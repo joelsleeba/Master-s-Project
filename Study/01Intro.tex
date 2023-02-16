@@ -197,7 +197,49 @@
  
 
   \subsection{Summability of Fourier series}
-  Given a function $f$ in the $\T$, we are interested in the convergence of fourier series of $f$.
+  Given a function $f$ in the $\T$, we are interested in the convergence of fourier series of $f$. We'll discuss about the convergence of the symmetric partial sum of the Fourier series.
+
+  \begin{definition}[Symmetric partial sum of a Fourier series]
+    \label{def:symmetric_partial_sum_of_fourier_series}
+    Given a function $f \in \L^1(\T)$ with its fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ symmetric parial sum of its fourier series as
+    \begin{displaymath}
+      S_N(x) = \sum_{n=-N}^N \hatf(n)e^{2\pi inx}
+    \end{displaymath}
+  \end{definition}
+  But it may happen that the summetric partial sum of the fourier seies may not converge. To deal with this we'll define another partial sum called the Ces\'aro partial sum.
+
+  \begin{definition}[Ces\'aro partial sum of Fourier series]
+    \label{def:cesaro_partial_sum_of_fourier_series}
+    Given a function $f \in \L^1(\T)$ with its fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ Ces\'aro parial sum of its fourier series as
+    \begin{displaymath}
+      \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)
+    \end{displaymath}
+    where $S_n(x)$ is the symmetric partial sum of the Fourier series as defined in \ref{def:symmetric_partial_sum_of_fourier_series}
+  \end{definition}
+  For an example, $\{-1^{n}\}$ is a sequence whose symmetric partial sums do not converge but the Ces\'aro partial sums converge to $\frac{1}{2}$. Also if the symmetric partial sums of a series converge, then the Ces\'aro partial sums will also converge to the same limit. \textcolor{red}{(Prove it!)}
+
+  Now we'll show that the Ces\'aro partial sum can be rewritten to another form which will help our proofs down the road.
+  \begin{lemma}
+    \label{lem:property_of_cesaro_partial_sum}
+    If $\sigma_N(x)$ is the $N^{th}$ Ces\'aro partial sum of the Fourier series of a function $f\in L^1(\T)$, then
+    \begin{displaymath}
+      \sigma_N(x) = \sum_{n=-N}^N \left(1-\frac{\abs{n}}{N} \right) \hatf(n) e^{2\pi inx}
+    \end{displaymath}
+  \end{lemma}
+  \begin{proof}
+    We'll prove the result for a general series so that it'll help us also in Fourier series.
+
+    Let $S_N = \sum_{n=-N}^{N}a_n$ be the $N^{th}$ partial sum of the series $\sum_{-\infty}^{\infty}a_n$. Then by the definition of Ces\'aro partial sum, 
+    \begin{align*}
+      \sigma_N  &= \frac{1}{N} \sum_{n=0}^{N-1}S_n \\
+                &= \frac{1}{N} \sum_{n=0}^{N-1}\sum_{k=-n}^{n}a_k \\
+                &= \frac{1}{N} \sum_{k=-N+1}^{N-1} a_k \sum_{n=|k|}^{N-1} 1 & \\
+                &= \frac{1}{N} \sum_{k=-N+1}^{N-1} \left(N - |k|\right) a_k \\
+                &=  \sum_{k=-N+1}^{N-1} \left(1 - \frac{|k|}{N}\right) a_k \\
+                &=  \sum_{k=-N}^{N} \left(1 - \frac{|k|}{N}\right) a_k \\ 
+    \end{align*}
+    Now speficially if we take $a_k = \hatf(k)e^{2\pi ikx}$, we get the required result. 
+  \end{proof}
 
   For that we'll use a collection of function called the summability kernels
   \begin{definition}[Summability kernels]
@@ -211,7 +253,7 @@
   \end{definition}
  
 
-  Now we'll define one of the important summability kernels
+  Now we'll define one of the important summability kernels.
   \begin{definition}[Fej\'er Kernels]
     \label{def:fejer_kernel}
     Fej\'er kernel is defined as a collection of functions  $\Delta_N$ where for each $N \in \N$, $\Delta_N : \R \to \R$ is defined as 
@@ -235,6 +277,10 @@
             \end{cases}
         \end{displaymath}
       \item 
+        \begin{displaymath}
+          (\Delta_N*f)(x) = \sigma_N(x) 
+        \end{displaymath}
+        where $\sigma_n(x)$ is the $n^{th}$ Ces\'aro partial sum of the Fourier series of $f$ as defined in $\ref{def:cesaro_partial_sum_of_fourier_series}$
     \end{enumerate}
   \end{proposition}
 
@@ -270,6 +316,19 @@
           \Delta_N(x) = \frac{1}{N}\frac{\sin^2(\pi Nx)}{\sin^2{\pi x}}
         \end{displaymath}
       Hence the proposition.
+
+    \item
+      \begin{align*}
+        (\Delta_N*f)(x) &= \int_0^1 \Delta_N(y)f(x-y) \ dy \\
+              &= \int_0^1 \sum_{n=-N}^{N} \left(1-\frac{\abs{n}}{N}\right)e^{2\pi iny} f(x-y) \ dy \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) \int_0^1 f(x-y) e^{2\pi iny} \ dy \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx}  \int_0^1 f(x-y) e^{-2\pi in \left( x-y \right) } \ dy \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_x^{x-1} -f(v) e^{-2\pi in v} \ dv \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_{x-1}^x f(v) e^{-2\pi in v} \ dv \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_0^{1} f(v) e^{-2\pi in v} \ dv & \text{by lemma } \ref{lem:integral_of_periodic_function}\\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \hatf(n) \\
+              &= \sigma_N(x)
+      \end{align*}
     \end{enumerate}
 \end{proof}
   
@@ -365,7 +424,7 @@
     \label{thm:L1_convergence_of_summability_kernel}
     If $f\in L^1(\T)$ and $K_N$ is a summability kernel then $f*K_N$ converges to $f$ in $L^1$ norm. That is
     \begin{displaymath}
-      \lim_{N\to \infty} \int_{0}^{1}\abs{f(x) - (f*K_N)(x))}dx = 0
+      \lim_{N\to \infty} \int_{0}^{1}\abs{f(x) - (f*K_N)(x))} = 0
     \end{displaymath}
 \end{theorem}
   \begin{proof}
@@ -403,3 +462,14 @@
   \end{displaymath}
 But by the $3^{rd}$ property of the summability kernel, we know that the integral in the above converges to zero. Therefore there exists an $N$ such that for ann $n>N, |I_2|< \epsilon/2$, which completes our proof.
   \end{proof}
+
+  \begin{corollary}{Convergence of Ces\'aro sum of functions in $L^1(\T)$}
+    If $f\in L^(\T)$ then $\sigma_N(x)$, the Ces\'aro sum of the Fourier series of $f$ converge to $f(x)$ in $L^1$ norm. That is, 
+    \begin{displaymath}
+      \lim_{N\to \infty} \int_0^1 \left|f(x) - \sigma_N(x)\right| = 0
+    \end{displaymath}
+  \end{corollary}
+  \begin{proof}
+    Since we know that Fej\'er kernel, $\Delta_N(x)$ is a summability kernel by proposition \ref{prop:fejer_kernel_is_summability_kernel} and that $(\Delta_N*f)(x) = \sigma_N(x)$ by prop \ref{prop:properties_of_fejer_kernel}, the result follows from theorem \ref{thm:L1_convergence_of_summability_kernel}.
+  \end{proof}
+  
