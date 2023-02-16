@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  16 FEB 2023 18:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  16 FEB 2023 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1051,7 +1051,7 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
 usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (18 pages, 264134 bytes).
+Output written on main.pdf (18 pages, 263238 bytes).
 PDF statistics:
  257 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams

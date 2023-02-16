@@ -177,9 +177,9 @@
 
   \begin{proof}
     \begin{align*}
-  \int_{0}^{1} |h(x)| dx &= \int_{0}^{1} \left| \int_{0}^{1} f(y)g(x-y) dy \right| du \\
-                         &\le \int_{0}^{1} \int_{0}^{1} |f(y)g(x-y)| dy dx \\
-                         &= \int_{0}^{1} \int_{0}^{1} |f(y)g(x-y)| dx dy \\
+  \int_{0}^{1} |h(x)| dx &= \int_{0}^{1} \left| \int_{0}^{1} f(y)g(x-y)\  dy \right| dx \\
+                         &\le \int_{0}^{1} \int_{0}^{1} |f(y)g(x-y)| \ dy \ dx \\
+                         &= \int_{0}^{1} \int_{0}^{1} |f(y)g(x-y)| \ dx \ dy & \text{by Tonelli's theorem}\\
                          &= \int_{0}^{1} \left( \int_{0}^{1} |g(x-y)| dx \right) |f(y)|dy \\
                          &=\norm{f}_1 \norm{g}_1
     \end{align*}
@@ -201,16 +201,16 @@
 
   \begin{definition}[Symmetric partial sum of a Fourier series]
     \label{def:symmetric_partial_sum_of_fourier_series}
-    Given a function $f \in \L^1(\T)$ with its fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ symmetric parial sum of its fourier series as
+    Given a function $f \in \L^1(\T)$ with its fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ symmetric parial sum of the fourier series as
     \begin{displaymath}
       S_N(x) = \sum_{n=-N}^N \hatf(n)e^{2\pi inx}
     \end{displaymath}
   \end{definition}
-  But it may happen that the summetric partial sum of the fourier seies may not converge. To deal with this we'll define another partial sum called the Ces\'aro partial sum.
+  But it may happen that the summetric partial sum of the Fourier seies may not converge. To deal with this we'll define another partial sum called the Ces\'aro partial sum.
 
   \begin{definition}[Ces\'aro partial sum of Fourier series]
     \label{def:cesaro_partial_sum_of_fourier_series}
-    Given a function $f \in \L^1(\T)$ with its fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ Ces\'aro parial sum of its fourier series as
+    Given a function $f \in \L^1(\T)$ with its Fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ Ces\'aro parial sum of its Fourier series as
     \begin{displaymath}
       \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)
     \end{displaymath}
@@ -242,7 +242,7 @@
   \end{proof}
 
   For that we'll use a collection of function called the summability kernels
-  \begin{definition}[Summability kernels]
+  \begin{definition}[Summability kernel]
     \label{def:summability_kernel}
     A sequence of functions $K_N \in L^1(\T)$ is called a summability kernel or an approximation identity if 
     \begin{enumerate}[label=(\alph*)]
@@ -254,7 +254,7 @@
  
 
   Now we'll define one of the important summability kernels.
-  \begin{definition}[Fej\'er Kernels]
+  \begin{definition}[Fej\'er kernel]
     \label{def:fejer_kernel}
     Fej\'er kernel is defined as a collection of functions  $\Delta_N$ where for each $N \in \N$, $\Delta_N : \R \to \R$ is defined as 
     \begin{displaymath}
@@ -263,7 +263,7 @@
   \end{definition}
   Notice that each $\Delta_N$ is a $1-$periodic function.
 
-  We'll prove that Fej\'er Kernel as defined in \ref{def:fejer_kernel} satify the properties in \ref{def:summability_kernel}. But before that we'll explore some properties of Fej\'er kernal so that it'll aid us in our proof.
+  We'll prove that Fej\'er kernel as defined in \ref{def:fejer_kernel} satify the properties in \ref{def:summability_kernel}. But before that we'll explore some properties of Fej\'er kernel so that it'll aid us in our proof.
   \begin{proposition}[Properties of Fej\'er kernel]
     \label{prop:properties_of_fejer_kernel}
     If $\Delta_N(x)$ is defined as in \ref{def:fejer_kernel}, then the following hold true
