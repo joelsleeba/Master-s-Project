@@ -294,7 +294,7 @@
         Hence the last case is solved. But if $x\notin \N$ then from the finite sum of geometric series,
         \begin{align*}
           \sum_{n=0}^{N-1}e^{2\pi inx} &= \frac{e^{2\pi iNx} - 1}{e^{2\pi ix} - 1} \\
-                  & = \frac{e^{\pi iNx}}{e^{\pi ix}} \frac{e^{\pi iNx} - e^{-\pi iNx}}{e^{\pi ix} - e^{-\pi ix}} \\
+                  & = \frac{e^{\pi iNx}}{e^{\pi ix}} \times \frac{e^{\pi iNx} - e^{-\pi iNx}}{e^{\pi ix} - e^{-\pi ix}} \\
                   & = e^{\pi i(N-1)x}\frac{\sin(\pi Nx)}{\sin(\pi x)}
         \end{align*}
         Since $\abs{e^{ix}} = 1$ for all $x\in \R$, we'll get
@@ -429,7 +429,7 @@
 \end{theorem}
   \begin{proof}
     \begin{displaymath}
-      f*K_N(x) = \int_0^1 f(x-y)K_N(x)dx
+      f*K_N(x) = \int_0^1 f(x-y)K_N(y)dy
     \end{displaymath}
     Since $\int_0^1 K_N(y)dy = 1$, by the $2^{nd}$ property of summability kernel,
     \begin{displaymath}
@@ -440,7 +440,7 @@
       \int_0^1 |f(x) - K_N(x)| dx &= \int_0^1 \left| \int_0^1 (f(x) - f(x-y))K_N(y)dy \ \right| \ dx \\
                 &\le \int_0^1 \int_0^1 \left| f(x) - f(x-y) K_N(y) \right| dy \ dx \\
                 &= \int_0^1 |K_N(y)| \int_0^1 |f(x) - f(x-y)| dx \ dy & \text{by Tonelli's theorem} \\
-                &= \int_{-\delta}^{1-\delta} & \text{by lemma } \ref{lem:integral_of_periodic_function} \\
+                &= \int_{-\delta}^{1-\delta} & \text{by lemma } \ref{lem:integral_of_periodic_function}\\
                 &= \int_{-\delta}^{\delta} + \int_{\delta}^{1-\delta} = I_1 + I_2\\
     \end{align*}
     We'll show that for a given $\epsilon$ we can find an $N$ such that for all $n>N, \ I_1+I_2 < \epsilon$
@@ -460,7 +460,7 @@
   \begin{displaymath}
     |I_2| \le 2\norm{f}_1 \int_{\delta}^{1-\delta} |K_N(y)|dy
   \end{displaymath}
-But by the $3^{rd}$ property of the summability kernel, we know that the integral in the above converges to zero. Therefore there exists an $N$ such that for ann $n>N, |I_2|< \epsilon/2$, which completes our proof.
+But by the $3^{rd}$ property of the summability kernel, we know that the integral in the above converges to zero. Therefore there exists an $N$ such that for an $n>N, |I_2|< \epsilon/2$, which completes our proof.
   \end{proof}
 
   \begin{corollary}{Convergence of Ces\'aro sum of functions in $L^1(\T)$}
@@ -472,4 +472,15 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
   \begin{proof}
     Since we know that Fej\'er kernel, $\Delta_N(x)$ is a summability kernel by proposition \ref{prop:fejer_kernel_is_summability_kernel} and that $(\Delta_N*f)(x) = \sigma_N(x)$ by prop \ref{prop:properties_of_fejer_kernel}, the result follows from theorem \ref{thm:L1_convergence_of_summability_kernel}.
   \end{proof}
-  
+
+  \begin{theorem}[Fej\'er's Theorem]
+    \label{fejer_theorem}
+    Let $f \in L^1(\T)$ and $f(a^-) = \lim_{x \to a^-} f(x)$ and $f(a^+) = \lim_{x \to a^+} f(x)$ exist and are finite, then
+    $$\lim_{ N\to \infty} \sigma_N(x) = \frac{f(x^-) + f(x^+)}{2}$$
+  \end{theorem}
+
+  \begin{proof}
+    Let $\epsilon$ be given. Since we assumed $f(x^+)$ and $f(x^-)$ exist and are finite, we can take $\delta$ small enough such that $|f(x-u) - f(x^-)| < \epsilon$ for $0\le u \le \delta$ and $|f(x+u) - f(x^+)| < \epsilon$ for $1-\delta \le u \le 1$.
+    $$ \sigma_N(x) = \int_0^1 f(x-u)\Delta_N(u) du = \int_{0}^\delta + \int_\delta^{1-\delta} + \int_{1-\delta}^1 = I_1 + I_2 + I_3$$
+     $|f(x-u) - f(x^-)| < \epsilon$
+  \end{proof}
