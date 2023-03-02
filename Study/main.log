@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.23)  2 MAR 2023 23:03
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.23)  3 MAR 2023 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -984,9 +984,6 @@ LaTeX Info: Redefining \nameref on input line 238.
 \openout5 = `main.out'.
 
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
@@ -1207,10 +1204,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8F8CC3133520CD392493A87D9E630F1E;1769.
  ) 
 Here is how much of TeX's memory you used:
- 35310 strings out of 476156
- 832022 string characters out of 5814962
- 1482467 words of memory out of 5000000
- 55486 multiletter control sequences out of 15000+600000
+ 35308 strings out of 476156
+ 831976 string characters out of 5814962
+ 1482465 words of memory out of 5000000
+ 55484 multiletter control sequences out of 15000+600000
  486094 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,14n,103p,715b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
