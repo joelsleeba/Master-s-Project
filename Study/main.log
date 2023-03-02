@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  2 MAR 2023 02:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  2 MAR 2023 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -790,7 +790,7 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer
 .code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.te
-x)) (./main.aux (./00Preface.aux) (./01Intro.aux))
+x)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 238.
@@ -900,140 +900,131 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 24
 0.
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+) (./00Preface.tex [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `00Preface.aux'.
-
-(./00Preface.tex [2
-
-]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 15.
-) [3]
-\openout2 = `01Intro.aux'.
+) (./01Intro.tex [2]
 
-(./01Intro.tex
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 7.
+(mdframed)              on input line 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 18.
+(mdframed)              on input line 19.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--27
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 29.
-[4
-
-
-
-]
+(mdframed)              on input line 30.
+[3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 54.
+(mdframed)              on input line 55.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 67.
+(mdframed)              on input line 68.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 75.
+[4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 76.
-Package mdframed Info: Not enough space on this page on input line 84.
+(mdframed)              on input line 77.
 [5]
-Package mdframed Info: Not enough space on this page on input line 84.
-[6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 118.
-<./figures//convolution.jpg, id=88, 642.4pt x 481.8pt>
+(mdframed)              on input line 119.
+<./figures//convolution.jpg, id=96, 642.4pt x 481.8pt>
 File: ./figures//convolution.jpg Graphic file (type jpg)
 <use ./figures//convolution.jpg>
-Package pdftex.def Info: ./figures//convolution.jpg  used on input line 128.
+Package pdftex.def Info: ./figures//convolution.jpg  used on input line 129.
 (pdftex.def)             Requested size: 250.95476pt x 188.21736pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 133.
-[7]
+(mdframed)              on input line 134.
+[6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 158.
-[8 <./figures//convolution.jpg>]
+(mdframed)              on input line 159.
+[7 <./figures//convolution.jpg>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 202.
+(mdframed)              on input line 203.
 
-LaTeX Warning: Command \L invalid in math mode on input line 204.
+LaTeX Warning: Command \L invalid in math mode on input line 205.
 
+[8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 212.
+
+LaTeX Warning: Command \L invalid in math mode on input line 214.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 223.
 [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 211.
-
-LaTeX Warning: Command \L invalid in math mode on input line 213.
-
+(mdframed)              on input line 247.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 222.
+(mdframed)              on input line 259.
 [10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 245.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 257.
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 263.
-
-[11]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 267.
-[12]
-Overfull \hbox (13.0076pt too wide) detected at line 331
+(mdframed)              on input line 269.
+[11] [12] [13]
+Overfull \hbox (13.0076pt too wide) detected at line 399
 []
  []
 
-[13]
+[14]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 336.
-[14] [15]
+(mdframed)              on input line 404.
+[15] [16]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 423.
-Package mdframed Info: Not enough space on this page on input line 429.
-[16]
-Package mdframed Info: Not enough space on this page on input line 429.
+(mdframed)              on input line 467.
 
-Overfull \hbox (24.23596pt too wide) detected at line 445
+Overfull \hbox (24.23596pt too wide) detected at line 489
 []
  []
 
 [17]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 466.
+(mdframed)              on input line 510.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 476.
+(mdframed)              on input line 520.
 
-Overfull \hbox (20.43709pt too wide) in paragraph at lines 478--479
+Overfull \hbox (20.43709pt too wide) in paragraph at lines 522--523
 [][][]\OT1/cmr/bx/n/12 Theorem 3.4[]--Fej^^Ser's The-o-rem []\OT1/cmr/m/n/12 Le
 t $\OML/cmm/m/it/12 f \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]\OT1/cmr/m/n/12 (\
 U/msb/m/n/12 T\OT1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/c
@@ -1041,16 +1032,39 @@ mm/m/it/12 a[]\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/
 cmm/m/it/12 x\OT1/cmr/m/n/12 )$
  []
 
-) [18] (./main.aux (./00Preface.aux) (./01Intro.aux))
+[18] [19]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 564.
+) (./02LpConvergence.tex [20]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 8.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 13.
+) [21] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3658983D4D536BA4F3CB6847EC6E6642;976.
+(rerunfilecheck)             Checksum: 41E8F7E2343DEEAF0E1BB18A3000E869;1581.
  ) 
 Here is how much of TeX's memory you used:
- 35535 strings out of 478238
- 833242 string characters out of 5850455
- 1480666 words of memory out of 5000000
- 53122 multiletter control sequences out of 15000+600000
- 484275 words of font info for 85 fonts, out of 8000000 for 9000
+ 35527 strings out of 478238
+ 832415 string characters out of 5850455
+ 1482667 words of memory out of 5000000
+ 53098 multiletter control sequences out of 15000+600000
+ 486300 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,103p,715b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
@@ -1064,10 +1078,10 @@ lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
 sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (18 pages, 273228 bytes).
+Output written on main.pdf (21 pages, 287099 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 67 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,16 @@
+% TeX root = main.tex
+\newpage
+\section{Fourier Series in $L^p(\T)$}
+Before we go into the general $L^p$, we'll first recall some importatnt results from functional analysis which are essential for the discussion of further topics
+
+Recall that in definiton \ref{def:Lp_function}, we've discussed what is an $L^p$ function for a general space $S$. Here the space is $\T$ and $L^p(\T)$ are precisely the set of all $L^p$ functions in $\T$.
+
+\begin{theorem}[Holder's Inequality for integrals]
+  Let $1 < p, q < \infty$, such that $1/p + 1/q = 1$, then for Lebesgue mesurable functions $f, g$,
+  $$ \left| \int_a^b f(x)g(x) dx \right| \le \left(\int_a^b |f(x)|^p \right)^{1/p} \left(\int_a^b |g(x)|^q \right)^{1/q}$$
+\end{theorem}
+
+\begin{theorem}[Minkowski's Inequality for integrals]
+ Let $1 < p < \infty$ then, 
+  $$\left(\int_a^b |f(x) + g(x)|^p dx \right)^{1/p} \le \left( \int_a^b |f(x)|^p dx \right)^{1/p} + \left( \int_a^b |g(x)|^p dx \right)^{1/p}$$
+\end{theorem}

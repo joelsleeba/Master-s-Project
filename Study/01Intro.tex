@@ -1,11 +1,12 @@
 % TeX root = main.tex
-\section{Fourier Series}
+\newpage
+\section{Fourier Series in $L^1(\T)$}
 
   \subsection{Definition and basic properties}
 
     We'll begin by reviewing the definition of $L^p$ space since we'll be mostly working on functions from these space.
   \begin{definition}[$L^p$ function]
-    \label{Lp_function}
+    \label{def:Lp_function}
     A real valued function $f$ defined on a lebesgue measurable space $S$ is called an $L^p$ function on $S$ or a $p$-integrable function on $S$ if 
     \begin{displaymath}
        \left( \int_{S} |f(x)|^p \right)^{1/p} < \infty
@@ -196,7 +197,7 @@
   \end{proof}
  
 
-  \subsection{Summability of Fourier series}
+  \subsection{Partial sums of Fourier series}
   Given a function $f$ in the $\T$, we are interested in the convergence of fourier series of $f$. We'll discuss about the convergence of the symmetric partial sum of the Fourier series.
 
   \begin{definition}[Symmetric partial sum of a Fourier series]
@@ -241,7 +242,8 @@
     Now speficially if we take $a_k = \hatf(k)e^{2\pi ikx}$, we get the required result. 
   \end{proof}
 
-  For that we'll use a collection of function called the summability kernels
+  \subsection{Summability Kernels}
+  Now we'll define a family of functions called the sumambility kernels, which we will use heavily in our proofs and simplify it.
   \begin{definition}[Summability kernel]
     \label{def:summability_kernel}
     A sequence of functions $K_N \in L^1(\T)$ is called a summability kernel or an approximation identity if 
@@ -269,13 +271,30 @@
     If $\Delta_N(x)$ is defined as in \ref{def:fejer_kernel}, then the following hold true
     \begin{enumerate}[label=(\alph*)]
       \item
+        $$\Delta_N(x) = 1 + 2 \sum_{n=1}^{N} ( 1-\frac{n}{N} )\cos{2\pi nx}$$ 
+      \item
+        $$\int_0^1 \Delta_N(x) dx = 1$$
+      \item 
+        $$\Delta_N(x) = \Delta_N(1-x)$$
+    
+\item For $0\le \delta \le \frac{1}{2}$,
+        $$\int_\delta^{\frac{1}{2}} \Delta_N(x) dx = \int_{\frac{1}{2}}^{1 - \delta} \Delta_N(x) dx$$
+        and therefore,
+        $$\int_0^{\frac{1}{2}} \Delta_N(x) dx = \int_{\frac{1}{2}}^{1} \Delta_N(x) dx = \frac{1}{2}$$
+      
+      \item
         \begin{displaymath}
           \Delta_N(x) = 
             \begin{cases}
-              \frac{1}{N}\left( \frac{\sin(\pi Nx)}{\sin(\pi x)} \right)^2, \quad \text{if } x\notin \Z \\
-              N, \quad \text{if } n \in \Z\
+              \frac{1}{N}\left( \frac{\sin(\pi Nx)}{\sin(\pi x)} \right)^2, &\text{ if } x\notin \Z \\
+              N, &\text{ if } x \in \Z\
             \end{cases}
         \end{displaymath}
+      \item
+        If $0\le x \le \frac{1}{2}$, then $$\Delta_N(x) \le \min\left(N, \frac{1}{4Nx^2}\right)$$
+      \item 
+        If $0<\delta \le \frac{1}{2}$, then 
+        $$\int_\delta^{\frac{1}{2}}\Delta_N(x) < \frac{1}{4N\delta}$$
       \item 
         \begin{displaymath}
           (\Delta_N*f)(x) = \sigma_N(x) 
@@ -286,6 +305,29 @@
 
   \begin{proof}
     \begin{enumerate}[label=(\alph*)]
+      \item
+        This follows straight from De Moivre's formula that $e^{ix} = \cos(x) + i\sin(x)$ and $e^{ix} + e^{-ix}  = 2\cos(x)$.
+
+      \item 
+        By previous result,
+          $$\Delta_N(x) = 1 + 2\sum_{n=1}^N \left(1-\frac{|n|}{N}\right)\cos(2\pi nx)$$
+        Therefore, 
+        \begin{align*}
+          \int_0^1\Delta_N(x) \ dx &= \int_0^1 1\ dx + 2\sum_{n=1}^N \left(1 - \frac{|n|}{N}\right)\int_0^1cos(2\pi nx) \ dx \\
+                &= 1 + 0 \\ 
+        \end{align*}
+
+      \item
+        This follows from the fact that $\cos(2\pi n(1-x))  = \cos(2\pi n - 2\pi nx) = \cos(2\pi nx)$ in the last result.
+      \item
+        From \ref{prop:properties_of_fejer_kernel}, we know that $\Delta_N(x) = \Delta_N(1-x)$. Therefore by change of variables,
+        \begin{displaymath}
+          \int_\delta^{\frac{1}{2}}\Delta_N(x) dx = \int_\delta^{\frac{1}{2}}\Delta_N(1-x)dx = -\int_{1-\delta}^{\frac{1}{2}} \Delta_N(y)dy = \int_{\frac{1}{2}}^{1 - \delta}\Delta_N(y) dy
+        \end{displaymath}
+        Also from previous result, we know
+        $$\int_0^{\frac{1}{2}}\Delta_N(x) dx + \int_{\frac{1}{2}}^1\Delta_N(x) dx = \int_0^1\Delta_N(x) dx = 1$$
+        Hence $$\int_0^{\frac{1}{2}} \Delta_N(x) dx = \int_{\frac{1}{2}}^1 \Delta_N(x) dx = \frac{1}{2}$$
+
       \item
         If $x\in \N$ then $e^{2\pi inx} = 1$ for all $n$ and then,
         \begin{displaymath}
@@ -299,7 +341,7 @@
         \end{align*}
         Since $\abs{e^{ix}} = 1$ for all $x\in \R$, we'll get
         \begin{displaymath}
-          \left|\sum_{n=0}^{N-1}e^{2 \pi inx}\right|^2 = \frac{\sin^2(\pi Nx)}{\sin^2{\pi x}}  
+          \left|\sum_{n=0}^{N-1}e^{2 \pi inx}\right|^2 = \frac{\sin^2(\pi Nx)}{\sin^2(\pi x)}  
         \end{displaymath}
 
         But we also know that,
@@ -315,7 +357,33 @@
         \begin{displaymath}
           \Delta_N(x) = \frac{1}{N}\frac{\sin^2(\pi Nx)}{\sin^2{\pi x}}
         \end{displaymath}
-      Hence the proposition.
+        Hence the proposition.
+     
+      \item 
+        We'll first see that $\sin(\pi x) \ge 2x$ whenever $0\le x\le \frac{1}{2}$. 
+        But this is because the $h(x) := \sin(\pi x) - 2x = 0$ only for $x=0$ and $x=2$ and the derivative of $h$, $h'(x) := \pi \cos(\pi x) - 2 = 0$, only for a unique real number $r\in [0, \frac{1}{2}]$.Now since $f$ is smooth, $f$ cannot have more roots in $[0, \frac{1}{2}]$. Hence $\sin(\pi x) \ge 2x$ for all $x \in [0, \frac{1}{2}]$
+
+        Now we'll get to the main proof. Assume $0 < \delta \le \frac{1}{2}$. Then by previous result, when $0<x \le \frac{1}{2}$,
+       \begin{align*}
+         \Delta_N(x) &= \frac{1}{N}\left(\frac{\sin(\pi Nx)}{\sin(\pi x)}\right)^2 \\
+                &\le \frac{1}{N\sin^2(\pi x)} \\
+                &\le \frac{1}{4Nx^2} &\text{since } \sin(\pi x) \ge 2x \\
+       \end{align*}
+
+        We also know that $$\Delta_N(x) = 1+ 2 \sum_{n=1}^{N} \left(1-\frac{n}{N}\right)\cos(2\pi nx)$$
+        But this shows that $\Delta_N(x)$ is maximum when $\cos(2\pi nx)$ is maximum, i.e at $x = 0, 1$. At both cases $\cos(2\pi nx) = 1$.
+        Also $$1 + 2\sum_{n=1}^N \left(1-\frac{n}{N}\right) = 1 + 2N - \frac{2}{N}\sum_{n=1}^N n = 1+2N - \frac{2}{N}\frac{N(N+1)}{2} = N$$
+        Therefore, $\Delta_N(x) \le N$ for all $0\le x \le 1$
+        Hence combining this with the result above, we get that while $0\le x\le \frac{1}{2}$
+        $$\Delta_N(x) \le \min{\left(N, \frac{1}{4Nx^2}\right)}$$
+
+      
+     \item
+       From last result we know that when $0< \delta \le \frac{1}{2}$, $$\Delta_N(x) \le \frac{1}{4Nx^2}$$
+       Then,
+        \begin{displaymath}
+          \int_\delta^\frac{1}{2} \Delta_N(x) dx \le \int_\delta^\frac{1}{2} \frac{1}{4Nx^2} dx \le \int_\delta^\infty \frac{1}{4Nx^2} dx = \frac{1}{4N\delta}
+        \end{displaymath}
 
     \item
       \begin{align*}
@@ -338,22 +406,20 @@
     Fej\'er kernel as defined in \ref{def:fejer_kernel} is a summability kernel as in definition \ref{def:summability_kernel}
   \end{proposition}
   \begin{proof}
-    \begin{enumerate}[label=(\alph*)]
+    To prove that Fej\'er kernel is a summability kernel, we'll verify the three properties given in \ref{def:summability_kernel}.
+    \begin{enumerate}
       \item
-        By definition,
-        \begin{align*}
-          \Delta_N(x) &= \sum_{n=-N}^{N}\left(1-\frac{\abs{n}}{N}\right)e^{2\pi inx} \\
-                      &= 1 + 2\sum_{n=1}^N \left(1-\frac{|n|}{N}\right)\cos(2\pi nx) \\
-        \end{align*}
-        Therefore, 
-        \begin{align*}
-          \int_0^1\Delta_N(x) \ dx &= \int_0^1 1\ dx + 2\sum_{n=1}^N \left(1 - \frac{|n|}{N}\right)\int_0^1cos(2\pi nx) \ dx \\
-                &= 1 + 0 \\ 
-        \end{align*}
-        This proves the first statement in the definition of summability kernel in \ref{def:summability_kernel}
-
+        We proved that $\int_0^1 \Delta_N(x) = 1$ at proposition \ref{prop:properties_of_fejer_kernel}
       \item
-        Since $\Delta_N(x) \ge 0$ for all $x\in \R$, by \ref{prop:properties_of_fejer_kernel}
+        From proposition \ref{prop:properties_of_fejer_kernel}, we know that
+        \begin{displaymath}
+          \Delta_N(x) = 
+          \begin{cases}
+            \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\sin(\pi x)}\right)^2, &\text{ if } x \notin \Z \\
+            N, &\text{ if } x \in \Z \\
+          \end{cases}
+        \end{displaymath}
+        Since $N \in \N$, this implies $\Delta_N(x) \ge 0$. Therefore,
         \begin{displaymath}
           \int_0^1 \left|\Delta_N(x)\right| dx = \int_0^1 \Delta(x) dx = 1
         \end{displaymath}
@@ -364,48 +430,24 @@
         \begin{displaymath}
           \lim_{N \to \infty}\int_\delta^{1-\delta} \left|\Delta_N(x) \right| dx = 0
         \end{displaymath}
-        we'll first see that $\sin(\pi x) \ge 2x$ whenever $0\le x\le \frac{1}{2}$. 
-        But this is because the $f(x) := \sin(\pi x) - 2x = 0$ only for $x=0$ and $x=2$ and the derivative of $f$, $f'(x) := \pi \cos(\pi x) - 2 = 0$, only for a unique real number $r\in [0, \frac{1}{2}]$.Now since $f$ is smooth, $f$ cannot have more roots in $[0, \frac{1}{2}]$. Hence $\sin(\pi x) \ge 2x$ for all $x \in [0, \frac{1}{2}]$
 
-        Now we'll get to the main proof. Assume $0 < \delta < \frac{1}{2}$. Then by \ref{prop:properties_of_fejer_kernel}
-       \begin{align*}
-         \Delta_N(x) &= \frac{1}{N}\left(\frac{\sin(\pi Nx)}{\sin(\pi x)}\right)^2 \\
-                &\le \frac{1}{N\sin^2(\pi x)} \\
-                &\le \frac{1}{4Nx^2} &\text{since } \sin(\pi x) \ge 2x \\
-       \end{align*}
-        Which implies
-        \begin{displaymath}
-          \int_\delta^\frac{1}{2} \left| \Delta_N(x) \right| dx \le \int_\delta^\frac{1}{2} \frac{1}{4Nx^2} dx \le \int_\delta^\infty \frac{1}{4Nx^2} dx = \frac{1}{4N\delta}
-        \end{displaymath}
-
-        Also note that $\sin^2(\pi N(1-x)) = \sin^2(\pi Nx)$ since,
-        \begin{align*}
-          \sin(\pi N(1-x))  &= \sin(\pi N - \pi Nx) \\
-                            &= \sin( \pi N)\cos(\pi Nx) - \cos(\pi N)\sin(\pi Nx) \\
-                            &= 0 - \cos(\pi N)\sin(\pi Nx) & \sin(\pi N) = 0\\
-                            &= \pm \sin(\pi Nx)
-        \end{align*}
-
-        Therefore $\Delta_N(1-x) = \Delta_N(x)$ and 
-        \begin{align*}
-          \int_\frac{1}{2}^{1-\delta} \Delta_N(x) &= \int_\frac{1}{2}^{1-\delta} \Delta_N(1-x)  \\
-                &= -\int_\frac{1}{2}^\delta \Delta_N(x) & \text{change of variables} \\
-                &=  \int_\delta^\frac{1}{2} \Delta_N(x)
-        \end{align*}
+        we note that from proposition \ref{prop:properties_of_fejer_kernel} if $0< \delta \le \frac{1}{2}$, $$ \int_\delta^{\frac{1}{2}}\Delta_N(x) dx \le \frac{1}{4N\delta}$$
+        and 
+        $$\int_\frac{1}{2}^{1-\delta} \Delta_N(x) =  \int_\delta^\frac{1}{2} \Delta_N(x)$$
 
         Hence,
         \begin{displaymath}
-          \int_\delta^{1-\delta} \Delta_N(x) = \int_\delta^\frac{1}{2} \Delta_N(x) + \int_\frac{1}{2}^\delta \Delta_N(x) \le 2 \int_\delta^\frac{1}{2} \Delta_N(x) \le \frac{1}{2N\delta}
+          \int_\delta^{1-\delta} \Delta_N(x) = \int_\delta^\frac{1}{2} \Delta_N(x) + \int_\frac{1}{2}^{1-\delta} \Delta_N(x) = 2 \int_\delta^\frac{1}{2} \Delta_N(x) \le \frac{1}{2N\delta}
         \end{displaymath}
        
-        Therefore, for $0 < \delta < \frac{1}{2}$, we have 
+        Therefore, for $0 < \delta \le \frac{1}{2}$, we have 
         \begin{displaymath}
           \lim_{N \to \infty} \int_\delta^{1-\delta} \left|\Delta_N(x)\right| = \lim_{N \to \infty} \int_\delta^{1-\delta} \Delta_N(x) = 0
         \end{displaymath}
 
         If $\frac{1}{2} < \delta < 1$ then by change of variable $y = 1 - x$
         \begin{displaymath}
-          \int_\delta^{1-\delta} \Delta_n(x) =  - \int_{1-\delta}^{\delta} \Delta_n(y) = 0
+          \lim_{N\to \infty} \int_\delta^{1-\delta} \Delta_N(x) = \lim_{N \to \infty} - \int_{1-\delta}^{\delta} \Delta_n(y) = 0
         \end{displaymath}
         And therefore for all $0 < \delta < 1$ 
         \begin{displaymath}
@@ -418,8 +460,10 @@
   \end{proof}
 
 
+  \subsection{Convergence of Fourier Series} % (fold)
+  \label{ssub:Convergence of Fourier Series}
 
-  Now we prove an important theorem which will serve as a backbone for the discussion of convergence forward.
+  Now with the help of summability kernels and convolution we'll prove an important theorem which will serve as a backbone for the discussion of convergence forward.
   \begin{theorem}[Convergence to convolution of summability kernels]
     \label{thm:L1_convergence_of_summability_kernel}
     If $f\in L^1(\T)$ and $K_N$ is a summability kernel then $f*K_N$ converges to $f$ in $L^1$ norm. That is
@@ -480,7 +524,43 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
   \end{theorem}
 
   \begin{proof}
-    Let $\epsilon$ be given. Since we assumed $f(x^+)$ and $f(x^-)$ exist and are finite, we can take $\delta$ small enough such that $|f(x-u) - f(x^-)| < \epsilon$ for $0\le u \le \delta$ and $|f(x+u) - f(x^+)| < \epsilon$ for $1-\delta \le u \le 1$.
+    Let $\epsilon$ be given. Since we assumed $f(x^+)$ and $f(x^-)$ exist and are finite, we can take $\delta < \frac{1}{2}$ small enough such that $|f(x-u) - f(x^-)| < \epsilon$ for $0\le u \le \delta$ and $|f(x+u) - f(x^+)| < \epsilon$ for $1-\delta \le u \le 1$.
     $$ \sigma_N(x) = \int_0^1 f(x-u)\Delta_N(u) du = \int_{0}^\delta + \int_\delta^{1-\delta} + \int_{1-\delta}^1 = I_1 + I_2 + I_3$$
-     $|f(x-u) - f(x^-)| < \epsilon$
+    Then, 
+    $$I_1 = \int_0^\delta (f(x-u) - f(x^-))\Delta_N(u)du + \int_0^\delta f(x^-)\Delta_N(u)du = T_1 + T_1^{'}$$
+    where by the property of summability kernels as in \ref{def:summability_kernel}, and by our choice of $\delta$, we have
+    $$|T_1| \le \int_0^\delta |f(x-u) - f(x^-)|\Delta_N(u)du < \epsilon \int_0^\delta \Delta_N(x) \le \epsilon$$
+    Therefore $T_1$ converge to $0$ as $N \to \infty$.
+
+    Again, from the proposition \ref{prop:properties_of_fejer_kernel}, we get
+    $$\frac{1}{2} \ge \int_0^\delta \Delta_N(x) dx = \int_0^{\frac{1}{2}} \Delta_N(x) dx - \int_\delta^{\frac{1}{2}} \Delta_N(x) dx \ge \frac{1}{2} - \frac{1}{4N\delta}$$
+    which then implies that, 
+    $$\frac{f(x^-)}{2} \ \ge \ T_1^{'} = f(x^-)\int_0^\delta \Delta_N(x) dx \ \ge \ \frac{f(x^-)}{2} - \frac{f(x^-)}{4N\delta}  $$
+    Therefore, 
+    $$ 0\ge T_1^{'} - \frac{f(x^-)}{2} \ge -\frac{f(x^-)}{4N\delta} $$
+    and hence, 
+    $$\left| T_1^{'} - \frac{f(x^-)}{2}\right| \le \left|\frac{f(x^-)}{4N\delta}\right| $$
+    which implies that $I_1 = T_1 + T_1^{'}$ converge to $\frac{f(x^-)}{2}$ as $N \to \infty$.
+
+    Now by proposition \ref{prop:properties_of_fejer_kernel} we know that if $0 < x \le \frac{1}{2}$, then $$\Delta_N(x) \le \frac{1}{4Nx^2}$$ which implies that 
+    $$ |I_2| \le \frac{1}{4N\delta^2}\int_\delta^{1-\delta}f(x-u) du \le \frac{1}{4N\delta^2}\int_0^1|f(u)|du = \frac{\|f\|_1}{4N\delta^2}$$
+    Therefore $I_2$ converge to $0$ as $N \to \infty$
+
+    Now we'll prove that $I_3$ converge to $\frac{f(x^+)}{2}$. For this we'll split $I_3$ into $T_3$ and $T_3^{'}$ like we did with $I_1$. 
+    $$I_3 = \int_{1-\delta}^1 (f(x-u) - f(x^+))\Delta_N(u) du + f(x^+)\int_{1-\delta}^{1}\Delta_N(u) du = T_3 + T_3^{'}$$
+    Then, 
+    $$|T_3| \le \int_{1-\delta}^1 |((f(x-u) - f(x^+))|\Delta_N(u)du < \epsilon \int_{1-\delta}^1 \Delta_N(x) dx \le \epsilon$$
+    Therefore $T_3$ converge to $0$ as $N \to \infty$.
+    Also
+      $$\int_{1-\delta}^1 \Delta_N(x) dx = -\int_{\delta}^0 \Delta_N(x) dx = \int_0^\delta \Delta_N(x) dx$$
+      Therefore by the same inequality we used for $T_1^{'}$ in \ref{prop:properties_of_fejer_kernel}, we'll get
+      $$ \left| T_3^{'} - \frac{f(x^+)}{2} \right| \le \left|\frac{f(x^+)}{4N\delta} \right|$$
+      which implies that $I_3 = T_3 + T_3^{'}$ converge to $\frac{f(x^+)}{2}$ as $N \to \infty$
+
+    Therefore since $\sigma_N(x) = I_1 + I_2 + I_3$, by the algebra of limits, 
+    $$ \lim_{N \to \infty} \sigma_N(x) = \frac{f(x^-) + f(x^+)}{2}$$
   \end{proof}
+
+ \begin{theorem}[Hardy Tauberian Theorem]
+   Let $\sum_{n=1}^\infty a_n$ is Ces\'aro summable to $a$, then if there exist a constant $C$ such that $$|a_n| \le \frac{C}{n}$$ for all $n$, then the series $\sum_{n=1}^\infty a_n$ converge to $a$
+ \end{theorem}
