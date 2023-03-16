@@ -5,17 +5,20 @@ Before we go into the general $L^p$, we'll first recall some importatnt results 
 
 Recall that in definiton \ref{def:Lp_function}, we've discussed what is an $L^p$ function for a general space $S$. Here the space is $\T$ and $L^p(\T)$ are precisely the set of all $L^p$ functions in $\T$.
 
-\begin{theorem}[Holder's Inequality for integrals]
-  \label{thm:Holder_inequality_for_integrals}
-  Let $1 < p, q < \infty$, such that $1/p + 1/q = 1$, then for Lebesgue mesurable functions $f, g$,
-  $$ \left| \int_a^b f(x)g(x) dx \right| \le \left(\int_a^b |f(x)|^p \right)^{1/p} \left(\int_a^b |g(x)|^q \right)^{1/q}$$
+\begin{theorem}[Holder's Inequality]
+   \label{thm:Holder_inequality}
+  Let $1 \le  p \le \infty$ and $q$ such that $1/p + 1/q = 1$ (for convention we will assume that the tuples $(1, \infty)$, and $(\infty, 1)$, satify the above relation) then for lebesgue measure space $S$ and functions $f \in L^p(S)$, and $g \in L^q(S)$
+  $$ \left| \int_S f(x)g(x) dx \right| \le \|f\|_p \|g\|_q$$
+  where $$\|f\|_p = \left(\int_s |f(x)|^p \right)^{\frac{1}{p}}$$ as in the definition of $L^p$ norm in \ref{def:Lp_function}.
 \end{theorem}
 
-\begin{theorem}[Minkowski's Inequality for integrals]
-  \label{thm:Minkowski_inequality_for_integrals}
- Let $1 < p < \infty$ then, 
-  $$\left(\int_a^b |f(x) + g(x)|^p dx \right)^{1/p} \le \left( \int_a^b |f(x)|^p dx \right)^{1/p} + \left( \int_a^b |g(x)|^p dx \right)^{1/p}$$
-\end{theorem} 
+\begin{theorem}[Minkowski's Inequality]
+  \label{thm:Minkowski_inequality}
+  Let $1 \le p \le \infty$ then for a lebesgue measure space $S$ and a fucntion $f \in L^p(S)$, then 
+  $$\|f+g\|_p \le \|f\|_p + \|g\|_p$$
+\end{theorem}
+
+The proofs of the above two theorems can be found in any measure theory textbook and since it is a common proof, we'll ommit it from detailing it here.
 
 \subsection{Fourier Series in $L^2(\T)$}
 Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$ functions we first prove some important results.
@@ -75,7 +78,7 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
   \end{displaymath}
   Hence,
   $$ f(x) - \sigma_N(x) = \int_0^1 (f(x) - f(x-u))\Delta_N(u) \ du $$ 
-  By Holder's inequality as in \ref{thm:Holder_inequality_for_integrals} applied to $(f(x) - f(x-u))\sqrt{\Delta_N(u)}$ and $\sqrt{\Delta_N(u)}$ 
+  By Holder's inequality as in \ref{thm:Holder_inequality} applied to $(f(x) - f(x-u))\sqrt{\Delta_N(u)}$ and $\sqrt{\Delta_N(u)}$ 
   \begin{align*}
     |f(x) - \sigma_N(x)| &= \left| \int_0^1 (f(x) - f(x-u))\Delta_N(u) \right| \ du \\
           &\le \left( \int_0^1 |f(x) - f(x-u)|^{2} \Delta_N(u) \ du \right)^{1/2} \left( \int_0^1 \Delta_N(u) \ du \right)^{1/2} \\
@@ -127,7 +130,7 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
 \end{proposition}
 \begin{proof}
   $$(f*g)(x+\delta) - (f*g)(x) = \int_0^1 f(u)(g(x+\delta - u) - g(x-u)) du $$
-  Therefore by Minkowski's inequality from theorem \ref{thm:Minkowski_inequality_for_integrals}, 
+  Therefore by Minkowski's inequality from theorem \ref{thm:Minkowski_inequality}, 
   \begin{align*}
     |f*g(x+\delta) - f*g(x)| &= \left| \int_0^1 f(u) (g(x + \delta -u)- g(x-u)) du \right| \\
           &\le \|f\|_p \left( \int_0^1|g(x+\delta - u) - g(x-u)|^q du \right)^{1/q} \\
@@ -163,7 +166,7 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
   \end{displaymath}
   Hence,
   $$ f(x) - \sigma_N(x) = \int_0^1 (f(x) - f(x-u))\Delta_N(u) \ du $$ 
-  By Holder's inequality as in \ref{thm:Holder_inequality_for_integrals} applied to $(f(x) - f(x-u))(\Delta_N(u))^{1/p}$ and $(\Delta_N(u))^{1/q}$ 
+  By Holder's inequality as in \ref{thm:Holder_inequality} applied to $(f(x) - f(x-u))(\Delta_N(u))^{1/p}$ and $(\Delta_N(u))^{1/q}$ 
   \begin{align*}
     |f(x) - \sigma_N(x)| &= \left| \int_0^1 (f(x) - f(x-u))\Delta_N(u) \right| \ du \\
           &\le \left( \int_0^1 |f(x) - f(x-u)|^{p} \Delta_N(u) \ du \right)^{1/p} \left( \int_0^1 \Delta_N(u) \ du \right)^{1/q} \\
