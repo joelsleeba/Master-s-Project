@@ -15,18 +15,17 @@ Recall that in definiton \ref{def:Lp_function}, we've discussed what is an $L^p$
   \label{thm:Minkowski_inequality_for_integrals}
  Let $1 < p < \infty$ then, 
   $$\left(\int_a^b |f(x) + g(x)|^p dx \right)^{1/p} \le \left( \int_a^b |f(x)|^p dx \right)^{1/p} + \left( \int_a^b |g(x)|^p dx \right)^{1/p}$$
-\end{theorem}
-
+\end{theorem} 
 
 \subsection{Fourier Series in $L^2(\T)$}
 Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$ functions we first prove some important results.
-\begin{theorem}
-  \label{thm:L2_functions_are_continuous_in_L2_norm}
+\begin{proposition}
+  \label{prop:L2_functions_are_continuous_in_L2_norm}
   If $f \in L^2(\T)$, then
   \begin{displaymath}
    \lim_{\delta \to 0} \int_0^1 |f(x+\delta) - f(x)|^2 dx = 0
   \end{displaymath}
-\end{theorem}
+\end{proposition}
 \begin{proof}
   From measure theory we know that continuous functions are dense in $L^2(\T)$. Then given any $\epsilon$ there exists a function $g\in C(\T)$ such that $\|f-g\|_2 < \epsilon$. Then,
   $$ f(x+\delta) - f(x) = (f(x+\delta) - g(x+\delta)) - (f(x) - g(x)) + ( g(x+\delta) - g(x))$$
@@ -35,10 +34,10 @@ Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$
   Now since $g$ is continuous on $\T$ it is uniformly continuous (since it is continuous on $\R$, it'll be continuous on $[0,1]$, a compact set) and therefore $\delta$ can be taken such that $\|g(x+\delta) - g(x) \|_2 < \epsilon$. Hence the theorem.
 \end{proof}
 
-\begin{theorem}
-  \label{thm:convolution_of_L2_functions}
+\begin{proposition}
+  \label{prop:convolution_of_L2_functions}
   If $f, g \in L^2(\T)$, then their convolution, $f*g$ is continuous and moreover $\|f*g\|_{\infty} \le \|f\|_2 \|g\|_2$
-\end{theorem}
+\end{proposition}
 \begin{proof}
   $$(f*g)(x+\delta) - (f*g)(x) = \int_0^1 f(u)(g(x+\delta - u) - g(x-u)) du $$
   Therefore by Cauchy Shwarz inequality, 
@@ -46,7 +45,7 @@ Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$
     |f*g(x+\delta) - f*g(x)| &= \left| \int_0^1 f(u) (g(x + \delta -u)- g(x-u)) du \right| \\
           &\le \|f\|_2 \left( \int_0^1|g(x+\delta - u) - g(x-u)|^2 du \right)^{1/2} \\
   \end{align*}
-  which converge to zero as $\delta \to 0$ by theorem \ref{thm:L2_functions_are_continuous_in_L2_norm}. Therefore $f*g$ is continuous in $\T$.
+  which converge to zero as $\delta \to 0$ by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm}. Therefore $f*g$ is continuous in $\T$.
   Also, 
   \begin{align*}
     |f*g(x)| &= \left| \int_0^1 f(u)g(x-u) du \right| \\
@@ -89,7 +88,7 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
           & = I_1 + I_2
   \end{align*}
 
-  Also from theorem \ref{thm:L2_functions_are_continuous_in_L2_norm}, given $\epsilon$, we can find $\delta$ such that 
+  Also from proposition \ref{prop:L2_functions_are_continuous_in_L2_norm}, given $\epsilon$, we can find $\delta$ such that 
   $$ \int_0^1|f(x) - f(x-\delta)|^2 \ dx < \epsilon$$
 
   Then for that choice of $\delta$,
@@ -106,13 +105,13 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
 \end{proof}
 
 \subsection{Fourier Series in $L^p(\T)$}
-\begin{theorem}
-  \label{thm:Lp_functions_are_continuous_in_Lp_norm}
+\begin{proposition}
+  \label{prop:Lp_functions_are_continuous_in_Lp_norm}
   If $f \in L^p(\T)$, then
   \begin{displaymath}
    \lim_{\delta \to 0} \int_0^1 |f(x+\delta) - f(x)|^p dx = 0
   \end{displaymath}
-\end{theorem}
+\end{proposition}
 \begin{proof}
   From measure theory we know that continuous functions are dense in $L^p(\T)$. Then given any $\epsilon$ there exists a function $g\in C(\T)$ such that $\|f-g\|_p < \epsilon$. Then,
   $$ f(x+\delta) - f(x) = (f(x+\delta) - g(x+\delta)) - (f(x) - g(x)) + ( g(x+\delta) - g(x))$$
@@ -122,10 +121,10 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
   Now since $g$ is continuous on $\T$ it is uniformly continuous (since it is continuous on $\R$, it'll be continuous on $[0,1]$, a compact set) and therefore $\delta$ can be taken such that $\|g(x+\delta) - g(x) \|_p < \epsilon$. Hence the theorem.
 \end{proof}
 
-\begin{theorem}
-  \label{thm:convolution_of_Lp_functions}
+\begin{proposition}
+  \label{prop:convolution_of_Lp_functions}
   If $f \in L^p(\T)$ and $g \in L^q(\T)$, then their convolution, $f*g$ is continuous and moreover $\|f*g\|_{\infty} \le \|f\|_p \|g\|_q$
-\end{theorem}
+\end{proposition}
 \begin{proof}
   $$(f*g)(x+\delta) - (f*g)(x) = \int_0^1 f(u)(g(x+\delta - u) - g(x-u)) du $$
   Therefore by Minkowski's inequality from theorem \ref{thm:Minkowski_inequality_for_integrals}, 
@@ -133,7 +132,7 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
     |f*g(x+\delta) - f*g(x)| &= \left| \int_0^1 f(u) (g(x + \delta -u)- g(x-u)) du \right| \\
           &\le \|f\|_p \left( \int_0^1|g(x+\delta - u) - g(x-u)|^q du \right)^{1/q} \\
   \end{align*}
-  which converge to zero as $\delta \to 0$ by theorem \ref{thm:Lp_functions_are_continuous_in_Lp_norm}. Therefore $f*g$ is continuous in $\T$.
+  which converge to zero as $\delta \to 0$ by proposition \ref{prop:Lp_functions_are_continuous_in_Lp_norm}. Therefore $f*g$ is continuous in $\T$.
   Also, 
   \begin{align*}
     |f*g(x)| &= \left| \int_0^1 f(u)g(x-u) du \right| \\
@@ -177,7 +176,7 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
           & = I_1 + I_2
   \end{align*}
 
-  Also from theorem \ref{thm:Lp_functions_are_continuous_in_Lp_norm}, given $\epsilon$, we can find $\delta$ such that 
+  Also from proposition \ref{prop:Lp_functions_are_continuous_in_Lp_norm}, given $\epsilon$, we can find $\delta$ such that 
   $$ \int_0^1|f(x) - f(x-\delta)|^p \ dx < \epsilon$$
 
   Then for that choice of $\delta$,

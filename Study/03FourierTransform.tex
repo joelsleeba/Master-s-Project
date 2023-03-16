@@ -1,0 +1,47 @@
+%TeX root = main.tex
+\newpage
+\section{Fourier Transform}
+
+\subsection{Definiton and basic properties}
+  While defining Fourier series we were mainly focused on periodic functions. Now we'll try to expand that into another set of functions. We'll be interested on functions in $L^1(\R)$, that is those real or complex valued functions $f(x)$ in $\R$ for which $$\int_{-\infty}^{\infty} |f(x)| \ dx < \infty$$. For those functions in $L^1(\R)$ the integral above will be called the $L^1$ norm of the function $f$ and will be denoted by $\|f\|_{L^1(\R)}$ or in short $\|f\|_1$. Also note that the notations $\int_{\R}$ and $\int_{-\infty}^{\infty}$ means the same and we might use them interchangably as we see fit.
+
+  Analogus to what we did in finding the $n^{th}$ fourier coefficient in definition \ref{def:fourier_coefficient}, we'll define the fourier transform of $f$
+
+  \begin{definition}[Fourier transform of a function $f$]
+    \label{def:fourier_transform_of_f}
+    Let $f \in L^1(\R)$, then we define the Fourier tranform of $f$ as $$\hatf(t) = \int_{\R} f(x) e^{-2 \pi itx} \ dx$$
+  \end{definition}
+  Note that while we say $\hatf$ is the Fourier transform of the function $f$, the term "Fourier tranform" is also used for the map which takes $f$ to $\hatf$.
+
+  Also note that $\hatf(t)$ is a finite quantity (real or complex) for all $t \in \T$ since $f\in L^1(\T)$ and $|e^{-2 \pi itx}| = 1$ implies $$|\hatf(t)| \le \int_{-\infty}^{\infty}\left|f(x)\right| dx < \infty$$ By the linearity of the integral we can also show that for functions $f, g \in L^2(\R)$ and scalars $\mu, \nu$, $\widehat{\mu f + \nu g}(t) = \mu \hatf(t) + \nu\hatg(t)$.
+
+  Now we'll prove some important properties of Fourier transforms. Note that this will almost remind you of the properties of Fourier coefficinets in proposition \ref{prop:properties_of_fourier_coefficients}. 
+  \begin{proposition}[Properties of Fourier transform]
+    \label{prop:properties_of_fourier_transform}
+    If $f\in L^1(\R)$ and $\hatf$ is the Fourier tranform of $f$ as in definition \ref{def:fourier_transform_of_f}, then 
+    \begin{enumerate}[label=(\alph*)]
+      \item If $a \in \R$ and $g(x) = f(x+a)$ for all $x \in \R$, then $g \in L^1(\R)$ and $\hatg(t) = e^{2\pi ita} \hatf(t)$ for all $t$.
+      \item If $b \in \R$ and $h(x) = e^{2\pi bx}f(x)$, then $h \in L^1(\R)$ and $\hath(t) = \hatf(t-b)$ for all $t$.
+      \item If $c \in \R$ is not $0$, and $j(x) = f(cx)$, then $j \in L^1(\R)$ and $\hatj(t) = \frac{\hatf(t/c)}{|c|}$ for all $t$.
+      \item if $l(x) = \overline{f(x)}$, then $l\in L^1(\R)$ and $\hatl(t) = \overline{\hatf(-t)}$
+    \end{enumerate}
+  \end{proposition}
+
+  \begin{proof}
+    Note that by appropriate change of variable we can see that all the above functions $g, h, j, l$ are in $L^1(\R)$. We'll prove the other properties.
+    \begin{enumerate}[label=(\alph*)]
+      \item By the change of variable $y = x+a$, we get that
+        $$\hatg(t) = \int_{\R}g(x)e^{-2 \pi itx} \ dx = \int_\R f(x+a)e^{-2\pi itx} \ dx = e^{2\pi ita}\int_\R f(y)e^{-2 \pi ity} \ dx$$
+        which is equal to $e^{2\pi ita}\hatf(t)$
+
+      \item $$\hath(t) = \int_{\R}h(x)e^{-2\pi itx} \ dx = \int_\R f(x)e^{-2\pi i(t-b)x} \ dx = \hatf(t-b)$$
+
+      \item Here we'll need to be careful because $c$ maybe negative.Assume $c>0$, then by a change of variable $y=cx$, we get $$\hatj(t) = \int_{-\infty}^{\infty} j(x)e^{-2\pi itx} \ dx = \int_{-\infty}^{\infty} f(cx)e^{-2\pi itx} \ dx = \frac{1}{c}\int_{-\infty}^{\infty} f(y)e^{-2\pi i \frac{t}{c}y} $$
+        Then if $c>0$, $\hatj(t) = \frac{\hatf(t/c)}{c}$. Now if $c<0$ the limits of integration will reverse, i.e $$\int_{-\infty}^{\infty} f(cx)e^{-2\pi itx} \ dx = \frac{1}{c}\int_{\infty}^{-\infty} f(y)e^{-2\pi i \frac{t}{c}y} \ dx = \frac{1}{-c}\int_{-\infty}^{\infty} f(y)e^{-2\pi i \frac{t}{c}y} \ dx$$
+        Which shows that if $c\neq 0$, $\hatj(t) = \frac{\hatf(t/c)}{|c|}$.
+      \item Since we know that integral of the conjugate is the conjugate of the integral, $$\hatl(t) = \int_\R \overline{f(x)} e^{-2\pi itx} = \int_\R \overline{f(x) e^{-2\pi i(-t)x}} = \overline{\int_\R f(x) e^{-2\pi i(-t)x}} = \overline{\hatf(-t)}$$
+    \end{enumerate}
+  \end{proof}
+
+
+
