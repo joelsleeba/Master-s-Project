@@ -43,6 +43,130 @@
     \end{enumerate}
   \end{proof}
 
-\subsection{Fourier tranforms in $L^2(\R)$}
-Similar to how we defined Fourier transforms for functions in $L^1(\R)$ in definition \ref{def:fourier_transform_of_f}, we can define the same for functions in $L^2(\R)$. For any function $f\in L^2(\R)$, we define the Fourier transform of $f$ as $$\hatf(t) = \int_{\R}f(x) e^{-2\pi itx} \ dx$$. 
+  Now we extend the proposition \ref{prop:L1_functions_are_continuous_in_L1_norm} to the whole of $\R$
+  \begin{proposition}
+    \label{prop:L1_functions_are_continuous_in_L1_norm_in_R}
+    If $f \in L^1(\R)$, then $$\lim_{\delta \to \infty} \int_\R |f(x+\delta) - f(x)| \ dx = 0$$
+  \end{proposition}
+  \begin{proof}
+    Since $f\in L^1(\R)$, there exists an $X$ such that $$\int_{|x|>X-1} |f(x)| \ dx < \epsilon$$
+    Then by triangle inequality, for $\delta \le 1$, $$\int_\R |f(x+\delta) - f(x)| \ dx \le \int_{-X}^X |f(x+\delta) - f(x)| \ dx + 2\epsilon$$
+    Now since $f \in L^1(\R)$ and continuous functions are dense in $L^1$ norm in compact intervals, there exists a $g \in C([-X-1, X+1]) \cap L^1([-X, X])$ such that for any given $\epsilon$, $$\int_{-X-1}^{X+1} |f(x) - g(x)| \ dx < \epsilon$$
+    Then by triangle inequality $$\int_{-X}^X |f(x+\delta) - f(x)| \ dx \le \int_{-X}^X |g(x+\delta) - g(x)| \ dx + 2\epsilon$$. Morever since $g$ is continuous on $[-X-1, X+1]$, it is uniformly continuous on the interval and hence the integral tends to $0$ as $\delta \to 0$. Hence the proof.
+  \end{proof}
 
+  Using the above result we'll prove an important theorem
+  \begin{theorem}[Riemann Lebesgue Lemma]
+    Let $f \in L^1(\R)$. Then $$\lim_{t \to \pm \infty} \hatf(t) = 0$$
+  \end{theorem}
+  \begin{proof}
+    We know that $$\hatf(t) = \int_\R f(x)e^{-2 \pi itx} \ dx $$
+    By change of variables $x = y + \frac{1}{2t}$, we see that the above equation becomes $$\hatf(t) = \int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y+ \frac{1}{2t})} \ dy = -\int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y)} \ dy  $$
+    Therefore $$2\hatf(t) = \int_\R (f(x + \frac{1}{2t}) - f(x))e^{-2 \pi itx} \ dx $$
+    and therefore $$\left|\hatf(t)\right| \le \frac{1}{2} \int_\R |f(x + \frac{1}{2t}) - f(x)| dx$$
+    Now by proposition \ref{prop:L1_functions_are_continuous_in_L1_norm_in_R} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$. Hence proved. 
+  \end{proof}
+
+  Convolution was one important operation which helped us in the theory of Fourier series. We will define the convolution of two functions in $L^1(\R)$ the same way we defined it for functions in $L^1(\T)$ in definition \ref{def:convolution_of_functions_in_L^1(T)}. That is if $f, g \in L^1(\R)$, we define the convolution of $f$ and $g$ as $$(f*g)(x) = \int_{\R} f(x-y)g(y) dy$$
+  But unlike $L^1(\T)$, $L^1(\R)$ is not finite measure space. So we'll need to make sure this definition of convolution is well defined for functions in $L^1(\R)$. 
+
+  \begin{proposition}
+    For functions $f, g \in L^1(\R)$, $f(x-y)g(y)$ is Lebesgue measurable in the product space $\R^2$. Moreover $f(x-y)g(y) \in L^1(\R^2)$. And therefore by Fubini's theorem $\int_\R f(x-y)g(y) dx$ exists and is well defined for all $x \in \R$. 
+  \end{proposition}
+  \begin{proof}
+    Consider $h, k : \R^2 \to \R$ defined as $h(x, y) = f(x)$ and $k(x, y) = g(x)$. Then $h^{-1}(a, \infty) = f^{-1}(a, \infty) \times \R$ and $k^{-1}(b, \infty) = \R \times g^{-1}(b, \infty)$ and therefore $h, k$ are measurable functions. Moreover we know from the theory of measurable functions that the product of measurable functions is measurable. Therefore $F(x, y) = h(x, y)k(x, y) = f(x)g(y)$ is measurable. Also the map $T(x, y) = (x-y, y)$ is linear. Hence $H(x, y) = F\circ T(x, y) = f(x-y)g(y)$ is measurable. 
+
+    Also $H \in L^1(\R^2)$ since $$\int_{\R^2} \left|H(x, y)\right| dx \ dy  = \int_\R \left( \int_\R \left|f(x-y)\right| dx \right)|g(y)| \ dy = \int_\R \|f\|_1 |g(y)| \ dy = \|f\|_1\|g\|_1$$
+    $f(x-y)g(y) \in L^1(\R^2)$.
+    
+  \end{proof}
+
+  Almost all the properties of the convolution in $L^1(\T)$ has its analogues in $L^(\R)$, but we will only quote the most important one, that is the convolution is commutative, $f*g = g*f$. One can easily prove this using a change of variable like we did in proposition \ref{prop:properties_of_convolution}
+
+  We'll also prove that for functions $f, g \in L^1(\R)$, $f*g \in L^1(\R)$.
+  \begin{proposition}
+    \label{prop:convolution_is_well_defined_in_L^1(R)}
+    Let $f, g \in L^1(\R)$, then $f*g \in L^1(\R)$ and $\widehat{f*g}(t) = \hatf(t)\hatg(t)$.
+  \end{proposition}
+  \begin{proof}
+    By the definition of the convolution of $f$ and $g$, 
+    \begin{align*}
+      \int_\R|(f*g)(x)| dx &= \int_\R \left| \int_\R f(x-y)g(y) \ dy \right| \ dx \\
+      & \le \int_\R \int_\R |f(x-y)g(y)| \ dy \ dx
+    \end{align*}
+    Now by Fubini's theorem we know that last integral is equal to $$\int_{\R^2}f(x-y)g(y) $$ and by previous theorem it is less than or equal to $\|f\|_1\|g\|_1$.
+
+    For the fourier transform
+    \begin{align*}
+      \widehat{f*g}(t) &= \int_\R \widehat{f*g}(x) e^{-2 \pi itx} \ dx \\
+      &= \int_\R \int_\R f(x-y)g(y) e^{-2 \pi itx} \ dy \ dx \\
+      &= \int_\R g(y)e^{-2 \pi ity}\int_\R f(x-y) e^{-2 \pi it (x-y)} \ dx \ dy \\
+      &= \int_\R g(y)e^{-2 \pi ity} \hatf(t) dy \\
+      &= \hatf(t) \hatg(t) \\
+    \end{align*}
+    Note that the change of variable is justified since we know that  for all $x \in \R$, $|e^{-2\pi itx}| = 1$ and hence the integral is absolutely convergent by the proof similar to last theorem. 
+  \end{proof}
+
+
+\subsection{Fourier Inversion Formula}
+
+\subsection{Fourier Tranform in $L^1(\R) \cap 
+L^2(\R)$}
+We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that their $L^1$ norm is finite. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we might not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
+
+Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
+
+Now we'll prove an important result which is the $L^2(\R)$ analogue of the proposition \ref{prop:L1_functions_are_continuous_in_L1_norm_in_R}
+
+\begin{proposition}
+  \label{prop:L2_functions_are_continuous_in_L2_norm_in_R}
+  If $f\in L^2(\R)$, then $$\lim_{\delta \to 0} \int_\R |f(x+\delta) - f(x)|^2 \ dx = 0 $$
+\end{proposition}
+\begin{proof}
+  Since $f\in L^2(\R)$, for every $\epsilon > 0$ there exist an $X$ such that $$\left( \int_{|x|> X-1} |f(x)|^2 \ dx \right)^{\frac{1}{2}} < \epsilon$$
+  Therefore by triangle inequality, for $\delta \le 1$, $$ \left( \int_\R |f(x+\delta) - f(x)|^2 \ dx \right)^{\frac{1}{2}} \le \left( \int_{-X}^X |f(x+\delta) - f(x)|^2 \ dx \right)^{\frac{1}{2}} + 2\epsilon$$
+  Now since continuous functions are dense in $L^2$ norm on compact intervals, there exists a $g \in C([-X-1, X+1])\cap L^2([-X-1, X+1])$ such that $$ \|f-g\|_{L^2([-X-1, X+1])} = \left( \int_{-X-1}^{X+1} |f(x) - g(x)|^2 \ dx \right)^{\frac{1}{2}} < \epsilon $$
+  Then by triangle inequality $$ \left( \int_{-X}^X |f(x+\delta) - f(x)|^2 \ dx \right)^{\frac{1}{2}} \le \left( \int_{-X}^X |g(x+\delta) - g(x+\delta)|^2 \ dx \right)^{\frac{1}{2}} + 2\epsilon $$
+  Now since $g$ is continuous in a compact space $[-X-1, X+1]$, it is uniformly continuous and therefore as $\delta \to 0$ the above integral tends to $0$. Hence the proof.
+\end{proof}
+
+Now we'll discuss about the convolution of functions in $L^2(\R)$. We'll follow the same definition as before in $L^1(\R)$. (For formula refer to definition \ref{def:convolution_of_functions_in_L^1(T)}). It is natural to think if such a definition is well defined. In fact by the Holders inequality (Theorem \ref{thm:Holder_inequality}) one can show that it is well defined. Since if $f, g \in L^2(\R)$, then 
+  \begin{align*}
+    |f*g(x)| &= \left|\int_R f(x-y)g(y) \ dy \right|\\
+        &\le \int_\R |f(x-y)g(y)| \ dy \\
+        &\le \left(\int_\R |f(x-y)|^2 \ dy \right)^{\frac{1}{2}} \left(\int_\R |g(y)|^2 \ dy \right)^{\frac{1}{2}} \\
+        &= \|f\|_2 \|g\|_2
+  \end{align*}
+
+We can now discuss about the convolution of $L^2(\R)$ functions. We'll now show that the convolution of two functions in $L^2(\R)$ is uniformly continuous. This proposition will be a stepping stone to the celebrated Plancherel's Theorem.
+
+  \begin{proposition}
+    If $f, g \in L^2(\R)$, then $f*g$ is uniformly continuous.
+  \end{proposition}
+  \begin{proof}
+    Let $h(x) = (f*g)(x)$. Then $$h(x+\delta) - h(x) = \int_\R (f(x+\delta - y) - f(x-y)) g(y) \ dy$$
+    By Holder's inequality, 
+    \begin{align*}
+      |h(x+\delta) - h(x)| &\le \int_\R \left|(f(x+\delta - y) - f(x-y)) g(y) \right| \ dy \\
+      &\le \left( \int_\R \left|f(x+\delta - y) - f(x-y) \right|^2 dy\right)^{\frac{1}{2}} \left( \int_\R \left|g(y)\right|^2 \right)^{\frac{1}{2}}
+    \end{align*}
+    where the first integral converge to zero by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm_in_R} and the last integral is a constant. Since the first integral is over all of $\R$, it is independent of $x$ and hence the result follows.
+  \end{proof}
+
+Now we'll prove the famous Plancherel's theorem.
+\begin{theorem}[Plancherel's Theorem]
+  \label{thm:Plancherel's_theorem}
+  If $f \in L^1(\R) \cap L^2(\R)$, then $$\int_\R |f(x)|^2 \ dx = \int_\R |\hatf(t)|^2 \ dt $$
+\end{theorem}
+\begin{proof}
+  Let $g(x) = \overline{f(-x)}$. Then $g \in L^1(\R)\cap L^2(\R)$. Put $h(x) = (f*g)(x)$. Since $f, g \in L^1(\R)$, by proposition \ref{prop:convolution_is_well_defined_in_L^1(R)}, $h \in L^1(\R)$. Since $f, g \in L^2(\R)$, by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm_in_R}, $h$ is uniformly continuous. 
+  Hence by theorem \ref{thm:}  $$h(x) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t)e^{2\pi itx} \ dt $$ for all $x$. In particular, for $x=0$ we get $$h(0) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t) \ dt$$
+  By the proposition \ref{prop:convolution_is_well_defined_in_L^1(R)} $\hath(t) = \hatf(t)\hatg(t)$. By the definition of $g$, and combining (c), (d) from proposition \ref{prop:properties_of_fourier_transform}, we get that $\hatg(t) = \overline{\hatf(t)}$.
+  Since $$h(0) = (f*g)(0) = \int_\R f(y)g(-y) \ dy = \int_\R |f(y)|^2 \ dy$$
+  we get that $$\int_\R |f(x)|^2 \ dx = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) |\hatf(t)|^2 \ dt$$
+  Since the integral in the right is always positive, the limit is an increasing limit. Then for any $0<\epsilon<1$, we have $$(1-\epsilon) \int_{-\epsilon T}^{\epsilon T} |\hatf(t)|^2 \ dt \le \int_{-T}^{T} \left( 1-\frac{|t|}{T} \right) |\hatf(t)|^2 dt \le \int_\R |\hatf(t)|^2 \ dt$$
+  Then as $T \to \infty$, $$(1-\epsilon) \int_\R |\hatf(t)|^2 \ dt \le \int_{\R} |f(t)|^2 dt \le \int_\R |\hatf(t)|^2 \ dt$$
+  Since $\epsilon$ can be made arbitary small, the result follows.
+
+
+\end{proof}

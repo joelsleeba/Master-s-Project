@@ -125,9 +125,10 @@
   \subsection{Convolution}
   Now we'll define another important operation with function called the convolution of two functions.
   \begin{definition}
+    \label{def:convolution_of_functions_in_L^1(T)}
     Let $f, g \in L^1(\T)$, then the convolution of $f$ and $g$ is defined as 
     \begin{displaymath}
-      f*g(x) = \int_0^1 f(y)g(x-y)dy
+      f*g(x) = \int_0^1 f(x-y)g(y)dy
     \end{displaymath}
   \end{definition}
 
@@ -154,20 +155,20 @@
 
     Put $v = x-y$, we get $dv = -dy$ and 
     \begin{align*}
-      f*g(x)  &= \int_{0}^{1}f(y)g(x-y) dy \\
-              &= -\int_{x}^{x-1} f(x - v)g(v) dy\\
-              &= \int_{x-1}^{x} g(v)f(x-v) dy \\
-              &= \int_{0}^{1}g(v)f(x-v)dy  &\text{by lemma } \ref{lem:integral_of_periodic_function}\\
+      f*g(x)  &= \int_{0}^{1}f(x-y)g(y) \ dy \\
+              &= -\int_{x}^{x-1} f(v)g(x-v) \ dv\\
+              &= \int_{x-1}^{x} g(x-v)f(v) \ dv \\
+              &= \int_{0}^{1}g(x-v)f(v) \ dv  &\text{by lemma } \ref{lem:integral_of_periodic_function}\\
               &=g*f(x)
     \end{align*} 
   \end{proof}
   
 
   We'll prove another important result that the convolution of two $L^1(\T)$ functions is again in $L^1(\T)$.
-  \begin{theorem}
-    \label{thm:convolution_is_in_L1}
+  \begin{proposition}
+    \label{prop:convolution_is_in_L1}
   Let $f, g \in L^1(\T)$. Then $h = f*g \in L^1(\T)$, and $\hath(n) = \hatf(n)\hatg(n)$.
-  \end{theorem}
+  \end{proposition}
   % \begin{proof}
   %   Consider the function $h: \T^2 \to \T$ defined as $h(x, y) = f(x)$. Then
   %   \begin{align*}

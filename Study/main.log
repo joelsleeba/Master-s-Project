@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  16 MAR 2023 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  18 MAR 2023 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1016,76 +1016,76 @@ Package mdframed Warning: You got a bad break
 (mdframed)                because the last box will be empty
 (mdframed)                you have to change it manually
 (mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 132.
+(mdframed)                or something else on input line 133.
 
 [6]
-<./figures//convolution.jpg, id=124, 642.4pt x 481.8pt>
+<./figures//convolution.jpg, id=128, 642.4pt x 481.8pt>
 File: ./figures//convolution.jpg Graphic file (type jpg)
 <use ./figures//convolution.jpg>
-Package pdftex.def Info: ./figures//convolution.jpg  used on input line 137.
+Package pdftex.def Info: ./figures//convolution.jpg  used on input line 138.
 (pdftex.def)             Requested size: 250.95476pt x 188.21736pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 142.
+(mdframed)              on input line 143.
 [7 <./figures//convolution.jpg>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 167.
+(mdframed)              on input line 168.
 [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 211.
+(mdframed)              on input line 212.
 
-LaTeX Warning: Command \L invalid in math mode on input line 213.
+LaTeX Warning: Command \L invalid in math mode on input line 214.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 220.
+(mdframed)              on input line 221.
 
-LaTeX Warning: Command \L invalid in math mode on input line 222.
+LaTeX Warning: Command \L invalid in math mode on input line 223.
 
 [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 231.
+(mdframed)              on input line 232.
 [10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 255.
+(mdframed)              on input line 256.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 267.
+(mdframed)              on input line 268.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 277.
+(mdframed)              on input line 278.
 [11] [12] [13] [14]
-Overfull \hbox (11.34088pt too wide) detected at line 407
+Overfull \hbox (11.34088pt too wide) detected at line 408
 []
  []
 
 [15]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 412.
+(mdframed)              on input line 413.
 [16]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 475.
+(mdframed)              on input line 476.
 [17]
-Overfull \hbox (24.23596pt too wide) detected at line 497
+Overfull \hbox (24.23596pt too wide) detected at line 498
 []
  []
 
 [18]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 518.
+(mdframed)              on input line 519.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 528.
+(mdframed)              on input line 529.
 
-Overfull \hbox (20.43709pt too wide) in paragraph at lines 530--531
-[][][]\OT1/cmr/bx/n/12 Theorem 3.3[]--Fej^^Ser's The-o-rem []\OT1/cmr/m/n/12 Le
+Overfull \hbox (20.43709pt too wide) in paragraph at lines 531--532
+[][][]\OT1/cmr/bx/n/12 Theorem 3.2[]--Fej^^Ser's The-o-rem []\OT1/cmr/m/n/12 Le
 t $\OML/cmm/m/it/12 f \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]\OT1/cmr/m/n/12 (\
 U/msb/m/n/12 T\OT1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/c
 mm/m/it/12 a[]\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/
@@ -1095,7 +1095,7 @@ cmm/m/it/12 x\OT1/cmr/m/n/12 )$
 [19] [20]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 572.
+(mdframed)              on input line 573.
 ) (./02LpConvergence.tex [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1193,26 +1193,84 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 19.
 [29]
 
+LaTeX Warning: Reference `prop:L1_functions_are_continuous_in_L1_norm' on page 
+30 undefined on input line 46.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 47.
+Package mdframed Info: Not enough space on this page on input line 50.
+[30]
+Package mdframed Info: Not enough space on this page on input line 50.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 59.
+[31]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 73.
+
+Overfull \hbox (6.74748pt too wide) detected at line 79
+[][] [] \OML/cmm/m/it/12 dx dy \OT1/cmr/m/n/12 = [][] [] \OMS/cmsy/m/n/12 j\OML
+/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OMS/cmsy/m/n
+/12 j \OML/cmm/m/it/12 dy \OT1/cmr/m/n/12 = [][] \OMS/cmsy/m/n/12 k\OML/cmm/m/i
+t/12 f\OMS/cmsy/m/n/12 k[]j\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+y\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 dy \OT1/cmr/m/n/12 = \OMS
+/cmsy/m/n/12 k\OML/cmm/m/it/12 f\OMS/cmsy/m/n/12 k[]k\OML/cmm/m/it/12 g\OMS/cms
+y/m/n/12 k[]
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 87.
+[32]
+Package mdframed Info: Not enough space on this page on input line 90.
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 46.
+(hyperref)                removing `math shift' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 46.
+(hyperref)                removing `superscript' on input line 114.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 46.
+(hyperref)                removing `\cap' on input line 114.
 
-[30]) [31] (./main.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 114.
+
+[33]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 121.
+[34]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 143.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 157.
+
+LaTeX Warning: Reference `thm:' on page 35 undefined on input line 163.
+
+[35]) [36] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ABAEF36DA57EED72CA4DE96AE9490018;2509.
+(rerunfilecheck)             Checksum: 049BCB9372F4C00C6B5E1858687A72AC;2732.
  ) 
 Here is how much of TeX's memory you used:
- 35644 strings out of 478238
- 834466 string characters out of 5850455
+ 35665 strings out of 478238
+ 834894 string characters out of 5850455
  1481847 words of memory out of 5000000
- 53168 multiletter control sequences out of 15000+600000
+ 53176 multiletter control sequences out of 15000+600000
  490097 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,103p,715b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1230,10 +1288,10 @@ sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (31 pages, 349238 bytes).
+Output written on main.pdf (36 pages, 368492 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 368 compressed objects within 4 object streams
- 120 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 407 compressed objects within 5 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
