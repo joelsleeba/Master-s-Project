@@ -109,6 +109,22 @@
 
 
 \subsection{Fourier Inversion Formula}
+% For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
+% But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogus techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{-2 \pi itx} \ dt$$
+% For the Fourier transform, these functions will serve as analogue for trigonometric polynomials in Fourier series.
+
+Here we'll prove some propositions which will help us in $L^2(\R)$. 
+\begin{proposition}
+  We have $$\int_{-\infty}^{\infty} \left(\frac{sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
+\end{proposition}
+\begin{proof}
+  from (b) and (e) of proposition \ref{prop:properties_of_fejer_kernel}, and lemma \ref{lem:integral_of_periodic_function} we get that $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\sin (\pi x)}\right)^2 \ dx = 1$$
+  We can write this integral as $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\pi x}\right)^2 \ dx + \int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{\sin^2 \pi Nx}{N} \left( \frac{1}{\sin^2 \pi x} - \frac{1}{(\pi x)^2} \right) \ dx = I_1 + I_2 = 1 $$
+  For $I_1$, we see that by the change of variable $y = Nx$, it becomes $$I_1 = \int_{-\frac{N}{2}}^{\frac{N}{2}} \left(\frac{\sin(\pi x)^2}{\pi x}\right)^2 \ dx $$. 
+  And for $I_2$, we see that the difference of fractions inside paranthesis is $$\frac{(\pi x)^2 - \sin^2(\pi x)}{(\pi x \sin(\pi x))^2} = \frac{(\pi x - \sin(\pi x))(\pi x + \sin(\pi x))}{(\pi x \sin(\pi x))^2}$$
+\end{proof}
+
+
 
 \subsection{Fourier Tranform in $L^1(\R) \cap 
 L^2(\R)$}
