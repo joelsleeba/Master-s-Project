@@ -116,10 +116,11 @@ For the Fourier transform, these functions will serve as analogue for trigonomet
 We'll now prove an important property of functions $B(x)$ as defined above. 
 
 \begin{proposition}
-  Let $b \in L^1[-T, T]$, and $f \in L^1(\R)$, then $$B(x) = \int_{_T}^T b(t)e^{2\pi itx} \ dt \implies (f*B)(x) = \int_{-T}^T b(t) \hatf(t)e^{2\pi itx} \ dx$$
+  \label{prop:property_of_analogue_of_trigonometric_functions}
+  Let $b \in L^1[-T, T]$, and $f \in L^1(\R)$, then $$B(x) = \int_{-T}^T b(t)e^{2\pi itx} \ dt \implies (f*B)(x) = \int_{-T}^T b(t) \hatf(t)e^{2\pi itx} \ dx$$
 \end{proposition}
 \begin{proof}
-  Since $|e^{2 \pi itx}| = 1$, and $b \in L^1[-T, T]$, by triangle inequaltiy $$|B(x)| \le \int_{_T}^T |b(t)| \ dt < \infty$$
+  Since $|e^{2 \pi itx}| = 1$, and $b \in L^1[-T, T]$, by triangle inequaltiy $$|B(x)| \le \int_{-T}^T |b(t)| \ dt < \infty$$
   Thus $B$ is a bounded function in the finite interval $[-T, T]$. Hence $|(f*B)(x)| \le \|f\|_1 \|b\|_1$ for all $x$. Moreover, 
   \begin{align}
     (f*B)(x) &= \int_\R f(x-y)B(y) \ dy \\
@@ -146,7 +147,7 @@ Now we'll prove some propositions which will help us in $L^2(\R)$.
 Let's define the $L^1(\R)$ analogue of Fej\'er kernel. 
 \begin{definition}
   For real numbes $T > 0$, we define 
-  \label{def:L1(R)_analogue_of_Fejer_kernel}
+  \label{def:L1(R)_analogue_of_fejer_kernel}
   $$\Delta_T(x) =
   \begin{cases}
     \frac{1}{T}\left(\frac{\sin \pi Tx}{\pi x}\right)^2, &\text{ if }x \neq 0\\
@@ -180,6 +181,34 @@ Let's define the $L^1(\R)$ analogue of Fej\'er kernel.
       Note that the above holds true for values $x\neq 0$ and when $x=0$, the integral reduces to $$\frac{1}{T}\int_{-T}^T (T-|t|) \ dt =  \frac{2}{T}\int_0^T(T-t) \ dt = T = \Delta(0)$$
     Hence the proof.
   \end{enumerate}
+\end{proof}
+
+From the above properties we conclude the following result. 
+\begin{corollary}
+  \label{cor:convolution_with_fejer_kernel_in_L1(R)}
+  If $f\in L^1(\R)$, and $\Delta_T$ is as in definition \ref{def:L1(R)_analogue_of_fejer_kernel}, then $$(f*\Delta_T)(x) = \int_{-T}^T \left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt$$
+\end{corollary}
+\begin{proof}
+  From last proposition we get that $$\Delta_T(x) = \int_{-T}^T \left(1-\frac{|t|}{T}\right)e^{-2 \pi itx} \ dx$$
+  Using the result of proposition \ref{prop:property_of_analogue_of_trigonometric_functions}, on $\Delta_T$, we get the result.
+\end{proof}
+
+Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (theorem \ref{thm:fejer_theorem})
+\begin{theorem}
+  \label{thm:L1(R)_analogue_of_fejer_theorem}
+  Let $f \in L^1(\R)$. If $f$ is continuous at $x$, then $$\lim_{x \to \infty} \int_{-T}{T}\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt = f(x)$$
+\end{theorem}
+\begin{proof}
+  Let $\epsilon$ be given, since we know that $f$ is continuous at $x$, there exist a $\delta$, such that $|f(x-y) - f(x)| < \epsilon$, when $|y| < \delta$. Also since we know that $\int_\R \Delta_T(x) \ dx = 1$ by proposition \ref{prop:properties_of_fejer_kernel_in_R} and by corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)},
+  \begin{align*}
+    \int_{-T}^T\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} dt - f(x) &= (f*\Delta_T)(x) - f(x) \\
+     &= \int_\R f(x-y) \Delta_T(y) dy - \int_\R f(x)\Delta_T(y) \ dy \\
+     &= \int_\R (f(x-y) - f(y)) \Delta_T(y) dy \\ 
+  \end{align*}
+  Now we'll evaluate the last integral into $I_1, I_2, I_3$, where $I_1$ is when $-\infty<y\le-\delta$, $I_2$ is when $-\delta < y < \delta$ and $I_3$ is $\delta \le y < \infty$. When $y$ is in $I_1$ and $I_3$, we see from the definition \ref{def:L1(R)_analogue_of_fejer_kernel} that since $|y| > |\delta|$ in $I_1$ and $I_3$, $|\Delta_T(y)| \le \frac{1}{T(\pi\delta)^2}$. Thus $$|I_1| \le \frac{1}{T\pi^2\delta^2}\int_{-\infty}^{-\delta} |f(x-y)| \ dy + |f(x)|\int_{-\infty}^{-\delta}\Delta_T(y) \ dy $$ $$|I_3| \le \frac{1}{T\pi^2\delta^2}\int^{\infty}_{\delta} |f(x-y)| \ dy + |f(x)|\int^{\infty}_{\delta}\Delta_T(y) \ dy $$
+  where the first integral in both the inequalities is less than $\|f\|_1$ which is finite, and second integral $$\int_{-\infty}^{-\delta} \Delta_T(y) \ dy = \int_\delta^\infty \Delta_T(y) \ dy \le \int_\delta^\infty \frac{1}{T\pi^2 \delta^2} \ dx = \frac{1}{T\pi^2 \delta}$$
+  Therefore $I_1, I_3 \to 0$, as $T\to \infty$. Now in $I_2$, by the continuity of $f$ at $x$, $$|I_2| \le \epsilon\int_{-\delta}^\delta \Delta_T(y) \ dy \le \epsilon \int_\R \Delta_T(y) \ dy = \epsilon$$
+  Therefore $I_2$ can also be made arbitarily small. Hence the theorem. 
 \end{proof}
 
 \subsection{Fourier Tranform in $L^1(\R) \cap 
@@ -232,7 +261,7 @@ Now we'll prove the famous Plancherel's theorem.
 \end{theorem}
 \begin{proof}
   Let $g(x) = \overline{f(-x)}$. Then $g \in L^1(\R)\cap L^2(\R)$. Put $h(x) = (f*g)(x)$. Since $f, g \in L^1(\R)$, by proposition \ref{prop:convolution_is_well_defined_in_L^1(R)}, $h \in L^1(\R)$. Since $f, g \in L^2(\R)$, by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm_in_R}, $h$ is uniformly continuous. 
-  Hence by theorem \ref{thm:}  $$h(x) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t)e^{2\pi itx} \ dt $$ for all $x$. In particular, for $x=0$ we get $$h(0) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t) \ dt$$
+  Hence by theorem \ref{thm:L1(R)_analogue_of_fejer_theorem}  $$h(x) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t)e^{2\pi itx} \ dt $$ for all $x$. In particular, for $x=0$ we get $$h(0) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t) \ dt$$
   By the proposition \ref{prop:convolution_is_well_defined_in_L^1(R)} $\hath(t) = \hatf(t)\hatg(t)$. By the definition of $g$, and combining (c), (d) from proposition \ref{prop:properties_of_fourier_transform}, we get that $\hatg(t) = \overline{\hatf(t)}$.
   Since $$h(0) = (f*g)(0) = \int_\R f(y)g(-y) \ dy = \int_\R |f(y)|^2 \ dy$$
   we get that $$\int_\R |f(x)|^2 \ dx = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) |\hatf(t)|^2 \ dt$$
