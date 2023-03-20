@@ -109,22 +109,78 @@
 
 
 \subsection{Fourier Inversion Formula}
-% For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
-% But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogus techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{-2 \pi itx} \ dt$$
-% For the Fourier transform, these functions will serve as analogue for trigonometric polynomials in Fourier series.
+For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
+But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogus techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
+For the Fourier transform, these functions will serve as analogue for trigonometric polynomials in Fourier series.
 
-Here we'll prove some propositions which will help us in $L^2(\R)$. 
+We'll now prove an important property of functions $B(x)$ as defined above. 
+
 \begin{proposition}
-  We have $$\int_{-\infty}^{\infty} \left(\frac{sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
+  Let $b \in L^1[-T, T]$, and $f \in L^1(\R)$, then $$B(x) = \int_{_T}^T b(t)e^{2\pi itx} \ dt \implies (f*B)(x) = \int_{-T}^T b(t) \hatf(t)e^{2\pi itx} \ dx$$
+\end{proposition}
+\begin{proof}
+  Since $|e^{2 \pi itx}| = 1$, and $b \in L^1[-T, T]$, by triangle inequaltiy $$|B(x)| \le \int_{_T}^T |b(t)| \ dt < \infty$$
+  Thus $B$ is a bounded function in the finite interval $[-T, T]$. Hence $|(f*B)(x)| \le \|f\|_1 \|b\|_1$ for all $x$. Moreover, 
+  \begin{align}
+    (f*B)(x) &= \int_\R f(x-y)B(y) \ dy \\
+    &= \int_\R f(x-y) \int_{-T}^T b(t)e^{2 \pi ity} \ dt \ dy \\
+    &= \int_{-T}^{T}b(t) e^{2 \pi itx}\int_\R f(x-y) e^{-2 \pi it(x-y)} \ dy \ dt \\
+    &= \int_{-T}^T b(t)\hatf(t)e^{2\pi itx} \ dt
+  \end{align}
+  Note that the change of intergral is justified because we already know that the integral is finite since $|(f*B)(x)| \le \infty$.
+\end{proof}
+
+Now we'll prove some propositions which will help us in $L^2(\R)$. 
+\begin{proposition}
+  \label{prop:integral_of_sin(pi_x)^2/(pi_x)^2}
+  We have $$\int_{-\infty}^{\infty} \left(\frac{\sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
 \end{proposition}
 \begin{proof}
   from (b) and (e) of proposition \ref{prop:properties_of_fejer_kernel}, and lemma \ref{lem:integral_of_periodic_function} we get that $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\sin (\pi x)}\right)^2 \ dx = 1$$
   We can write this integral as $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\pi x}\right)^2 \ dx + \int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{\sin^2 \pi Nx}{N} \left( \frac{1}{\sin^2 \pi x} - \frac{1}{(\pi x)^2} \right) \ dx = I_1 + I_2 = 1 $$
   For $I_1$, we see that by the change of variable $y = Nx$, it becomes $$I_1 = \int_{-\frac{N}{2}}^{\frac{N}{2}} \left(\frac{\sin(\pi x)^2}{\pi x}\right)^2 \ dx $$. 
   And for $I_2$, we see that the difference of fractions inside paranthesis is $$\frac{(\pi x)^2 - \sin^2(\pi x)}{(\pi x \sin(\pi x))^2} = \frac{(\pi x - \sin(\pi x))(\pi x + \sin(\pi x))}{(\pi x \sin(\pi x))^2}$$
+  Here $\pi x - \sin(\pi x)$ has a zero of order 3, and $\pi x + \sin(\pi x)$ has a zero of order 1 at $x=0$. Hence the numerator has a zero of order 4 at $x=0$. Again the denominator also has a zero of order 0 at $x=0$. Then the expression has a bounded value at $x=0$. Also everywhere else in the interval $-\frac{1}{2} \le x \le \frac{1}{2}$, the expression is continuous being a product and quotient of continuous function. Hence the expression is bounded in the same interval. Hence $|I_2| \le \frac{C}{N}$, for some constant $C$. Therefore as $N \to \infty$, $I_1$ tends to our desired integral and $I_2 \to 0$. Since $I_1 + I_2 = 1$ our result follows. 
 \end{proof}
 
+Let's define the $L^1(\R)$ analogue of Fej\'er kernel. 
+\begin{definition}
+  For real numbes $T > 0$, we define 
+  \label{def:L1(R)_analogue_of_Fejer_kernel}
+  $$\Delta_T(x) =
+  \begin{cases}
+    \frac{1}{T}\left(\frac{\sin \pi Tx}{\pi x}\right)^2, &\text{ if }x \neq 0\\
+    T, &\text{ if } x=0
+  \end{cases}$$
+\end{definition}
 
+\begin{proposition}[Properties of $\Delta$ function]
+  \label{prop:properties_of_fejer_kernel_in_R}
+  Let $T>0$, and $\Delta(x)$ be as defined above, then the following holds 
+  \begin{enumerate}[label=(\alph*)]
+    \item $$\int_\R \Delta_T(x) \ dx = 1$$
+    \item $$\Delta(-x) = \Delta(x)$$
+    \item $$\int_{-T}^T \left(1-\frac{|t|}{T}\right) e^{2\pi itx} \ dt = \Delta_T(x)$$
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  \begin{enumerate}[label=(\alph*)]
+    \item  
+      From proposition \ref{prop:integral_of_sin(pi_x)^2/(pi_x)^2}, $$\int_\R \left(\frac{\sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
+      Put $x=Ty$, then $dx = T \ dy $ and we get the desired result
+
+    \item This is clear from the definition, since $\sin^2(-x) = \sin^2(x)$.
+    \item To prove this first we'll find the Fourier transform of the function $g$, where $g(x) = 1 - |x|$ for $|x| \le 1$ and $g(x)$ is 0 everywhere else.
+     \begin{align*}
+       \hatg(t) &= \int_{-1}^1 (1-|x|)e^{-2 \pi itx} \ dx = 2\int_0^1(1-x)\cos(2\pi tx) \ dx \\
+       &= 2\left[(1-x)\frac{\sin(2\pi tx)}{2\pi t} \right]_0^1 + \int_0^1\frac{\sin(2\pi tx)}{\pi t} \ dx \\
+       &= \left[-\frac{\cos(2\pi tx)}{2(\pi t)^2}\right]_0^1 = \frac{1 - \cos(2\pi tx)}{2(\pi t)^2} = \left(\frac{\sin(\pi t)}{\pi t}\right)^2
+     \end{align*}
+      Now from the (c) of proposition \ref{prop:properties_of_fourier_transform}, we get that the fourier transform of the function $h(x) = g(Tx)$, $$\hath(t) = \frac{1}{T}\left(\frac{\sin(\pi Tx)}{\pi x}\right)^2 = \Delta(x)$$
+      Note that the above holds true for values $x\neq 0$ and when $x=0$, the integral reduces to $$\frac{1}{T}\int_{-T}^T (T-|t|) \ dt =  \frac{2}{T}\int_0^T(T-t) \ dt = T = \Delta(0)$$
+    Hence the proof.
+  \end{enumerate}
+\end{proof}
 
 \subsection{Fourier Tranform in $L^1(\R) \cap 
 L^2(\R)$}
