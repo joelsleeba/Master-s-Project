@@ -82,7 +82,7 @@
     where $\hatf(n)$ is the $n^{th}$ fourier coefficient as defined in \ref{def:fourier_coefficient} 
   \end{definition}
 
-  \begin{proposition}[Properties of Fourier coefficinets]
+  \begin{proposition}[Properties of Fourier coefficients]
     \label{prop:properties_of_fourier_coefficients}
     Suppose that $f\in L^1(\T)$.
     \begin{enumerate}[label=(\alph*)]
@@ -517,7 +517,7 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
   \end{proof}
 
   \begin{corollary}{Convergence of Ces\'aro sum of functions in $L^1(\T)$}
-    If $f\in L^(\T)$ then $\sigma_N(x)$, the Ces\'aro sum of the Fourier series of $f$ converge to $f(x)$ in $L^1$ norm. That is, 
+    If $f\in L^1(\T)$ then $\sigma_N(x)$, the Ces\'aro sum of the Fourier series of $f$ converge to $f(x)$ in $L^1$ norm. That is, 
     \begin{displaymath}
       \lim_{N\to \infty} \int_0^1 \left|f(x) - \sigma_N(x)\right| = 0
     \end{displaymath}
@@ -533,7 +533,7 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
   \end{theorem}
 
   \begin{proof}
-    Let $\epsilon$ be given. Since we assumed $f(x^+)$ and $f(x^-)$ exist and are finite, we can take $\delta < \frac{1}{2}$ small enough such that $|f(x-u) - f(x^-)| < \epsilon$ for $0\le u \le \delta$ and $|f(x+u) - f(x^+)| < \epsilon$ for $1-\delta \le u \le 1$.
+    Let $\epsilon$ be given. Since we assumed $f(x^+)$ and $f(x^-)$ exist and are finite, we can take $\delta < \frac{1}{2}$ small enough such that $|f(x-u) - f(x^-)| < \epsilon$ for $0\le u \le \delta$ and $|f(x-u) - f(x^+)| < \epsilon$ for $1-\delta \le u \le 1$. Notice that while the bounds for $u$ seems obvious for $f(x^-)$, for $f(x^+)$ we are using the fact that $f$ is periodic with period 1, and hence $f$ has the same value in $[1-\delta, 1]$, and $[-\delta, 0]$.
     $$ \sigma_N(x) = \int_0^1 f(x-u)\Delta_N(u) du = \int_{0}^\delta + \int_\delta^{1-\delta} + \int_{1-\delta}^1 = I_1 + I_2 + I_3$$
     Then, 
     $$I_1 = \int_0^\delta (f(x-u) - f(x^-))\Delta_N(u)du + \int_0^\delta f(x^-)\Delta_N(u)du = T_1 + T_1^{'}$$
@@ -557,12 +557,12 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
 
     Now we'll prove that $I_3$ converge to $\frac{f(x^+)}{2}$. For this we'll split $I_3$ into $T_3$ and $T_3^{'}$ like we did with $I_1$. 
     $$I_3 = \int_{1-\delta}^1 (f(x-u) - f(x^+))\Delta_N(u) du + f(x^+)\int_{1-\delta}^{1}\Delta_N(u) du = T_3 + T_3^{'}$$
-    Then, 
+    Then by our choice of $\delta$, 
     $$|T_3| \le \int_{1-\delta}^1 |((f(x-u) - f(x^+))|\Delta_N(u)du < \epsilon \int_{1-\delta}^1 \Delta_N(x) dx \le \epsilon$$
     Therefore $T_3$ converge to $0$ as $N \to \infty$.
     Also
       $$\int_{1-\delta}^1 \Delta_N(x) dx = -\int_{\delta}^0 \Delta_N(x) dx = \int_0^\delta \Delta_N(x) dx$$
-      Therefore by the same inequality we used for $T_1^{'}$ in \ref{prop:properties_of_fejer_kernel}, we'll get
+      Therefore by the same inequality we used for $T_1^{'}$ from proposition \ref{prop:properties_of_fejer_kernel}, we'll get
       $$ \left| T_3^{'} - \frac{f(x^+)}{2} \right| \le \left|\frac{f(x^+)}{4N\delta} \right|$$
       which implies that $I_3 = T_3 + T_3^{'}$ converge to $\frac{f(x^+)}{2}$ as $N \to \infty$
 

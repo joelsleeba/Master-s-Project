@@ -9,7 +9,7 @@
 
   \begin{definition}[Fourier transform of a function $f$]
     \label{def:fourier_transform_of_f}
-    Let $f \in L^1(\R)$, then we define the Fourier tranform of $f$ as $$\hatf(t) = \int_{\R} f(x) e^{-2 \pi itx} \ dx$$
+    Let $f \in L^1(\R)$, then we define the Fourier tranform of $f$, $\hatf : \R \to \C$ as $$\hatf(t) = \int_{\R} f(x) e^{-2 \pi itx} \ dx$$
   \end{definition}
   Note that while we say $\hatf$ is the Fourier transform of the function $f$, the term "Fourier tranform" is also used for the map which takes $f$ to $\hatf$.
 
@@ -21,7 +21,7 @@
     If $f\in L^1(\R)$ and $\hatf$ is the Fourier tranform of $f$ as in definition \ref{def:fourier_transform_of_f}, then 
     \begin{enumerate}[label=(\alph*)]
       \item If $a \in \R$ and $g(x) = f(x+a)$ for all $x \in \R$, then $g \in L^1(\R)$ and $\hatg(t) = e^{2\pi ita} \hatf(t)$ for all $t$.
-      \item If $b \in \R$ and $h(x) = e^{2\pi bx}f(x)$, then $h \in L^1(\R)$ and $\hath(t) = \hatf(t-b)$ for all $t$.
+      \item If $b \in \R$ and $h(x) = e^{2\pi ibx}f(x)$, then $h \in L^1(\R)$ and $\hath(t) = \hatf(t-b)$ for all $t$.
       \item If $c \in \R$ is not $0$, and $j(x) = f(cx)$, then $j \in L^1(\R)$ and $\hatj(t) = \frac{\hatf(t/c)}{|c|}$ for all $t$.
       \item if $l(x) = \overline{f(x)}$, then $l\in L^1(\R)$ and $\hatl(t) = \overline{\hatf(-t)}$
     \end{enumerate}
@@ -43,7 +43,7 @@
     \end{enumerate}
   \end{proof}
 
-  Now we extend the proposition \ref{prop:L1_functions_are_continuous_in_L1_norm} to the whole of $\R$
+  Now we prove another important result from measure theory.
   \begin{proposition}
     \label{prop:L1_functions_are_continuous_in_L1_norm_in_R}
     If $f \in L^1(\R)$, then $$\lim_{\delta \to \infty} \int_\R |f(x+\delta) - f(x)| \ dx = 0$$
@@ -76,12 +76,12 @@
   \begin{proof}
     Consider $h, k : \R^2 \to \R$ defined as $h(x, y) = f(x)$ and $k(x, y) = g(x)$. Then $h^{-1}(a, \infty) = f^{-1}(a, \infty) \times \R$ and $k^{-1}(b, \infty) = \R \times g^{-1}(b, \infty)$ and therefore $h, k$ are measurable functions. Moreover we know from the theory of measurable functions that the product of measurable functions is measurable. Therefore $F(x, y) = h(x, y)k(x, y) = f(x)g(y)$ is measurable. Also the map $T(x, y) = (x-y, y)$ is linear. Hence $H(x, y) = F\circ T(x, y) = f(x-y)g(y)$ is measurable. 
 
-    Also $H \in L^1(\R^2)$ since $$\int_{\R^2} \left|H(x, y)\right| dx \ dy  = \int_\R \left( \int_\R \left|f(x-y)\right| dx \right)|g(y)| \ dy = \int_\R \|f\|_1 |g(y)| \ dy = \|f\|_1\|g\|_1$$
-    $f(x-y)g(y) \in L^1(\R^2)$.
+    Also $H \in L^1(\R^2)$ implies $$\int_{\R^2} \left|H(x, y)\right| dx \ dy  = \int_\R \left( \int_\R \left|f(x-y)\right| dx \right)|g(y)| \ dy = \int_\R \|f\|_1 |g(y)| \ dy = \|f\|_1\|g\|_1$$
+   Hence $f(x-y)g(y) \in L^1(\R^2)$ and the result follows.
     
   \end{proof}
 
-  Almost all the properties of the convolution in $L^1(\T)$ has its analogues in $L^(\R)$, but we will only quote the most important one, that is the convolution is commutative, $f*g = g*f$. One can easily prove this using a change of variable like we did in proposition \ref{prop:properties_of_convolution}
+  Almost all the properties of the convolution in $L^1(\T)$ has its analogues in $L^1(\R)$, but we will only quote the most important one, that is the convolution is commutative, $f*g = g*f$. One can easily prove this using a change of variable like we did in proposition \ref{prop:properties_of_convolution}
 
   We'll also prove that for functions $f, g \in L^1(\R)$, $f*g \in L^1(\R)$.
   \begin{proposition}

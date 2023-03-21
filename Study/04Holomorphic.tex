@@ -1,0 +1,48 @@
+%TeX root = main.tex
+\section{Holomorphic Fourier Transforms}
+
+In last chapter we explored the Fourier transforms of functions in $\R$. Frequently the fourier transform of functions in $\R$ can be extended to a holomorphic function in certain regions. For example say $f(x) = e^{-|x|}$, then $\hatf(t) = \frac{1}{1+(2\pi t)^2}$. 
+Since, 
+\begin{align*}
+  \hatf(t) = \int_\R e^{-|x|}e^{-2 \pi itx} \ dx &= \int_{-\infty}^0 e^{x(1-2\pi it)} \ dx + \int_0^{\infty} e^{-x(1+2\pi it)} \ dx \\
+  & = \left[ \frac{e^{x(1-2\pi it)}}{1-2\pi it}\right]_{-\infty}^0 - \left[ \frac{e^{-x(1+2\pi it)}}{1+2\pi it}\right]^{\infty}_0 \\
+  & = \frac{1}{1-2\pi it} + \frac{1}{1+2\pi it} \\
+  &= \frac{1}{1+(2\pi t)^2}
+\end{align*}
+Clearly $w(z) = \frac{1}{1+(2\pi z)^2}$ is a holomorphic extension of $\hatf$ into the regions of the complex plane without the points $z=\pm \frac{i}{2\pi}$.
+
+We will study two classes of functions which can be extended in this manner. The first class of such functions is $$f(z) = \int_0^\infty F(t)e^{2\pi i tz}\ dt$$
+where $z\in \Pi^+ = \{z\in \C \ | \Im(z) > 0 \}$ and $F \in L^2(\R)$ is a function which vanishes on $(-\infty, 0)$. The second class of functions will be $$f(z) = \int_{-A}^A F(t)e^{2\pi i t z} \ dt$$
+where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important results regarding these two classes of functions
+
+\begin{proposition}
+  Let $F\in L^2(\R)$ such that $F$ vanishes at $(-\infty , 0)$. Then $f : \Pi^+ \to \C$ defined as, $$f(z) = \int_0^\infty F(t) e^{2\pi itz} \ dt$$
+  is holomorphic in the upper half plane, i.e $f \in H(\Pi^+)$
+\end{proposition}
+\begin{proof}
+  Let $z \in \Pi^+$. Then there exists a $\delta$ such that $0< \delta < \Im(z)$. Since $\Pi^+$ is open, there exists a sequence $z_n$ in $\Pi^+$ such that $\delta < \Im(z_n)$, and  $z_n \to z$. Also 
+  \begin{align*}
+    \left|e^{2 \pi itz_n} - e^{2\pi itz}\right|^2 &= \left|\left(e^{2\pi it z_n} - e^{2\pi itz}\right)^2\right| \\ 
+    &= \left| e^{4\pi itz_n} + e^{4\pi itz} - 2e^{2\pi it(z+z_n)} \right| \\
+    &\le \left|e^{4\pi itz_n}\right| + \left|e^{4\pi itz}\right| + 2\left|e^{2\pi it(z_n + z)}\right| \\
+    &= e^{-4\pi t \Im(z_n)} + e^{-4 \pi t \Im(z)} + 2e^{-2\pi t \Im(z_n - z)} \\
+    &\le e^{-4\pi t \delta} + e^{-4\pi t \delta} + 2e^{-4 \pi t\delta} \\
+    &=4e^{-4\pi t \delta}
+  \end{align*}
+  Now since $$\int_0^\infty 4e^{-4\pi t\delta} \ dt = \frac{4}{2\pi \delta}$$
+  the integrad is $L^1$ in $(0, \infty)$ and therefore by dominated convergence theorem, $$\lim_{n \to \infty} \int_0^\infty \left|e^{2\pi itz_n} - e^{2\pi itz}\right|^2 \ dt = 0$$
+  Now therefore if $w \in \Pi^+$ and $w_n \to w$, then 
+  \begin{align*}
+    f(w_n) - f(w) &= \int_0^\infty F(t)(e^{2\pi it w_n} - e^{2\pi i tw}) \ dt \\
+    & \le \|F\|_2 \|e^{2\pi itw_n} - e^{2\pi itw}\|_2
+  \end{align*}
+  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Alsfo if $\gamma$ is any closed path in $\Pi^+$, then 
+  \begin{align*}
+    \int_\gamma f(z)\ dz &= \int_\gamma \int_0^\infty F(t) e^{2\pi i t z} \ dt \ dz \\
+    & = \int_0^\infty F(t) \int_\gamma e^{2\pi itz} \ dz \ dt \\
+    & = \int_0^\infty F(t) \cdot 0 \ dt \\
+    & = 0
+  \end{align*}
+
+  Note that the change of integral is justified by Fubini's theorem since we know $f$ is measurable. Therefore by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane. Hence the result.  
+\end{proof}
