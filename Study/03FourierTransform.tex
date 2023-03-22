@@ -5,7 +5,7 @@
 \subsection{Definiton and basic properties}
   While defining Fourier series we were mainly focused on periodic functions. Now we'll try to expand that into another set of functions. We'll be interested on functions in $L^1(\R)$, that is those real or complex valued functions $f(x)$ in $\R$ for which $$\int_{-\infty}^{\infty} |f(x)| \ dx < \infty$$. For those functions in $L^1(\R)$ the integral above will be called the $L^1$ norm of the function $f$ and will be denoted by $\|f\|_{L^1(\R)}$ or in short $\|f\|_1$. Also note that the notations $\int_{\R}$ and $\int_{-\infty}^{\infty}$ means the same and we might use them interchangably as we see fit.
 
-  Analogus to what we did in finding the $n^{th}$ fourier coefficient in definition \ref{def:fourier_coefficient}, we'll define the fourier transform of $f$
+  Analogous to what we did in finding the $n^{th}$ fourier coefficient in definition \ref{def:fourier_coefficient}, we'll define the fourier transform of $f$
 
   \begin{definition}[Fourier transform of a function $f$]
     \label{def:fourier_transform_of_f}
@@ -108,9 +108,9 @@
   \end{proof}
 
 
-\subsection{Fourier Inversion Formula}
+\subsection{Fourier Inversion Theorem}
 For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
-But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogus techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
+But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogous techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
 For the Fourier transform, these functions will serve as analogue for trigonometric polynomials in Fourier series.
 
 We'll now prove an important property of functions $B(x)$ as defined above. 
@@ -196,7 +196,7 @@ From the above properties we conclude the following result.
 Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (theorem \ref{thm:fejer_theorem})
 \begin{theorem}
   \label{thm:L1(R)_analogue_of_fejer_theorem}
-  Let $f \in L^1(\R)$. If $f$ is continuous at $x$, then $$\lim_{x \to \infty} \int_{-T}{T}\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt = f(x)$$
+  Let $f \in L^1(\R)$. If $f$ is continuous at $x$, then $$\lim_{x \to \infty} \int_{-T}^{T}\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt = f(x)$$
 \end{theorem}
 \begin{proof}
   Let $\epsilon$ be given, since we know that $f$ is continuous at $x$, there exist a $\delta$, such that $|f(x-y) - f(x)| < \epsilon$, when $|y| < \delta$. Also since we know that $\int_\R \Delta_T(x) \ dx = 1$ by proposition \ref{prop:properties_of_fejer_kernel_in_R} and by corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)},
@@ -211,7 +211,33 @@ Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (theorem \ref{thm:fej
   Therefore $I_2$ can also be made arbitarily small. Hence the theorem. 
 \end{proof}
 
-\subsection{Fourier Tranform in $L^1(\R) \cap 
+Now we'll prove some results which will help us to prove the general Fourier inversion theorem. The below result is analogous to the fact that Ces\'aro sum of a convergent sequence converges to the same limit as the original sequence, given it exists.
+\begin{proposition}
+  \label{prop:cesaro_integral_converge_to_same_limit}
+  Let $f \in L^1[-T, T]$ and let $$I(T) = \int_{-T}^T f(t) \ dt, \quad J(T) = \int_{-T}^T\left(1-\frac{|t|}{T}\right)f(t)\ dt$$
+  Then $$\lim_{T\to \infty} I(T) = \lim_{T\to \infty}J(T)$$
+\end{proposition}
+\begin{proof}
+  We'll first show that $\lim_{T\to \infty}I(T)$ exists. But since $f\in L^1(\R)$, $$|I(T)| \ dt \le \int_{-T}^T |f(t)| \ dt \le \|f\|_1$$
+  Therefore $\lim_{T \to \infty}I(T) \le \|f\|_1$, and the limit exists. Moreover we see that by Fubini's theorem, $$\frac{1}{T} \int_0^T I(u) \ du = \frac{1}{T} \int_0^T\int_{-u}^u f(t) \ dt \ du = \frac{1}{T}\int_{-T}^T f(t) \left(\int_{|t|}^T 1 \ du \right) \ dt = J(T)$$
+  Since we assumed that $\lim_{T\to \infty} I(T) = a$, given $\epsilon > 0$, there exists an $N$ such that $|I(u) - a| < \epsilon$ for all $u \ge N$. Now we can write $$J(T) - a = \frac{1}{T}\int_0^T I(u) - a \ du = \frac{1}{T}\int_0^N I(u) - a \ du + \frac{1}{T}\int_N^T I(u) - a \ du = E_1 + E_2$$
+  Now since $I(u)$ is bounded for all $u$, the integral in $E_1$ is finite and therefore $E_1 \to 0$ as $T\to \infty$. As for $E_2$, $$|E_2| \le \frac{1}{T} \int_N^T |I(u) -a| \ du < \frac{1}{T}\int_N^T \epsilon \ du = \frac{T-N}{T}\epsilon < \epsilon$$
+  Therefore $E_2$ converge to 0 as $\epsilon$ can be made arbitarily small. Hence the result. %$\lim_{T\to \infty} J(T) = a$
+\end{proof}
+
+As a result of the above result combined with theorem \ref{thm:L1(R)_analogue_of_fejer_theorem}, we get
+\begin{corollary}
+  Let $f\in L^1(\R)$ and $f$ is continuous at $x$. If $$\lim_{T\to \infty} \int_{-T}^T\hatf(t)e^{2\pi itx} \ dt$$
+  exists, then it is equal to $f(x)$.
+\end{corollary}
+
+Since we'll be working a lot with functions $f$ which are continuous everywhere in the real line, we explicitly state the next theorem.
+\begin{theorem}
+  If $f\in L^1(\R)$, $f$ is continuous in $\R$, and if $\hatf \in L^1(\R)$, then $$\int_\R \hatf(t)e^{2\pi itx} \ dt = f(x)$$
+\end{theorem}
+Note that the condition that $\hatf \in L^1(\R)$ in the above theorem guarentees the existence of the limit.
+
+\subsection{Fourier Transform in $L^1(\R) \cap 
 L^2(\R)$}
 We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that their $L^1$ norm is finite. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we might not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
 
@@ -268,6 +294,5 @@ Now we'll prove the famous Plancherel's theorem.
   Since the integral in the right is always positive, the limit is an increasing limit. Then for any $0<\epsilon<1$, we have $$(1-\epsilon) \int_{-\epsilon T}^{\epsilon T} |\hatf(t)|^2 \ dt \le \int_{-T}^{T} \left( 1-\frac{|t|}{T} \right) |\hatf(t)|^2 dt \le \int_\R |\hatf(t)|^2 \ dt$$
   Then as $T \to \infty$, $$(1-\epsilon) \int_\R |\hatf(t)|^2 \ dt \le \int_{\R} |f(t)|^2 dt \le \int_\R |\hatf(t)|^2 \ dt$$
   Since $\epsilon$ can be made arbitary small, the result follows.
-
-
 \end{proof}
+

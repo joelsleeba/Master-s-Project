@@ -37,7 +37,7 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
     f(w_n) - f(w) &= \int_0^\infty F(t)(e^{2\pi it w_n} - e^{2\pi i tw}) \ dt \\
     & \le \|F\|_2 \|e^{2\pi itw_n} - e^{2\pi itw}\|_2
   \end{align*}
-  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Alsfo if $\gamma$ is any closed path in $\Pi^+$, then 
+  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Also if $\gamma$ is any closed path in $\Pi^+$, then 
   \begin{align*}
     \int_\gamma f(z)\ dz &= \int_\gamma \int_0^\infty F(t) e^{2\pi i t z} \ dt \ dz \\
     & = \int_0^\infty F(t) \int_\gamma e^{2\pi itz} \ dz \ dt \\
@@ -80,4 +80,4 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
 \end{proof}
 
 \subsection{Paley Wiener Theorems}
-
+\

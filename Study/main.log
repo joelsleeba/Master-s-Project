@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  22 MAR 2023 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.23)  22 MAR 2023 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1259,57 +1259,66 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 197.
 [37]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cap' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 215.
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 222.
+(mdframed)              on input line 215.
 [38]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 244.
-[39]
+(mdframed)              on input line 229.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 258.
-) (./04Holomorphic.tex [40]
+(mdframed)              on input line 235.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 241.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 241.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cap' on input line 241.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 241.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 241.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 248.
+Package mdframed Info: Not enough space on this page on input line 251.
+[39]
+Package mdframed Info: Not enough space on this page on input line 251.
+[40]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 270.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 284.
+[41]) (./04Holomorphic.tex [42]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 19.
-[41] [42]
+[43] [44]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 61.
-Package mdframed Info: Not enough space on this page on input line 65.
-[43]
-Package mdframed Info: Not enough space on this page on input line 65.
-[44]) [45] (./main.aux)
+[45]) [46] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 23403E425C0E16332B3C9FDEFFCA22C9;3308.
+(rerunfilecheck)             Checksum: 49A6DED825478421994B189BADF1DBBE;3313.
  ) 
 Here is how much of TeX's memory you used:
- 35707 strings out of 478238
- 835576 string characters out of 5850455
+ 35712 strings out of 478238
+ 835668 string characters out of 5850455
  1482847 words of memory out of 5000000
- 53185 multiletter control sequences out of 15000+600000
+ 53186 multiletter control sequences out of 15000+600000
  490097 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,103p,715b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1327,10 +1336,10 @@ sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (45 pages, 401678 bytes).
+Output written on main.pdf (46 pages, 406144 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 163 named destinations out of 1000 (max. 500000)
+ 587 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 167 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
