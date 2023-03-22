@@ -17,7 +17,7 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
 
 \begin{proposition}
   Let $F\in L^2(\R)$ such that $F$ vanishes at $(-\infty , 0)$. Then $f : \Pi^+ \to \C$ defined as, $$f(z) = \int_0^\infty F(t) e^{2\pi itz} \ dt$$
-  is holomorphic in the upper half plane, i.e $f \in H(\Pi^+)$
+  is holomorphic in the upper half plane, i.e $f \in H(\Pi^+)$. Moreover then, $f$ restricted to horizontal lines in $\Pi^+$ is bounded in the  $L^2$ norm. That is if $f(z)$ is written as $f(x+iy)$, then $$\int_{-\infty}^\infty \left|f(x + iy)\right|^2 \ dx < \infty$$
 \end{proposition}
 \begin{proof}
   Let $z \in \Pi^+$. Then there exists a $\delta$ such that $0< \delta < \Im(z)$. Since $\Pi^+$ is open, there exists a sequence $z_n$ in $\Pi^+$ such that $\delta < \Im(z_n)$, and  $z_n \to z$. Also 
@@ -43,8 +43,21 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
     & = \int_0^\infty F(t) \cdot 0 \ dt \\
     & = 0
   \end{align*}
+  Note that the change of integral is justified by Fubini's theorem. \textcolor{red}{Justify how!} Therefore by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane.  
 
-  Note that the change of integral is justified by Fubini's theorem since we know $f$ is measurable. Therefore by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane. Hence the result.  
+  Now consider $z=x+iy$ where $i = \sqrt{-1}$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dx$$ 
+  Now for a fixed $y \in \R$, consider $g_y(t) = F(t)e^{-2\pi ty}$. Then from above equation $f(x+iy) = \widehat{g_y}(x)$. By Holder's inequality we get that 
+  \begin{align*}
+    \int_0^\infty |g_y(t)| \ dt &= \int_0^\infty \left|F(t)e^{-2\pi ty}\right| \ dt \\
+    &\le \left(\int_0^\infty \left|F(t)\right|^2 \ dt \right)^{\frac{1}{2}} \left(\int_0^\infty e^{-4\pi ity} \ dt \right)^{\frac{1}{2}}
+  \end{align*}
+  where both of the integrals are finite. Therefore $g_y \in L^1(0, \infty)$. Again since $0<e^{-x}\le1$ when $0\le x<\infty$, we know that $$\int_0^\infty |g_y(t)|^2 \ dt = \int_0^\infty \left|F(t)\right|^2 \left| e^{-2\pi ty} \right|^2 \ dt \le \int_0^\infty \left|F(t)\right|^2 \ dt$$
+  which is again finite. Therefore $g\in L^2(0, \infty)$. Therefore by Plancherel's theorem (refer theorem \ref{thm:Plancherel's_theorem}) on $g_y$ we get that, $$\int_{-\infty}^{\infty}\left|f(x+iy)\right|^2 \ dx = \int_{-\infty}^{\infty} \left|\widehat{g_y}(x)\right|^2 \ dx= \int_{-\infty}^{\infty} \left|g_y(t)\right|^2 \ dt = \int_0^\infty \left|g_y(t)\right|^2 \ dt < \infty$$
+Note that the change in limit in the last integral is because $g_y(t) = 0$ when $t < 0$. Hence the result.
 \end{proof}
 
-
+\begin{proposition}
+  Let $0<A<\infty$ and $F \in L^2(-A, A)$. Then $f:\C \to \C$ defined as $$f(z) = \int_{-A}^A F(z)e^{2\pi itz} \ dt$$
+  is an entire function which satisfy $$|f(z)| \le Ce^{A|z|}$$
+  for some constant $C$ and $f$ when restricted to horizontal lines is bounded in the $L^2$ norm. That is if $f(z)$ is written as $f(x+iy)$ then  $$\int_{-\infty}^{\infty} f(x+iy) \ dx < \infty$$
+\end{proposition}
