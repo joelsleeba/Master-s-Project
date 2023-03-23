@@ -9,9 +9,9 @@
 
   \begin{definition}[Fourier transform of a function $f$]
     \label{def:fourier_transform_of_f}
-    Let $f \in L^1(\R)$, then we define the Fourier tranform of $f$, $\hatf : \R \to \C$ as $$\hatf(t) = \int_{\R} f(x) e^{-2 \pi itx} \ dx$$
+    Let $f \in L^1(\R)$, then we define the Fourier transform of $f$, $\hatf : \R \to \C$ as $$\hatf(t) = \int_{\R} f(x) e^{-2 \pi itx} \ dx$$
   \end{definition}
-  Note that while we say $\hatf$ is the Fourier transform of the function $f$, the term "Fourier tranform" is also used for the map which takes $f$ to $\hatf$.
+  Note that while we say $\hatf$ is the Fourier transform of the function $f$, the term "Fourier transform" is also used for the map which takes $f$ to $\hatf$.
 
   Also note that $\hatf(t)$ is a finite quantity (real or complex) for all $t \in \T$ since $f\in L^1(\T)$ and $|e^{-2 \pi itx}| = 1$ implies $$|\hatf(t)| \le \int_{-\infty}^{\infty}\left|f(x)\right| dx < \infty$$ By the linearity of the integral we can also show that for functions $f, g \in L^2(\R)$ and scalars $\mu, \nu$, $\widehat{\mu f + \nu g}(t) = \mu \hatf(t) + \nu\hatg(t)$.
 
@@ -46,7 +46,7 @@
   Now we prove another important result from measure theory.
   \begin{proposition}
     \label{prop:L1_functions_are_continuous_in_L1_norm_in_R}
-    If $f \in L^1(\R)$, then $$\lim_{\delta \to \infty} \int_\R |f(x+\delta) - f(x)| \ dx = 0$$
+    If $f \in L^1(\R)$, then $$\lim_{\delta \to 0} \int_\R |f(x+\delta) - f(x)| \ dx = 0$$
   \end{proposition}
   \begin{proof}
     Since $f\in L^1(\R)$, there exists an $X$ such that $$\int_{|x|>X-1} |f(x)| \ dx < \epsilon$$
@@ -196,7 +196,7 @@ From the above properties we conclude the following result.
 Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (theorem \ref{thm:fejer_theorem})
 \begin{theorem}
   \label{thm:L1(R)_analogue_of_fejer_theorem}
-  Let $f \in L^1(\R)$. If $f$ is continuous at $x$, then $$\lim_{x \to \infty} \int_{-T}^{T}\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt = f(x)$$
+  Let $f \in L^1(\R)$. If $f$ is continuous at $x$, then $$\lim_{T \to \infty} \int_{-T}^{T}\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt = f(x)$$
 \end{theorem}
 \begin{proof}
   Let $\epsilon$ be given, since we know that $f$ is continuous at $x$, there exist a $\delta$, such that $|f(x-y) - f(x)| < \epsilon$, when $|y| < \delta$. Also since we know that $\int_\R \Delta_T(x) \ dx = 1$ by proposition \ref{prop:properties_of_fejer_kernel_in_R} and by corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)},
@@ -231,14 +231,47 @@ As a result of the above result combined with theorem \ref{thm:L1(R)_analogue_of
   exists, then it is equal to $f(x)$.
 \end{corollary}
 
-Since we'll be working a lot with functions $f$ which are continuous everywhere in the real line, we explicitly state the next theorem.
+Since we'll be working a lot with functions $f$ which are continuous everywhere in the real line, we explicityly state the next theorem.
 \begin{theorem}
   If $f\in L^1(\R)$, $f$ is continuous in $\R$, and if $\hatf \in L^1(\R)$, then $$\int_\R \hatf(t)e^{2\pi itx} \ dt = f(x)$$
 \end{theorem}
-Note that the condition that $\hatf \in L^1(\R)$ in the above theorem guarentees the existence of the limit.
+Note that the condition that $\hatf \in L^1(\R)$ in the above theorem guarantee the existence of the limit from the corollary above.
 
-\subsection{Fourier Transform in $L^1(\R) \cap 
-L^2(\R)$}
+Now we'll prove one important theorem
+\begin{theorem}
+  If $f\in L^1(\R)$ and $\sigma_T(x) = (f*\Delta_T)(x)$, where $\Delta_T$ is as in definition \ref{def:L1(R)_analogue_of_fejer_kernel}, then $$\lim_{T\to \infty} \int_{-\infty}^{\infty}|f(x) - \sigma_T(x)| \ dx = 0$$
+\end{theorem}
+\begin{proof}
+  % From corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)}, we know that $$\sigma_T(x) = (f*\Delta_T)(x) = \int_{-T}^T\left(1-\frac{|t|}{T}\right) \hatf(t) e^{2\pi itx} \ dt $$
+  From proposition \ref{prop:properties_of_fejer_kernel_in_R}, we know that $\int_\R \Delta_T(x) \ dx = 1$, therefore $$f(x) - \sigma_T(x) = \int_\R \left(f(x) - f(x-u)\right) \Delta_T(u) \ du$$
+  which implies $$\left|f(x)-\sigma_T(x)\right| \le \int_\R \left|f(x) - f(x-u)\right| \Delta_T(u) \ du$$
+  and therefore $$\int_\R \left|f(x)-\sigma_T(x)\right| \ dx \le \int_\R \int_\R \left|f(x) - f(x-u)\right| \Delta_T(u) \ du \ dx$$
+  Again we see that $$\int_\R \Delta_T(u) \int_\R |f(x) - f(x-u)| \ dx \ du \le \int_\R \Delta_T(u) \cdot 2\|f\|_1 \ du = 2\|f|\|_1$$
+  and since $\R^2$ is a sigma finite measure space by Fubini-Tonelli theorem, we can change the order of integration. Then $$\int_\R \left|f(x)-\sigma_T(x)\right| \ dx \le \int_\R \Delta_T(u) \int_\R \left|f(x) - f(x-u)\right|  \ dx \ du$$
+  Now we'll analyse the last integral. Let us denote the inner integral by $I(u)$. Since $f\in L^1(\R)$, by proposition \ref{prop:L1_functions_are_continuous_in_L1_norm_in_R} given any $\epsilon$, there exists a $\delta$ such that for all $|u| < \delta$, $$I(u) = \int_\R |f(x) - f(x-u)| \ dx < \epsilon$$
+  Moreover, $$I(u) \le \int_\R |f(x)| + |f(x-u)| \ du = 2\|f\|_1$$
+  We'll split the integral into three intervals and analyse there. For that let $$\int_\R \Delta_T(u) I(u) \ du = \int_{-\infty}^{-\delta}+ \int_{-\delta}^{\delta} + \int^{\infty}_{\delta} = I_1 + I_2 + I_3$$
+  Then by the definition of $\Delta_T$ in definition \ref{def:L1(R)_analogue_of_fejer_kernel},
+  $$I_1 \le 2\|f\|_1 \int_{-\infty}^{-\delta} \Delta_T(u) \ du \le 2\|f\|_1\int_{-\infty}^{-\delta} \frac{1}{T\pi^2 u^2} \le \frac{2\|f\|_1}{T\pi^2 \delta}$$ $$I_3 \le 2\|f\|_1 \int^{\infty}_{\delta} \Delta_T(u) \ du \le 2\|f\|_1\int^{\infty}_{\delta} \frac{1}{T\pi^2 u^2} \le \frac{2\|f\|_1}{T\pi^2 \delta}$$
+  And by the choice of $\delta$ and proposition \ref{prop:properties_of_fejer_kernel_in_R}, $I_2$ can be estimated as $$I_2 \le \epsilon \int_{-\delta}^\delta \Delta_T(u) \ du \le \epsilon \int_\R \Delta_T(u) \ du = \epsilon$$
+  Since $\epsilon$ can be chosen arbitarily small and for the corresponding $\delta$, we see that $I_1, I_3 \to 0$ as $T\to \infty$. Hence the result.
+\end{proof}
+
+Now armed with the above theorem we can conclude some important results.
+\begin{corollary}
+  If $f\in L^1(\R)$ and $\hatf(t) = 0$ for all $t$, then $f$ is $0$ almost everywhere. That is $$\int_\R |f(x)| \ dx = 0$$
+\end{corollary}
+\begin{proof}
+  Since we know that $\hatf(t)= 0$ for all $t\in \R$, by corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)}, $\sigma_T = (f*\Delta_T) =0$(zero function) for all $T$. Then by previous theorem the result follows. 
+\end{proof}
+
+Applying the corollary above to $f-g$ where $f, g \in L^1(\R)$, we get
+\begin{corollary}
+  \label{cor:functions_with_same_fourier_transform_in_R}
+  Let $f, g \in L^1(\R)$ and $\hatf = \hatg$. Then $f=g$ almost everywhere. That is $$\int_\R |f(x) - g(x)| \ dx = 0$$.
+\end{corollary}
+
+\subsection{Fourier Transform in $L^1(\R) \cap L^2(\R)$}
 We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that their $L^1$ norm is finite. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we might not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
 
 Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
