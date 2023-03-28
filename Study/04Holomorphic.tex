@@ -38,16 +38,24 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
     f(w_n) - f(w) &= \int_0^\infty F(t)(e^{2\pi it w_n} - e^{2\pi i tw}) \ dt \\
     & \le \|F\|_2 \|e^{2\pi itw_n} - e^{2\pi itw}\|_2
   \end{align*}
-  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Also if $\gamma$ is any closed path in $\Pi^+$, then 
+  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Also if $\gamma$ is any triangle in $\Pi^+$, then $\gamma$ can be parametrized by $s \in [a, b]$ as $\gamma(s) = x(s) + iy(s)$, where $y(s) >0$ since $\gamma \in \Pi^+$. Now let $M = \inf_{s \in [a,b]} |\gamma^{'}(s)|$ (here we take only differentiable points in $\gamma$ for infimum, since the non-differentiable points will be measure zero and adds nothing to the integral). Also since $\gamma \in \Pi^+$, there exist an $m >0$ such that $y(s) > m$ for all $s$. Then we get that
+  \begin{align*}
+    \int_{\gamma}\int_{0}^{\infty}|F(t)e^{itz}|\,dt\,d|z|&=
+    \int_a^b\int_{0}^{\infty}|F(t)|e^{-ty(s)}\,dt\,|\gamma'(s)|\,ds\\
+    &\leq M\int_a^b\int_{0}^{\infty}|F(t)|e^{-mt}\,dt\,ds\\
+    &=M(b-a)\int_{0}^{\infty}|F(t)|e^{-mt}\,dt\\
+    &\leq M(b-a)\|F\|_{L^2((0,\infty))}\cdot\left(\int_{0}^{\infty}(e^{-mt})^2\,dt\right)^{1/2}
+  \end{align*}
+  Therfore by Fubini's Theorem we can change the order of integration and we get, 
   \begin{align*}
     \int_\gamma f(z)\ dz &= \int_\gamma \int_0^\infty F(t) e^{2\pi i t z} \ dt \ dz \\
     & = \int_0^\infty F(t) \int_\gamma e^{2\pi itz} \ dz \ dt \\
     & = \int_0^\infty F(t) \cdot 0 \ dt \\
     & = 0
   \end{align*}
-  Note that the change of integral is justified by Fubini's theorem. \textcolor{red}{Justify how!} Therefore by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane.  
+  Then by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane.  
 
-  Now consider $z=x+iy$ where $i = \sqrt{-1}$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dx$$ 
+  Now consider $z=x+iy$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dx$$ 
   Now for a fixed $y \in \R$, consider $g_y(t) = F(t)e^{-2\pi ty}$. Then from above equation $f(x+iy) = \widehat{g_y}(x)$. By Holder's inequality we get that 
   \begin{align*}
     \int_0^\infty |g_y(t)| \ dt &= \int_0^\infty \left|F(t)e^{-2\pi ty}\right| \ dt \\
