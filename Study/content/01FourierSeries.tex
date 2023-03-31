@@ -1,8 +1,7 @@
 % TeX root = main.tex
-\newpage
-\section{Fourier Series in $L^1(\T)$}
+\chapter{Fourier Series in $L^1(\T)$}
 
-  \subsection{Definition and basic properties}
+  \section{Definition and basic properties}
 
     We'll begin by reviewing the definition of $L^p$ space since we'll be mostly working on functions from these space.
   \begin{definition}[$L^p$ function]
@@ -122,7 +121,7 @@
   \end{proof}
 
 
-  \subsection{Convolution}
+  \section{Convolution}
   Now we'll define another important operation with function called the convolution of two functions.
   \begin{definition}
     \label{def:convolution_of_functions_in_L^1(T)}
@@ -206,7 +205,7 @@
   \end{proof}
  
 
-  \subsection{Partial sums of Fourier series}
+  \section{Partial sums of Fourier series}
   Given a function $f$ in the $\T$, we are interested in the convergence of fourier series of $f$. We'll discuss about the convergence of the symmetric partial sum of the Fourier series.
 
   \begin{definition}[Symmetric partial sum of a Fourier series]
@@ -251,7 +250,7 @@
     Now speficially if we take $a_k = \hatf(k)e^{2\pi ikx}$, we get the required result. 
   \end{proof}
 
-  \subsection{Summability Kernels}
+  \section{Summability Kernels}
   Now we'll define a family of functions called the sumambility kernels, which we will use heavily in our proofs and simplify it.
   \begin{definition}[Summability kernel]
     \label{def:summability_kernel}
@@ -469,7 +468,7 @@
   \end{proof}
 
 
-  \subsection{Convergence of Fourier Series} % (fold)
+  \section{Convergence of Fourier Series} % (fold)
   \label{ssub:Convergence of Fourier Series}
 
   Now with the help of summability kernels and convolution we'll prove an important theorem which will serve as a backbone for the discussion of convergence forward.
@@ -492,11 +491,11 @@
     \begin{align*}
       \int_0^1 |f(x) - K_N(x)| dx &= \int_0^1 \left| \int_0^1 (f(x) - f(x-y))K_N(y)dy \ \right| \ dx \\
                 &\le \int_0^1 \int_0^1 \left| f(x) - f(x-y) K_N(y) \right| dy \ dx \\
-                &= \int_0^1 |K_N(y)| \int_0^1 |f(x) - f(x-y)| dx \ dy & \text{by Tonelli's theorem} \\
+                &= \int_0^1 |K_N(y)| \int_0^1 |f(x) - f(x-y)| dx \ dy \\
                 &= \int_{-\delta}^{1-\delta} & \text{by lemma } \ref{lem:integral_of_periodic_function}\\
                 &= \int_{-\delta}^{\delta} + \int_{\delta}^{1-\delta} = I_1 + I_2\\
     \end{align*}
-    We'll show that for a given $\epsilon$ we can find an $N$ such that for all $n>N, \ I_1+I_2 < \epsilon$
+    Note that the change of order of integration above is justified by Tonelli's theorem, since the space if of finite measure. We'll show that for a given $\epsilon$ we can find an $N$ such that for all $n>N, \ I_1+I_2 < \epsilon$
 
     Since $f \in L^1(\T)$ we can find $\delta >0$ such that $\int_0^1| f(x+\delta) - f(x) | dx = \epsilon / 2C$, where $C$ is the constant in the second conditon of summability kernel. The proof can be found in any measure theory textbook.
     

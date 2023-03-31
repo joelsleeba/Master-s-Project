@@ -1,8 +1,7 @@
 %TeX root = main.tex
-\newpage
-\section{Fourier Transform}
+\chapter{Fourier Transform}
 
-\subsection{Definiton and basic properties}
+\section{Definiton and basic properties}
   While defining Fourier series we were mainly focused on periodic functions. Now we'll try to expand that into another set of functions. We'll be interested on functions in $L^1(\R)$, that is those real or complex valued functions $f(x)$ in $\R$ for which $$\int_{-\infty}^{\infty} |f(x)| \ dx < \infty$$. For those functions in $L^1(\R)$ the integral above will be called the $L^1$ norm of the function $f$ and will be denoted by $\|f\|_{L^1(\R)}$ or in short $\|f\|_1$. Also note that the notations $\int_{\R}$ and $\int_{-\infty}^{\infty}$ means the same and we might use them interchangably as we see fit.
 
   Analogous to what we did in finding the $n^{th}$ fourier coefficient in definition \ref{def:fourier_coefficient}, we'll define the fourier transform of $f$
@@ -108,7 +107,7 @@
   \end{proof}
 
 
-\subsection{Fourier Inversion Theorem}
+\section{Fourier Inversion Theorem}
 For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
 But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogous techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
 For the Fourier transform, these functions will serve as analogue for trigonometric polynomials in Fourier series.
@@ -271,7 +270,7 @@ Applying the corollary above to $f-g$ where $f, g \in L^1(\R)$, we get
   Let $f, g \in L^1(\R)$ and $\hatf = \hatg$. Then $f=g$ almost everywhere. That is $$\int_\R |f(x) - g(x)| \ dx = 0$$.
 \end{corollary}
 
-\subsection{Fourier Transform in $L^1(\R) \cap L^2(\R)$}
+\section{Fourier Transform in $L^1(\R) \cap L^2(\R)$}
 We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that their $L^1$ norm is finite. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we might not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
 
 Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
