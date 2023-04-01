@@ -1,19 +1,19 @@
-\contentsline {chapter}{Preface}{i}{}%
-\contentsline {chapter}{\numberline {1}Preliminaries}{1}{}%
-\contentsline {section}{\numberline {1.1}Measure theory}{1}{}%
-\contentsline {chapter}{\numberline {2}Fourier Series in $L^1(\mathbb T)$}{3}{}%
-\contentsline {section}{\numberline {2.1}Definition and basic properties}{3}{}%
-\contentsline {section}{\numberline {2.2}Convolution}{7}{}%
-\contentsline {section}{\numberline {2.3}Partial sums of Fourier series}{9}{}%
-\contentsline {section}{\numberline {2.4}Summability Kernels}{11}{}%
-\contentsline {section}{\numberline {2.5}Convergence of Fourier Series}{18}{}%
-\contentsline {chapter}{\numberline {3}Fourier Series in $L^p(\mathbb T)$}{23}{}%
-\contentsline {section}{\numberline {3.1}Fourier Series in $L^2(\mathbb T)$}{24}{}%
-\contentsline {section}{\numberline {3.2}Fourier Series in $L^p(\mathbb T)$}{27}{}%
-\contentsline {chapter}{\numberline {4}Fourier Transform}{31}{}%
-\contentsline {section}{\numberline {4.1}Definiton and basic properties}{31}{}%
-\contentsline {section}{\numberline {4.2}Fourier Inversion Theorem}{36}{}%
-\contentsline {section}{\numberline {4.3}Fourier Transform in $L^1(\mathbb R) \cap L^2(\mathbb R)$}{44}{}%
-\contentsline {chapter}{\numberline {5}Holomorphic Fourier Transforms}{47}{}%
-\contentsline {section}{\numberline {5.1}Motivation and Basic Results}{47}{}%
-\contentsline {section}{\numberline {5.2}Paley Wiener Theorems}{51}{}%
+\contentsline {chapter}{Preface}{i}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Preliminaries}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Measure theory}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Fourier Series in $L^1(\mathbb T)$}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Definition and basic properties}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Convolution}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Partial sums of Fourier series}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Summability Kernels}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Convergence of Fourier Series}{18}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Fourier Series in $L^p(\mathbb T)$}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Fourier Series in $L^2(\mathbb T)$}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Fourier Series in $L^p(\mathbb T)$}{27}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Fourier Transform}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definiton and basic properties}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Fourier Inversion Theorem}{36}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Fourier Transform in $L^1(\mathbb R) \cap L^2(\mathbb R)$}{44}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Holomorphic Fourier Transforms}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Motivation and Basic Results}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Paley Wiener Theorems}{51}{section.5.2}%

@@ -1,4 +1,4 @@
-% TeX root = main.tex
+% TeX root = ../main.tex
 \chapter{Fourier Series in $L^1(\T)$}
 
   \section{Definition and basic properties}
@@ -78,7 +78,7 @@
     \begin{displaymath}
       \sum_{n\in \Z} \hatf(n)e^{2\pi inx}
     \end{displaymath}
-    where $\hatf(n)$ is the $n^{th}$ fourier coefficient as defined in \ref{def:fourier_coefficient} 
+    where $\hatf(n)$ is the $n^{th}$ fourier coefficient as \autoref{def:fourier_coefficient} 
   \end{definition}
 
   \begin{proposition}[Properties of Fourier coefficients]
@@ -112,7 +112,7 @@
           \hatj(n)  &= \int_0^1 f(-x)e^{-2\pi inx} dx \\
                     &= -\int_0^{-1} f(y) e^{2\pi iny}dy & \text{by } y=-x\\
                     &= \int_{-1}^0 f(y)e^{2\pi iny}dy \\
-                    &= \int_0^1 f(y)e^{2\pi iny}dy & \text{by lemma }\ref{lem:integral_of_periodic_function}\\
+                    &= \int_0^1 f(y)e^{2\pi iny}dy & \text{by \autoref{lem:integral_of_periodic_function}}\\
                     &= \hatf(-n)
         \end{align*}
         
@@ -131,7 +131,7 @@
     \end{displaymath}
   \end{definition}
 
-  Convolution can be thought of as taking the moving average of a function with another function. Refer figure \ref{fig:convolution}.
+  Convolution can be thought of as taking the moving average of a function with another function. Refer \autoref{fig:convolution}.
   \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{convolution}
@@ -157,7 +157,7 @@
       f*g(x)  &= \int_{0}^{1}f(x-y)g(y) \ dy \\
               &= -\int_{x}^{x-1} f(v)g(x-v) \ dv\\
               &= \int_{x-1}^{x} g(x-v)f(v) \ dv \\
-              &= \int_{0}^{1}g(x-v)f(v) \ dv  &\text{by lemma } \ref{lem:integral_of_periodic_function}\\
+              &= \int_{0}^{1}g(x-v)f(v) \ dv  &\text{by \autoref{lem:integral_of_periodic_function}}\\
               &=g*f(x)
     \end{align*} 
   \end{proof}
@@ -199,7 +199,7 @@
     \begin{align*}
       \hath(n) &= \int_0^1 \left( \int_0^1 f(y)g(x-y)dy \right) e^{-2\pi in x} dx \\
                &= \int_0^1 f(y) \left( \int_0^1 g(x-y) e^{-2\pi in x}dx \right) dy & \text{by Tonelli's theorem}\\  
-               &= \int_0^1 f(y) \hatg(n)e^{-2\pi inx} dy & \text{by proposition } \ref{prop:properties_of_fourier_coefficients} \text{(a)}\\
+               &= \int_0^1 f(y) \hatg(n)e^{-2\pi inx} dy & \text{by \autoref{prop:properties_of_fourier_coefficients}(a)}\\
                &= \hatf(n)\hatg(n)
     \end{align*}
   \end{proof}
@@ -223,7 +223,7 @@
     \begin{displaymath}
       \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)
     \end{displaymath}
-    where $S_n(x)$ is the symmetric partial sum of the Fourier series as defined in \ref{def:symmetric_partial_sum_of_fourier_series}
+    where $S_n(x)$ is the symmetric partial sum of the Fourier series in \autoref{def:symmetric_partial_sum_of_fourier_series}
   \end{definition}
   For an example, $\{-1^{n}\}$ is a sequence whose symmetric partial sums do not converge but the Ces\'aro partial sums converge to $\frac{1}{2}$. Also if the symmetric partial sums of a series converge, then the Ces\'aro partial sums will also converge to the same limit. \textcolor{red}{(Prove it!)}
 
@@ -273,10 +273,10 @@
   \end{definition}
   Notice that each $\Delta_N$ is a $1-$periodic function.
 
-  We'll prove that Fej\'er kernel as defined in \ref{def:fejer_kernel} satify the properties in \ref{def:summability_kernel}. But before that we'll explore some properties of Fej\'er kernel so that it'll aid us in our proof.
+  We'll prove that Fej\'er kernel as in \autoref{def:fejer_kernel} satify the properties in \autoref{def:summability_kernel}. But before that we'll explore some properties of Fej\'er kernel so that it'll aid us in our proof.
   \begin{proposition}[Properties of Fej\'er kernel]
     \label{prop:properties_of_fejer_kernel}
-    If $\Delta_N(x)$ is defined as in \ref{def:fejer_kernel}, then the following hold true
+    If $\Delta_N(x)$ is as in \autoref{def:fejer_kernel}, then the following hold true
     \begin{enumerate}[label=(\alph*)]
       \item
         $$\Delta_N(x) = 1 + 2 \sum_{n=1}^{N} ( 1-\frac{n}{N} )\cos{2\pi nx}$$ 
@@ -307,7 +307,7 @@
         \begin{displaymath}
           (\Delta_N*f)(x) = \sigma_N(x) 
         \end{displaymath}
-        where $\sigma_n(x)$ is the $n^{th}$ Ces\'aro partial sum of the Fourier series of $f$ as defined in $\ref{def:cesaro_partial_sum_of_fourier_series}$
+        where $\sigma_n(x)$ is the $n^{th}$ Ces\'aro partial sum of the Fourier series of $f$ as defined in \autoref{def:cesaro_partial_sum_of_fourier_series}.
     \end{enumerate}
   \end{proposition}
 
@@ -328,7 +328,7 @@
       \item
         This follows from the fact that $\cos(2\pi n(1-x))  = \cos(2\pi n - 2\pi nx) = \cos(2\pi nx)$ in the last result.
       \item
-        From \ref{prop:properties_of_fejer_kernel}, we know that $\Delta_N(x) = \Delta_N(1-x)$. Therefore by change of variables,
+        From \autoref{prop:properties_of_fejer_kernel}, we know that $\Delta_N(x) = \Delta_N(1-x)$. Therefore by change of variables,
         \begin{displaymath}
           \int_\delta^{\frac{1}{2}}\Delta_N(x) dx = \int_\delta^{\frac{1}{2}}\Delta_N(1-x)dx = -\int_{1-\delta}^{\frac{1}{2}} \Delta_N(y)dy = \int_{\frac{1}{2}}^{1 - \delta}\Delta_N(y) dy
         \end{displaymath}
@@ -401,7 +401,7 @@
               &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx}  \int_0^1 f(x-y) e^{-2\pi in \left( x-y \right) } \ dy \\
               &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_x^{x-1} -f(v) e^{-2\pi in v} \ dv \\
               &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_{x-1}^x f(v) e^{-2\pi in v} \ dv \\
-              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_0^{1} f(v) e^{-2\pi in v} \ dv & \text{by lemma } \ref{lem:integral_of_periodic_function}\\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_0^{1} f(v) e^{-2\pi in v} \ dv & \text{by \autoref{lem:integral_of_periodic_function}}\\
               &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \hatf(n) \\
               &= \sigma_N(x)
       \end{align*}
@@ -411,15 +411,15 @@
 
   \begin{proposition}
     \label{prop:fejer_kernel_is_summability_kernel}
-    Fej\'er kernel as defined in \ref{def:fejer_kernel} is a summability kernel as in definition \ref{def:summability_kernel}
+    Fej\'er kernel as defined in \autoref{def:fejer_kernel} is a summability kernel as in \autoref{def:summability_kernel}
   \end{proposition}
   \begin{proof}
-    To prove that Fej\'er kernel is a summability kernel, we'll verify the three properties given in \ref{def:summability_kernel}.
+    To prove that Fej\'er kernel is a summability kernel, we'll verify the three properties given in \autoref{def:summability_kernel}.
     \begin{enumerate}
       \item
-        We proved that $\int_0^1 \Delta_N(x) = 1$ at proposition \ref{prop:properties_of_fejer_kernel}
+        We proved that $\int_0^1 \Delta_N(x) = 1$ at \autoref{prop:properties_of_fejer_kernel}
       \item
-        From proposition \ref{prop:properties_of_fejer_kernel}, we know that
+        From \autoref{prop:properties_of_fejer_kernel}, we know that
         \begin{displaymath}
           \Delta_N(x) = 
           \begin{cases}
@@ -439,7 +439,7 @@
           \lim_{N \to \infty}\int_\delta^{1-\delta} \left|\Delta_N(x) \right| dx = 0
         \end{displaymath}
 
-        we note that from proposition \ref{prop:properties_of_fejer_kernel} if $0< \delta \le \frac{1}{2}$, $$ \int_\delta^{\frac{1}{2}}\Delta_N(x) dx \le \frac{1}{4N\delta}$$
+        we note that from \autoref{prop:properties_of_fejer_kernel} if $0< \delta \le \frac{1}{2}$, $$ \int_\delta^{\frac{1}{2}}\Delta_N(x) dx \le \frac{1}{4N\delta}$$
         and 
         $$\int_\frac{1}{2}^{1-\delta} \Delta_N(x) =  \int_\delta^\frac{1}{2} \Delta_N(x)$$
 
