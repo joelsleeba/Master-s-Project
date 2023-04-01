@@ -1,0 +1,160 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{axler}{book}{}
+      \name{author}{1}{}{%
+        {{hash=71493eec7caacea528ad39dbfb52773a}{%
+           family={Axler},
+           familyi={A\bibinitperiod},
+           given={Sheldon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{fullhash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{bibnamehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{authorbibnamehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{authornamehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{authorfullhash}{71493eec7caacea528ad39dbfb52773a}
+      \field{labelalpha}{Axl20}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783030331429 9783030331436}
+      \field{series}{Graduate {Texts} in {Mathematics}}
+      \field{title}{Measure, integration \& real analysis}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{282}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-030-33143-6
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-030-33143-6
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-030-33143-6
+      \endverb
+    \endentry
+    \entry{grafakos}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d75ea9c673adff92b3c4257d2a70a85b}{%
+           family={Grafakos},
+           familyi={G\bibinitperiod},
+           given={Loukas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=085de258ef2807e37542183d3f90f064}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Diogo\bibnamedelimb Oliveira\bibnamedelima e},
+           giveni={D\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim e\bibinitperiod}}}%
+        {{hash=6a37dfafb51f835a861b555265c9667d}{%
+           family={Pramanik},
+           familyi={P\bibinitperiod},
+           given={Malabika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0195343a0188ad73fea77d9a848cbaf6}{%
+           family={Seeger},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9acfc8e1330463942b45469d1ce2dded}{%
+           family={Stovall},
+           familyi={S\bibinitperiod},
+           given={Betsy},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7afa501e1f1c546078c95d4a387b71cd}
+      \strng{fullhash}{ba039398949b543fcccbfc33aaee3455}
+      \strng{bibnamehash}{7afa501e1f1c546078c95d4a387b71cd}
+      \strng{authorbibnamehash}{7afa501e1f1c546078c95d4a387b71cd}
+      \strng{authornamehash}{7afa501e1f1c546078c95d4a387b71cd}
+      \strng{authorfullhash}{ba039398949b543fcccbfc33aaee3455}
+      \field{labelalpha}{Gra+17}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In May 2016, we organized a conference in harmonic analysis in honor of Professor Michael Christ, on the campus of the University of Wisconsin in Madison. We are happy to present sixteen open problems, almost all of which were contributed by participants of a problem session held in the afternoon of May 19, 2016.}
+      \field{title}{Some {Problems} in {Harmonic} {Analysis}}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.1701.06637
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1701.06637
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1701.06637
+      \endverb
+      \keyw{Classical Analysis and ODEs (math.CA),Analysis of PDEs (math.AP),FOS: Mathematics,FOS: Mathematics}
+    \endentry
+    \entry{rudin}{book}{}
+      \name{author}{1}{}{%
+        {{hash=33be2fc2739d3493c6d6cc5d56a4c41e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{fullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{bibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorbibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authornamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorfullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \field{labelalpha}{Rud87}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd ed}
+      \field{isbn}{9780070542341}
+      \field{title}{Real and complex analysis}
+      \field{year}{1987}
+      \keyw{Mathematical analysis}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
