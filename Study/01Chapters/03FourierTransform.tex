@@ -4,7 +4,7 @@
 \section{Definiton and basic properties}
   While defining Fourier series we were mainly focused on periodic functions. Now we'll try to expand that into another set of functions. We'll be interested on functions in $L^1(\R)$, that is those real or complex valued functions $f(x)$ in $\R$ for which $$\int_{-\infty}^{\infty} |f(x)| \ dx < \infty$$. For those functions in $L^1(\R)$ the integral above will be called the $L^1$ norm of the function $f$ and will be denoted by $\|f\|_{L^1(\R)}$ or in short $\|f\|_1$. Also note that the notations $\int_{\R}$ and $\int_{-\infty}^{\infty}$ means the same and we might use them interchangably as we see fit.
 
-  Analogous to what we did in finding the $n^{th}$ fourier coefficient in definition \ref{def:fourier_coefficient}, we'll define the fourier transform of $f$
+  Analogous to what we did in finding the $n^{th}$ fourier coefficient in \autoref{def:fourier_coefficient}, we'll define the fourier transform of $f$
 
   \begin{definition}[Fourier transform of a function $f$]
     \label{def:fourier_transform_of_f}
@@ -14,10 +14,10 @@
 
   Also note that $\hatf(t)$ is a finite quantity (real or complex) for all $t \in \T$ since $f\in L^1(\T)$ and $|e^{-2 \pi itx}| = 1$ implies $$|\hatf(t)| \le \int_{-\infty}^{\infty}\left|f(x)\right| dx < \infty$$ By the linearity of the integral we can also show that for functions $f, g \in L^2(\R)$ and scalars $\mu, \nu$, $\widehat{\mu f + \nu g}(t) = \mu \hatf(t) + \nu\hatg(t)$.
 
-  Now we'll prove some important properties of Fourier transforms. Note that this will almost remind you of the properties of Fourier coefficinets in proposition \ref{prop:properties_of_fourier_coefficients}. 
+  Now we'll prove some important properties of Fourier transforms. Note that this will almost remind you of the properties of Fourier coefficinets in \autoref{prop:properties_of_fourier_coefficients}. 
   \begin{proposition}[Properties of Fourier transform]
     \label{prop:properties_of_fourier_transform}
-    If $f\in L^1(\R)$ and $\hatf$ is the Fourier tranform of $f$ as in definition \ref{def:fourier_transform_of_f}, then 
+    If $f\in L^1(\R)$ and $\hatf$ is the Fourier tranform of $f$ as in \autoref{def:fourier_transform_of_f}, then 
     \begin{enumerate}[label=(\alph*)]
       \item If $a \in \R$ and $g(x) = f(x+a)$ for all $x \in \R$, then $g \in L^1(\R)$ and $\hatg(t) = e^{2\pi ita} \hatf(t)$ for all $t$.
       \item If $b \in \R$ and $h(x) = e^{2\pi ibx}f(x)$, then $h \in L^1(\R)$ and $\hath(t) = \hatf(t-b)$ for all $t$.
@@ -63,10 +63,10 @@
     By change of variables $x = y + \frac{1}{2t}$, we see that the above equation becomes $$\hatf(t) = \int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y+ \frac{1}{2t})} \ dy = -\int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y)} \ dy  $$
     Therefore $$2\hatf(t) = \int_\R (f(x + \frac{1}{2t}) - f(x))e^{-2 \pi itx} \ dx $$
     and therefore $$\left|\hatf(t)\right| \le \frac{1}{2} \int_\R |f(x + \frac{1}{2t}) - f(x)| dx$$
-    Now by proposition \ref{prop:L1_functions_are_continuous_in_L1_norm_in_R} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$. Hence proved. 
+    Now by \autoref{prop:L1_functions_are_continuous_in_L1_norm_in_R} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$. Hence proved. 
   \end{proof}
 
-  Convolution was one important operation which helped us in the theory of Fourier series. We will define the convolution of two functions in $L^1(\R)$ the same way we defined it for functions in $L^1(\T)$ in definition \ref{def:convolution_of_functions_in_L^1(T)}. That is if $f, g \in L^1(\R)$, we define the convolution of $f$ and $g$ as $$(f*g)(x) = \int_{\R} f(x-y)g(y) dy$$
+  Convolution was one important operation which helped us in the theory of Fourier series. We will define the convolution of two functions in $L^1(\R)$ the same way we defined it for functions in $L^1(\T)$ in \autoref{def:convolution_of_functions_in_L^1(T)}. That is if $f, g \in L^1(\R)$, we define the convolution of $f$ and $g$ as $$(f*g)(x) = \int_{\R} f(x-y)g(y) dy$$
   But unlike $L^1(\T)$, $L^1(\R)$ is not finite measure space. So we'll need to make sure this definition of convolution is well defined for functions in $L^1(\R)$. 
 
   \begin{proposition}
@@ -80,7 +80,7 @@
     
   \end{proof}
 
-  Almost all the properties of the convolution in $L^1(\T)$ has its analogues in $L^1(\R)$, but we will only quote the most important one, that is the convolution is commutative, $f*g = g*f$. One can easily prove this using a change of variable like we did in proposition \ref{prop:properties_of_convolution}
+  Almost all the properties of the convolution in $L^1(\T)$ has its analogues in $L^1(\R)$, but we will only quote the most important one, that is the convolution is commutative, $f*g = g*f$. One can easily prove this using a change of variable like we did in \autoref{prop:properties_of_convolution}
 
   We'll also prove that for functions $f, g \in L^1(\R)$, $f*g \in L^1(\R)$.
   \begin{proposition}
@@ -106,7 +106,6 @@
     Note that the change of variable is justified since we know that  for all $x \in \R$, $|e^{-2\pi itx}| = 1$ and hence the integral is absolutely convergent by the proof similar to last theorem. 
   \end{proof}
 
-
 \section{Fourier Inversion Theorem}
 For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
 But, we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogous techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
@@ -121,12 +120,12 @@ We'll now prove an important property of functions $B(x)$ as defined above.
 \begin{proof}
   Since $|e^{2 \pi itx}| = 1$, and $b \in L^1[-T, T]$, by triangle inequaltiy $$|B(x)| \le \int_{-T}^T |b(t)| \ dt < \infty$$
   Thus $B$ is a bounded function in the finite interval $[-T, T]$. Hence $|(f*B)(x)| \le \|f\|_1 \|b\|_1$ for all $x$. Moreover, 
-  \begin{align}
+  \begin{align*}
     (f*B)(x) &= \int_\R f(x-y)B(y) \ dy \\
     &= \int_\R f(x-y) \int_{-T}^T b(t)e^{2 \pi ity} \ dt \ dy \\
     &= \int_{-T}^{T}b(t) e^{2 \pi itx}\int_\R f(x-y) e^{-2 \pi it(x-y)} \ dy \ dt \\
     &= \int_{-T}^T b(t)\hatf(t)e^{2\pi itx} \ dt
-  \end{align}
+  \end{align*}
   Note that the change of intergral is justified because we already know that the integral is finite since $|(f*B)(x)| \le \infty$.
 \end{proof}
 
@@ -136,7 +135,7 @@ Now we'll prove some propositions which will help us in $L^2(\R)$.
   We have $$\int_{-\infty}^{\infty} \left(\frac{\sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
 \end{proposition}
 \begin{proof}
-  from (b) and (e) of proposition \ref{prop:properties_of_fejer_kernel}, and lemma \ref{lem:integral_of_periodic_function} we get that $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\sin (\pi x)}\right)^2 \ dx = 1$$
+  from (b) and (e) of \autoref{prop:properties_of_fejer_kernel}, and \autoref{lem:integral_of_periodic_function} we get that $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\sin (\pi x)}\right)^2 \ dx = 1$$
   We can write this integral as $$\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{1}{N} \left(\frac{\sin(\pi Nx)}{\pi x}\right)^2 \ dx + \int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{\sin^2 \pi Nx}{N} \left( \frac{1}{\sin^2 \pi x} - \frac{1}{(\pi x)^2} \right) \ dx = I_1 + I_2 = 1 $$
   For $I_1$, we see that by the change of variable $y = Nx$, it becomes $$I_1 = \int_{-\frac{N}{2}}^{\frac{N}{2}} \left(\frac{\sin(\pi x)^2}{\pi x}\right)^2 \ dx $$. 
   And for $I_2$, we see that the difference of fractions inside paranthesis is $$\frac{(\pi x)^2 - \sin^2(\pi x)}{(\pi x \sin(\pi x))^2} = \frac{(\pi x - \sin(\pi x))(\pi x + \sin(\pi x))}{(\pi x \sin(\pi x))^2}$$
@@ -166,7 +165,7 @@ Let's define the $L^1(\R)$ analogue of Fej\'er kernel.
 \begin{proof}
   \begin{enumerate}[label=(\alph*)]
     \item  
-      From proposition \ref{prop:integral_of_sin(pi_x)^2/(pi_x)^2}, $$\int_\R \left(\frac{\sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
+      From \autoref{prop:integral_of_sin(pi_x)^2/(pi_x)^2}, $$\int_\R \left(\frac{\sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
       Put $x=Ty$, then $dx = T \ dy $ and we get the desired result
 
     \item This is clear from the definition, since $\sin^2(-x) = \sin^2(x)$.
@@ -176,7 +175,7 @@ Let's define the $L^1(\R)$ analogue of Fej\'er kernel.
        &= 2\left[(1-x)\frac{\sin(2\pi tx)}{2\pi t} \right]_0^1 + \int_0^1\frac{\sin(2\pi tx)}{\pi t} \ dx \\
        &= \left[-\frac{\cos(2\pi tx)}{2(\pi t)^2}\right]_0^1 = \frac{1 - \cos(2\pi tx)}{2(\pi t)^2} = \left(\frac{\sin(\pi t)}{\pi t}\right)^2
      \end{align*}
-      Now from the (c) of proposition \ref{prop:properties_of_fourier_transform}, we get that the fourier transform of the function $h(x) = g(Tx)$, $$\hath(t) = \frac{1}{T}\left(\frac{\sin(\pi Tx)}{\pi x}\right)^2 = \Delta(x)$$
+      Now from the (c) of \autoref{prop:properties_of_fourier_transform}, we get that the fourier transform of the function $h(x) = g(Tx)$, $$\hath(t) = \frac{1}{T}\left(\frac{\sin(\pi Tx)}{\pi x}\right)^2 = \Delta(x)$$
       Note that the above holds true for values $x\neq 0$ and when $x=0$, the integral reduces to $$\frac{1}{T}\int_{-T}^T (T-|t|) \ dt =  \frac{2}{T}\int_0^T(T-t) \ dt = T = \Delta(0)$$
     Hence the proof.
   \end{enumerate}
@@ -185,26 +184,26 @@ Let's define the $L^1(\R)$ analogue of Fej\'er kernel.
 From the above properties we conclude the following result. 
 \begin{corollary}
   \label{cor:convolution_with_fejer_kernel_in_L1(R)}
-  If $f\in L^1(\R)$, and $\Delta_T$ is as in definition \ref{def:L1(R)_analogue_of_fejer_kernel}, then $$(f*\Delta_T)(x) = \int_{-T}^T \left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt$$
+  If $f\in L^1(\R)$, and $\Delta_T$ is as in \autoref{def:L1(R)_analogue_of_fejer_kernel}, then $$(f*\Delta_T)(x) = \int_{-T}^T \left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt$$
 \end{corollary}
 \begin{proof}
   From last proposition we get that $$\Delta_T(x) = \int_{-T}^T \left(1-\frac{|t|}{T}\right)e^{-2 \pi itx} \ dx$$
-  Using the result of proposition \ref{prop:property_of_analogue_of_trigonometric_functions}, on $\Delta_T$, we get the result.
+  Using the result of \autoref{prop:property_of_analogue_of_trigonometric_functions}, on $\Delta_T$, we get the result.
 \end{proof}
 
-Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (theorem \ref{thm:fejer_theorem})
+Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (\autoref{thm:fejer_theorem})
 \begin{theorem}
   \label{thm:L1(R)_analogue_of_fejer_theorem}
   Let $f \in L^1(\R)$. If $f$ is continuous at $x$, then $$\lim_{T \to \infty} \int_{-T}^{T}\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} \ dt = f(x)$$
 \end{theorem}
 \begin{proof}
-  Let $\epsilon$ be given, since we know that $f$ is continuous at $x$, there exist a $\delta$, such that $|f(x-y) - f(x)| < \epsilon$, when $|y| < \delta$. Also since we know that $\int_\R \Delta_T(x) \ dx = 1$ by proposition \ref{prop:properties_of_fejer_kernel_in_R} and by corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)},
+  Let $\epsilon$ be given, since we know that $f$ is continuous at $x$, there exist a $\delta$, such that $|f(x-y) - f(x)| < \epsilon$, when $|y| < \delta$. Also since we know that $\int_\R \Delta_T(x) \ dx = 1$ by \autoref{prop:properties_of_fejer_kernel_in_R} and by \autoref{cor:convolution_with_fejer_kernel_in_L1(R)},
   \begin{align*}
     \int_{-T}^T\left(1-\frac{|t|}{T}\right)\hatf(t)e^{2\pi itx} dt - f(x) &= (f*\Delta_T)(x) - f(x) \\
      &= \int_\R f(x-y) \Delta_T(y) dy - \int_\R f(x)\Delta_T(y) \ dy \\
      &= \int_\R (f(x-y) - f(y)) \Delta_T(y) dy \\ 
   \end{align*}
-  Now we'll evaluate the last integral into $I_1, I_2, I_3$, where $I_1$ is when $-\infty<y\le-\delta$, $I_2$ is when $-\delta < y < \delta$ and $I_3$ is $\delta \le y < \infty$. When $y$ is in $I_1$ and $I_3$, we see from the definition \ref{def:L1(R)_analogue_of_fejer_kernel} that since $|y| > |\delta|$ in $I_1$ and $I_3$, $|\Delta_T(y)| \le \frac{1}{T(\pi\delta)^2}$. Thus $$|I_1| \le \frac{1}{T\pi^2\delta^2}\int_{-\infty}^{-\delta} |f(x-y)| \ dy + |f(x)|\int_{-\infty}^{-\delta}\Delta_T(y) \ dy $$ $$|I_3| \le \frac{1}{T\pi^2\delta^2}\int^{\infty}_{\delta} |f(x-y)| \ dy + |f(x)|\int^{\infty}_{\delta}\Delta_T(y) \ dy $$
+  Now we'll evaluate the last integral into $I_1, I_2, I_3$, where $I_1$ is when $-\infty<y\le-\delta$, $I_2$ is when $-\delta < y < \delta$ and $I_3$ is $\delta \le y < \infty$. When $y$ is in $I_1$ and $I_3$, we see from the \autoref{def:L1(R)_analogue_of_fejer_kernel} that since $|y| > |\delta|$ in $I_1$ and $I_3$, $|\Delta_T(y)| \le \frac{1}{T(\pi\delta)^2}$. Thus $$|I_1| \le \frac{1}{T\pi^2\delta^2}\int_{-\infty}^{-\delta} |f(x-y)| \ dy + |f(x)|\int_{-\infty}^{-\delta}\Delta_T(y) \ dy $$ $$|I_3| \le \frac{1}{T\pi^2\delta^2}\int^{\infty}_{\delta} |f(x-y)| \ dy + |f(x)|\int^{\infty}_{\delta}\Delta_T(y) \ dy $$
   where the first integral in both the inequalities is less than $\|f\|_1$ which is finite, and second integral $$\int_{-\infty}^{-\delta} \Delta_T(y) \ dy = \int_\delta^\infty \Delta_T(y) \ dy \le \int_\delta^\infty \frac{1}{T\pi^2 \delta^2} \ dx = \frac{1}{T\pi^2 \delta}$$
   Therefore $I_1, I_3 \to 0$, as $T\to \infty$. Now in $I_2$, by the continuity of $f$ at $x$, $$|I_2| \le \epsilon\int_{-\delta}^\delta \Delta_T(y) \ dy \le \epsilon \int_\R \Delta_T(y) \ dy = \epsilon$$
   Therefore $I_2$ can also be made arbitarily small. Hence the theorem. 
@@ -224,7 +223,7 @@ Now we'll prove some results which will help us to prove the general Fourier inv
   Therefore $E_2$ converge to 0 as $\epsilon$ can be made arbitarily small. Hence the result. %$\lim_{T\to \infty} J(T) = a$
 \end{proof}
 
-As a result of the above result combined with theorem \ref{thm:L1(R)_analogue_of_fejer_theorem}, we get
+As a result of the above result combined with \autoref{thm:L1(R)_analogue_of_fejer_theorem}, we get
 \begin{corollary}
   Let $f\in L^1(\R)$ and $f$ is continuous at $x$. If $$\lim_{T\to \infty} \int_{-T}^T\hatf(t)e^{2\pi itx} \ dt$$
   exists, then it is equal to $f(x)$.
@@ -238,21 +237,21 @@ Note that the condition that $\hatf \in L^1(\R)$ in the above theorem guarantee 
 
 Now we'll prove one important theorem
 \begin{theorem}
-  If $f\in L^1(\R)$ and $\sigma_T(x) = (f*\Delta_T)(x)$, where $\Delta_T$ is as in definition \ref{def:L1(R)_analogue_of_fejer_kernel}, then $$\lim_{T\to \infty} \int_{-\infty}^{\infty}|f(x) - \sigma_T(x)| \ dx = 0$$
+  If $f\in L^1(\R)$ and $\sigma_T(x) = (f*\Delta_T)(x)$, where $\Delta_T$ is as in \autoref{def:L1(R)_analogue_of_fejer_kernel}, then $$\lim_{T\to \infty} \int_{-\infty}^{\infty}|f(x) - \sigma_T(x)| \ dx = 0$$
 \end{theorem}
 \begin{proof}
-  % From corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)}, we know that $$\sigma_T(x) = (f*\Delta_T)(x) = \int_{-T}^T\left(1-\frac{|t|}{T}\right) \hatf(t) e^{2\pi itx} \ dt $$
-  From proposition \ref{prop:properties_of_fejer_kernel_in_R}, we know that $\int_\R \Delta_T(x) \ dx = 1$, therefore $$f(x) - \sigma_T(x) = \int_\R \left(f(x) - f(x-u)\right) \Delta_T(u) \ du$$
+  % From \autoref{cor:convolution_with_fejer_kernel_in_L1(R)}, we know that $$\sigma_T(x) = (f*\Delta_T)(x) = \int_{-T}^T\left(1-\frac{|t|}{T}\right) \hatf(t) e^{2\pi itx} \ dt $$
+  From \autoref{prop:properties_of_fejer_kernel_in_R}, we know that $\int_\R \Delta_T(x) \ dx = 1$, therefore $$f(x) - \sigma_T(x) = \int_\R \left(f(x) - f(x-u)\right) \Delta_T(u) \ du$$
   which implies $$\left|f(x)-\sigma_T(x)\right| \le \int_\R \left|f(x) - f(x-u)\right| \Delta_T(u) \ du$$
   and therefore $$\int_\R \left|f(x)-\sigma_T(x)\right| \ dx \le \int_\R \int_\R \left|f(x) - f(x-u)\right| \Delta_T(u) \ du \ dx$$
   Again we see that $$\int_\R \Delta_T(u) \int_\R |f(x) - f(x-u)| \ dx \ du \le \int_\R \Delta_T(u) \cdot 2\|f\|_1 \ du = 2\|f|\|_1$$
   and since $\R^2$ is a sigma finite measure space by Fubini-Tonelli theorem, we can change the order of integration. Then $$\int_\R \left|f(x)-\sigma_T(x)\right| \ dx \le \int_\R \Delta_T(u) \int_\R \left|f(x) - f(x-u)\right|  \ dx \ du$$
-  Now we'll analyse the last integral. Let us denote the inner integral by $I(u)$. Since $f\in L^1(\R)$, by proposition \ref{prop:L1_functions_are_continuous_in_L1_norm_in_R} given any $\epsilon$, there exists a $\delta$ such that for all $|u| < \delta$, $$I(u) = \int_\R |f(x) - f(x-u)| \ dx < \epsilon$$
+  Now we'll analyse the last integral. Let us denote the inner integral by $I(u)$. Since $f\in L^1(\R)$, by \autoref{prop:L1_functions_are_continuous_in_L1_norm_in_R} given any $\epsilon$, there exists a $\delta$ such that for all $|u| < \delta$, $$I(u) = \int_\R |f(x) - f(x-u)| \ dx < \epsilon$$
   Moreover, $$I(u) \le \int_\R |f(x)| + |f(x-u)| \ du = 2\|f\|_1$$
   We'll split the integral into three intervals and analyse there. For that let $$\int_\R \Delta_T(u) I(u) \ du = \int_{-\infty}^{-\delta}+ \int_{-\delta}^{\delta} + \int^{\infty}_{\delta} = I_1 + I_2 + I_3$$
-  Then by the definition of $\Delta_T$ in definition \ref{def:L1(R)_analogue_of_fejer_kernel},
+  Then by the definition of $\Delta_T$ in \autoref{def:L1(R)_analogue_of_fejer_kernel},
   $$I_1 \le 2\|f\|_1 \int_{-\infty}^{-\delta} \Delta_T(u) \ du \le 2\|f\|_1\int_{-\infty}^{-\delta} \frac{1}{T\pi^2 u^2} \le \frac{2\|f\|_1}{T\pi^2 \delta}$$ $$I_3 \le 2\|f\|_1 \int^{\infty}_{\delta} \Delta_T(u) \ du \le 2\|f\|_1\int^{\infty}_{\delta} \frac{1}{T\pi^2 u^2} \le \frac{2\|f\|_1}{T\pi^2 \delta}$$
-  And by the choice of $\delta$ and proposition \ref{prop:properties_of_fejer_kernel_in_R}, $I_2$ can be estimated as $$I_2 \le \epsilon \int_{-\delta}^\delta \Delta_T(u) \ du \le \epsilon \int_\R \Delta_T(u) \ du = \epsilon$$
+  And by the choice of $\delta$ and \autoref{prop:properties_of_fejer_kernel_in_R}, $I_2$ can be estimated as $$I_2 \le \epsilon \int_{-\delta}^\delta \Delta_T(u) \ du \le \epsilon \int_\R \Delta_T(u) \ du = \epsilon$$
   Since $\epsilon$ can be chosen arbitarily small and for the corresponding $\delta$, we see that $I_1, I_3 \to 0$ as $T\to \infty$. Hence the result.
 \end{proof}
 
@@ -261,7 +260,7 @@ Now armed with the above theorem we can conclude some important results.
   If $f\in L^1(\R)$ and $\hatf(t) = 0$ for all $t$, then $f$ is $0$ almost everywhere. That is $$\int_\R |f(x)| \ dx = 0$$
 \end{corollary}
 \begin{proof}
-  Since we know that $\hatf(t)= 0$ for all $t\in \R$, by corollary \ref{cor:convolution_with_fejer_kernel_in_L1(R)}, $\sigma_T = (f*\Delta_T) =0$(zero function) for all $T$. Then by previous theorem the result follows. 
+  Since we know that $\hatf(t)= 0$ for all $t\in \R$, by \autoref{cor:convolution_with_fejer_kernel_in_L1(R)}, $\sigma_T = (f*\Delta_T) =0$(zero function) for all $T$. Then by previous theorem the result follows. 
 \end{proof}
 
 Applying the corollary above to $f-g$ where $f, g \in L^1(\R)$, we get
@@ -275,7 +274,7 @@ We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ 
 
 Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
 
-Now we'll prove an important result which is the $L^2(\R)$ analogue of the proposition \ref{prop:L1_functions_are_continuous_in_L1_norm_in_R}
+Now we'll prove an important result which is the $L^2(\R)$ analogue of the \autoref{prop:L1_functions_are_continuous_in_L1_norm_in_R}
 
 \begin{proposition}
   \label{prop:L2_functions_are_continuous_in_L2_norm_in_R}
@@ -289,7 +288,7 @@ Now we'll prove an important result which is the $L^2(\R)$ analogue of the propo
   Now since $g$ is continuous in a compact space $[-X-1, X+1]$, it is uniformly continuous and therefore as $\delta \to 0$ the above integral tends to $0$. Hence the proof.
 \end{proof}
 
-Now we'll discuss about the convolution of functions in $L^2(\R)$. We'll follow the same definition as before in $L^1(\R)$. (For formula refer to definition \ref{def:convolution_of_functions_in_L^1(T)}). It is natural to think if such a definition is well defined. In fact by the Holders inequality (Theorem \ref{thm:Holder_inequality}) one can show that it is well defined. Since if $f, g \in L^2(\R)$, then 
+Now we'll discuss about the convolution of functions in $L^2(\R)$. We'll follow the same definition as before in $L^1(\R)$. (For formula refer to \autoref{def:convolution_of_functions_in_L^1(T)}). It is natural to think if such a definition is well defined. In fact by the Holders inequality (\autoref{thm:Holder_inequality}) one can show that it is well defined. Since if $f, g \in L^2(\R)$, then 
   \begin{align*}
     |f*g(x)| &= \left|\int_R f(x-y)g(y) \ dy \right|\\
         &\le \int_\R |f(x-y)g(y)| \ dy \\
@@ -309,7 +308,7 @@ We can now discuss about the convolution of $L^2(\R)$ functions. We'll now show 
       |h(x+\delta) - h(x)| &\le \int_\R \left|(f(x+\delta - y) - f(x-y)) g(y) \right| \ dy \\
       &\le \left( \int_\R \left|f(x+\delta - y) - f(x-y) \right|^2 dy\right)^{\frac{1}{2}} \left( \int_\R \left|g(y)\right|^2 \right)^{\frac{1}{2}}
     \end{align*}
-    where the first integral converge to zero by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm_in_R} and the last integral is a constant. Since the first integral is over all of $\R$, it is independent of $x$ and hence the result follows.
+    where the first integral converge to zero by \autoref{prop:L2_functions_are_continuous_in_L2_norm_in_R} and the last integral is a constant. Since the first integral is over all of $\R$, it is independent of $x$ and hence the result follows.
   \end{proof}
 
 Now we'll prove the famous Plancherel's theorem.
@@ -318,9 +317,9 @@ Now we'll prove the famous Plancherel's theorem.
   If $f \in L^1(\R) \cap L^2(\R)$, then $$\int_\R |f(x)|^2 \ dx = \int_\R |\hatf(t)|^2 \ dt $$
 \end{theorem}
 \begin{proof}
-  Let $g(x) = \overline{f(-x)}$. Then $g \in L^1(\R)\cap L^2(\R)$. Put $h(x) = (f*g)(x)$. Since $f, g \in L^1(\R)$, by proposition \ref{prop:convolution_is_well_defined_in_L^1(R)}, $h \in L^1(\R)$. Since $f, g \in L^2(\R)$, by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm_in_R}, $h$ is uniformly continuous. 
-  Hence by theorem \ref{thm:L1(R)_analogue_of_fejer_theorem}  $$h(x) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t)e^{2\pi itx} \ dt $$ for all $x$. In particular, for $x=0$ we get $$h(0) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t) \ dt$$
-  By the proposition \ref{prop:convolution_is_well_defined_in_L^1(R)} $\hath(t) = \hatf(t)\hatg(t)$. By the definition of $g$, and combining (c), (d) from proposition \ref{prop:properties_of_fourier_transform}, we get that $\hatg(t) = \overline{\hatf(t)}$.
+  Let $g(x) = \overline{f(-x)}$. Then $g \in L^1(\R)\cap L^2(\R)$. Put $h(x) = (f*g)(x)$. Since $f, g \in L^1(\R)$, by \autoref{prop:convolution_is_well_defined_in_L^1(R)}, $h \in L^1(\R)$. Since $f, g \in L^2(\R)$, by \autoref{prop:L2_functions_are_continuous_in_L2_norm_in_R}, $h$ is uniformly continuous. 
+  Hence by \autoref{thm:L1(R)_analogue_of_fejer_theorem}  $$h(x) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t)e^{2\pi itx} \ dt $$ for all $x$. In particular, for $x=0$ we get $$h(0) = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) \hath(t) \ dt$$
+  By the \autoref{prop:convolution_is_well_defined_in_L^1(R)} $\hath(t) = \hatf(t)\hatg(t)$. By the definition of $g$, and combining (c), (d) from \autoref{prop:properties_of_fourier_transform}, we get that $\hatg(t) = \overline{\hatf(t)}$.
   Since $$h(0) = (f*g)(0) = \int_\R f(y)g(-y) \ dy = \int_\R |f(y)|^2 \ dy$$
   we get that $$\int_\R |f(x)|^2 \ dx = \lim_{T\to \infty} \int_{-T}^T \left(1-\frac{|t|}{T}\right) |\hatf(t)|^2 \ dt$$
   Since the integral in the right is always positive, the limit is an increasing limit. Then for any $0<\epsilon<1$, we have $$(1-\epsilon) \int_{-\epsilon T}^{\epsilon T} |\hatf(t)|^2 \ dt \le \int_{-T}^{T} \left( 1-\frac{|t|}{T} \right) |\hatf(t)|^2 dt \le \int_\R |\hatf(t)|^2 \ dt$$

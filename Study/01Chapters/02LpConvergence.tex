@@ -1,14 +1,14 @@
 % TeX root = main.tex
 \chapter{Fourier Series in $L^p(\T)$}
-Before we go into the general $L^p$, we'll first recall some importatnt results from functional analysis which are essential for the discussion of further topics
+Before we go into the general $L^p$, we'll first recall some importatnt results from functional analysis which are essential for the discussion of further topics.
 
-Recall that in definiton \ref{def:Lp_function}, we've discussed what is an $L^p$ function for a general space $S$. Here the space is $\T$ and $L^p(\T)$ are precisely the set of all $L^p$ functions in $\T$.
+Recall that in \autoref{def:Lp_function}, we've discussed what is an $L^p$ function for a general space $S$. Here the space is $\T$ and $L^p(\T)$ are precisely the set of all $L^p$ functions in $\T$.
 
 \begin{theorem}[Holder's Inequality]
    \label{thm:Holder_inequality}
   Let $1 \le  p \le \infty$ and $q$ such that $1/p + 1/q = 1$ (for convention we will assume that the tuples $(1, \infty)$, and $(\infty, 1)$, satify the above relation) then for lebesgue measure space $S$ and functions $f \in L^p(S)$, and $g \in L^q(S)$
   $$ \left| \int_S f(x)g(x) dx \right| \le \|f\|_p \|g\|_q$$
-  where $$\|f\|_p = \left(\int_s |f(x)|^p \right)^{\frac{1}{p}}$$ as in the definition of $L^p$ norm in \ref{def:Lp_function}.
+  where $$\|f\|_p = \left(\int_s |f(x)|^p \right)^{\frac{1}{p}}$$ as in \autoref{def:Lp_function}.
 \end{theorem}
 
 \begin{theorem}[Minkowski's Inequality]
@@ -47,7 +47,7 @@ Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$
     |f*g(x+\delta) - f*g(x)| &= \left| \int_0^1 f(u) (g(x + \delta -u)- g(x-u)) du \right| \\
           &\le \|f\|_2 \left( \int_0^1|g(x+\delta - u) - g(x-u)|^2 du \right)^{1/2} \\
   \end{align*}
-  which converge to zero as $\delta \to 0$ by proposition \ref{prop:L2_functions_are_continuous_in_L2_norm}. Therefore $f*g$ is continuous in $\T$.
+  which converge to zero as $\delta \to 0$ by \autoref{prop:L2_functions_are_continuous_in_L2_norm}. Therefore $f*g$ is continuous in $\T$.
   Also, 
   \begin{align*}
     |f*g(x)| &= \left| \int_0^1 f(u)g(x-u) du \right| \\
@@ -57,13 +57,13 @@ Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$
   Hence the theorem.
 \end{proof}
 
- Now that we've proved some important results, we'll define the fourier coeffients $\hatf(n)$ the same way we defined them for $\L^1(\T)$ in definition \ref{def:fourier_coefficient} as 
+ Now that we've proved some important results, we'll define the fourier coeffients $\hatf(n)$ the same way we defined them for $\L^1(\T)$ in \autoref{def:fourier_coefficient} as 
 $$\hat{f}(n) = \int_0^1 f(x)e^{-2\pi inx} dx$$
 
 Note that $\hatf(n)$ is a finite quantity since $|e^{ix}| = 1$ and,
 $$ |\hatf(n)| = \left| \int_0^1 f(x)e^{-2\pi inx} dx \right| \le \|f\|_2\left(\int_0^1 |e^{-2\pi inx}|^2 dx\right)^{1/2} = \|f\|_2 $$
 
-Hence we define the fourier series the same way as in definition \ref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^2(\T)$ functions are Ces\'aro summable to $f$. In fact this is true.
+Hence we define the fourier series the same way as in \autoref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^2(\T)$ functions are Ces\'aro summable to $f$. In fact this is true.
 
 \begin{theorem}[Fourier series of $L^2(\T)$ functions are Ces\'aro summable]
   If $f\in L^2(\T)$, and $\sigma_N(x)$ is the $N^{th}$ Ces\'aro partial sum of the Fourier series of $f$, then
@@ -71,18 +71,18 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
 \end{theorem}
 
 \begin{proof}
-  From proposition \ref{prop:properties_of_fejer_kernel} we know that
+  From \autoref{prop:properties_of_fejer_kernel} we know that
   \begin{displaymath}
     \sigma_N(x) = \int_0^1 \Delta_N(u)f(x-u) \ du 
   \end{displaymath}
   Hence,
   $$ f(x) - \sigma_N(x) = \int_0^1 (f(x) - f(x-u))\Delta_N(u) \ du $$ 
-  By Holder's inequality as in \ref{thm:Holder_inequality} applied to $(f(x) - f(x-u))\sqrt{\Delta_N(u)}$ and $\sqrt{\Delta_N(u)}$ 
+  By Holder's inequality in \autoref{thm:Holder_inequality} applied to $(f(x) - f(x-u))\sqrt{\Delta_N(u)}$ and $\sqrt{\Delta_N(u)}$ 
   \begin{align*}
     |f(x) - \sigma_N(x)| &= \left| \int_0^1 (f(x) - f(x-u))\Delta_N(u) \right| \ du \\
           &\le \left( \int_0^1 |f(x) - f(x-u)|^{2} \Delta_N(u) \ du \right)^{1/2} \left( \int_0^1 \Delta_N(u) \ du \right)^{1/2} \\
   \end{align*}
-  Since by \ref{prop:properties_of_fejer_kernel}, $\int_0^1 \Delta_N(x) dx = 1$ and by Tonelli's theorem, 
+  Since by \autoref{prop:properties_of_fejer_kernel}, $\int_0^1 \Delta_N(x) dx = 1$ and by Tonelli's theorem, 
   \begin{align*}
     \int_0^1 |f(x) - \sigma_N(x)|^2 dx &= \int_0^1 \int_0^1 |f(x) - f(x-u)|^{2} \Delta_N(u) \ du  \ dx \\
           & = \int_0^1 \Delta_N(u) \int_0^1 |f(x) - f(x-u)|^{2} \ dx  \ du \\
@@ -90,16 +90,16 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
           & = I_1 + I_2
   \end{align*}
 
-  Also from proposition \ref{prop:L2_functions_are_continuous_in_L2_norm}, given $\epsilon$, we can find $\delta$ such that 
+  Also from \autoref{prop:L2_functions_are_continuous_in_L2_norm}, given $\epsilon$, we can find $\delta$ such that 
   $$ \int_0^1|f(x) - f(x-\delta)|^2 \ dx < \epsilon$$
 
   Then for that choice of $\delta$,
   $$|I_1| \le \epsilon \int_{-\delta}^\delta \Delta_N(u) du \le \epsilon \int_0^1 \Delta_N(u) du = \epsilon$$
   To prove $I_2$ is also bounded, we'll use a small trick aided by Minkowski's inequality. We know that $\|f-g\|_p \le \|f\|_p + \|g\|_p$. Therefore $\|f-g\|_p \le 2\max\{\|f\|_p, \|g\|_p\}$ and $\|f-g\|_p^p \le 2\max\{\|f\|_p^p, \|g\|_p^p\}$, and finally, $\|f-g\|_p^p \le 2(\|f\|_p^p + \|g\|_p^p)$.Then for $p=2$, 
   $$ \int_0^1 |f(x) - f(x-u)|^2 dx \le 2(\|f\|_2^2 + \|f\|_2^2) = 4\|f\|_2^2$$
-  Therefore by proposition \ref{prop:properties_of_fejer_kernel}, we get 
+  Therefore by \autoref{prop:properties_of_fejer_kernel}, we get 
   $$|I_2| = \int_\delta^{1-\delta} \Delta_N(u) \int_0^1 |f(x) - f(x-u)|^{2} \ dx  \ du \le 4\|f\|_2^2 \int_\delta^{1-\delta}\Delta_N(u) du$$
-  But by proposition \ref{prop:properties_of_fejer_kernel} 
+  But by \autoref{prop:properties_of_fejer_kernel} 
   $$ \int_\delta^{1-\delta}\Delta_N(u)du = 2\int_\delta^{1/2}\Delta_N(x) \le \frac{1}{2N\delta}$$
   Which implies, 
   $$ |I_2| \le \frac{2\|f\|_2^2}{N\delta}$$
@@ -129,12 +129,12 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
 \end{proposition}
 \begin{proof}
   $$(f*g)(x+\delta) - (f*g)(x) = \int_0^1 f(u)(g(x+\delta - u) - g(x-u)) du $$
-  Therefore by Minkowski's inequality from theorem \ref{thm:Minkowski_inequality}, 
+  Therefore by Minkowski's inequality from \autoref{thm:Minkowski_inequality}, 
   \begin{align*}
     |f*g(x+\delta) - f*g(x)| &= \left| \int_0^1 f(u) (g(x + \delta -u)- g(x-u)) du \right| \\
           &\le \|f\|_p \left( \int_0^1|g(x+\delta - u) - g(x-u)|^q du \right)^{1/q} \\
   \end{align*}
-  which converge to zero as $\delta \to 0$ by proposition \ref{prop:Lp_functions_are_continuous_in_Lp_norm}. Therefore $f*g$ is continuous in $\T$.
+  which converge to zero as $\delta \to 0$ by \autoref{prop:Lp_functions_are_continuous_in_Lp_norm}. Therefore $f*g$ is continuous in $\T$.
   Also, 
   \begin{align*}
     |f*g(x)| &= \left| \int_0^1 f(u)g(x-u) du \right| \\
@@ -145,13 +145,13 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
 \end{proof}
 
 
-Now that we've proved some important results, we'll define the fourier coeffients $\hatf(n)$ the same way we defined them for $\L^1(\T)$ in definition \ref{def:fourier_coefficient} as 
+Now that we've proved some important results, we'll define the fourier coeffients $\hatf(n)$ the same way we defined them for $\L^1(\T)$ in \autoref{def:fourier_coefficient} as 
 $$\hat{f}(n) = \int_0^1 f(x)e^{-2\pi inx} dx$$
 
 Note that $\hatf(n)$ is a finite quantity since $|e^{ix}| = 1$ and,
 $$ |\hatf(n)| = \left| \int_0^1 f(x)e^{-2\pi inx} dx \right| \le \|f\|_p\left(\int_0^1 |e^{-2\pi inx}|^q dx\right)^{1/q} = \|f\|_p $$ where $1/p + 1/q = 1$.
 
-Hence we define the fourier series the same way as in definition \ref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^p(\T)$ functions are Ces\'aro summable to $f$. In fact this is true.
+Hence we define the fourier series the same way as in \autoref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^p(\T)$ functions are Ces\'aro summable to $f$. In fact this is true.
 
 \begin{theorem}[Fourier series of $L^p(\T)$ functions are Ces\'aro summable]
   If $f\in L^p(\T)$, and $\sigma_N(x)$ is the $N^{th}$ Ces\'aro partial sum of the Fourier series of $f$, then
@@ -159,18 +159,18 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
 \end{theorem}
 
 \begin{proof}
-  From proposition \ref{prop:properties_of_fejer_kernel} we know that
+  From \autoref{prop:properties_of_fejer_kernel} we know that
   \begin{displaymath}
     \sigma_N(x) = \int_0^1 \Delta_N(u)f(x-u) \ du 
   \end{displaymath}
   Hence,
   $$ f(x) - \sigma_N(x) = \int_0^1 (f(x) - f(x-u))\Delta_N(u) \ du $$ 
-  By Holder's inequality as in \ref{thm:Holder_inequality} applied to $(f(x) - f(x-u))(\Delta_N(u))^{1/p}$ and $(\Delta_N(u))^{1/q}$ 
+  By Holder's inequality as in \autoref{thm:Holder_inequality} applied to $(f(x) - f(x-u))(\Delta_N(u))^{1/p}$ and $(\Delta_N(u))^{1/q}$ 
   \begin{align*}
     |f(x) - \sigma_N(x)| &= \left| \int_0^1 (f(x) - f(x-u))\Delta_N(u) \right| \ du \\
           &\le \left( \int_0^1 |f(x) - f(x-u)|^{p} \Delta_N(u) \ du \right)^{1/p} \left( \int_0^1 \Delta_N(u) \ du \right)^{1/q} \\
   \end{align*}
-  Since by \ref{prop:properties_of_fejer_kernel}, $\int_0^1 \Delta_N(x) dx = 1$ and by Tonelli's theorem, 
+  Since by \autoref{prop:properties_of_fejer_kernel}, $\int_0^1 \Delta_N(x) dx = 1$ and by Tonelli's theorem, 
   \begin{align*}
     \int_0^1 |f(x) - \sigma_N(x)|^2 dx &= \int_0^1 \int_0^1 |f(x) - f(x-u)|^{p} \Delta_N(u) \ du  \ dx \\
           & = \int_0^1 \Delta_N(u) \int_0^1 |f(x) - f(x-u)|^{p} \ dx  \ du \\
@@ -178,16 +178,16 @@ Hence we define the fourier series the same way as in definition \ref{def:fourie
           & = I_1 + I_2
   \end{align*}
 
-  Also from proposition \ref{prop:Lp_functions_are_continuous_in_Lp_norm}, given $\epsilon$, we can find $\delta$ such that 
+  Also from \autoref{prop:Lp_functions_are_continuous_in_Lp_norm}, given $\epsilon$, we can find $\delta$ such that 
   $$ \int_0^1|f(x) - f(x-\delta)|^p \ dx < \epsilon$$
 
   Then for that choice of $\delta$,
   $$|I_1| \le \epsilon \int_{-\delta}^\delta \Delta_N(u) du \le \epsilon \int_0^1 \Delta_N(u) du = \epsilon$$
  To prove $I_2$ is also bounded, we'll use a small trick aided by Minkowski's inequality. We know that $\|f-g\|_p \le \|f\|_p + \|g\|_p$. Therefore $\|f-g\|_p \le 2\max\{\|f\|_p, \|g\|_p\}$ and $\|f-g\|_p^p \le 2\max\{\|f\|_p^p, \|g\|_p^p\}$, and finally, $\|f-g\|_p^p \le 2(\|f\|_p^p + \|g\|_p^p)$.Then, 
   $$ \int_0^1 |f(x) - f(x-u)|^p dx \le 2(\|f\|_p^p + \|f\|_p^p) = 4\|f\|_p^p$$
-  Therefore by proposition \ref{prop:properties_of_fejer_kernel}, we get 
+  Therefore by \autoref{prop:properties_of_fejer_kernel}, we get 
   $$|I_2| = \int_\delta^{1-\delta} \Delta_N(u) \int_0^1 |f(x) - f(x-u)|^{p} \ dx  \ du \le 4\|f\|_p^p \int_\delta^{1-\delta}\Delta_N(u) du$$
-  But by proposition \ref{prop:properties_of_fejer_kernel} 
+  But by \autoref{prop:properties_of_fejer_kernel} 
   $$ \int_\delta^{1-\delta}\Delta_N(u)du = 2\int_\delta^{1/2}\Delta_N(x) \le \frac{1}{2N\delta}$$
   Which implies, 
   $$ |I_2| \le \frac{2\|f\|_p^p}{N\delta}$$
