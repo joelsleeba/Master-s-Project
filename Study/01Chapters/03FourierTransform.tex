@@ -115,6 +115,7 @@
 
   Now we'll prove a result which has close relations with the Plancherel's theorem we'll prove in \autoref{thm:Plancherel's_theorem}. We'll use this result to prove some propoerties of the Poisson Kernel in \autoref{prop:convolution_of_poisson_kernel}
 \begin{proposition}
+  \label{prop:plancherel_theorem_in_L1}
   Let $f, g \in L^1(\R)$, then $$\int_\R \hatf(t) g(t) \ dt = \int_\R f(t) \hatg(t) \ dt$$
 \end{proposition}
 \begin{proof}
@@ -128,30 +129,25 @@
 \end{proof}
 
 \section{Poisson Kernel}
-  Like how we defined summability kernels in \autoref{def:summability_kernel}, we would define them in real line also.
-
-\begin{definition}[Summability Kernel]
-  \label{def:summability_kernel_in_R}
-  A collection of functions $K_\gamma \in L^1(\R)$ is called a summability kernel or an approximation identity if 
-    \begin{enumerate}[label=(\alph*)]
-      \item $\int_\R K_\gamma(x)dx = 1$
-      \item $\int_\R\abs{K_\gamma(x)}dx \le C$ for some constant $C>0$
-      \item $\lim_{\gamma \to \infty} \int_{|x| > \delta}\abs{K_\gamma(x)}dx = 0$ for each $\delta$
-    \end{enumerate}
-  \end{definition}
-
-  Now specifically we'll define Poisson kernel.
+\textit{when you pull an all nighter thinking you missed an important step in your master's thesis, but it was your misunderstanding and you really didn't need Poisson kernel. Yes, I'm crying now at 3 AM}
+  
+  Now we'll define Poisson kernel which will be quite useful for the fourier inversion.
 \begin{definition}[Poisson Kernel]
   \label{def:poisson_kernel}
-  Let $y>0$ define $P_y : \R \to \R$, as $$P_y = \frac{1}{\pi}\frac{y}{x^2 + y^2}$$
-  Then the collection of functions $P_y$ are called Poisson kernel.
+  Let $r>0$ define $P_r : \R \to \R$, as $$P_r = \frac{1}{\pi}\frac{r}{x^2 + r^2}$$
+  Then the collection of functions $P_r$ are called Poisson kernel.
 \end{definition}
 
 Since we defined Poisson kernel and approximation identities we'll now show that Poisson kernel is an approximation identity.
 
 \begin{proposition}
-  \label{prop:poisson_kernel_is_summability_kernel}
-  Let $P_y$ be the Poisson kernel as in \autoref{def:poisson_kernel}, then $P_y$ satisfy the conditions in \autoref{def:summability_kernel_in_R} and therefore is a summability kernel.
+  \label{prop:properties_of_poisson_kernel}
+  Let $P_y$ be the Poisson kernel as in \autoref{def:poisson_kernel}, then $P_y$ satisfy the following conditions 
+  \begin{enumerate}[label=(\alph*)]
+      \item $\int_\R P_y(x)dx = 1$
+      \item $\int_\R\abs{P_y(x)}dx \le C$ for some constant $C>0$
+      \item $\lim_{y \downarrow 0} \int_{|x| > \delta}\abs{P_y(x)}dx = 0$ for each $\delta$
+    \end{enumerate}
 \end{proposition}
 \begin{proof}
   \begin{enumerate}[label=(\alph*)]
@@ -171,11 +167,60 @@ Since we defined Poisson kernel and approximation identities we'll now show that
         &= 1 - \frac{2}{\pi}\left[\tan^{-1}\left(\frac{\delta}{y}\right)\right] \\
     \end{align*}
     which implies \begin{displaymath}
-      \lim_{y \to \infty} \int_{|x|>\delta} P_y(x) \ dx = 1 - \lim_{y \to \infty}\frac{2}{\pi}\left[\tan^{-1}\left(\frac{\delta}{y}\right)\right] = 0
+      \lim_{y \downarrow 0} \int_{|x|>\delta} P_y(x) \ dx = 1 - \lim_{y \downarrow \infty}\frac{2}{\pi}\left[\tan^{-1}\left(\frac{\delta}{y}\right)\right] = 0
     \end{displaymath}
-    Therefore Poisson Kernel is a summability kernel
   \end{enumerate}
 \end{proof}
+
+Like we used convolutions of the summability kernels in Fourier series, here the convolutions of the Poisson kernels will be an important tool in our analysis. Here we'll prove an important result. 
+\begin{proposition}
+\label{prop:convolution_of_poisson_kernel}
+  Consider the function $h_{y,b}(x) = e^{2\pi i b x}e^{-2 \pi y|x|} $ and $f \in L^1(\R)$. Then $$\int_\R \hatf(x)h_{y, b}(x) \ dx = \int_\R \hatf(x) e^{2\pi i b x}e^{-2\pi y |x|} \ dx = (f*P_y)(x)$$
+  where $f*P_y$ is the convolution of $f$ and $P_y$.
+\end{proposition}
+\begin{proof}
+  Before we start analyse $h_{y, b}(x)$, let's break down that into two simple functions. Let $g(x) = e^{-2\pi y |x|}$. Then, 
+  \begin{align*}
+    \hatg(t) &= \int_\R e^{-2 \pi y |x|}e^{-2\pi i t x } \ dx \\
+            &= \int_{-\infty}^0 e^{2 \pi y x}e^{-2\pi itx} \ dx + \int_0^\infty e^{-2\pi yx}e^{-2\pi itx} \ dx \\
+            &= \left[\frac{e^{2\pi(y-it)x}}{2\pi (y - it)}\right]_{-\infty}^0 + \left[-\frac{e^{-2\pi(y+it)x}}{2\pi (y + it)}\right]^{\infty}_0 \\
+            &= \frac{1}{2\pi (y-it)} - \frac{1}{2\pi (y+it)} \\
+            &= \frac{1}{\pi}\frac{y}{t^2 + y^2}
+  \end{align*}
+  Now by \autoref{prop:properties_of_fourier_transform} we get that $$\widehat{h_{y, b}}(t) = \frac{1}{\pi}\frac{y}{(t-b)^2 + y^2}$$
+  By \autoref{prop:plancherel_theorem_in_L1} we get
+  \begin{align*}
+    \int_\R \hatf(x) h_{y, b}(x) \ dx &= \int_\R f(t) \widehat{h_{y,b}}(t)\ dt \\
+                &= \int_\R f(t) \frac{1}{\pi} \frac{y}{(t-b)^2 + y^2} \ dt \\
+                &= \int_\R f(t) P_y(b-t) \ dt \\
+                &= (f*P_y)(b)
+  \end{align*}
+\end{proof}
+
+We'll show another important property of Poisson kernel.
+\begin{proposition}
+  Let $f: \R \to \C$ be uniformly continuous and bounded. Then $$\lim_{y\downarrow 0} \norm{f - (f*P_y)}_\infty = 0$$
+\end{proposition}
+\begin{proof}
+  Let $M$ be a constant such that $|f(x)| < M$ for all $x \in \R$. Since it is given that $f$ is uniformly continuous, given any $\epsilon>0$ ther exist a $\delta>0$ such that whenever $y \le \delta$, $|f(x) - f(x+y)| < \epsilon$ for all $x \in \R$. Therefore,
+  \begin{align*}
+    f(x) - (f*P_y)(x) &= \int_\R f(x)P_y(t) \ dt - \int_\R f(x-y)P_y(t) \ dt \\
+    & = \int_\R (f(x) - f(x-y)) P_y(t) \ dt \\
+    & = \int_{-\infty}^{-\delta} + \int_{-\delta}^{\delta} + \int_{\delta}^{\infty}\\
+    & = I_1 + I_2 + I_3
+  \end{align*}
+  From \autoref{def:poisson_kernel} and \autoref{prop:properties_of_poisson_kernel}, we get that $$I_1+I_3 \le 2M\int_{|x|>\delta} P_y(t) \ dt$$
+  converges to 0 as $y \downarrow 0$.
+  Also by the choice of $\delta$ $$I_2 \le \epsilon \int_{-\delta}^{\delta} P_y(t) \ dt = \epsilon$$
+  Since our choice of $\epsilon$ was arbitary it can be taken arbitarily small and it does not depend on $x$. Hence the result.
+\end{proof}
+
+We'll state another property of poisson kernel
+\begin{proposition}
+  Let $1\le p < \infty$ and $f \in L^p(\R)$. Then $$\lim_{y \downarrow 0}\norm{f-(f*P_y)}_p = 0$$
+\end{proposition}
+For proof refer \autocite[Theorem~11.74 \pno~388]{AxlerMeasure} or \autocite[Theorem~9.10 \pno~184]{papaRudin}
+
 
 \section{Fourier Inversion Theorem}
 For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
@@ -346,18 +391,6 @@ We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ 
 Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
 
 Now we'll prove an important result which is the $L^2(\R)$ analogue of the \autoref{prop:L1_functions_are_continuous_in_L1_norm_in_R}
-
-\begin{proposition}
-  \label{prop:L2_functions_are_continuous_in_L2_norm_in_R}
-  If $f\in L^2(\R)$, then $$\lim_{\delta \to 0} \int_\R |f(x+\delta) - f(x)|^2 \ dx = 0 $$
-\end{proposition}
-\begin{proof}
-  Since $f\in L^2(\R)$, for every $\epsilon > 0$ there exist an $X$ such that $$\left( \int_{|x|> X-1} |f(x)|^2 \ dx \right)^{\frac{1}{2}} < \epsilon$$
-  Therefore by triangle inequality, for $\delta \le 1$, $$ \left( \int_\R |f(x+\delta) - f(x)|^2 \ dx \right)^{\frac{1}{2}} \le \left( \int_{-X}^X |f(x+\delta) - f(x)|^2 \ dx \right)^{\frac{1}{2}} + 2\epsilon$$
-  Now since continuous functions are dense in $L^2$ norm on compact intervals, there exists a $g \in C([-X-1, X+1])\cap L^2([-X-1, X+1])$ such that $$ \|f-g\|_{L^2([-X-1, X+1])} = \left( \int_{-X-1}^{X+1} |f(x) - g(x)|^2 \ dx \right)^{\frac{1}{2}} < \epsilon $$
-  Then by triangle inequality $$ \left( \int_{-X}^X |f(x+\delta) - f(x)|^2 \ dx \right)^{\frac{1}{2}} \le \left( \int_{-X}^X |g(x+\delta) - g(x+\delta)|^2 \ dx \right)^{\frac{1}{2}} + 2\epsilon $$
-  Now since $g$ is continuous in a compact space $[-X-1, X+1]$, it is uniformly continuous and therefore as $\delta \to 0$ the above integral tends to $0$. Hence the proof.
-\end{proof}
 
 Now we'll discuss about the convolution of functions in $L^2(\R)$. We'll follow the same definition as before in $L^1(\R)$. (For formula refer to \autoref{def:convolution_of_functions_in_L^1(T)}). It is natural to think if such a definition is well defined. In fact by the Holders inequality (\autoref{thm:Holder_inequality}) one can show that it is well defined. Since if $f, g \in L^2(\R)$, then 
   \begin{align*}
