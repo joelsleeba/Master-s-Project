@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{axler}{book}{}
+    \entry{AxlerMeasure}{book}{}
       \name{author}{1}{}{%
         {{hash=71493eec7caacea528ad39dbfb52773a}{%
            family={Axler},
@@ -27,14 +27,8 @@
            given={Sheldon},
            giveni={S\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
-      \list{location}{1}{%
-        {Cham}%
-      }
       \list{publisher}{1}{%
-        {Springer International Publishing}%
+        {Springer}%
       }
       \strng{namehash}{71493eec7caacea528ad39dbfb52773a}
       \strng{fullhash}{71493eec7caacea528ad39dbfb52773a}
@@ -47,26 +41,15 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9783030331429 9783030331436}
-      \field{series}{Graduate {Texts} in {Mathematics}}
-      \field{title}{Measure, integration \& real analysis}
-      \field{urlday}{31}
-      \field{urlmonth}{3}
-      \field{urlyear}{2023}
+      \field{isbn}{978-3-030-33143-6}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Measure, Integration \& Real Analysis}
       \field{volume}{282}
       \field{year}{2020}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-030-33143-6
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/978-3-030-33143-6
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/978-3-030-33143-6
-      \endverb
+      \field{pages}{411}
+      \range{pages}{1}
     \endentry
-    \entry{grafakos}{article}{}
+    \entry{Grafakos2017a}{article}{}
       \name{author}{5}{}{%
         {{hash=d75ea9c673adff92b3c4257d2a70a85b}{%
            family={Grafakos},
@@ -94,6 +77,9 @@
            given={Betsy},
            giveni={B\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
       \strng{namehash}{7afa501e1f1c546078c95d4a387b71cd}
       \strng{fullhash}{ba039398949b543fcccbfc33aaee3455}
       \strng{bibnamehash}{7afa501e1f1c546078c95d4a387b71cd}
@@ -106,33 +92,26 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In May 2016, we organized a conference in harmonic analysis in honor of Professor Michael Christ, on the campus of the University of Wisconsin in Madison. We are happy to present sixteen open problems, almost all of which were contributed by participants of a problem session held in the afternoon of May 19, 2016.}
-      \field{title}{Some {Problems} in {Harmonic} {Analysis}}
-      \field{urlday}{31}
-      \field{urlmonth}{3}
-      \field{urlyear}{2023}
+      \field{eprintclass}{math.CA}
+      \field{eprinttype}{arXiv}
+      \field{month}{1}
+      \field{title}{Some Problems in Harmonic Analysis}
       \field{year}{2017}
-      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.48550/ARXIV.1701.06637
       \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1701.06637
+      \verb{eprint}
+      \verb 1701.06637
       \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1701.06637
-      \endverb
-      \keyw{Classical Analysis and ODEs (math.CA),Analysis of PDEs (math.AP),FOS: Mathematics,FOS: Mathematics}
+      \keyw{Classical Analysis and ODEs (math.CA),Analysis of PDEs (math.AP),FOS: Mathematics}
     \endentry
-    \entry{rudin}{book}{}
+    \entry{papaRudin}{book}{}
       \name{author}{1}{}{%
         {{hash=33be2fc2739d3493c6d6cc5d56a4c41e}{%
            family={Rudin},
            familyi={R\bibinitperiod},
            given={Walter},
            giveni={W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York}%
       }
       \list{publisher}{1}{%
         {McGraw-Hill}%
@@ -148,11 +127,11 @@
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{3rd ed}
-      \field{isbn}{9780070542341}
-      \field{title}{Real and complex analysis}
+      \field{isbn}{978-0-07-054234-1}
+      \field{title}{Real and Complex analysis}
       \field{year}{1987}
-      \keyw{Mathematical analysis}
+      \field{pages}{483}
+      \range{pages}{1}
     \endentry
   \enddatalist
 \endrefsection

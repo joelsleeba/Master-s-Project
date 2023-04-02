@@ -1,4 +1,5 @@
 \contentsline {chapter}{Preface}{i}{chapter*.1}%
+\contentsline {chapter}{Contents}{iii}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Fourier Series}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Definition and basic properties}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Convolution}{4}{section.1.2}%
@@ -15,3 +16,6 @@
 \contentsline {chapter}{\numberline {4}Holomorphic Fourier Transforms}{43}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Motivation and Basic Results}{43}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Paley Wiener Theorems}{47}{section.4.2}%
+\contentsline {chapter}{Appendices}{48}{section*.4}%
+\contentsline {chapter}{\numberline {A}Results from Measure Theory}{49}{appendix.A}%
+\contentsline {chapter}{Bibliography}{51}{appendix*.5}%
