@@ -12,8 +12,15 @@
   \end{definition}
   Note that while we say $\hatf$ is the Fourier transform of the function $f$, the term "Fourier transform" is also used for the map which takes $f$ to $\hatf$.
 
-  Also note that $\hatf(t)$ is a finite quantity (real or complex) for all $t \in \T$ since $f\in L^1(\T)$ and $|e^{-2 \pi itx}| = 1$ implies $$|\hatf(t)| \le \int_{-\infty}^{\infty}\left|f(x)\right| dx < \infty$$ By the linearity of the integral we can also show that for functions $f, g \in L^2(\R)$ and scalars $\mu, \nu$, $\widehat{\mu f + \nu g}(t) = \mu \hatf(t) + \nu\hatg(t)$.
+  Also note that $\hatf(t)$ is a finite quantity (real or complex) for all $t \in \T$ since $f\in L^1(\T)$ and $|e^{-2 \pi itx}| = 1$ implies $$|\hatf(t)| \le \int_{-\infty}^{\infty}\left|f(x)\right| dx < \infty$$
+  This shows that the fourier transform of a function in $L^1(\R)$ is in $L^\infty(\R)$. We state this as a seperate result.
+  \begin{proposition}
+    \label{prop:fourier_transform_of_L1_functions_in_R_are_bounded}
+    If $f \in L^1(\R)$, then $\hatf \in L^\infty(\R)$, i.e $$\sup_{t \in \R} |\hatf(t)| \le \infty$$.
+  \end{proposition}
 
+  By the linearity of the integral we can also show that for functions $f, g \in L^2(\R)$ and scalars $\mu, \nu$, $\widehat{\mu f + \nu g}(t) = \mu \hatf(t) + \nu\hatg(t)$.
+ 
   Now we'll prove some important properties of Fourier transforms. Note that this will almost remind you of the properties of Fourier coefficinets in \autoref{prop:properties_of_fourier_coefficients}. 
   \begin{proposition}[Properties of Fourier transform]
     \label{prop:properties_of_fourier_transform}
@@ -105,6 +112,70 @@
     \end{align*}
     Note that the change of variable is justified since we know that  for all $x \in \R$, $|e^{-2\pi itx}| = 1$ and hence the integral is absolutely convergent by the proof similar to last theorem. 
   \end{proof}
+
+  Now we'll prove a result which has close relations with the Plancherel's theorem we'll prove in \autoref{thm:Plancherel's_theorem}. We'll use this result to prove some propoerties of the Poisson Kernel in \autoref{prop:convolution_of_poisson_kernel}
+\begin{proposition}
+  Let $f, g \in L^1(\R)$, then $$\int_\R \hatf(t) g(t) \ dt = \int_\R f(t) \hatg(t) \ dt$$
+\end{proposition}
+\begin{proof}
+  Since $f, g \in L^1(\R)$ from \autoref{prop:fourier_transform_of_L1_functions_in_R_are_bounded} we get that $\hatf, \hatg \in L^\infty(\R)$. Then we get that 
+  \begin{align*}
+    \int_\R \hatf(t) g(t) \ dt &= \int_\R g(t) \int_\R f(x) e^{-2\pi itx} \ dx \ dt \\
+    & = \int_\R f(x) \int_\R g(t) e^{-2\pi itx} \ dt \ dx \\
+    & = \int_\R f(x)\hatg(x) \ dx
+  \end{align*}
+  where the change of order of integration is justified by Fubini's theorem since $\hatf$ is uniformly bounded by some constand $M$ and we know that $g \in L^1(\R)$.
+\end{proof}
+
+\section{Poisson Kernel}
+  Like how we defined summability kernels in \autoref{def:summability_kernel}, we would define them in real line also.
+
+\begin{definition}[Summability Kernel]
+  \label{def:summability_kernel_in_R}
+  A collection of functions $K_\gamma \in L^1(\R)$ is called a summability kernel or an approximation identity if 
+    \begin{enumerate}[label=(\alph*)]
+      \item $\int_\R K_\gamma(x)dx = 1$
+      \item $\int_\R\abs{K_\gamma(x)}dx \le C$ for some constant $C>0$
+      \item $\lim_{\gamma \to \infty} \int_{|x| > \delta}\abs{K_\gamma(x)}dx = 0$ for each $\delta$
+    \end{enumerate}
+  \end{definition}
+
+  Now specifically we'll define Poisson kernel.
+\begin{definition}[Poisson Kernel]
+  \label{def:poisson_kernel}
+  Let $y>0$ define $P_y : \R \to \R$, as $$P_y = \frac{1}{\pi}\frac{y}{x^2 + y^2}$$
+  Then the collection of functions $P_y$ are called Poisson kernel.
+\end{definition}
+
+Since we defined Poisson kernel and approximation identities we'll now show that Poisson kernel is an approximation identity.
+
+\begin{proposition}
+  \label{prop:poisson_kernel_is_summability_kernel}
+  Let $P_y$ be the Poisson kernel as in \autoref{def:poisson_kernel}, then $P_y$ satisfy the conditions in \autoref{def:summability_kernel_in_R} and therefore is a summability kernel.
+\end{proposition}
+\begin{proof}
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      \begin{align*}
+        \int_\R P_y(x) \ dx &= \frac{1}{\pi}\int_\R \frac{y}{x^2 + y^2} \ dx \\
+        &= \frac{1}{\pi}\left[\tan^{-1}\left(\frac{x}{y}\right)\right]_{-\infty}^\infty\\
+        &= \frac{1}{\pi}\left(\frac{\pi}{2}+\frac{\pi}{2}\right) \\
+        &= 1
+    \end{align*}
+
+    \item This follows straight from (a) upon observing that since $y>0$, $P_y(x) > 0$ for all $x \in \R$. 
+
+    \item \begin{align*}
+        \int_{|x|>\delta} P_y(x) \ dx & = \int_\R P_y(x) \ dx - \int_{|x| < \delta} P_y(x) \ dx \\
+        &= 1 - \frac{1}{\pi}\left[\tan^{-1}\left(\frac{x}{y}\right)\right]_{-\delta}^\delta\\
+        &= 1 - \frac{2}{\pi}\left[\tan^{-1}\left(\frac{\delta}{y}\right)\right] \\
+    \end{align*}
+    which implies \begin{displaymath}
+      \lim_{y \to \infty} \int_{|x|>\delta} P_y(x) \ dx = 1 - \lim_{y \to \infty}\frac{2}{\pi}\left[\tan^{-1}\left(\frac{\delta}{y}\right)\right] = 0
+    \end{displaymath}
+    Therefore Poisson Kernel is a summability kernel
+  \end{enumerate}
+\end{proof}
 
 \section{Fourier Inversion Theorem}
 For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
