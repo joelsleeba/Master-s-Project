@@ -1,4 +1,4 @@
-%TeX root = main.tex
+%TeX root = ../main.tex
 \chapter{Holomorphic Fourier Transforms}
 
 \section{Motivation and Basic Results}
@@ -88,7 +88,26 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
 \end{proof}
 
 \section{Paley Wiener Theorems}
+What is interesting is that the converse of the above two results is also true. These are known as the classical Paley Wiener theorems. With the help of these we can extend the definition of Fourier transforms to holomorphic functions in the upper half plane and entire functions of exponential type (functions where $|f(z)| \le Ce^{2\pi A |z|}$).
+
+\begin{theorem}[Paley Wiener Theorem]
+  \label{thm:paley_wiener_in_upper_half_plane}
+  Let $f \in H(\Pi^+)$ and $$\sup_{0<y<\infty} \frac{1}{2\pi} \int_\R |f(x+iy)|^2 \ dx = C < \infty$$
+  Then there exists an $F \in L^2(0, \infty)$ such that for $z \in \Pi^+$, $$f(z) = \int_0^\infty F(t)e^{2\pi itz} \ dt$$
+  and 
+  $$\int_0^\infty |F(t)|^2 \ dt = C $$
+\end{theorem}
+\begin{note}
+  Let's analyse this intuitively. Rewriting the second equation in the theorem, we see that $$f(x+iy) = e^{-2\pi ty}\int_0^\infty F(t) e^{2\pi itx} \ dt $$
+  which implies
+  $$\int_0^\infty F(t) e^{2\pi itx} \ dt = e^{2\pi t y}f(x+iy)$$
+  From this we see that the required function $F$ is the inverse transform of $f(x+iy)e^{2\pi ty}$ along the horizontal line $\Im(z) = y$
+  Therefore a good candidate is $$F(t) = \int_\R f(x+iy)e^{2\pi ty}e^{-2\pi itx} \ dy = \int_{\Im(z) = y} f(z)e^{-2\pi itz} \ dz$$
+  Here the left hand side of the equation seems to be depending on only $t$, while the left hand side seems to depend on $y$. So we will have that the value fo $F(t)$ is independent of $y$, i.e $F(t)$ will depend only on the choice of the function $f$ and not the horizontal lines in which $f$ is evaluated.
+\end{note}
+\begin{proof}
+
+\end{proof}
+
 
 \cite{AxlerMeasure} \cite{papaRudin}, \textcite{Grafakos2017a}
-
-
