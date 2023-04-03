@@ -341,6 +341,7 @@ Now we'll prove some results which will help us to prove the general Fourier inv
 
 As a result of the above result combined with \autoref{thm:L1(R)_analogue_of_fejer_theorem}, we get
 \begin{corollary}
+  \label{cor:fourier_inversion_equals_f_at_points_of_continuity}
   Let $f\in L^1(\R)$ and $f$ is continuous at $x$. If $$\lim_{T\to \infty} \int_{-T}^T\hatf(t)e^{2\pi itx} \ dt$$
   exists, then it is equal to $f(x)$.
 \end{corollary}
@@ -353,6 +354,7 @@ Note that the condition that $\hatf \in L^1(\R)$ in the above theorem guarantee 
 
 Now we'll prove one important theorem
 \begin{theorem}
+  \label{thm:almost_fourier_inversion}
   If $f\in L^1(\R)$ and $\sigma_T(x) = (f*\Delta_T)(x)$, where $\Delta_T$ is as in \autoref{def:L1(R)_analogue_of_fejer_kernel}, then $$\lim_{T\to \infty} \int_{-\infty}^{\infty}|f(x) - \sigma_T(x)| \ dx = 0$$
 \end{theorem}
 \begin{proof}
@@ -385,8 +387,20 @@ Applying the corollary above to $f-g$ where $f, g \in L^1(\R)$, we get
   Let $f, g \in L^1(\R)$ and $\hatf = \hatg$. Then $f=g$ almost everywhere. That is $$\int_\R |f(x) - g(x)| \ dx = 0$$.
 \end{corollary}
 
-\section{Fourier Transform in $L^1(\R) \cap L^2(\R)$}
-We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that their $L^1$ norm is finite. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we might not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
+  Now we can explicitly state the most important theorem in this section. The Fourier inversion theorem. The theorem states that given any function $\hatf \in L^1(\R)$, it is almost everywhere equal to the Fourier transform of some function $f \in L^1(\R)$.
+\begin{theorem}
+  \label{thm:fourier_inversion_in_L1}
+  Let $f, \hatf \in L^1(\R)$. If$$g(x) = \int_\R \hatf(t) e^{2\pi itx} \ dx$$
+  then $f=g$ almost everywhere.
+\end{theorem}
+\begin{proof}
+  Since it is given that $\hatf \in L^1(\R)$, $g$ is well defined and $g(x)$ exists for all points $x \in \R$. Also at points of continuity of $f$, $g(x) = f(x)$ by \autoref{cor:fourier_inversion_equals_f_at_points_of_continuity}. But since $f \in L^1(\R)$, it is continuous almost everywhere. Therefore $f = g$ almost everywhere. 
+
+\end{proof}
+
+
+\section{Fourier Transform in $L^2(\R)$}
+We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that since their $L^1$ norm is finite, the integral in \autoref{def:fourier_transform_of_f} is well defined. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we will not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
 
 Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
 
@@ -415,6 +429,7 @@ We can now discuss about the convolution of $L^2(\R)$ functions. We'll now show 
     where the first integral converge to zero by \autoref{prop:L2_functions_are_continuous_in_L2_norm_in_R} and the last integral is a constant. Since the first integral is over all of $\R$, it is independent of $x$ and hence the result follows.
   \end{proof}
 
+
 Now we'll prove the famous Plancherel's theorem.
 \begin{theorem}[Plancherel's Theorem]
   \label{thm:Plancherel's_theorem}
@@ -430,3 +445,14 @@ Now we'll prove the famous Plancherel's theorem.
   Then as $T \to \infty$, $$(1-\epsilon) \int_\R |\hatf(t)|^2 \ dt \le \int_{\R} |f(t)|^2 dt \le \int_\R |\hatf(t)|^2 \ dt$$
   Since $\epsilon$ can be made arbitary small, the result follows.
 \end{proof}
+
+Also by \autoref{prop:L1_functions_are_dense_in_L2}, $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$. Then by Plancherel's theorem Fourier transform in $L^1(\R) \cap L^2(\R)$ can be extended into an equinorm transform $\mathcal{F} : L^2(\R) \to L^2(\R)$. When working with $L^2(\R)$, by Fourier transform we'll mean this $\mathcal{F}$. Also note that $\mathcal{F}(L^1(\R) \cap L^2(\R))$ is dense in $L^2(\R)$. The proof can be seen at \autocite[Theorem~9.13 \pno~186]{papaRudin} or \autocite[Theorem~2.4.1 \pno~128]{PinskyWavelet}
+
+
+% Moreover, if $C_c(\R)$ is the set of all compactly supported functions in $\R$, then $C_c(\R)$ is dense in $L^2(\R)$ by \autoref{prop:L1_functions_are_dense_in_L2}. Let $f \in C_c(\R)$ compactly supported in $[-A, A]$, then consider $$g(x) = \int_{-A}^A f(t) e^{2\pi i tx} \ dt$$
+% Since $f \in C_c(\R) \subset L^1(\R)\cap L^2(\R)$, by Fubini-Tonelli theorem we get that,
+% \begin{align*}
+%   \int_\R |g(x)| \ dx \le \int_\R \left| \int_{-A}^{A} f(t) e^{2\pi itx} \ dt \right| \ dx \\
+%         &= \int_{-A}^A \int_\R |f(t)| \ dx \ dt
+% \end{align*}
+

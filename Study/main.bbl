@@ -46,8 +46,6 @@
       \field{title}{Measure, Integration \& Real Analysis}
       \field{volume}{282}
       \field{year}{2020}
-      \field{pages}{411}
-      \range{pages}{1}
     \endentry
     \entry{Grafakos2017a}{article}{}
       \name{author}{5}{}{%
@@ -77,9 +75,6 @@
            given={Betsy},
            giveni={B\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
       \strng{namehash}{7afa501e1f1c546078c95d4a387b71cd}
       \strng{fullhash}{ba039398949b543fcccbfc33aaee3455}
       \strng{bibnamehash}{7afa501e1f1c546078c95d4a387b71cd}
@@ -92,7 +87,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In May 2016, we organized a conference in harmonic analysis in honor of Professor Michael Christ, on the campus of the University of Wisconsin in Madison. We are happy to present sixteen open problems, almost all of which were contributed by participants of a problem session held in the afternoon of May 19, 2016.}
-      \field{eprintclass}{math.CA}
       \field{eprinttype}{arXiv}
       \field{month}{1}
       \field{title}{Some Problems in Harmonic Analysis}
@@ -104,6 +98,32 @@
       \verb 1701.06637
       \endverb
       \keyw{Classical Analysis and ODEs (math.CA),Analysis of PDEs (math.AP),FOS: Mathematics}
+    \endentry
+    \entry{PinskyWavelet}{book}{}
+      \name{author}{1}{}{%
+        {{hash=49295021f3e47595bc4fab421adfc386}{%
+           family={Pinsky},
+           familyi={P\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{49295021f3e47595bc4fab421adfc386}
+      \strng{fullhash}{49295021f3e47595bc4fab421adfc386}
+      \strng{bibnamehash}{49295021f3e47595bc4fab421adfc386}
+      \strng{authorbibnamehash}{49295021f3e47595bc4fab421adfc386}
+      \strng{authornamehash}{49295021f3e47595bc4fab421adfc386}
+      \strng{authorfullhash}{49295021f3e47595bc4fab421adfc386}
+      \field{labelalpha}{Pin09}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780821847978}
+      \field{title}{Introduction to fourier analysis and wavelets}
+      \field{year}{2009}
     \endentry
     \entry{papaRudin}{book}{}
       \name{author}{1}{}{%
@@ -128,7 +148,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-07-054234-1}
-      \field{title}{Real and Complex analysis}
+      \field{title}{Real and complex analysis}
       \field{year}{1987}
       \field{pages}{483}
       \range{pages}{1}

@@ -12,7 +12,13 @@ Here'll we'll discuss some important results from measure theory which are essen
 \end{proof}
 
 \begin{proposition}
-  \label{thm:L1_functions_are_dense_in_L2}
+\label{prop:compact_supported_cont_func_are_dense_in_Lp}
+  Let $C_c(\R)$ be the set of all compactly supported continuous functions in $\R$, then $C_c(\R)$ is dense in $L^p(\R)$. This is \autocite[Theorem~3.14 \pno~69]{papaRudin}.
+\end{proposition}
+
+
+\begin{proposition}
+  \label{prop:L1_functions_are_dense_in_L2}
   $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$.
 \end{proposition}
 \begin{proof}
@@ -21,11 +27,6 @@ Here'll we'll discuss some important results from measure theory which are essen
 
 If you follow the proof of the above theorem close enough, you'll see that we can make a stronger claim. Since, $C_c(\R) \subset L^p(\R)$ for all $1\le p < \infty$, $$C_c(\R) \subset \bigcap_{1\le p < \infty} L^p(\R)$$
 and therefore again by \autocite[Theorem~3.14 on \pno~69]{papaRudin}, $\bigcap_{1\le p < \infty} L^p(\R)$ is dense in $L^q(\R)$ for all $1 \le q < \infty$. We will state the generalization of this as a seperate result.
-
-\begin{proposition}
-\label{prop:compact_supported_cont_func_are_dense_in_Lp}
-  Let $C_c(\R)$ be the set of all compactly supported functions in $\R$, then $C_c(\R)$ is dense in $L^p(\R)$.
-\end{proposition}
 
 \begin{proposition}
   \label{prop:L2_functions_are_continuous_in_L2_norm_in_R}
