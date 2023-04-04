@@ -513,14 +513,32 @@
 But by the $3^{rd}$ property of the summability kernel, we know that the integral in the above converges to zero. Therefore there exists an $N$ such that for an $n>N, |I_2|< \epsilon/2$, which completes our proof.
   \end{proof}
 
-  \begin{corollary}{Convergence of Ces\'aro sum of functions in $L^1(\T)$}
+  This leads to one important thoerem,
+  \begin{theorem}{Convergence of Ces\'aro sum of functions in $L^1(\T)$}
+    \label{thm:convergence_of_cesaro_partial_sum_in_circle}
     If $f\in L^1(\T)$ then $\sigma_N(x)$, the Ces\'aro sum of the Fourier series of $f$ converge to $f(x)$ in $L^1$ norm. That is, 
     \begin{displaymath}
       \lim_{N\to \infty} \int_0^1 \left|f(x) - \sigma_N(x)\right| = 0
     \end{displaymath}
-  \end{corollary}
+  \end{theorem}
   \begin{proof}
     Since we know that Fej\'er kernel, $\Delta_N(x)$ is a summability kernel by proposition \ref{prop:fejer_kernel_is_summability_kernel} and that $(\Delta_N*f)(x) = \sigma_N(x)$ by prop \ref{prop:properties_of_fejer_kernel}, the result follows from theorem \ref{thm:L1_convergence_of_summability_kernel}.
+  \end{proof}
+  \begin{corollary}
+    \label{cor:fourier_coefficients_are_zero}
+    If $f \in L^1(\T)$ and $\hatf(n) = 0$ for all $n \in \N$. Then $f(x) = 0$ almost everywhere in $\T$.
+  \end{corollary}
+  \begin{proof}
+    Since $\hatf(n) = 0$ for all $n\in \N$, the Ces\'aro partial sum (\autoref{def:cesaro_partial_sum_of_fourier_series}) will be identically zero. Then by \autoref{thm:convergence_of_cesaro_partial_sum_in_circle} it follows that $$\norm{f}_{\T}|f(x)| \ dx = 0$$
+    Hence the result.
+  \end{proof}
+
+  \begin{corollary}
+    \label{cor:fourier_coefficients_are_equal}
+    If $f, g \in L^1(\T)$ and $\hatf{n} = \hatg{n}$ for all $n\in \N$, then $f = g$ almost everywhere.
+  \end{corollary}
+  \begin{proof}
+    This follows from taking $f-g$ in above corollary.
   \end{proof}
 
   \begin{theorem}[Fej\'er's Theorem]
