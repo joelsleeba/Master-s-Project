@@ -529,13 +529,13 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
     If $f \in L^1(\T)$ and $\hatf(n) = 0$ for all $n \in \N$. Then $f(x) = 0$ almost everywhere in $\T$.
   \end{corollary}
   \begin{proof}
-    Since $\hatf(n) = 0$ for all $n\in \N$, the Ces\'aro partial sum (\autoref{def:cesaro_partial_sum_of_fourier_series}) will be identically zero. Then by \autoref{thm:convergence_of_cesaro_partial_sum_in_circle} it follows that $$\norm{f}_{\T}|f(x)| \ dx = 0$$
+    Since $\hatf(n) = 0$ for all $n\in \N$, the Ces\'aro partial sum (\autoref{def:cesaro_partial_sum_of_fourier_series}) will be identically zero. Then by \autoref{thm:convergence_of_cesaro_partial_sum_in_circle} it follows that $$\int_\T|f(x)| \ dx = 0$$
     Hence the result.
   \end{proof}
 
   \begin{corollary}
     \label{cor:fourier_coefficients_are_equal}
-    If $f, g \in L^1(\T)$ and $\hatf{n} = \hatg{n}$ for all $n\in \N$, then $f = g$ almost everywhere.
+    If $f, g \in L^1(\T)$ and $\hatf(n) = \hatg(n)$ for all $n\in \N$, then $f = g$ almost everywhere.
   \end{corollary}
   \begin{proof}
     This follows from taking $f-g$ in above corollary.
