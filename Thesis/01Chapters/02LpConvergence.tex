@@ -172,7 +172,7 @@ Hence we define the fourier series the same way as in \autoref{def:fourier_serie
   \end{align*}
   Since by \autoref{prop:properties_of_fejer_kernel}, $\int_0^1 \Delta_N(x) dx = 1$ and by Tonelli's theorem, 
   \begin{align*}
-    \int_0^1 |f(x) - \sigma_N(x)|^2 dx &= \int_0^1 \int_0^1 |f(x) - f(x-u)|^{p} \Delta_N(u) \ du  \ dx \\
+    \int_0^1 |f(x) - \sigma_N(x)|^p dx &= \int_0^1 \int_0^1 |f(x) - f(x-u)|^{p} \Delta_N(u) \ du  \ dx \\
           & = \int_0^1 \Delta_N(u) \int_0^1 |f(x) - f(x-u)|^{p} \ dx  \ du \\
           & = \int_{-\delta}^\delta + \int_\delta^{1-\delta} \\
           & = I_1 + I_2
