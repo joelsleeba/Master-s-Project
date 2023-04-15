@@ -55,7 +55,7 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
   \end{align*}
   Then by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane.
 
-  Now consider $z=x+iy$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dx$$ 
+  Now consider $z=x+iy$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dt$$ 
   Now for a fixed $y \in \R$, consider $g_y(t) = F(t)e^{-2\pi ty}$. Then from above equation $f(x+iy) = \widehat{g_y}(x)$. By Holder's inequality we get that 
   \begin{align*}
     \int_0^\infty |g_y(t)| \ dt &= \int_0^\infty \left|F(t)e^{-2\pi ty}\right| \ dt \\
@@ -86,6 +86,12 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
 
   Moreover if $\gamma$ is any closed path in $\C$, and $\Omega$ is the interior of the space enclosed by $\gamma$, then $(-A, A)\times\Omega$ is a finite measure space. Therefore by Fubini's Theorem we change of order of integration and $$\int_\gamma f(z) \ dz = \int_\gamma \int_{-A}^A F(t)e^{2\pi itz} \ dt \ dz = \int_{-A}^A F(t) \int_\gamma e^{2\pi itz} \ dz \ dt = \int_{-A}^A F(t)\cdot 0 \ dt = 0$$
   since $e^{2\pi itz}$ is entire. Then by Morera's theorem, $f$ is entire.
+
+  We'll now prove that restrictioins of $f$ in to horizontal lines are bounde in the $L^2$ norm. For this let $$g_y(t) = F(t)e^{-2\pi ty}$$
+  Then from the first equation in the proof, we get that $$f(x+iy) = \int_{-A}^A g_y(t) e^{2\pi itx} \ dt$$
+which implies that $f$ restricted to horizontal lines is the inverse Fourier transform of $g_y$ in the domain $(-A, A)$. Also by the definition of $g_y$, $$\int_{-A}^A \left|g_y(t)\right|^2 \ dt = \int_{-A}^A \left|F(t)\right|^2 e^{-4\pi t y} \ dt \le e^{\left|4\pi Ay\right|}\int_{-A}^A \left|F(t)\right|^2 \ dt$$
+  Since by assumption $F \in L^2(-A, A)$, $g_y \in L^2(-A, A)$. Since $(-A, A)$ is a finite measure space $g_y \in L^1(-A, A)$. Now using Plancherel's theorem (\autoref{thm:Plancherel's_theorem}), we get that $$\int_{-\infty}^\infty |f(x+iy)|^2 \ dx = \int_{-\infty}^\infty |\widehat{g_y}(x)|^2 \ dx = \int_{-A}^A |g_y(t)|^2 \ dt $$
+  Therefore, $f$ restricted to horizontal lines is bounded in $L^2$.
 \end{proof}
 
 \section{Paley Wiener Theorems}
@@ -167,4 +173,5 @@ What is interesting is that the converse of the above two results is also true. 
   $$f(z) = f_y(x) = \int_\R \widehat{f_y}(t) e^{2\pi it x}\ dt = \int_0^\infty F(t)e^{2\pi it(x+iy)} \ dt = \int_{0}^\infty F(t)e^{2\pi itz} \ dz$$
   And from \autoref{prop:fourier_transform_in_upper_half_plane} it follows that $$\int_0^\infty |F(t)|^2 \ dt = C$$
 \end{proof}
-\cite{AxlerMeasure} \cite{papaRudin}, \textcite{Grafakos2017a}
+
+
