@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  15 APR 2023 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  18 APR 2023 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -993,36 +993,28 @@ r/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n
 /10 0 \OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = 0
  []
 
-[51] [52] [53] [54]) [55] (./02End/appendix.tex [56
-
-
-
-]
+[51] [52] [53] [54] [55]) [56] (./02End/appendix.tex
 Appendix A.
-[57]) [58] [59
+[57
+
+
+
+]) [58] [59
 
 ] (./main.aux (./00Intro/Preface.aux) (./01Chapters/01FourierSeries.aux) (./01C
 hapters/02LpConvergence.aux) (./01Chapters/03FourierTransform.aux) (./01Chapter
 s/04Holomorphic.aux))
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 29651A9EFCAAE765750BBC98D8539215;3545.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21716 strings out of 476025
- 378480 string characters out of 5796532
+ 21718 strings out of 476025
+ 378513 string characters out of 5796532
  1869388 words of memory out of 5000000
- 41632 multiletter control sequences out of 15000+600000
+ 41633 multiletter control sequences out of 15000+600000
  542523 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,15n,79p,799b,1865s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1045,10 +1037,10 @@ fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.
 pfb>
-Output written on main.pdf (65 pages, 515767 bytes).
+Output written on main.pdf (65 pages, 519506 bytes).
 PDF statistics:
- 816 PDF objects out of 1000 (max. 8388607)
- 668 compressed objects within 7 object streams
- 209 named destinations out of 1000 (max. 500000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 669 compressed objects within 7 object streams
+ 210 named destinations out of 1000 (max. 500000)
  182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -70,7 +70,7 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
 \begin{proposition}
   Let $0<A<\infty$ and $F \in L^2(-A, A)$. Then $f:\C \to \C$ defined as $$f(z) = \int_{-A}^A F(z)e^{2\pi itz} \ dt$$
   is an entire function which satisfy $$|f(z)| \le Ce^{2 \pi A|z|}$$
-  for some constant $C$ and $f$ when restricted to horizontal lines is bounded in the $L^2$ norm. That is if $f(z)$ is written as $f(x+iy)$ then  $$\int_{-\infty}^{\infty} f(x+iy) \ dx < \infty$$
+  for some constant $C$ and $f$ when restricted to horizontal lines is bounded in the $L^2$ norm. That is if $f(z)$ is written as $f(x+iy)$ then  $$\int_{-\infty}^{\infty} |f(x+iy)|^2 \ dx < \infty$$
 \end{proposition}
 \begin{proof}
   Like in proof of the above theorem for $z\in \C$ we write $z = x+iy$. Then $$f(x+iy) = \int_{-A}^A F(t) e^{2\pi it(x+iy)} \ dt = \int_{-A}^A F(t)e^{-2\pi ty}e^{2\pi itx} \ dt$$
@@ -173,5 +173,26 @@ What is interesting is that the converse of the above two results is also true. 
   $$f(z) = f_y(x) = \int_\R \widehat{f_y}(t) e^{2\pi it x}\ dt = \int_0^\infty F(t)e^{2\pi it(x+iy)} \ dt = \int_{0}^\infty F(t)e^{2\pi itz} \ dz$$
   And from \autoref{prop:fourier_transform_in_upper_half_plane} it follows that $$\int_0^\infty |F(t)|^2 \ dt = C$$
 \end{proof}
+
+\begin{theorem}[Paley Wiener Theorem]
+  \label{thm:paley_wiener_2}
+  Suppose $A$ and $C$ are positive constants and $f$ is an entire function such that for all $z \in \C$, $$|f(z)| \le Ce^{2\pi A |z|}$$
+  and restriction of $f$ into horizontal lines is in $L^2$, i.e $$\int_{-\infty}^\infty |f(x +iy)|^2 \ dx < \infty$$
+  Then there exists an $F \in L^2(-A, A)$ such that for all $z\in \C$, $$f(z) = \int_{-A}^A F(t)e^{2 \pi it z} \ dt $$
+\end{theorem}
+\begin{proof}
+  Before we start analysing on $f$, we'll define $f_\epsilon(x) = f(x)e^{-2\pi \epsilon |x|}$
+
+  \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{2\pi i\alpha}$$
+  where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{2\pi i\alpha}) > A\}$$
+  Note that $\Pi_\alpha$ is precisely the half plane where $\Re(w) > A$ rotated by $2\pi \alpha$ degress in the clockwise direction. This information will later come in handy. Now for $w \in \Phi_\alpha$ define $$ \Phi_\alpha(w) = \int_{\Gamma_\alpha} f(z) e^{-wz} \ dz = e^{2\pi i\alpha}\int_0^\infty f(se^{2\pi i\alpha})e^{-wse^{2\pi i\alpha}} \ ds$$
+  By assumption, we know that $\left|f(se^{2\pi i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{2\pi i\alpha})e^{-wse^{2\pi i\alpha}}\right| = \left|f(se^{2\pi i\alpha})e^{-\Re(wse^{2\pi i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} $$ %\left|Ce^{-(we^{i\alpha} - 2\pi A)s}\right|$$
+  Therefore rewriting $\Phi_\alpha$ as $$\Phi_\alpha(x) = e^{i \alpha} \int_0^\infty f(se^{i\alpha}) e^{- \Re (wse^{i \alpha })} e^{-i \Im(wse^{i\alpha})} \ ds$$
+
+\end{proof}
+
+
+
+
 
 
