@@ -183,11 +183,19 @@ What is interesting is that the converse of the above two results is also true. 
 \begin{proof}
   Before we start analysing on $f$, we'll define $f_\epsilon(x) = f(x)e^{-2\pi \epsilon |x|}$
 
-  \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{2\pi i\alpha}$$
-  where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{2\pi i\alpha}) > A\}$$
-  Note that $\Pi_\alpha$ is precisely the half plane where $\Re(w) > A$ rotated by $2\pi \alpha$ degress in the clockwise direction. This information will later come in handy. Now for $w \in \Phi_\alpha$ define $$ \Phi_\alpha(w) = \int_{\Gamma_\alpha} f(z) e^{-wz} \ dz = e^{2\pi i\alpha}\int_0^\infty f(se^{2\pi i\alpha})e^{-wse^{2\pi i\alpha}} \ ds$$
-  By assumption, we know that $\left|f(se^{2\pi i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{2\pi i\alpha})e^{-wse^{2\pi i\alpha}}\right| = \left|f(se^{2\pi i\alpha})e^{-\Re(wse^{2\pi i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} $$ %\left|Ce^{-(we^{i\alpha} - 2\pi A)s}\right|$$
-  Therefore rewriting $\Phi_\alpha$ as $$\Phi_\alpha(x) = e^{i \alpha} \int_0^\infty f(se^{i\alpha}) e^{- \Re (wse^{i \alpha })} e^{-i \Im(wse^{i\alpha})} \ ds$$
+  \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{i\alpha}$$
+  where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{i\alpha}) > A\}$$
+  Note that $\Pi_\alpha$ is precisely the half plane where $\Re(w) > A$ rotated by $\alpha$ degress in the clockwise direction. This information will later come in handy. Now for $w \in \Pi_\alpha$ define $$ \Phi_\alpha(w) = \int_{\Gamma_\alpha} f(z) e^{-2\pi wz} \ dz = e^{i\alpha}\int_0^\infty f(se^{i\alpha})e^{-2\pi wse^{i\alpha}} \ ds$$
+  By assumption, we know that $\left|f(se^{i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{i\alpha})e^{-2\pi wse^{i\alpha}}\right| = \left|f(se^{i\alpha})e^{-\Re(2\pi wse^{i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} = Ce^{-2\pi \tau s}$$
+  where $\tau > 0$, since $w \in \Pi_\alpha$. Since $Ce^{-2\pi \tau s}$ is analytic everywhere in $\Pi_\alpha$, if $T$ is any triangular path in $\Pi_\alpha$, by Fubini-Tonelli theorem,
+  \begin{align*}
+    \int_T \Phi_\alpha(w) \ dw &= \int_T e^{i\alpha} \int_0^\infty f(se^{i\alpha}) e^{-2\pi w s e^{i\alpha}} \ ds \ dw \\
+    & = e^{i\alpha}\int_0^\infty f(se^{i\alpha}) \int_T e^{-2\pi wse^{i\alpha}} \ dw \ ds \\
+    & = e^{i\alpha} \int_0^\infty f(se^{i\alpha}) \cdot 0 \ ds \\
+    & = 0
+  \end{align*}
+  Hence by Morera's theorem, we get that $\Phi_\alpha$ is analytic everywhere in $\Pi_\alpha$.
+  % Therefore rewriting $\Phi_\alpha$ as $$\Phi_\alpha(x) = e^{i \alpha} \int_0^\infty f(se^{i\alpha}) e^{- \Re (wse^{i \alpha })} e^{-i \Im(wse^{i\alpha})} \ ds$$
 
 \end{proof}
 
