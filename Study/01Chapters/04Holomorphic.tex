@@ -202,14 +202,19 @@ What is interesting is that the converse of the above two results is also true. 
     & = e^{i\alpha} \int_0^\infty f(se^{i\alpha}) \cdot 0 \ ds \\
     & = 0
   \end{align*}
-  Hence by Morera's theorem, we get that $\Phi_\alpha$ is analytic everywhere in $\Pi_\alpha$. Moreover for $\alpha = 0$ and $\alpha =  \pi$, we get
-  $$\Phi_0(w) = \int_0^\infty f(s)e^{-2\pi w s} \ ds $$
-  $$\Phi_\pi(w) = \int_0^\infty f(-s)e^{2\pi w s} \ ds = -\int_0^\infty f(s)e^{-2 \pi ws} \ ds$$
-  where they are analytic in $\Pi_0$ and $\Pi_\pi$ respectively.
+  Hence by Morera's theorem, we get that $\Phi_\alpha$ is analytic everywhere in $\Pi_\alpha$. Moreover for $\alpha = 0$ and a triangle $T$ in $\{w \in \C \ | \Re(w) > 0 \}$, by Cauchy Schwarz inequality we get,
+  \begin{align*}
+    \int_T \left| \Phi_0(w)\right| \ dw & \le \int_T \int_0^\infty \left| f(s)e^{-2\pi w s}\right| \ ds \ dw \\
+    & \le \int_T \|f\|_2 \Bigg( \int_0^\infty \left|e^{-2\pi w s}\right|^2 \ ds \Bigg)^\frac{1}{2} dw \\
+  \end{align*}
+  where the inner integral is finite since there exists a $\tau \in T$ such that $$\Re(\tau) = \inf\{ \Re(t) \ | \ t \in T \}$$
+  and therefore $$\int_0^\infty \left|e^{-2 \pi ws} \right|^2 \ ds \le \int_0^\infty e^{-4 \pi \tau s} \ ds < \infty$$
+Now we can use Fubini-Tonelli theorem to interchange the order of the integration to get,
+  \begin{align*}
+    \int_T \Phi_0(w) \ dw & \le \int_T \int_0^\infty f(s)e^{-2\pi w s} \ ds \ dw \\
+    & = \int_0^\infty f(s) \int_T e^{-2\pi w s} \ dw \ ds \\
+    & = 0
+  \end{align*}
+Then Morera's theorem asserts that $\Phi_0$ is analytic in $\{w \in \C \ | \Re(w) > 0 \}$. By similar argument we can show that $\Phi_\pi$ is analytic in $\{w \in \C \ | \Re(w) < 0 \}$
 \end{proof}
-
-
-
-
-
 

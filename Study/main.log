@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  18 APR 2023 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  26 APR 2023 00:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -993,13 +993,13 @@ r/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n
 /10 0 \OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = 0
  []
 
-[51] [52] [53] [54] [55]) [56] (./02End/appendix.tex
+[51] [52] [53] [54] [55] [56]) [57] (./02End/appendix.tex [58
+
+
+
+]
 Appendix A.
-[57
-
-
-
-]) [58] [59
+[59]) [60] [61
 
 ] (./main.aux (./00Intro/Preface.aux) (./01Chapters/01FourierSeries.aux) (./01C
 hapters/02LpConvergence.aux) (./01Chapters/03FourierTransform.aux) (./01Chapter
@@ -1011,8 +1011,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21718 strings out of 476025
- 378513 string characters out of 5796532
+ 21720 strings out of 476025
+ 378527 string characters out of 5796532
  1869388 words of memory out of 5000000
  41633 multiletter control sequences out of 15000+600000
  542523 words of font info for 141 fonts, out of 8000000 for 9000
@@ -1037,10 +1037,10 @@ fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.
 pfb>
-Output written on main.pdf (65 pages, 521353 bytes).
+Output written on main.pdf (67 pages, 523242 bytes).
 PDF statistics:
- 817 PDF objects out of 1000 (max. 8388607)
- 669 compressed objects within 7 object streams
- 210 named destinations out of 1000 (max. 500000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 677 compressed objects within 7 object streams
+ 212 named destinations out of 1000 (max. 500000)
  182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
