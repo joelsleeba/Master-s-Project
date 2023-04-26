@@ -202,7 +202,11 @@ What is interesting is that the converse of the above two results is also true. 
     & = e^{i\alpha} \int_0^\infty f(se^{i\alpha}) \cdot 0 \ ds \\
     & = 0
   \end{align*}
-  Hence by Morera's theorem, we get that $\Phi_\alpha$ is analytic everywhere in $\Pi_\alpha$. Moreover for $\alpha = 0$ and a triangle $T$ in $\{w \in \C \ | \Re(w) > 0 \}$, by Cauchy Schwarz inequality we get,
+  Hence by Morera's theorem, we get that $\Phi_\alpha$ is analytic everywhere in $\Pi_\alpha$. For our futher analysis we'll be focusing on $\Phi_0$ and $\Phi_\pi$, therefore we'll explicitly write them.
+  \begin{equation*}
+  \boxed{\Phi_0(w) = \int_0^\infty f(s) e^{-2\pi w s} \ ds \ , \quad \Phi_\pi(w) = -\int^0_{-\infty} f(s) e^{-2\pi w s} \ ds}
+  \end{equation*}
+  Now for $\alpha = 0$ and a triangle $T$ in $\{w \in \C \ | \Re(w) > 0 \}$, by Cauchy Schwarz inequality we get,
   \begin{align*}
     \int_T \left| \Phi_0(w)\right| \ dw & \le \int_T \int_0^\infty \left| f(s)e^{-2\pi w s}\right| \ ds \ dw \\
     & \le \int_T \|f\|_2 \Bigg( \int_0^\infty \left|e^{-2\pi w s}\right|^2 \ ds \Bigg)^\frac{1}{2} dw \\
@@ -215,10 +219,35 @@ Hence the integral is finite, and we can use Fubini-Tonelli theorem to interchan
     & = \int_0^\infty f(s) \int_T e^{-2\pi w s} \ dw \ ds \\
     & = 0
   \end{align*}
-  Then Morera's theorem asserts that $\Phi_0$ is analytic in $\{w \in \C \ | \Re(w) > 0 \}$. By similar argument we can show that $\Phi_\pi$ is analytic in $\{w \in \C \ | \Re(w) < 0 \}$. Now we can write our candidate for $F(t)$ as, $$\Phi_0(it) - \Phi_\pi(it) = \int_0^\infty f(s)e^{-2\pi it s} \ ds - \int_0^\infty f(-s) e^{2\pi it s} \ ds = \int_{-\infty}^\infty f(x) e^{-2\pi it x} \ dx $$
+  Then Morera's theorem asserts that $\Phi_0$ is analytic in $\{w \in \C \ | \Re(w) > 0 \}$. By similar argument we can show that $\Phi_\pi$ is analytic in $\{w \in \C \ | \Re(w) < 0 \}$. Now we can write our candidate for $F(t)$ as, \begin{align*} F(t) &= \Phi_0(it) - \Phi_\pi(it) \\
+    & = \int_0^\infty f(x)e^{-2\pi it x} \ dx + \int^0_{-\infty} f(x) e^{-2\pi it x} \ dx \\
+    &= \int_{-\infty}^\infty f(x) e^{-2\pi it x} \ dx
+  \end{align*}
 
   \textbf{Step 2}: But we have to show that $F(t)$ vanishes almost everywhere outside $(-A, A)$. Let $f_\epsilon(x) = f(x)e^{-2\pi \epsilon |x|}$ where $\epsilon > 0$, then $$\int_{-\infty}^{\infty} |f(x) -f_\epsilon(x)|^2 \ dx = \int_{-\infty}^\infty (1-e^{-2\pi \epsilon|x|})^2 |f(x)|^2 \ dx$$
   Since $(1-e^{-2\pi \epsilon|x|})^2 |f(x)|^2 < |f(x)|^2$ and $f\big|_\R \in L^2(\R)$, by Lebesgue dominated convergence theorem, we get $f_\epsilon \to f$ in $L^2(\R)$. Hence it is enough to show that for all $t$ such that $A < |t|$, $$\lim_{\epsilon \to 0}\int_\R f_\epsilon(x)e^{-2\pi itx} dx = 0$$
-  Let $t>A$, then $$\int_\R f_\epsilon(x) e^{-2\pi itx} \ dx = \Phi_0(\epsilon+it) - \Phi_\pi(-\epsilon+it)$$
+  Since
+  \begin{align*}
+    \Phi_0(\epsilon + it) &= \int_0^\infty f(x) e^{-2\pi (\epsilon + it)x} \ dx\\
+    &= \int_0^\infty \underbrace{f(x) e^{-2\pi \epsilon |x|}}_{f_\epsilon(x)} e^{-2 \pi i tx} \ dx \\
+    &= \int_0^\infty f_\epsilon(x) e^{-2\pi i tx} \ dx
+  \end{align*}
+  and
+  \begin{align*}
+    \Phi_\pi(-\epsilon + it) &= -\int^0_{-\infty} f(x) e^{-2\pi (-\epsilon + it)x} \ dx\\
+    &= - \int^0_{-\infty} \underbrace{f(x) e^{-2\pi \epsilon |x|}}_{f_\epsilon(x)} e^{-2 \pi i tx} \ dx \\
+    &= \int^0_{-\infty} f_\epsilon(x) e^{-2\pi i tx} \ dx
+  \end{align*}
+  we get that,
+  $$\int_\R f_\epsilon(x) e^{-2\pi itx} \ dx = \Phi_0(\epsilon+it) - \Phi_\pi(-\epsilon+it)$$
+  Therefore it is enough to show that for $|t| > A$, the right side of above equation converge to $0$ as $\epsilon \to 0$. For that we'll show that $\Phi_0$ and $\Phi_\pi$ are analytic continuations of $\Phi_{\frac{\pi}{2}}$ if $t>A$ or $\Phi_{-\frac{\pi}{2}}$ if $t <-A$ on the intersections of their respective domains. Then $\Phi_0(\epsilon+it) + \Phi_\pi(-\epsilon+it) \to 0$ as $\epsilon \to 0$ will follow from the fact that every $\Phi_\alpha$ is continuous. 
+
+  For that we'll show that for any $\alpha, \beta$ such that $0< \beta -\alpha < \pi$, and $\Phi_\alpha$, $\Phi_\beta$ defined on $\Pi_\alpha$ and $\Pi_\beta$ respectively $$\Phi_\alpha(x) = \Phi_\beta(x), \quad x \in \Pi_\alpha \cap \Pi_\beta$$
+  Let $\gamma = \frac{\alpha+\beta}{2}, \eta = \cos\frac{\beta-\alpha}{2}$, and let $w = |w|e^{-i\gamma}$ then, $$\Re(we^{i\alpha}) =\Re(|w|e^{i(\alpha-\gamma)}) = |w|\cos\left(\frac{\alpha-\beta}{2}\right) = \Re(|w|e^{i(\beta-\gamma)}) = \Re(we^{i\beta})$$
+  Then $w \in \Pi_\alpha \cap \Pi_\beta$ if $|w| > A / \eta$. Now for a fixed $r \in \R$ consider the circular path $\Gamma_r = re^{it}$ were $\alpha \le t \le \beta$ and the integral $$\int_{\Gamma_r} f(z)e^{-2\pi wz} \ dz$$
+  Also we get that $$\Re(-wz) = \Re(-|w|re^{i(t-\gamma)}) = -|w|r \cos(t-\gamma)\le -|w|r\eta$$ 
+  Since $|z| = r$ in $\Gamma_r$ and $|f(z)| \le Ce^{2\pi A |z|}$ by assumption, $$|f(z)e^{-2\pi wz}| \le Ce^{-2\pi (|w|\eta - A) r}$$
+  Therefore if $|w| > A / \eta$, $$\left|\int_{\Gamma_r} f(z) e^{-2 \pi wz} \ dz \right| = \int_{\Gamma_r} \left|f(z) e^{-2 \pi wz}\right| \ dz = Ce^{-2\pi (|w|\eta -A)r} \ell(\Gamma_r)$$
+  where $\ell(\Gamma_r)$ is the arc length of $\Gamma_r$. Now when $r \to \infty$, since the arc length increases linearly and the exponent decays exponentially, we get that $$\lim_{r\to \infty} \int_{\Gamma_r} f(z)e^{-2\pi w z} \ dz = 0$$
 \end{proof}
 

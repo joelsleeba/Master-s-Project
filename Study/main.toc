@@ -17,6 +17,6 @@
 \contentsline {chapter}{\numberline {4}Holomorphic Fourier Transforms}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Motivation and Basic Results}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Paley Wiener Theorems}{52}{section.4.2}%
-\contentsline {chapter}{Appendices}{58}{section*.4}%
-\contentsline {chapter}{\numberline {A}Results from Measure Theory}{59}{appendix.A}%
-\contentsline {chapter}{Bibliography}{61}{appendix*.5}%
+\contentsline {chapter}{Appendices}{60}{section*.4}%
+\contentsline {chapter}{\numberline {A}Results from Measure Theory}{61}{appendix.A}%
+\contentsline {chapter}{Bibliography}{63}{appendix*.5}%
