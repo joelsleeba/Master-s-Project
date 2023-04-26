@@ -87,7 +87,7 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
   Moreover if $\gamma$ is any closed path in $\C$, and $\Omega$ is the interior of the space enclosed by $\gamma$, then $(-A, A)\times\Omega$ is a finite measure space. Therefore by Fubini's Theorem we change of order of integration and $$\int_\gamma f(z) \ dz = \int_\gamma \int_{-A}^A F(t)e^{2\pi itz} \ dt \ dz = \int_{-A}^A F(t) \int_\gamma e^{2\pi itz} \ dz \ dt = \int_{-A}^A F(t)\cdot 0 \ dt = 0$$
   since $e^{2\pi itz}$ is entire. Then by Morera's theorem, $f$ is entire.
 
-  We'll now prove that restrictioins of $f$ in to horizontal lines are bounde in the $L^2$ norm. For this let $$g_y(t) = F(t)e^{-2\pi ty}$$
+  We'll now prove that restrictioins of $f$ in to horizontal lines are bounded in the $L^2$ norm. For this let $$g_y(t) = F(t)e^{-2\pi ty}$$
   Then from the first equation in the proof, we get that $$f(x+iy) = \int_{-A}^A g_y(t) e^{2\pi itx} \ dt$$
 which implies that $f$ restricted to horizontal lines is the inverse Fourier transform of $g_y$ in the domain $(-A, A)$. Also by the definition of $g_y$, $$\int_{-A}^A \left|g_y(t)\right|^2 \ dt = \int_{-A}^A \left|F(t)\right|^2 e^{-4\pi t y} \ dt \le e^{\left|4\pi Ay\right|}\int_{-A}^A \left|F(t)\right|^2 \ dt$$
   Since by assumption $F \in L^2(-A, A)$, $g_y \in L^2(-A, A)$. Since $(-A, A)$ is a finite measure space $g_y \in L^1(-A, A)$. Now using Plancherel's theorem (\autoref{thm:Plancherel's_theorem}), we get that $$\int_{-\infty}^\infty |f(x+iy)|^2 \ dx = \int_{-\infty}^\infty |\widehat{g_y}(x)|^2 \ dx = \int_{-A}^A |g_y(t)|^2 \ dt $$
@@ -209,12 +209,16 @@ What is interesting is that the converse of the above two results is also true. 
   \end{align*}
   where the inner integral is finite since there exists a $\tau \in T$ such that $$\Re(\tau) = \inf\{ \Re(t) \ | \ t \in T \}$$
   and therefore $$\int_0^\infty \left|e^{-2 \pi ws} \right|^2 \ ds \le \int_0^\infty e^{-4 \pi \tau s} \ ds < \infty$$
-Now we can use Fubini-Tonelli theorem to interchange the order of the integration to get,
+Hence the integral is finite, and we can use Fubini-Tonelli theorem to interchange the order of the integration to get,
   \begin{align*}
     \int_T \Phi_0(w) \ dw & \le \int_T \int_0^\infty f(s)e^{-2\pi w s} \ ds \ dw \\
     & = \int_0^\infty f(s) \int_T e^{-2\pi w s} \ dw \ ds \\
     & = 0
   \end{align*}
-Then Morera's theorem asserts that $\Phi_0$ is analytic in $\{w \in \C \ | \Re(w) > 0 \}$. By similar argument we can show that $\Phi_\pi$ is analytic in $\{w \in \C \ | \Re(w) < 0 \}$
+  Then Morera's theorem asserts that $\Phi_0$ is analytic in $\{w \in \C \ | \Re(w) > 0 \}$. By similar argument we can show that $\Phi_\pi$ is analytic in $\{w \in \C \ | \Re(w) < 0 \}$. Now we can write our candidate for $F(t)$ as, $$\Phi_0(it) - \Phi_\pi(it) = \int_0^\infty f(s)e^{-2\pi it s} \ ds - \int_0^\infty f(-s) e^{2\pi it s} \ ds = \int_{-\infty}^\infty f(x) e^{-2\pi it x} \ dx $$
+
+  \textbf{Step 2}: But we have to show that $F(t)$ vanishes almost everywhere outside $(-A, A)$. Let $f_\epsilon(x) = f(x)e^{-2\pi \epsilon |x|}$ where $\epsilon > 0$, then $$\int_{-\infty}^{\infty} |f(x) -f_\epsilon(x)|^2 \ dx = \int_{-\infty}^\infty (1-e^{-2\pi \epsilon|x|})^2 |f(x)|^2 \ dx$$
+  Since $(1-e^{-2\pi \epsilon|x|})^2 |f(x)|^2 < |f(x)|^2$ and $f\big|_\R \in L^2(\R)$, by Lebesgue dominated convergence theorem, we get $f_\epsilon \to f$ in $L^2(\R)$. Hence it is enough to show that for all $t$ such that $A < |t|$, $$\lim_{\epsilon \to 0}\int_\R f_\epsilon(x)e^{-2\pi itx} dx = 0$$
+  Let $t>A$, then $$\int_\R f_\epsilon(x) e^{-2\pi itx} \ dx = \Phi_0(\epsilon+it) - \Phi_\pi(-\epsilon+it)$$
 \end{proof}
 
