@@ -1,0 +1,29 @@
+% TeX_root = ../main.tex
+
+\chapter{Further Topics}
+
+From our understanding our Fourier analysis in the circle, line and for special classes of holomorphic functions, we can step into a world of further analysis where answers to seemingly simple problems are still hidden. In this chapter we will discuss some of them and try to understand what tools are required for them.
+
+\section{A Problem}
+We'll try to look into \emph{Functions whose Fourier transform vanishes on the sphere} from \autocite[Problem no. 3]{Grafakos2017a}
+
+\begin{problem}[Functions whose Fourier transforms vanishes on the sphere]
+\label{prb:research_problem}
+Let $n \ge 2$. Does there exist a function $f \in L^{\frac{2n+2}{n+3}}(\R^n)$ such that $$\hatf\vert_{S^{n-1}} = 0$$
+and 
+$$\left| 1 - |\xi|^2\right|^{-\frac{1}{2}}f \notin L^2(\R^n)$$
+\end{problem}
+
+In order to analyse this problem we need a little more tools in our disposal. The main one among them is Schwartz functions. 
+
+\begin{definition}[Schwartz Class]
+\label{def:schwartz_class}
+A smooth function $f:\mathbb{R}^n \to \mathbb{C}$, $f$ is called a \emph{Schwartz function} if for any given multi index $\alpha, \beta$, there exists a positive constant $C_{\alpha, \beta}$ such that $$\rho_{\alpha, \beta} = \sup_{x \in \mathbb{R}^n} \left|x^\alpha (D^\beta f)x \right| = C_{\alpha, \beta} < \infty$$ 
+Here $\rho_{\alpha, \beta}(f)$ is called \emph{Schwartz seminorm of $f$}. The collection of all such functions is called the \emph{Schwartz space} of $\mathbb{R}^n$ and is denoted by $\mathscr{S}(\mathbb{R}^n)$. 
+
+See \autocite[Appendix A.3]{perko_differential_2001} for definition of multi index and derivative.
+\end{definition}
+
+The reason why Schwartz class is an attractive space for Fourier analysis is because Fourier transform is a homeomorphism on the Schwartz class \autocite[Corollary 2.2.15]{Grafakos_Classical_Fourier}
+
+Next theorem which will aid us is the Stein-Tomas theorem. 

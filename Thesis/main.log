@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.11)  12 APR 2023 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  10 MAY 2023 02:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,16 +717,18 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 21.
 \c@proposition=\count430
 \c@lemma=\count431
 \c@corollary=\count432
-\c@definition=\count433
+\c@problem=\count433
+\c@definition=\count434
 ) (./config/mathletters.tex)
-\@quotelevel=\count434
-\@quotereset=\count435
+\@quotelevel=\count435
+\@quotereset=\count436
 
 (./main.aux (./00Intro/01_Title.aux) (./00Intro/02_Declaration.aux)
 (./00Intro/03_Certificate.aux) (./00Intro/04_Acknowledgement.aux)
 (./00Intro/05_Abstract.aux) (./00Intro/06_ToC-LoF-LoA.aux)
 (./01Chapters/01FourierSeries.aux) (./01Chapters/02LpConvergence.aux)
-(./01Chapters/03FourierTransform.aux) (./01Chapters/04Holomorphic.aux))
+(./01Chapters/03FourierTransform.aux) (./01Chapters/04Holomorphic.aux)
+(./01Chapters/05Future.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -792,16 +794,16 @@ Package hyperref Info: Link coloring ON on input line 12.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count436
+\scratchcounter=\count437
 \scratchdimen=\dimen193
 \scratchbox=\box58
-\nofMPsegments=\count437
-\nofMParguments=\count438
+\nofMPsegments=\count438
+\nofMParguments=\count439
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count439
+\MPscratchCnt=\count440
 \MPscratchDim=\dimen194
-\MPnumerator=\count440
-\makeMPintoPDFobject=\count441
+\MPnumerator=\count441
+\makeMPintoPDFobject=\count442
 \everyMPtoPDFconversion=\toks31
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -834,7 +836,7 @@ Package biblatex Info: Reference segment=0 on input line 12.
 
 
 (./00Intro/01_Title.tex
-<./figures//logo/iiser_logo.png, id=88, 1284.8pt x 755.82375pt>
+<./figures//logo/iiser_logo.png, id=100, 1284.8pt x 755.82375pt>
 File: ./figures//logo/iiser_logo.png Graphic file (type png)
 <use ./figures//logo/iiser_logo.png>
 Package pdftex.def Info: ./figures//logo/iiser_logo.png  used on input line 41.
@@ -903,77 +905,53 @@ LaTeX Font Info:    Trying to load font information for OMX+yhex on input line
 (/usr/share/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
-))
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
 ) [6
 
 
 
 
 
-]
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+) [7]
 \openout2 = `01Chapters/01FourierSeries.aux'.
 
 
 (./01Chapters/01FourierSeries.tex
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12.
 
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
-
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 
-      [1
+l.26   \end{proposition}
+                         [1
 
 
 
 
-] [2]
-Overfull \hbox (33.47906pt too wide) detected at line 73
-[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n\OT1/cmr/m/n/12 ) = [][](\OML/cmm/m/it/12 
-f \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 x\OT1/
-cmr/m/n/12 )\OML/cmm/m/it/12 e[] dx \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 f\O
-T1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 e[] dx \OT1/
-cmr/m/n/12 + [][] \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr
-/m/n/12 )\OML/cmm/m/it/12 e[] dx \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 n\OT1/cm
-r/m/n/12 ) + [](\OML/cmm/m/it/12 n\OT1/cmr/m/n/12 )
- []
+] [2] [3] [4] [5] [6]
 
-[3]
-<./figures//convolution.jpg, id=183, 642.4pt x 481.8pt>
-File: ./figures//convolution.jpg Graphic file (type jpg)
-<use ./figures//convolution.jpg>
-Package pdftex.def Info: ./figures//convolution.jpg  used on input line 135.
-(pdftex.def)             Requested size: 250.95476pt x 188.21736pt.
- [4] [5 <./figures//convolution.jpg>]
+LaTeX Warning: Command \L invalid in math mode on input line 239.
 
-LaTeX Warning: Command \L invalid in math mode on input line 211.
 
-[6]
+LaTeX Warning: Command \L invalid in math mode on input line 248.
 
-LaTeX Warning: Command \L invalid in math mode on input line 220.
-
-[7] [8] [9] [10] [11]
-Overfull \hbox (24.55742pt too wide) detected at line 405
-[]
- []
-
-[12] [13] [14] [15] [16] [17]) [18]
+[7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]) [19]
 \openout2 = `01Chapters/02LpConvergence.aux'.
 
- (./01Chapters/02LpConvergence.tex
+
+(./01Chapters/02LpConvergence.tex
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -999,7 +977,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 22.
 
-[19
+[20
 
 
 
@@ -1008,7 +986,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Warning: Command \L invalid in math mode on input line 60.
 
-[20] [21]
+[21] [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 109.
@@ -1021,21 +999,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 109.
 
-[22]
+[23]
 
 LaTeX Warning: Command \L invalid in math mode on input line 148.
 
-[23] [24]) [25]
+[24] [25]) [26]
 \openout2 = `01Chapters/03FourierTransform.aux'.
 
  (./01Chapters/03FourierTransform.tex
 Chapter 3.
-[26
+[27
 
 
 
 
-] [27] [28] [29]
+] [28] [29] [30]
 Overfull \hbox (6.74748pt too wide) detected at line 85
 [][] [] \OML/cmm/m/it/12 dx dy \OT1/cmr/m/n/12 = [][] [] \OMS/cmsy/m/n/12 j\OML
 /cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OMS/cmsy/m/n
@@ -1046,7 +1024,7 @@ y\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 dy \OT1/cmr/m/n/12 = \OMS
 y/m/n/12 k[]
  []
 
-[30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+[31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 402.
@@ -1059,7 +1037,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 402.
 
-[42] [43]
+[43] [44]
 Overfull \hbox (4.33116pt too wide) in paragraph at lines 449--450
 []\OT1/cmr/m/n/12 Also by [][]Propo-si-tion A.0.3[][][], $\OML/cmm/m/it/12 L[]\
 OT1/cmr/m/n/12 (\U/msb/m/n/12 R\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 \ \OML/cmm/m/
@@ -1068,54 +1046,76 @@ mm/m/it/12 L[]\OT1/cmr/m/n/12 (\U/msb/m/n/12 R\OT1/cmr/m/n/12 )$. Then by Planc
 herel's
  []
 
-) [44]
+) [45]
 \openout2 = `01Chapters/04Holomorphic.aux'.
 
  (./01Chapters/04Holomorphic.tex
 Chapter 4.
-[45
+[46
 
 
 
 
-] [46] [47] [48] [49] [50] [51]) [52] [53
+] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]) [58]
+\openout2 = `01Chapters/05Future.aux'.
+
+
+(./01Chapters/05Future.tex
+Chapter 5.
+[59
+
+
+
+
+]) [60] [61
 
 
 
 ] (./02End/appendix.tex
 Appendix A.
-[54
 
-]) [55] [56
+LaTeX Warning: Reference `def:continuous_functions_on_T' on page 62 undefined o
+n input line 8.
 
-] (./main.aux (./00Intro/01_Title.aux)
-(./00Intro/02_Declaration.aux) (./00Intro/03_Certificate.aux)
-(./00Intro/04_Acknowledgement.aux) (./00Intro/05_Abstract.aux)
-(./00Intro/06_ToC-LoF-LoA.aux) (./01Chapters/01FourierSeries.aux)
-(./01Chapters/02LpConvergence.aux) (./01Chapters/03FourierTransform.aux)
-(./01Chapters/04Holomorphic.aux))
+[62
+
+]) [63]
+Overfull \hbox (15.03531pt too wide) in paragraph at lines 33--33
+\OT1/cmr/m/n/12 texts in math-e-mat-ics 249. New York: Springer, 2014. \OT1/cmr
+/m/sc/12 isbn\OT1/cmr/m/n/12 : 9781493911936. 
+ []
+
+
+Overfull \hbox (32.96265pt too wide) in paragraph at lines 33--33
+\OT1/cmr/m/n/12 plied Un-der-grad-u-ate Texts. Amer-i-can Math-e-mat-i-cal So-c
+i-ety, 2014, pp. x+390.
+ []
+
+[64
+
+] (./main.aux (./00Intro/01_Title.aux) (./00Intro/02_Declaration.aux)
+(./00Intro/03_Certificate.aux) (./00Intro/04_Acknowledgement.aux)
+(./00Intro/05_Abstract.aux) (./00Intro/06_ToC-LoF-LoA.aux)
+(./01Chapters/01FourierSeries.aux) (./01Chapters/02LpConvergence.aux)
+(./01Chapters/03FourierTransform.aux) (./01Chapters/04Holomorphic.aux)
+(./01Chapters/05Future.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 87462F640E8D7BCEE7A492E22326B75A;3465.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 74530E3D8FAA152498DE4495D037B1B6;3826.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21831 strings out of 476025
- 384097 string characters out of 5796532
+ 21894 strings out of 476025
+ 385990 string characters out of 5796532
  1868388 words of memory out of 5000000
- 41721 multiletter control sequences out of 15000+600000
+ 41760 multiletter control sequences out of 15000+600000
  535849 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,15n,79p,799b,1865s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,15n,79p,799b,1869s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1129,11 +1129,12 @@ ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1
 f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (62 pages, 510605 bytes).
+msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on main.pdf (71 pages, 454057 bytes).
 PDF statistics:
- 778 PDF objects out of 1000 (max. 8388607)
- 641 compressed objects within 7 object streams
- 207 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 853 PDF objects out of 1000 (max. 8388607)
+ 705 compressed objects within 8 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

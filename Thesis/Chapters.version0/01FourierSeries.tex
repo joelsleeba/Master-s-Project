@@ -1,55 +1,37 @@
 % TeX root = ../main.tex
 \chapter{Fourier Series}
 
-  Throughout this chapter we will be concerned with periodic functions. We will discuss the Fourier series of functions and their convergence. Before we begin we will formally define periodic functions in $\R$. 
-  \begin{definition}[Periodic function]
-    \label{def:periodic_function}
-    A function $f:\R \to \R$ is called periodic with period $p$ (or $p$-periodic) if $f(x+p) = f(x)$ for all $x \in \R$
-  \end{definition}
+  \section{Definition and basic properties}
 
-  From the above definition it is evident that a periodic function in $\R$ is uniquely determined by the its images in a closed open interval of length $p$, where $p$ is the period of the function. Moreover if $g: \R \to \R$ is a $p$-periodic function, $f(x) := g(\frac{x}{p})$ is a $1$-periodic function. Thereofore we'll focus our attention to $1$-periodic function. Now we'll identifiy $1$-periodic functions in $\R$ with functions in the interval $[0,1)$. By this identification we will be able to use many results from Lebesgue measure theory which are restricted to finite measure spaces.
-
-  \section{Structure and Topology of $\T$}
- % \label{def:definition_of_T}
-  Let us define an relation $\sim$ on $\R$ where $$x \sim y \iff x-y \in \Z$$
-  It is easy to verify that this is an equivalence relation on $\R$ and the equivalence classes of this relation is denoted by $\T$ or $\frac{\R}{\Z}$. Note that if $r \in \R$, then the equivalence class of $r$, denoted by $[r]$ is $$[r] = r + \Z = \left\{r + n \ \vert \ n \in \Z \right\} = \{r\} + \Z$$
- where $\{r\}$ is the fractional part of $r$. 
-
-  Moreover $f: \R \to \T$ defined as $f(r) = [r]$ is a surjective map onto $\T$ and therefore defines the quotient topology on $\T$. 
-
-
-% By our identification of $T$ with $[0, 1)$ this translates to the quotient topology on $[0, 1)$ given by the map $\tilde{f} : \R \to [0, 1)$ as $\tilde{f}(r) = \{r\}$.
-% Now $\T$ can be identified with $[0, 1)$ where $[r] \in \T$ is identified with $\{r\} \in [0, 1)$. Therefore by abuse of notation we'll use $\T = [0, 1)$ instead of $\frac{\R}{\Z}$
-
-  \begin{proposition}[Periodisation of functions in $\T$]
-   Let $f: \R \to \R$ be defined as $f(x) = [x]$ and $h: \T \to \R$. Then $h \circ f: \R \to \R$ is a periodic function of period $1$.
-  \end{proposition}
-
-By the above theorem we consider functions in $\T$ as $1$-periodic functions in $\R$. Also, having endowed $\T$ with a topology and measure, we are now at a position to discuss continuity of functions in $\T$.
-
-\begin{proposition}[Continuous functions in $\T$]
-  \label{prop:continuous_functions_on_T}
-  Let $g : \T \to \R$ be a function. Then $g$ is continuous on $\T$ if and only if the function $h: \R \to \R$ defined as $h(x) = g([x])$ is a continuous function of period $1$.
-\end{proposition}
-\begin{proof}
-  ($\implies$) Assume $g$ is a continuous function in $\T$. Then by the definition, if $U \subset \R$ is an open set then $g^{-1}(A)$ is an open set in $\T$. Since the topology on $\T$ is defined by the quotient map $f: \R \to \T$, where $f(x) = [x]$, we get that $f^{-1}g^{-1}(A)$ is open in $\R$. Since $h = g \circ f$ by definition, it follows that $h$ is continuous. Also since $f(x + 1) = f(x)$ for all $x \in \R$, it follows that $h$ is of period $1$.
-
-  ($\impliedby$) Assume that $h$ is a continuous function on $\R$. Then $h^{-1}(A)$ is an open set in $\R$ for any open set $A \in \R$. Since $h = g \circ f$ we get $f^{-1}g^{-1}(A)$ is open in $\R$. Again since $f$ is a quotient map to $\T$, we get that $g^{-1}(A)$ is open in $\T$. Therefore $g$ is a continuous function on $\T$.
-\end{proof}
-
-Now by abuse of notation we'll identify $\T$ with $[0, 1)$ by the function $f:[x] \to \{ x \}$. By this identification we can define Lebesgue measure on $\T$. If $A$ is an open subset of $\T$ then Lebesgue measure of $A$ is defined as, $\mu(A) = \lambda(f(A))$ where the $\lambda$ is the Lebesgue measure on $\R$. Then we see that $\T$ is a finite Lebesgue measure space.
-
-Recall the definition of $L^p$ funtions for a Lebesgue measure space.
+    We'll begin by reviewing the definition of $L^p$ space since we'll be mostly working on functions from these space.
   \begin{definition}[$L^p$ function]
     \label{def:Lp_function}
-    A real valued function $f$ defined on a Lebesgue measure space $S$ is called an $L^p$ function on $S$ or a $p$-integrable function on $S$ if 
+    A real valued function $f$ defined on a lebesgue measure space $S$ is called an $L^p$ function on $S$ or a $p$-integrable function on $S$ if 
     \begin{displaymath}
-       \left( \int_{S} |f(x)|^p d\mu \right)^{1/p} < \infty
+       \left( \int_{S} |f(x)|^p \right)^{1/p} < \infty
     \end{displaymath}
     For such a function the integral above is called the $p$-norm of the function $f$ and often denoted by $\|f\|_{L^p(S)}$ or $\|f\|_p$ if the space is known.
+\end{definition}  
+  Although we've defined general $L^p$ spaces, we'll mostly be concerned about $L^1$ and $L^2$ functions in $\R$ and $\T = [0, 1)$ .
+  \\
+
+  Now let's define what a periodic function is.
+  \begin{definition}[Periodic function]
+    \label{def:periodic_function}
+    A function $f:\R \to \R$ is called periodic with period $p$(or $p$-periodic) if $f(x+p) = f(x)$ for all $x \in \R$
+
+  \end{definition}
+  Although we're definining real valued periodic functions the definition holds well for any function $f$ from the reals to a space where equality is defined.
+  Also note that if we know the value of a $p$ periodic function $f$ in a closed-open (or open-close or closed) interval of length $p$ say $[x, x+p)$, then using the definition of periodic function we can get the function value at the whole of $\R$(we leave it for the reader to verify). That is, we can identify any $p$ periodic function $f$ on $\R$ with the restriction of $f$ onto an interval of length $p$. We can also identify $f$ with the values in a unit circle in $\C$.
+  Specifically we'll be working with $1$-periodic functions identified by their restrictions in $\T$.
+\\
+
+  \begin{definition}[Continuous functions in $\T$]
+    \label{def:continuous_functions_on_T}
+    Continuous functions on $\T$, are precisely those functions which are continuous in $\R$ with period $1$. We'll denote the collection of continuous functions in $\T$ with $C(\T)$.
   \end{definition}
 
-Let us now prove an important result about periodic functions.
+  Now let's prove an important result of periodic functions.
   \begin{lemma}
     \label{lem:integral_of_periodic_function}
     If $f:\R \to \R$ is of period $1$ and $\int_{0}^{1} f(x) dx$ exists, then for any real number $a$, 
@@ -59,7 +41,9 @@ Let us now prove an important result about periodic functions.
   \end{lemma}
   \begin{proof}
     Let $a = n +b$, where $0\le b <1$ and $n$ is an integer. Then since $f$ has period 1,
-      $\int_{a}^{a+1}f(x) dx = \int_{n+b}^{n+b+1}f(x)dx = \int_{b}^{b+1}f(x+n)dx = \int_{b}^{b+1}f(x)dx $
+    \begin{displaymath}
+      \int_{a}^{a+1}f(x) dx = \int_{n+b}^{n+b+1}f(x)dx = \int_{b}^{b+1}f(x+n)dx = \int_{b}^{b+1}f(x)dx
+    \end{displaymath}
     and, 
     \begin{align*}
       \int_{b}^{b+1}f(x)dx &= \int_{b}^{1}f(x)dx + \int_{1}^{b+1}f(x)dx \\
@@ -67,11 +51,11 @@ Let us now prove an important result about periodic functions.
                       &= \int_{b}^{1}f(x)dx + \int_{0}^{b}f(x)dx \\
                       &= \int_{0}^{1}f(x)dx
     \end{align*}
+
     Hence the result.
+    
   \end{proof}
 
-
-  \section{Fourier Coefficients}
   Now we'll define fourier coefficients of a periodic function $f \in L^1(\T)$
   \begin{definition}[Fourier coefficient]
     \label{def:fourier_coefficient}
@@ -80,26 +64,13 @@ Let us now prove an important result about periodic functions.
       \hatf(n) = \int_0^1 f(x)e^{-2\pi inx} dx \end{displaymath}
   \end{definition}
   $\hatf(n)$ is finite and well defined for each $n$ since $f \in L^1(\T)$, since
-  \begin{align*}
-    |\hatf(n)| &\le \int_0^1 |f(x)e^{-2\pi inx}| dx \\
-               &\le \int_0^1 |f(x)||e^{-2\pi inx}| dx \\
-               &= \int_0^1|f(x)| dx < \infty
-  \end{align*}
+  \begin{displaymath}
+    |\hatf(n)| \le \int_0^1 |f(x)e^{-2\pi inx}| dx \le \int_0^1 |f(x)||e^{-2\pi inx}| dx = \int_0^1|f(x)| dx < \infty
+  \end{displaymath}
   
   Once we have the fourier coefficients of a function at hand we can combine them together to make a series called the fourier series. We'll be investigating the conditions at which this series converges to our initial function $f$.
 
-  Also note that the map which takes $f$ to $\hatf$ is linear since if $f, g \in L^1(\T)$, then 
-  \begin{align*}
-    \widehat{f+g}(n) &= \int_0^1 (f+g)(x) e^{-2 \pi inx} \ dx \\
-              &= \int_0^1f(x)e^{-2\pi inx} \ dx + \int_0^1 g(x)e^{-2\pi inx} \ dx \\
-              &= \hatf(n) + \hatg(n)
-  \end{align*}
-  and for $\lambda \in \R$
-  \begin{align*}
-  \widehat{\lambda f}(n) \ dx &= \int_0^1 \lambda f(x) e^{-2\pi inx} \ dx \\
-              &= \lambda \int_0^1 f(x) e^{-2 \pi inx} \ dx \\
-              &= \lambda\hatf(n)
-  \end{align*}
+  Also note that the map which takes $f$ to $\hatf$ is linear since if $f, g \in L^1(\T)$, then $$\widehat{f+g}(n) = \int_0^1 (f+g)(x) e^{-2 \pi inx} \ dx = \int_0^1f(x)e^{-2\pi inx} \ dx + \int_0^1g(x)e^{-2\pi inx} \ dx = \hatf(n) + \hatg(n)$$ and for some $\lambda \in \R$, $$\widehat{\lambda f}(n) \ dx = \int_0^1 \lambda f(x) e^{-2\pi inx} \ dx = \lambda \int_0^1 f(x) e^{-2 \pi inx} \ dx = \lambda\hatf(n)$$
 
   \begin{definition}[Fourier series]
     \label{def:fourier_series}
@@ -115,8 +86,8 @@ Let us now prove an important result about periodic functions.
     Suppose that $f\in L^1(\T)$.
     \begin{enumerate}[label=(\alph*)]
       \item If $a$ is a real number and $g(x) = f(x+a)$ for all $x$, then $\hatg(n) = \hatf(n)e^{2\pi ina}$ for all $n \in \Z$.
-      \item If $b$ is an integer and $h(x) = f(x)e^{2\pi i bx}$ for all $x$, then $\hath(n) = \hatf(n-b)$ for all $n\in \Z$.
-      \item If $j(x) = f(-x)$ for all $x$, then $\hatj(n) = \hatf(-n)$
+      \item if $b$ is an integer and $h(x) = f(x)e^{2\pi i bx}$ for all $x$, then $\hath(n) = \hatf(n-b)$ for all $n\in \Z$.
+      \item if $j(x) = f(-x)$ for all $x$, then $\hatj(n) = \hatf(-n)$
     \end{enumerate}
   \end{proposition}
   \begin{proof}
@@ -158,13 +129,13 @@ Let us now prove an important result about periodic functions.
     \end{displaymath}
   \end{definition}
 
-  % Convolution can be thought of as taking the moving average of a function with another function. Refer \autoref{fig:convolution}.
-  % \begin{figure}
-  %   \centering
-  %   \includegraphics[width=0.6\textwidth]{convolution}
-  %   \caption{convolution}
-  %   \label{fig:convolution}
-  % \end{figure}
+  Convolution can be thought of as taking the moving average of a function with another function. Refer \autoref{fig:convolution}.
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{convolution}
+    \caption{convolution}
+    \label{fig:convolution}
+  \end{figure}
 
   \begin{proposition}[Properties of convolution]
     \label{prop:properties_of_convolution}
@@ -177,7 +148,8 @@ Let us now prove an important result about periodic functions.
     \end{enumerate}
   \end{proposition}
   \begin{proof}
-    We'll just prove the commutativity since the rest are easily verifiable by the properties of integration.
+    We'll just prove the commutativity and will leave the rest for the reader to verify. (Hint: Use properties of integration)
+
     Put $v = x-y$, we get $dv = -dy$ and 
     \begin{align*}
       f*g(x)  &= \int_{0}^{1}f(x-y)g(y) \ dy \\
@@ -241,22 +213,22 @@ Let us now prove an important result about periodic functions.
       S_N(x) = \sum_{n=-N}^N \hatf(n)e^{2\pi inx}
     \end{displaymath}
   \end{definition}
-  But it may happen that the summetric partial sum of the Fourier seies may not converge. To deal with this we'll define another partial sum called the Ces\`aro partial sum.
+  But it may happen that the summetric partial sum of the Fourier seies may not converge. To deal with this we'll define another partial sum called the Ces\'aro partial sum.
 
-  \begin{definition}[Ces\`aro partial sum of Fourier series]
+  \begin{definition}[Ces\'aro partial sum of Fourier series]
     \label{def:cesaro_partial_sum_of_fourier_series}
-    Given a function $f \in \L^1(\T)$ with its Fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ Ces\`aro parial sum of its Fourier series as
+    Given a function $f \in \L^1(\T)$ with its Fourier series, $\sum_{-\infty}^\infty \hatf(n)e^{2\pi in x}$, we define the $n^{th}$ Ces\'aro parial sum of its Fourier series as
     \begin{displaymath}
       \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)
     \end{displaymath}
     where $S_n(x)$ is the symmetric partial sum of the Fourier series in \autoref{def:symmetric_partial_sum_of_fourier_series}
   \end{definition}
-  For an example, $\{-1^{n}\}$ is a sequence whose symmetric partial sums do not converge but the Ces\`aro partial sums converge to $\frac{1}{2}$. Also if the symmetric partial sums of a series converge, then the Ces\`aro partial sums will also converge to the same limit. \autocite[Theorem~8.48 \pno~206]{Apostol_Analysis}
+  For an example, $\{-1^{n}\}$ is a sequence whose symmetric partial sums do not converge but the Ces\'aro partial sums converge to $\frac{1}{2}$. Also if the symmetric partial sums of a series converge, then the Ces\'aro partial sums will also converge to the same limit. \textcolor{red}{(Prove it!)}
 
-  Now we'll show that the Ces\`aro partial sum can be rewritten to another form which will help our proofs down the road.
+  Now we'll show that the Ces\'aro partial sum can be rewritten to another form which will help our proofs down the road.
   \begin{lemma}
     \label{lem:property_of_cesaro_partial_sum}
-    If $\sigma_N(x)$ is the $N^{th}$ Ces\`aro partial sum of the Fourier series of a function $f\in L^1(\T)$, then
+    If $\sigma_N(x)$ is the $N^{th}$ Ces\'aro partial sum of the Fourier series of a function $f\in L^1(\T)$, then
     \begin{displaymath}
       \sigma_N(x) = \sum_{n=-N}^N \left(1-\frac{\abs{n}}{N} \right) \hatf(n) e^{2\pi inx}
     \end{displaymath}
@@ -264,7 +236,7 @@ Let us now prove an important result about periodic functions.
   \begin{proof}
     We'll prove the result for a general series so that it'll help us also in Fourier series.
 
-    Let $S_N = \sum_{n=-N}^{N}a_n$ be the $N^{th}$ partial sum of the series $\sum_{-\infty}^{\infty}a_n$. Then by the definition of Ces\`aro partial sum, 
+    Let $S_N = \sum_{n=-N}^{N}a_n$ be the $N^{th}$ partial sum of the series $\sum_{-\infty}^{\infty}a_n$. Then by the definition of Ces\'aro partial sum, 
     \begin{align*}
       \sigma_N  &= \frac{1}{N} \sum_{n=0}^{N-1}S_n \\
                 &= \frac{1}{N} \sum_{n=0}^{N-1}\sum_{k=-n}^{n}a_k \\
@@ -333,7 +305,7 @@ Let us now prove an important result about periodic functions.
         \begin{displaymath}
           (\Delta_N*f)(x) = \sigma_N(x) 
         \end{displaymath}
-        where $\sigma_n(x)$ is the $n^{th}$ Ces\`aro partial sum of the Fourier series of $f$ as in \autoref{def:cesaro_partial_sum_of_fourier_series}.
+        where $\sigma_n(x)$ is the $n^{th}$ Ces\'aro partial sum of the Fourier series of $f$ as defined in \autoref{def:cesaro_partial_sum_of_fourier_series}.
     \end{enumerate}
   \end{proposition}
 
@@ -423,15 +395,10 @@ Let us now prove an important result about periodic functions.
       \begin{align*}
         (\Delta_N*f)(x) &= \int_0^1 \Delta_N(y)f(x-y) \ dy \\
               &= \int_0^1 \sum_{n=-N}^{N} \left(1-\frac{\abs{n}}{N}\right)e^{2\pi iny} f(x-y) \ dy \\
-              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) \int_0^1 f(x-y) e^{2\pi iny} \ dy
-      \end{align*}
-      Now since the summation is finite we get, 
-        $$= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx}  \int_0^1 f(x-y) e^{-2\pi in \left( x-y \right) } \ dy $$
-      By change of variable as $v = x-y$,
-        $$= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_x^{x-1} -f(v) e^{-2\pi in v} \ dv$$
-      And therefore we get,
-      \begin{align*}
-      (\Delta_N*f)(x) &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_{x-1}^x f(v) e^{-2\pi in v} \ dv \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) \int_0^1 f(x-y) e^{2\pi iny} \ dy \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx}  \int_0^1 f(x-y) e^{-2\pi in \left( x-y \right) } \ dy \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_x^{x-1} -f(v) e^{-2\pi in v} \ dv \\
+              &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_{x-1}^x f(v) e^{-2\pi in v} \ dv \\
               &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \int_0^{1} f(v) e^{-2\pi in v} \ dv & \text{by \autoref{lem:integral_of_periodic_function}}\\
               &= \sum_{n=-N}^N  \left(1-\frac{\abs{n}}{N}\right) e^{2 \pi inx} \hatf(n) \\
               &= \sigma_N(x)
@@ -442,7 +409,7 @@ Let us now prove an important result about periodic functions.
 
   \begin{proposition}
     \label{prop:fejer_kernel_is_summability_kernel}
-    Fej\'er kernel as in \autoref{def:fejer_kernel} is a summability kernel as in \autoref{def:summability_kernel}
+    Fej\'er kernel as defined in \autoref{def:fejer_kernel} is a summability kernel as in \autoref{def:summability_kernel}
   \end{proposition}
   \begin{proof}
     To prove that Fej\'er kernel is a summability kernel, we'll verify the three properties given in \autoref{def:summability_kernel}.
@@ -547,9 +514,9 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
   \end{proof}
 
   This leads to one important thoerem,
-  \begin{theorem}{Convergence of Ces\`aro sum of functions in $L^1(\T)$}
+  \begin{theorem}{Convergence of Ces\'aro sum of functions in $L^1(\T)$}
     \label{thm:convergence_of_cesaro_partial_sum_in_circle}
-    If $f\in L^1(\T)$ then $\sigma_N(x)$, the Ces\`aro sum of the Fourier series of $f$ converge to $f(x)$ in $L^1$ norm. That is, 
+    If $f\in L^1(\T)$ then $\sigma_N(x)$, the Ces\'aro sum of the Fourier series of $f$ converge to $f(x)$ in $L^1$ norm. That is, 
     \begin{displaymath}
       \lim_{N\to \infty} \int_0^1 \left|f(x) - \sigma_N(x)\right| = 0
     \end{displaymath}
@@ -562,7 +529,7 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
     If $f \in L^1(\T)$ and $\hatf(n) = 0$ for all $n \in \N$. Then $f(x) = 0$ almost everywhere in $\T$.
   \end{corollary}
   \begin{proof}
-    Since $\hatf(n) = 0$ for all $n\in \N$, the Ces\`aro partial sum (\autoref{def:cesaro_partial_sum_of_fourier_series}) will be identically zero. Then by \autoref{thm:convergence_of_cesaro_partial_sum_in_circle} it follows that $$\int_\T|f(x)| \ dx = 0$$
+    Since $\hatf(n) = 0$ for all $n\in \N$, the Ces\'aro partial sum (\autoref{def:cesaro_partial_sum_of_fourier_series}) will be identically zero. Then by \autoref{thm:convergence_of_cesaro_partial_sum_in_circle} it follows that $$\int_\T|f(x)| \ dx = 0$$
     Hence the result.
   \end{proof}
 
@@ -618,14 +585,6 @@ But by the $3^{rd}$ property of the summability kernel, we know that the integra
     $$ \lim_{N \to \infty} \sigma_N(x) = \frac{f(x^-) + f(x^+)}{2}$$
   \end{proof}
 
-  Fej\'er's theorem show that the Ces\`aro parital sum of the a continuous function converge pointwise to itself.
-  \begin{corollary}
-    If $f\in C(\T)$ and $\sigma_N(x)$ is the Ces\`aro partial sum of the Fourier series of $f$, then $$\lim_{N \to \infty}\sigma_N(x) = f(x)$$
-  \end{corollary}
-
  \begin{theorem}[Hardy Tauberian Theorem]
-   Let $\sum_{n=1}^\infty a_n$ is Ces\`aro summable to $a$, then if there exist a constant $C$ such that $$|a_n| \le \frac{C}{n}$$ for all $n$, then the series $\sum_{n=1}^\infty a_n$ converge to $a$
+   Let $\sum_{n=1}^\infty a_n$ is Ces\'aro summable to $a$, then if there exist a constant $C$ such that $$|a_n| \le \frac{C}{n}$$ for all $n$, then the series $\sum_{n=1}^\infty a_n$ converge to $a$
  \end{theorem}
- \begin{proof}
- See \autocite[Theorem~4.32 \pno~123]{MontgomeryFourier}.
- \end{proof}

@@ -19,6 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{Apostol_Analysis}{book}{}
+      \name{author}{1}{}{%
+        {{hash=125cfbd85cc6e304e8467fb8dded9ad1}{%
+           family={Apostol},
+           familyi={A\bibinitperiod},
+           given={Tom\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{125cfbd85cc6e304e8467fb8dded9ad1}
+      \strng{fullhash}{125cfbd85cc6e304e8467fb8dded9ad1}
+      \strng{bibnamehash}{125cfbd85cc6e304e8467fb8dded9ad1}
+      \strng{authorbibnamehash}{125cfbd85cc6e304e8467fb8dded9ad1}
+      \strng{authornamehash}{125cfbd85cc6e304e8467fb8dded9ad1}
+      \strng{authorfullhash}{125cfbd85cc6e304e8467fb8dded9ad1}
+      \field{labelalpha}{Apo74}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{2. ed}
+      \field{isbn}{9780201002881}
+      \field{series}{Addison-{Wesley} series in mathematics}
+      \field{shorttitle}{Mathematical analysis}
+      \field{title}{Mathematical analysis: a modern approach to advanced calculus}
+      \field{year}{1974}
+    \endentry
     \entry{AxlerMeasure}{book}{}
       \name{author}{1}{}{%
         {{hash=71493eec7caacea528ad39dbfb52773a}{%
@@ -98,6 +130,122 @@
       \verb 1701.06637
       \endverb
       \keyw{Classical Analysis and ODEs (math.CA),Analysis of PDEs (math.AP),FOS: Mathematics}
+    \endentry
+    \entry{Grafakos_Classical_Fourier}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d75ea9c673adff92b3c4257d2a70a85b}{%
+           family={Grafakos},
+           familyi={G\bibinitperiod},
+           given={Loukas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{fullhash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{bibnamehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{authorbibnamehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{authornamehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{authorfullhash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \field{labelalpha}{Gra14}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third edition}
+      \field{isbn}{9781493911936}
+      \field{number}{249}
+      \field{series}{Graduate texts in mathematics}
+      \field{title}{Classical {Fourier} analysis}
+      \field{year}{2014}
+      \keyw{Fourier analysis,Fourier analysis}
+    \endentry
+    \entry{MontgomeryFourier}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d6fc16fe2b971a8009f6a09376b27581}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Hugh\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{d6fc16fe2b971a8009f6a09376b27581}
+      \strng{fullhash}{d6fc16fe2b971a8009f6a09376b27581}
+      \strng{bibnamehash}{d6fc16fe2b971a8009f6a09376b27581}
+      \strng{authorbibnamehash}{d6fc16fe2b971a8009f6a09376b27581}
+      \strng{authornamehash}{d6fc16fe2b971a8009f6a09376b27581}
+      \strng{authorfullhash}{d6fc16fe2b971a8009f6a09376b27581}
+      \field{labelalpha}{Mon14}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background Complex numbers The discrete Fourier transform Fourier coefficients and first Fourier series Summability of Fourier series Fourier series in mean square Trigonometric polynomials Absolutely convergent Fourier series Convergence of Fourier series Applications of Fourier series The Fourier transform Higher dimensions Appendix B. The binomial theorem Appendix C. Chebyshev polynomials Appendix F. Applications of the fundamental theorem of algebra Appendix I. Inequalities Appendix L. Topics in linear algebra Appendix O. Orders of magnitude Appendix T. Trigonometry References Index}
+      \field{isbn}{978-1-4704-1560-0}
+      \field{series}{Pure and Applied Undergraduate Texts}
+      \field{title}{Early Fourier Analysis}
+      \field{volume}{22}
+      \field{year}{2014}
+      \field{pages}{x+390}
+      \range{pages}{-1}
+      \keyw{42-01 (42A16 42B05)}
+    \endentry
+    \entry{perko_differential_2001}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2e86fbceb5185d82a8b0e6fccbdf1691}{%
+           family={Perko},
+           familyi={P\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=a109e64d7dd72d3d3700a1a0216efd4b}{%
+           family={Marsden},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5d6345132a2589d627a26c0778d1b0ad}{%
+           family={Sirovich},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=04c1bb50a693abd13f903c4d491ef394}{%
+           family={Golubitsky},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{fullhash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{bibnamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{authorbibnamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{authornamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{authorfullhash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{editorbibnamehash}{e9d83dc54d3832706519233f84a2f979}
+      \strng{editornamehash}{e9d83dc54d3832706519233f84a2f979}
+      \strng{editorfullhash}{e9d83dc54d3832706519233f84a2f979}
+      \field{labelalpha}{Per01}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781461265269}
+      \field{series}{Texts in {Applied} {Mathematics}}
+      \field{title}{Differential {Equations} and {Dynamical} {Systems}}
+      \field{volume}{7}
+      \field{year}{2001}
     \endentry
     \entry{PinskyWavelet}{book}{}
       \name{author}{1}{}{%

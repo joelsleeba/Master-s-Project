@@ -1,4 +1,4 @@
-% TeX root = ../main.tex
+% TeX root = main.tex
 \chapter{Fourier Series in $L^p(\T)$}
 Before we go into the general $L^p$, we'll first recall some importatnt results from functional analysis which are essential for the discussion of further topics.
 
@@ -63,10 +63,10 @@ $$\hat{f}(n) = \int_0^1 f(x)e^{-2\pi inx} dx$$
 Note that $\hatf(n)$ is a finite quantity since $|e^{ix}| = 1$ and,
 $$ |\hatf(n)| = \left| \int_0^1 f(x)e^{-2\pi inx} dx \right| \le \|f\|_2\left(\int_0^1 |e^{-2\pi inx}|^2 dx\right)^{1/2} = \|f\|_2 $$
 
-Hence we define the fourier series the same way as in \autoref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^2(\T)$ functions are Ces\`aro summable to $f$. In fact this is true.
+Hence we define the fourier series the same way as in \autoref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^2(\T)$ functions are Ces\'aro summable to $f$. In fact this is true.
 
-\begin{theorem}[Fourier series of $L^2(\T)$ functions are Ces\`aro summable]
-  If $f\in L^2(\T)$, and $\sigma_N(x)$ is the $N^{th}$ Ces\`aro partial sum of the Fourier series of $f$, then
+\begin{theorem}[Fourier series of $L^2(\T)$ functions are Ces\'aro summable]
+  If $f\in L^2(\T)$, and $\sigma_N(x)$ is the $N^{th}$ Ces\'aro partial sum of the Fourier series of $f$, then
   $$ \lim_{N \to \infty} \int_0^1 |f(x) - \sigma_N(x)|^2 \ dx = 0$$
 \end{theorem}
 
@@ -151,10 +151,10 @@ $$\hat{f}(n) = \int_0^1 f(x)e^{-2\pi inx} dx$$
 Note that $\hatf(n)$ is a finite quantity since $|e^{ix}| = 1$ and,
 $$ |\hatf(n)| = \left| \int_0^1 f(x)e^{-2\pi inx} dx \right| \le \|f\|_p\left(\int_0^1 |e^{-2\pi inx}|^q dx\right)^{1/q} = \|f\|_p $$ where $1/p + 1/q = 1$.
 
-Hence we define the fourier series the same way as in \autoref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^p(\T)$ functions are Ces\`aro summable to $f$. In fact this is true.
+Hence we define the fourier series the same way as in \autoref{def:fourier_series}. Then we'll investigate if the Fourier series of $L^p(\T)$ functions are Ces\'aro summable to $f$. In fact this is true.
 
-\begin{theorem}[Fourier series of $L^p(\T)$ functions are Ces\`aro summable]
-  If $f\in L^p(\T)$, and $\sigma_N(x)$ is the $N^{th}$ Ces\`aro partial sum of the Fourier series of $f$, then
+\begin{theorem}[Fourier series of $L^p(\T)$ functions are Ces\'aro summable]
+  If $f\in L^p(\T)$, and $\sigma_N(x)$ is the $N^{th}$ Ces\'aro partial sum of the Fourier series of $f$, then
   $$ \lim_{N \to \infty} \int_0^1 |f(x) - \sigma_N(x)|^p \ dx = 0$$
 \end{theorem}
 

@@ -55,7 +55,7 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
   \end{align*}
   Then by Morera's theorem, $f$ is holomorphic everywhere in the upper half plane.
 
-  Now consider $z=x+iy$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dt$$ 
+  Now consider $z=x+iy$, then $f$ can be written as $$f(x+iy) = \int_0^\infty F(t)e^{2\pi i t (x+iy)}\ dt = \int_0^\infty F(t)e^{-2\pi ty}e^{2\pi i tx} \ dx$$ 
   Now for a fixed $y \in \R$, consider $g_y(t) = F(t)e^{-2\pi ty}$. Then from above equation $f(x+iy) = \widehat{g_y}(x)$. By Holder's inequality we get that 
   \begin{align*}
     \int_0^\infty |g_y(t)| \ dt &= \int_0^\infty \left|F(t)e^{-2\pi ty}\right| \ dt \\
@@ -70,7 +70,7 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
 \begin{proposition}
   Let $0<A<\infty$ and $F \in L^2(-A, A)$. Then $f:\C \to \C$ defined as $$f(z) = \int_{-A}^A F(z)e^{2\pi itz} \ dt$$
   is an entire function which satisfy $$|f(z)| \le Ce^{2 \pi A|z|}$$
-  for some constant $C$ and $f$ when restricted to horizontal lines is bounded in the $L^2$ norm. That is if $f(z)$ is written as $f(x+iy)$ then  $$\int_{-\infty}^{\infty} |f(x+iy)|^2 \ dx < \infty$$
+  for some constant $C$ and $f$ when restricted to horizontal lines is bounded in the $L^2$ norm. That is if $f(z)$ is written as $f(x+iy)$ then  $$\int_{-\infty}^{\infty} f(x+iy) \ dx < \infty$$
 \end{proposition}
 \begin{proof}
   Like in proof of the above theorem for $z\in \C$ we write $z = x+iy$. Then $$f(x+iy) = \int_{-A}^A F(t) e^{2\pi it(x+iy)} \ dt = \int_{-A}^A F(t)e^{-2\pi ty}e^{2\pi itx} \ dt$$
@@ -86,12 +86,6 @@ Note that the change in limit in the last integral is because $g_y(t) = 0$ when 
 
   Moreover if $\gamma$ is any closed path in $\C$, and $\Omega$ is the interior of the space enclosed by $\gamma$, then $(-A, A)\times\Omega$ is a finite measure space. Therefore by Fubini's Theorem we change of order of integration and $$\int_\gamma f(z) \ dz = \int_\gamma \int_{-A}^A F(t)e^{2\pi itz} \ dt \ dz = \int_{-A}^A F(t) \int_\gamma e^{2\pi itz} \ dz \ dt = \int_{-A}^A F(t)\cdot 0 \ dt = 0$$
   since $e^{2\pi itz}$ is entire. Then by Morera's theorem, $f$ is entire.
-
-  We'll now prove that restrictioins of $f$ in to horizontal lines are bounded in the $L^2$ norm. For this let $$g_y(t) = F(t)e^{-2\pi ty}$$
-  Then from the first equation in the proof, we get that $$f(x+iy) = \int_{-A}^A g_y(t) e^{2\pi itx} \ dt$$
-which implies that $f$ restricted to horizontal lines is the inverse Fourier transform of $g_y$ in the domain $(-A, A)$. Also by the definition of $g_y$, $$\int_{-A}^A \left|g_y(t)\right|^2 \ dt = \int_{-A}^A \left|F(t)\right|^2 e^{-4\pi t y} \ dt \le e^{\left|4\pi Ay\right|}\int_{-A}^A \left|F(t)\right|^2 \ dt$$
-  Since by assumption $F \in L^2(-A, A)$, $g_y \in L^2(-A, A)$. Since $(-A, A)$ is a finite measure space $g_y \in L^1(-A, A)$. Now using Plancherel's theorem (\autoref{thm:Plancherel's_theorem}), we get that $$\int_{-\infty}^\infty |f(x+iy)|^2 \ dx = \int_{-\infty}^\infty |\widehat{g_y}(x)|^2 \ dx = \int_{-A}^A |g_y(t)|^2 \ dt $$
-  Therefore, $f$ restricted to horizontal lines is bounded in $L^2$.
 \end{proof}
 
 \section{Paley Wiener Theorems}
@@ -173,81 +167,3 @@ What is interesting is that the converse of the above two results is also true. 
   $$f(z) = f_y(x) = \int_\R \widehat{f_y}(t) e^{2\pi it x}\ dt = \int_0^\infty F(t)e^{2\pi it(x+iy)} \ dt = \int_{0}^\infty F(t)e^{2\pi itz} \ dz$$
   And from \autoref{prop:fourier_transform_in_upper_half_plane} it follows that $$\int_0^\infty |F(t)|^2 \ dt = C$$
 \end{proof}
-
-\begin{theorem}[Paley Wiener Theorem]
-  \label{thm:paley_wiener_2}
-  Suppose $A$ and $C$ are positive constants and $f$ is an entire function such that for all $z \in \C$, $$|f(z)| \le Ce^{2\pi A |z|}$$
-  and restriction of $f$ into horizontal lines is in $L^2$, i.e $$\int_{-\infty}^\infty |f(x +iy)|^2 \ dx < \infty$$
-  Then there exists an $F \in L^2(-A, A)$ such that for all $z\in \C$, $$f(z) = \int_{-A}^A F(t)e^{2 \pi it z} \ dt $$
-\end{theorem}
-\begin{proof}
-  Before we start analysing on $f$, we'll define $f_\epsilon(x) = f(x)e^{-2\pi \epsilon |x|}$
-
-  \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{i\alpha}$$
-  where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{i\alpha}) > A\}$$
-  Note that $\Pi_\alpha$ is precisely the half plane where $\Re(w) > A$ rotated by $\alpha$ degress in the clockwise direction. This information will later come in handy. Now for $w \in \Pi_\alpha$ define $$ \Phi_\alpha(w) = \int_{\Gamma_\alpha} f(z) e^{-2\pi wz} \ dz = e^{i\alpha}\int_0^\infty f(se^{i\alpha})e^{-2\pi wse^{i\alpha}} \ ds$$
-  By assumption, we know that $\left|f(se^{i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{i\alpha})e^{-2\pi wse^{i\alpha}}\right| = \left|f(se^{i\alpha})e^{-\Re(2\pi wse^{i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} = Ce^{-2\pi \tau s}$$
-  where $\tau > 0$, since $w \in \Pi_\alpha$. Let $T$ is any triangular path in $\Pi_\alpha$. Since $T$ is compact and $\Re(we^{i\alpha})-A$ is continuous and positive in $\Pi_\alpha$, there is a $w = \tau_k$ where $\Re(we^{i\alpha} - A)$ is minimum and positive. Then 
-  \begin{align*}
-    \int_T\left|\Phi_\alpha(w)\right| \ dw &= \int_T e^{i\alpha} \left|\int_0^\infty f(se^{i\alpha}) e^{-2\pi we^{i\alpha}} \ ds \right| dw \\
-      & \le \int_T e^{i\alpha} \int_0^\infty \left|f(se^{i\alpha}) e^{-2\pi we^{i\alpha}} \right| \ ds \ dw \\
-      & \le \int_T e^{i\alpha} \int_0^\infty Ce^{-2\pi \tau_k s} \ ds \ dw \\
-      & \le Ce^{i\alpha} \mu(T^\circ) \int_0^\infty e^{-2\pi \tau_k s} \ ds
-  \end{align*}
-  is finite where $\mu(T^\circ)$ is the lebesgue measure of the interior of the triangle $T$. 
-  Now we can use Fubini-Tonelli theorem and get
-  \begin{align*}
-    \int_T \Phi_\alpha(w) \ dw &= \int_T e^{i\alpha} \int_0^\infty f(se^{i\alpha}) e^{-2\pi w s e^{i\alpha}} \ ds \ dw \\
-    & = e^{i\alpha}\int_0^\infty f(se^{i\alpha}) \int_T e^{-2\pi wse^{i\alpha}} \ dw \ ds \\
-    & = e^{i\alpha} \int_0^\infty f(se^{i\alpha}) \cdot 0 \ ds \\
-    & = 0
-  \end{align*}
-  Hence by Morera's theorem, we get that $\Phi_\alpha$ is analytic everywhere in $\Pi_\alpha$. For our futher analysis we'll be focusing on $\Phi_0$ and $\Phi_\pi$, therefore we'll explicitly write them.
-  \begin{equation*}
-  \boxed{\Phi_0(w) = \int_0^\infty f(s) e^{-2\pi w s} \ ds \ , \quad \Phi_\pi(w) = -\int^0_{-\infty} f(s) e^{-2\pi w s} \ ds}
-  \end{equation*}
-  Now for $\alpha = 0$ and a triangle $T$ in $\{w \in \C \ | \Re(w) > 0 \}$, by Cauchy Schwarz inequality we get,
-  \begin{align*}
-    \int_T \left| \Phi_0(w)\right| \ dw & \le \int_T \int_0^\infty \left| f(s)e^{-2\pi w s}\right| \ ds \ dw \\
-    & \le \int_T \|f\|_2 \Bigg( \int_0^\infty \left|e^{-2\pi w s}\right|^2 \ ds \Bigg)^\frac{1}{2} dw \\
-  \end{align*}
-  where the inner integral is finite since there exists a $\tau \in T$ such that $$\Re(\tau) = \inf\{ \Re(t) \ | \ t \in T \}$$
-  and therefore $$\int_0^\infty \left|e^{-2 \pi ws} \right|^2 \ ds \le \int_0^\infty e^{-4 \pi \tau s} \ ds < \infty$$
-Hence the integral is finite, and we can use Fubini-Tonelli theorem to interchange the order of the integration to get,
-  \begin{align*}
-    \int_T \Phi_0(w) \ dw & \le \int_T \int_0^\infty f(s)e^{-2\pi w s} \ ds \ dw \\
-    & = \int_0^\infty f(s) \int_T e^{-2\pi w s} \ dw \ ds \\
-    & = 0
-  \end{align*}
-  Then Morera's theorem asserts that $\Phi_0$ is analytic in $\{w \in \C \ | \Re(w) > 0 \}$. By similar argument we can show that $\Phi_\pi$ is analytic in $\{w \in \C \ | \Re(w) < 0 \}$. Now we can write our candidate for $F(t)$ as, \begin{align*} F(t) &= \Phi_0(it) - \Phi_\pi(it) \\
-    & = \int_0^\infty f(x)e^{-2\pi it x} \ dx + \int^0_{-\infty} f(x) e^{-2\pi it x} \ dx \\
-    &= \int_{-\infty}^\infty f(x) e^{-2\pi it x} \ dx
-  \end{align*}
-
-  \textbf{Step 2}: But we have to show that $F(t)$ vanishes almost everywhere outside $(-A, A)$. Let $f_\epsilon(x) = f(x)e^{-2\pi \epsilon |x|}$ where $\epsilon > 0$, then $$\int_{-\infty}^{\infty} |f(x) -f_\epsilon(x)|^2 \ dx = \int_{-\infty}^\infty (1-e^{-2\pi \epsilon|x|})^2 |f(x)|^2 \ dx$$
-  Since $(1-e^{-2\pi \epsilon|x|})^2 |f(x)|^2 < |f(x)|^2$ and $f\big|_\R \in L^2(\R)$, by Lebesgue dominated convergence theorem, we get $f_\epsilon \to f$ in $L^2(\R)$. Hence it is enough to show that for all $t$ such that $A < |t|$, $$\lim_{\epsilon \to 0}\int_\R f_\epsilon(x)e^{-2\pi itx} dx = 0$$
-  Since
-  \begin{align*}
-    \Phi_0(\epsilon + it) &= \int_0^\infty f(x) e^{-2\pi (\epsilon + it)x} \ dx\\
-    &= \int_0^\infty \underbrace{f(x) e^{-2\pi \epsilon |x|}}_{f_\epsilon(x)} e^{-2 \pi i tx} \ dx \\
-    &= \int_0^\infty f_\epsilon(x) e^{-2\pi i tx} \ dx
-  \end{align*}
-  and
-  \begin{align*}
-    \Phi_\pi(-\epsilon + it) &= -\int^0_{-\infty} f(x) e^{-2\pi (-\epsilon + it)x} \ dx\\
-    &= - \int^0_{-\infty} \underbrace{f(x) e^{-2\pi \epsilon |x|}}_{f_\epsilon(x)} e^{-2 \pi i tx} \ dx \\
-    &= \int^0_{-\infty} f_\epsilon(x) e^{-2\pi i tx} \ dx
-  \end{align*}
-  we get that,
-  $$\int_\R f_\epsilon(x) e^{-2\pi itx} \ dx = \Phi_0(\epsilon+it) - \Phi_\pi(-\epsilon+it)$$
-  Therefore it is enough to show that for $|t| > A$, the right side of above equation converge to $0$ as $\epsilon \to 0$. For that we'll show that $\Phi_0$ and $\Phi_\pi$ are analytic continuations of $\Phi_{\frac{\pi}{2}}$ if $t>A$ or $\Phi_{-\frac{\pi}{2}}$ if $t <-A$ on the intersections of their respective domains. Then $\Phi_0(\epsilon+it) + \Phi_\pi(-\epsilon+it) \to 0$ as $\epsilon \to 0$ will follow from the fact that every $\Phi_\alpha$ is continuous. 
-
-  For that we'll show that for any $\alpha, \beta$ such that $0< \beta -\alpha < \pi$, and $\Phi_\alpha$, $\Phi_\beta$ defined on $\Pi_\alpha$ and $\Pi_\beta$ respectively $$\Phi_\alpha(x) = \Phi_\beta(x), \quad x \in \Pi_\alpha \cap \Pi_\beta$$
-  Let $\gamma = \frac{\alpha+\beta}{2}, \eta = \cos\frac{\beta-\alpha}{2}$, and let $w = |w|e^{-i\gamma}$ then, $$\Re(we^{i\alpha}) =\Re(|w|e^{i(\alpha-\gamma)}) = |w|\cos\left(\frac{\alpha-\beta}{2}\right) = \Re(|w|e^{i(\beta-\gamma)}) = \Re(we^{i\beta})$$
-  Then $w \in \Pi_\alpha \cap \Pi_\beta$ if $|w| > A / \eta$. Now for a fixed $r \in \R$ consider the circular path $\Gamma_r = re^{it}$ were $\alpha \le t \le \beta$ and the integral $$\int_{\Gamma_r} f(z)e^{-2\pi wz} \ dz$$
-  Also we get that $$\Re(-wz) = \Re(-|w|re^{i(t-\gamma)}) = -|w|r \cos(t-\gamma)\le -|w|r\eta$$ 
-  Since $|z| = r$ in $\Gamma_r$ and $|f(z)| \le Ce^{2\pi A |z|}$ by assumption, $$|f(z)e^{-2\pi wz}| \le Ce^{-2\pi (|w|\eta - A) r}$$
-  Therefore if $|w| > A / \eta$, $$\left|\int_{\Gamma_r} f(z) e^{-2 \pi wz} \ dz \right| = \int_{\Gamma_r} \left|f(z) e^{-2 \pi wz}\right| \ dz = Ce^{-2\pi (|w|\eta -A)r} \ell(\Gamma_r)$$
-  where $\ell(\Gamma_r)$ is the arc length of $\Gamma_r$. Now when $r \to \infty$, since the arc length increases linearly and the exponent decays exponentially, we get that $$\lim_{r\to \infty} \int_{\Gamma_r} f(z)e^{-2\pi w z} \ dz = 0$$
-\end{proof}
-
