@@ -99,6 +99,90 @@
       \endverb
       \keyw{Classical Analysis and ODEs (math.CA),Analysis of PDEs (math.AP),FOS: Mathematics}
     \endentry
+    \entry{Grafakos_Classical_Fourier}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d75ea9c673adff92b3c4257d2a70a85b}{%
+           family={Grafakos},
+           familyi={G\bibinitperiod},
+           given={Loukas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{fullhash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{bibnamehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{authorbibnamehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{authornamehash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \strng{authorfullhash}{d75ea9c673adff92b3c4257d2a70a85b}
+      \field{labelalpha}{Gra14}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third edition}
+      \field{isbn}{9781493911936}
+      \field{number}{249}
+      \field{series}{Graduate texts in mathematics}
+      \field{title}{Classical {Fourier} analysis}
+      \field{year}{2014}
+      \keyw{Fourier analysis,Fourier analysis}
+    \endentry
+    \entry{perko_differential_2001}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2e86fbceb5185d82a8b0e6fccbdf1691}{%
+           family={Perko},
+           familyi={P\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=a109e64d7dd72d3d3700a1a0216efd4b}{%
+           family={Marsden},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5d6345132a2589d627a26c0778d1b0ad}{%
+           family={Sirovich},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=04c1bb50a693abd13f903c4d491ef394}{%
+           family={Golubitsky},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{fullhash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{bibnamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{authorbibnamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{authornamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{authorfullhash}{2e86fbceb5185d82a8b0e6fccbdf1691}
+      \strng{editorbibnamehash}{e9d83dc54d3832706519233f84a2f979}
+      \strng{editornamehash}{e9d83dc54d3832706519233f84a2f979}
+      \strng{editorfullhash}{e9d83dc54d3832706519233f84a2f979}
+      \field{labelalpha}{Per01}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781461265269}
+      \field{series}{Texts in {Applied} {Mathematics}}
+      \field{title}{Differential {Equations} and {Dynamical} {Systems}}
+      \field{volume}{7}
+      \field{year}{2001}
+    \endentry
     \entry{PinskyWavelet}{book}{}
       \name{author}{1}{}{%
         {{hash=49295021f3e47595bc4fab421adfc386}{%
