@@ -123,6 +123,8 @@ What is interesting is that the converse of the above two results is also true. 
     \int_{\Gamma_\alpha} f(z)e^{-2\pi itz} \ dz = 0
   \end{equation}
   For $\beta \in \R$ and $I= [1, y]$ if $1<y$ (otherwise let $I=[y, 1]$) let $$\Phi(\beta) = \int_I f(\beta + iu)e^{-2\pi it(\beta+iu)} \ du$$
+
+  
   Now by Cauchy Schwarz inequality, we get that
   \begin{equation}
     |\Phi(\beta)|^2 \le \left(\int_I |f(\beta+iu)|^2 \ du \right)\left(\int_I e^{4\pi \beta u} \ dt \right)
@@ -140,7 +142,38 @@ What is interesting is that the converse of the above two results is also true. 
   \label{eqn:some_blah_blah_blah}
   \lim_{j \to \infty} \int_I f(\alpha_j + iu) \ du = \lim_{j \to \infty} \int_I f(-\alpha_j + iu) \ du = 0
   \end{equation}
+ 
   Therefore $\Phi(\alpha_j) \to 0, \Phi(-\alpha_j) \to 0$ as $j \to \infty$.
+ 
+  \begin{figure}
+    \centering
+    \begin{tikzpicture}
+    % Draw the x-axis and y-axis
+    \draw[->] (-5,0) -- (5,0) node[below right] {$\Re(z)$};
+    \draw[->] (0,-1) -- (0,4) node[above left] {$\Im(z)$};
+    
+    % Draw the rectangle with one edge on the line y=1
+    \draw[thick] (-2,1) rectangle (2,3);
+    \draw[dotted] (-3,1) rectangle (3,3);
+    \draw[dotted] (-4,1) rectangle (4,3);
+
+
+    \node[left] at (0, 2) {$\Gamma_{\alpha_j}$};
+    \node[above right] at (0, 1) {$1$};
+    \node[above right] at (0, 3) {$y$};
+    \node[circle, fill, inner sep=1pt, label=below:$\alpha_j$] at (2, 0) {};
+    \node[circle, fill, inner sep=1pt, label=below:$\alpha_{j+1}$] at (3, 0) {};
+    \node[circle, fill, inner sep=1pt, label=below:$\alpha_{j+2}$] at (4, 0) {};
+    \node[circle, fill, inner sep=1pt, label=below:$-\alpha_j$] at (-2, 0) {};
+    \node[circle, fill, inner sep=1pt, label=below:$-\alpha_{j+1}$] at (-3, 0) {};
+    \node[circle, fill, inner sep=1pt, label=below:$-\alpha_{j+2}$] at (-4, 0) {};
+    \node[left] at (-2, 2) {\rotatebox{90}{$\xrightarrow{\Phi(-\alpha_j)}$}};
+    \node[left] at (2, 2) {\rotatebox{90}{$\xrightarrow{\Phi(\alpha_j)}$}};
+
+    \end{tikzpicture}
+    \caption{Indicative diagram shows the domains of integration}
+  \end{figure}
+
   Also by \autoref{eqn:eqn_holomorphic_stuff},
   \begin{equation*}
     \begin{split}

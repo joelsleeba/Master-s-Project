@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  9 MAY 2023 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  10 MAY 2023 03:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,7 +624,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \EQ_mathdisplay_box=\box56
 \EQ_tag_box=\box57
 \g_EQ_temprow_int=\count428
-)) (/usr/share/texmf-dist/tex/latex/tools/bm.sty
+) (/usr/share/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup8
 \symboldletters=\mathgroup9
@@ -635,16 +635,230 @@ Package bm Info: No bold for \U/msb/m/n, using \pmb.
 Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 Package bm Info: No bold for \OMX/yhex/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-) (./config/options.tex) (./config/colors.tex) (./config/theoremstyle.tex
-\c@theorem=\count429
-\c@proposition=\count430
-\c@lemma=\count431
-\c@corollary=\count432
-\c@problem=\count433
-\c@definition=\count434
+)) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texm
+f-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/ut
+ilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-com
+mon.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen193
+\pgfutil@tempdimb=\dimen194
+) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box58
+) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/
+texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-d
+ist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf
+/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
+x
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen195
+\pgf@y=\dimen196
+\pgf@xa=\dimen197
+\pgf@ya=\dimen198
+\pgf@xb=\dimen199
+\pgf@yb=\dimen256
+\pgf@xc=\dimen257
+\pgf@yc=\dimen258
+\pgf@xd=\dimen259
+\pgf@yd=\dimen260
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count429
+\c@pgf@countb=\count430
+\c@pgf@countc=\count431
+\c@pgf@countd=\count432
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count433
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count434
+\pgfsyssoftpath@bigbuffer@items=\count435
+) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-
+dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/gene
+ric/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen261
+\pgfmath@count=\count436
+\pgfmath@box=\box59
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/
+share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.
+tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) 
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/
+usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/
+usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count437
+)) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/tex
+mf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen262
+\pgf@picmaxx=\dimen263
+\pgf@picminy=\dimen264
+\pgf@picmaxy=\dimen265
+\pgf@pathminx=\dimen266
+\pgf@pathmaxx=\dimen267
+\pgf@pathminy=\dimen268
+\pgf@pathmaxy=\dimen269
+\pgf@xx=\dimen270
+\pgf@xy=\dimen271
+\pgf@yx=\dimen272
+\pgf@yy=\dimen273
+\pgf@zx=\dimen274
+\pgf@zy=\dimen275
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen276
+\pgf@path@lasty=\dimen277
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen278
+\pgf@shorten@start@additional=\dimen279
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count438
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.te
+x
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen280
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen281
+\pgf@pt@y=\dimen282
+\pgf@pt@temp=\dimen283
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen284
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen285
+\pgf@sys@shading@range@num=\count439
+\pgf@shadingcount=\count440
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box63
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.te
+x
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box64
+) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen286
+\pgf@nodesepend=\dimen287
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-
+dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf
+/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath
+.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share
+/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen288
+\pgffor@skip=\dimen289
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count441
+\pgfplotmarksize=\dimen290
+)
+\tikz@lastx=\dimen291
+\tikz@lasty=\dimen292
+\tikz@lastxsaved=\dimen293
+\tikz@lastysaved=\dimen294
+\tikz@lastmovetox=\dimen295
+\tikz@lastmovetoy=\dimen296
+\tikzleveldistance=\dimen297
+\tikzsiblingdistance=\dimen298
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count442
+\tikznumberofchildren=\count443
+\tikznumberofcurrentchild=\count444
+\tikz@fig@count=\count445
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count446
+\pgfmatrixcurrentcolumn=\count447
+\pgf@matrix@numberofcolumns=\count448
+)
+\tikz@expandcount=\count449
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (./config/options.tex) (./config/colors.tex) (./config/theoremstyle.tex
+\c@theorem=\count450
+\c@proposition=\count451
+\c@lemma=\count452
+\c@corollary=\count453
+\c@problem=\count454
+\c@definition=\count455
 ) (./config/mathletters.tex)
-\@quotelevel=\count435
-\@quotereset=\count436
+\@quotelevel=\count456
+\@quotereset=\count457
 (./main.aux (./00Intro/Preface.aux) (./01Chapters/01FourierSeries.aux) (./01Cha
 pters/02LpConvergence.aux) (./01Chapters/03FourierTransform.aux) (./01Chapters/
 04Holomorphic.aux) (./01Chapters/05Future.aux))
@@ -706,22 +920,22 @@ LaTeX Font Info:    ... okay on input line 14.
 
 Package hyperref Info: Link coloring OFF on input line 14.
 (./main.out) (./main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count437
-\scratchdimen=\dimen193
-\scratchbox=\box58
-\nofMPsegments=\count438
-\nofMParguments=\count439
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count440
-\MPscratchDim=\dimen194
-\MPnumerator=\count441
-\makeMPintoPDFobject=\count442
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count458
+\scratchdimen=\dimen299
+\scratchbox=\box69
+\nofMPsegments=\count459
+\nofMParguments=\count460
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count461
+\MPscratchDim=\dimen300
+\MPnumerator=\count462
+\makeMPintoPDFobject=\count463
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -783,8 +997,8 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 
 
 ] (./main.toc [3])
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
 [4]
 \openout2 = `01Chapters/01FourierSeries.aux'.
@@ -792,22 +1006,20 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 (./01Chapters/01FourierSeries.tex
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12.
 
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
-
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 
-      [1
+l.26   \end{proposition}
+                         [1
 
 
 
@@ -816,57 +1028,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.69   \end{displaymath}
-                         [2]
-Overfull \hbox (43.11958pt too wide) detected at line 73
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ) = [][](\OML/cmm/m/it/10 
-f \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 x\OT1/
-cmr/m/n/10 )\OML/cmm/m/it/10 e[] dx \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 f\O
-T1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 e[] dx \OT1/
-cmr/m/n/10 + [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr
-/m/n/10 )\OML/cmm/m/it/10 e[] dx \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 n\OT1/cm
-r/m/n/10 ) + [](\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )
- []
+l.64     \begin{align*}
+                        [2] [3] [4] [5] [6]
 
-[3]
-<./figures//convolution.jpg, id=198, 642.4pt x 481.8pt>
-File: ./figures//convolution.jpg Graphic file (type jpg)
-<use ./figures//convolution.jpg>
-Package pdftex.def Info: ./figures//convolution.jpg  used on input line 135.
-(pdftex.def)             Requested size: 210.32397pt x 157.7447pt.
-[4] [5 <./figures//convolution.jpg>]
-
-LaTeX Warning: Command \L invalid in math mode on input line 211.
-
-[6]
-
-LaTeX Warning: Command \L invalid in math mode on input line 220.
+LaTeX Warning: Command \L invalid in math mode on input line 239.
 
 
-Underfull \vbox (badness 2213) has occurred while \output is active []
+LaTeX Warning: Command \L invalid in math mode on input line 248.
 
-[7] [8]
-Overfull \hbox (3.74324pt too wide) in paragraph at lines 277--278
-[][]\OT1/cmr/bx/n/10 Proposition 1.4.1 \OT1/cmr/m/n/10 (Prop-er-ties of Fej^^Se
+[7]
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+[8]
+Overfull \hbox (3.74324pt too wide) in paragraph at lines 305--306
+[][]\OT1/cmr/bx/n/10 Proposition 1.5.1 \OT1/cmr/m/n/10 (Prop-er-ties of Fej^^Se
 r ker-nel)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 If $\OT1/cmr/m/n/10 ^^A[](\OML/
-cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 is as in []Def-i-ni-tion 1.4.2
+cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 is as in []Def-i-ni-tion 1.5.2
 [][],
  []
 
-[9] [10] [11]
-Overfull \hbox (37.18465pt too wide) detected at line 405
+[9] [10] [11] [12]
+Overfull \hbox (8.38603pt too wide) detected at line 438
 []
  []
 
-[12] [13] [14]
-Overfull \hbox (5.90742pt too wide) detected at line 495
+[13] [14] [15]
+Overfull \hbox (5.90742pt too wide) detected at line 528
 []
  []
 
-[15] [16] [17]) [18]
+[16] [17] [18]) [19]
 \openout2 = `01Chapters/02LpConvergence.aux'.
 
-(./01Chapters/02LpConvergence.tex
+(./01Chapters/02LpConvergence.tex [20
+
+
+
+
+]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -892,16 +1091,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 22.
 
-[19
-
-
-
-
-] [20]
+[21] [22]
 
 LaTeX Warning: Command \L invalid in math mode on input line 60.
 
-[21] [22]
+[23] [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 109.
@@ -914,21 +1108,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 109.
 
-[23]
+[25]
 
 LaTeX Warning: Command \L invalid in math mode on input line 148.
 
-[24] [25]) [26]
+[26] [27]) [28]
 \openout2 = `01Chapters/03FourierTransform.aux'.
 
 (./01Chapters/03FourierTransform.tex
 Chapter 3.
-[27
+[29
 
 
 
 
-] [28] [29] [30]
+] [30] [31] [32]
 Overfull \hbox (11.07901pt too wide) detected at line 85
 [][] [] \OML/cmm/m/it/10 dx dy \OT1/cmr/m/n/10 = [][] [] \OMS/cmsy/m/n/10 j\OML
 /cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 )\OMS/cmsy/m/n
@@ -939,10 +1133,10 @@ y\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 dy \OT1/cmr/m/n/10 = \OMS
 y/m/n/10 k[]
  []
 
-[31] [32] [33]
+[33] [34] [35]
 Underfull \vbox (badness 1342) has occurred while \output is active []
 
-[34] [35] [36] [37] [38] [39] [40] [41] [42]
+[36] [37] [38] [39] [40] [41] [42] [43] [44]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 402.
@@ -955,7 +1149,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 402.
 
-[43] [44]
+[45] [46]
 Overfull \hbox (9.91331pt too wide) in paragraph at lines 449--450
 []\OT1/cmr/m/n/10 Also by []Propo-si-tion A.0.3[][], $\OML/cmm/m/it/10 L[]\OT1/
 cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/1
@@ -964,17 +1158,17 @@ cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/1
 l's
  []
 
-) [45]
+) [47]
 \openout2 = `01Chapters/04Holomorphic.aux'.
 
-(./01Chapters/04Holomorphic.tex [46
+(./01Chapters/04Holomorphic.tex [48
 
 
 
 
 ]
 Chapter 4.
-[47]
+[49]
 Overfull \hbox (6.23047pt too wide) in paragraph at lines 40--42
 \OT1/cmr/m/n/10 By as-sump-tion $\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 F\OMS/cmsy/
 m/n/10 k[]$ \OT1/cmr/m/n/10 is a fi-nite quan-tity and from above re-sult $\OMS
@@ -982,7 +1176,7 @@ m/n/10 k[]$ \OT1/cmr/m/n/10 is a fi-nite quan-tity and from above re-sult $\OMS
 S/cmsy/m/n/10 k[] !
  []
 
-[48] [49] [50]
+[50] [51] [52]
 Overfull \hbox (9.44669pt too wide) detected at line 87
 [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) \OM
 L/cmm/m/it/10 dz \OT1/cmr/m/n/10 = [][] [][] \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 
@@ -993,53 +1187,57 @@ r/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n
 /10 0 \OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = 0
  []
 
-[51] [52] [53] [54] [55]
-Underfull \vbox (badness 3872) has occurred while \output is active []
+[53] [54] [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[56] [57] [58]) [59]
+[56] [57] [58] [59] [60]) [61]
 \openout2 = `01Chapters/05Future.aux'.
 
-(./01Chapters/05Future.tex [60
+(./01Chapters/05Future.tex [62
 
 
 
 
 ]
 Chapter 5.
-[61]) [62] (./02End/appendix.tex
+[63]) [64] (./02End/appendix.tex
 Appendix A.
-[63
+
+LaTeX Warning: Reference `def:continuous_functions_on_T' on page 65 undefined o
+n input line 8.
+
+[65
 
 
 
-]) [64]
+]) [66]
 Overfull \hbox (17.92804pt too wide) in paragraph at lines 32--32
 \OT1/cmr/m/n/10 texts in math-e-mat-ics 249. New York: Springer, 2014. \OT1/cmr
 /m/sc/10 isbn\OT1/cmr/m/n/10 : 9781493911936. 
  []
 
-[65
+[67
 
 ] (./main.aux (./00Intro/Preface.aux) (./01Chapters/01FourierSeries.aux) (./01C
 hapters/02LpConvergence.aux) (./01Chapters/03FourierTransform.aux) (./01Chapter
 s/04Holomorphic.aux) (./01Chapters/05Future.aux))
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A66C7CCCD0AEC4939E771425320FD161;3765.
+(rerunfilecheck)             Checksum: 99119A18EBB8529E3E502086EA46F83D;3906.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21781 strings out of 476025
- 380306 string characters out of 5796532
- 1869388 words of memory out of 5000000
- 41677 multiletter control sequences out of 15000+600000
+ 31855 strings out of 476025
+ 600903 string characters out of 5796532
+ 1867388 words of memory out of 5000000
+ 51545 multiletter control sequences out of 15000+600000
  542523 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,15n,79p,799b,1869s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,17n,83p,799b,1869s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1059,10 +1257,10 @@ fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pf
 b></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (71 pages, 539178 bytes).
+Output written on main.pdf (73 pages, 459948 bytes).
 PDF statistics:
- 870 PDF objects out of 1000 (max. 8388607)
- 713 compressed objects within 8 object streams
- 222 named destinations out of 1000 (max. 500000)
- 198 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 893 PDF objects out of 1000 (max. 8388607)
+ 735 compressed objects within 8 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
