@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  10 MAY 2023 03:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  10 MAY 2023 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,17 +1190,17 @@ r/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n
 [53] [54] [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[56] [57] [58] [59] [60]) [61]
+[56] [57] [58] [59] [60] [61]) [62]
 \openout2 = `01Chapters/05Future.aux'.
 
-(./01Chapters/05Future.tex [62
-
-
-
-
-]
+(./01Chapters/05Future.tex
 Chapter 5.
-[63]) [64] (./02End/appendix.tex
+[63
+
+
+
+
+]) [64] (./02End/appendix.tex
 Appendix A.
 
 LaTeX Warning: Reference `def:continuous_functions_on_T' on page 65 undefined o
@@ -1231,10 +1231,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31855 strings out of 476025
- 600903 string characters out of 5796532
+ 31938 strings out of 476025
+ 602801 string characters out of 5796532
  1867388 words of memory out of 5000000
- 51545 multiletter control sequences out of 15000+600000
+ 51628 multiletter control sequences out of 15000+600000
  542523 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,17n,83p,799b,1869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1257,7 +1257,7 @@ fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pf
 b></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (73 pages, 459948 bytes).
+Output written on main.pdf (73 pages, 460620 bytes).
 PDF statistics:
  893 PDF objects out of 1000 (max. 8388607)
  735 compressed objects within 8 object streams
