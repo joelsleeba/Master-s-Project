@@ -155,7 +155,7 @@ What is interesting is that the converse of the above two results is also true. 
       % Draw the rectangle with one edge on the line y=1
       \draw[thick] (-2,1) rectangle (2,3);
       \draw[dotted] (-3,1) rectangle (3,3);
-      \fill[cyan, opacity=0.17] (-2,1) -- (-2, 3) -- (2, 3) -- (2, 1) -- cycle;
+      \fill[cyan, opacity=0.3] (-2,1) -- (-2, 3) -- (2, 3) -- (2, 1) -- cycle;
       \draw[dotted] (-4,1) rectangle (4,3);
 
       \node[left] at (0, 2) {$\Gamma_{\alpha_j}$};
@@ -218,23 +218,25 @@ What is interesting is that the converse of the above two results is also true. 
   \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{i\alpha}$$
   where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{i\alpha}) > A\}$$
 
-  \begin{flushright}
-    \begin{minipage}{0.5\textwidth}
+   \begin{figure}[h]
+     \centering
       \begin{tikzpicture}
         % Draw axes
-        \draw[<->] (-2,0) -- (2,0) node[below right] {$\operatorname{Re}(z)$};
-        \draw[<->] (0,-2) -- (0,2) node[above left] {$\operatorname{Im}(z)$};
+        \draw[<->] (-2,0) -- (2,0) node[above] {$\Re(z)$};
+        \draw[<->] (0,-2) -- (0,1) node[left] {$\Im(z)$};
         \fill[cyan,opacity=0.3] (-2,-1.5) -- (-2, -2) -- (2,-2) -- (2, 0) -- cycle;
         \draw[dashed] (-2, -1.5) -- (2, 0);
         % Draw line
-        \draw[-,rotate=-68] (0,0) -- (0.7,0);
-        \node at (0.35, -0.35) {A};
+        \draw[blue,rotate=-67] (0,0) -- (0.7,0);
+        \node at (0.35, -0.35) {\color{blue}{A}};
         \node at (0.7, -1.4) {$\Pi_\alpha$};
-        \draw[-] (0, 0) -- (0:0.2) arc (0:-68:0.2) node[midway, right] {$\alpha$};
+        \draw[red] (0, 0) -- (0:0.2) arc (0:-68:0.2) node[midway, right] {\color{red}{$\alpha$}};
+        \draw[rotate=-67] (0.6, 0) -- (0.6, -0.1) -- (0.7, -0.1);
       \end{tikzpicture}
-    \end{minipage}
-  \end{flushright}
-  By assumption, we know that $\left|f(se^{i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{i\alpha})e^{-2\pi wse^{i\alpha}}\right| = \left|f(se^{i\alpha})e^{-\Re(2\pi wse^{i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} = Ce^{-2\pi \tau s}$$
+      \caption{Region $\Pi_\alpha$}
+    \end{figure}
+
+  By assumption, we know that $\left|f(se^{i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{i\alpha})e^{-2\pi wse^{i\alpha}}\right| = \left|f(se^{i\alpha})e^{-\Re(3\pi wse^{i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} = Ce^{-2\pi \tau s}$$
   where $\tau > 0$, since $w \in \Pi_\alpha$. Let $T$ is any triangular path in $\Pi_\alpha$. Since $T$ is compact and $\Re(we^{i\alpha})-A$ is continuous and positive in $\Pi_\alpha$, there is a $w = \tau_k$ where $\Re(we^{i\alpha} - A)$ is minimum and positive. Then 
   \begin{align*}
     \int_T\left|\Phi_\alpha(w)\right| \ dw &= \int_T e^{i\alpha} \left|\int_0^\infty f(se^{i\alpha}) e^{-2\pi we^{i\alpha}} \ ds \right| dw \\

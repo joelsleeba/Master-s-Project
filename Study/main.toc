@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {4.1}Motivation and Basic Results}{49}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Paley Wiener Theorems}{54}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Further Topics}{63}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Problem}{63}{section.5.1}%
-\contentsline {chapter}{Appendices}{65}{section*.4}%
+\contentsline {section}{\numberline {5.1}Fourier Transforms in $\mathbb R^n$}{63}{section.5.1}%
+\contentsline {chapter}{Appendices}{65}{section*.5}%
 \contentsline {chapter}{\numberline {A}Results from Measure Theory}{65}{appendix.A}%
-\contentsline {chapter}{Bibliography}{67}{appendix*.5}%
+\contentsline {chapter}{Bibliography}{67}{appendix*.6}%
