@@ -63,14 +63,14 @@
  
   Now we will prove an important theorem
   \begin{theorem}[Riemann Lebesgue Lemma]
-    Let $f \in L^1(\R)$. Then $$\lim_{t \to \pm \infty} \hatf(t) = 0$$
+    Let $f \in L^1(\R)$. Then $\hatf$ is uniformly continuous and $$\lim_{t \to \pm \infty} \hatf(t) = 0$$
   \end{theorem}
   \begin{proof}
     We know that $$\hatf(t) = \int_\R f(x)e^{-2 \pi itx} \ dx $$
     By change of variables $x = y + \frac{1}{2t}$, we see that the above equation becomes $$\hatf(t) = \int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y+ \frac{1}{2t})} \ dy = -\int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y)} \ dy  $$
     Therefore $$2\hatf(t) = \int_\R (f(x + \frac{1}{2t}) - f(x))e^{-2 \pi itx} \ dx $$
     and therefore $$\left|\hatf(t)\right| \le \frac{1}{2} \int_\R |f(x + \frac{1}{2t}) - f(x)| dx$$
-    Now by \autoref{prop:Lp_functions_are_continuous_in_LpR} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$. Hence proved. 
+    Now by \autoref{prop:Lp_functions_are_continuous_in_LpR} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$ as $|t| \to \infty$. Refer \autocite[Theorem~10.4 \pno~251]{MontgomeryFourier} for the proof that $\hatf$ is uniformly continuous.
   \end{proof}
 
   Convolution was one important operation which helped us in the theory of Fourier series. We will define the convolution of two functions in $L^1(\R)$ the same way we defined it for functions in $L^1(\T)$ in \autoref{def:convolution_of_functions_in_L^1(T)}. That is if $f, g \in L^1(\R)$, we define the convolution of $f$ and $g$ as $$(f*g)(x) = \int_{\R} f(x-y)g(y) dy$$
@@ -347,7 +347,7 @@ As a result of the above result combined with \autoref{thm:L1(R)_analogue_of_fej
   exists, then it is equal to $f(x)$.
 \end{corollary}
 
-Since we will be working a lot with functions $f$ which are continuous everywhere in the real line, we explicityly state the next theorem.
+Since we will be working a lot with functions $f$ which are continuous everywhere in the real line, we explicitly state the next theorem.
 \begin{theorem}
   If $f\in L^1(\R)$, $f$ is continuous in $\R$, and if $\hatf \in L^1(\R)$, then $$\int_\R \hatf(t)e^{2\pi itx} \ dt = f(x)$$
 \end{theorem}

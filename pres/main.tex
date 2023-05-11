@@ -124,7 +124,7 @@
 \begin{frame}{Fourier transforms in $L^1(\R)$}
   \begin{itemize}
     \item For any $f\in L^1(\R)$, the Fourier transform of $f$ is defined as $$\hat{f}(t) = \int_{-\infty}^{\infty} f(x)e^{-2\pi i t x} \ dx $$
-    \item Riemann Lebesgue lemma $$\lim_{|t| \to \infty} \hat{f}(t) = 0$$
+    \item $\hat{f}$ is uniformly continuous and $$\lim_{|t| \to \infty} \hat{f}(t) = 0$$
   \end{itemize}
 \end{frame}
 
@@ -132,9 +132,20 @@
 \end{frame}
 
 \begin{frame}{Fourier Inversion}
+  \begin{itemize}
+    \item Let $f \in L^1(\R)$, then the inverse Fourier transform is defined as $$\check{f}(t) = \int_{-\infty}^\infty f(x)e^{2\pi itx} \ dx$$
+    \item We see that if $f \in L^1(\R)$, continuous at $x \in \R$ and its Fourier transform $\hat{f} \in L^1(\R)$, then $$\check{\hat{f}}(x) = f(x)$$
+    \item Generalizing further we get that that if $f, \hat{f} \in L^1(\R)$ then $$\check{\hat{f}} \ \stackrel{a.e}{=} \ f$$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Fourier transforms in $L^2(\R)$}
+  \begin{itemize}
+    \item We consider the space $L^1(\R) \cap L^2(\R)$. Since it is a subspace of $L^1(\R)$, the definition of Fourier transform and inverse transform holds good in the smaller space.
+    \item (Plancherel's Theorem) If $f \in L^1(\R) \cap L^2(\R)$, then $$\int_\R |f(x)|^2 \ dx = \int_\R |\hat{f}(t)|^2 \ dt$$
+    \item Now since the collection of compactly supported functions in $\R$, $C_c(\R)$ is dense in $L^p(\R)$ for all $1 \le p < \infty$, we get that $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$.
+    \item Moreover we see that the Fourier transform of functions in $L^1(\R) \cap L^2(\R)$ form a dense subset in $L^2(\R)$. Therefore we can extend the domain of Fourier transform to $L^2(\R)$ and Plancherel's theorem asserts that Fourier transform in $L^2(\R)$ is an isometry.
+  \end{itemize}
 \end{frame}
 
 \section{Holomorphic Fourier Transforms}
