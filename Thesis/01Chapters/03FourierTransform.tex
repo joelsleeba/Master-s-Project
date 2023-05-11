@@ -2,9 +2,9 @@
 \chapter{Fourier Transform}
 
 \section{Definiton and basic properties}
-  While defining Fourier series we were mainly focused on periodic functions. Now we'll try to expand that into another set of functions. We'll be interested on functions in $L^1(\R)$, that is those real or complex valued functions $f(x)$ in $\R$ for which $$\int_{-\infty}^{\infty} |f(x)| \ dx < \infty$$. For those functions in $L^1(\R)$ the integral above will be called the $L^1$ norm of the function $f$ and will be denoted by $\|f\|_{L^1(\R)}$ or in short $\|f\|_1$. Also note that the notations $\int_{\R}$ and $\int_{-\infty}^{\infty}$ means the same and we might use them interchangably as we see fit.
+  While defining Fourier series we were mainly focused on periodic functions. Now we will try to expand that into another set of functions. We will be interested on functions in $L^1(\R)$, that is those real or complex valued functions $f(x)$ in $\R$ for which $$\int_{-\infty}^{\infty} |f(x)| \ dx < \infty$$. For those functions in $L^1(\R)$ the integral above will be called the $L^1$ norm of the function $f$ and will be denoted by $\|f\|_{L^1(\R)}$ or in short $\|f\|_1$. Also note that the notations $\int_{\R}$ and $\int_{-\infty}^{\infty}$ means the same and we might use them interchangably as we see fit.
 
-  Analogous to what we did in finding the $n^{th}$ fourier coefficient in \autoref{def:fourier_coefficient}, we'll define the fourier transform of $f$
+  Analogous to what we did in finding the $n^{th}$ fourier coefficient in \autoref{def:fourier_coefficient}, we will define the fourier transform of $f$
 
   \begin{definition}[Fourier transform of a function $f$]
     \label{def:fourier_transform_of_f}
@@ -21,7 +21,7 @@
 
   By the linearity of the integral we can also show that for functions $f, g \in L^2(\R)$ and scalars $\mu, \nu$, $\widehat{\mu f + \nu g}(t) = \mu \hatf(t) + \nu\hatg(t)$.
  
-  Now we'll prove some important properties of Fourier transforms. Note that this will almost remind you of the properties of Fourier coefficinets in \autoref{prop:properties_of_fourier_coefficients}. 
+  Now we will prove some important properties of Fourier transforms. Note that this will almost remind you of the properties of Fourier coefficinets in \autoref{prop:properties_of_fourier_coefficients}. 
   \begin{proposition}[Properties of Fourier transform]
     \label{prop:properties_of_fourier_transform}
     If $f\in L^1(\R)$ and $\hatf$ is the Fourier tranform of $f$ as in \autoref{def:fourier_transform_of_f}, then 
@@ -34,7 +34,7 @@
   \end{proposition}
 
   \begin{proof}
-    Note that by appropriate change of variable we can see that all the above functions $g, h, j, l$ are in $L^1(\R)$. We'll prove the other properties.
+    Note that by appropriate change of variable we can see that all the above functions $g, h, j, l$ are in $L^1(\R)$. We will prove the other properties.
     \begin{enumerate}[label=(\alph*)]
       \item By the change of variable $y = x+a$, we get that
         $$\hatg(t) = \int_{\R}g(x)e^{-2 \pi itx} \ dx = \int_\R f(x+a)e^{-2\pi itx} \ dx = e^{2\pi ita}\int_\R f(y)e^{-2 \pi ity} \ dx$$
@@ -42,7 +42,7 @@
 
       \item $$\hath(t) = \int_{\R}h(x)e^{-2\pi itx} \ dx = \int_\R f(x)e^{-2\pi i(t-b)x} \ dx = \hatf(t-b)$$
 
-      \item Here we'll need to be careful because $c$ maybe negative.Assume $c>0$, then by a change of variable $y=cx$, we get $$\hatj(t) = \int_{-\infty}^{\infty} j(x)e^{-2\pi itx} \ dx = \int_{-\infty}^{\infty} f(cx)e^{-2\pi itx} \ dx = \frac{1}{c}\int_{-\infty}^{\infty} f(y)e^{-2\pi i \frac{t}{c}y} $$
+      \item Here we will need to be careful because $c$ maybe negative.Assume $c>0$, then by a change of variable $y=cx$, we get $$\hatj(t) = \int_{-\infty}^{\infty} j(x)e^{-2\pi itx} \ dx = \int_{-\infty}^{\infty} f(cx)e^{-2\pi itx} \ dx = \frac{1}{c}\int_{-\infty}^{\infty} f(y)e^{-2\pi i \frac{t}{c}y} $$
         Then if $c>0$, $\hatj(t) = \frac{\hatf(t/c)}{c}$. Now if $c<0$ the limits of integration will reverse, i.e $$\int_{-\infty}^{\infty} f(cx)e^{-2\pi itx} \ dx = \frac{1}{c}\int_{\infty}^{-\infty} f(y)e^{-2\pi i \frac{t}{c}y} \ dx = \frac{1}{-c}\int_{-\infty}^{\infty} f(y)e^{-2\pi i \frac{t}{c}y} \ dx$$
         Which shows that if $c\neq 0$, $\hatj(t) = \frac{\hatf(t/c)}{|c|}$.
       \item Since we know that integral of the conjugate is the conjugate of the integral, $$\hatl(t) = \int_\R \overline{f(x)} e^{-2\pi itx} = \int_\R \overline{f(x) e^{-2\pi i(-t)x}} = \overline{\int_\R f(x) e^{-2\pi i(-t)x}} = \overline{\hatf(-t)}$$
@@ -61,7 +61,7 @@
   %   Then by triangle inequality $$\int_{-X}^X |f(x+\delta) - f(x)| \ dx \le \int_{-X}^X |g(x+\delta) - g(x)| \ dx + 2\epsilon$$. Morever since $g$ is continuous on $[-X-1, X+1]$, it is uniformly continuous on the interval and hence the integral tends to $0$ as $\delta \to 0$. Hence the proof.
   % \end{proof}
  
-  Now we'll prove an important theorem
+  Now we will prove an important theorem
   \begin{theorem}[Riemann Lebesgue Lemma]
     Let $f \in L^1(\R)$. Then $$\lim_{t \to \pm \infty} \hatf(t) = 0$$
   \end{theorem}
@@ -70,11 +70,11 @@
     By change of variables $x = y + \frac{1}{2t}$, we see that the above equation becomes $$\hatf(t) = \int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y+ \frac{1}{2t})} \ dy = -\int_\R f(y + \frac{1}{2t})e^{-2 \pi it(y)} \ dy  $$
     Therefore $$2\hatf(t) = \int_\R (f(x + \frac{1}{2t}) - f(x))e^{-2 \pi itx} \ dx $$
     and therefore $$\left|\hatf(t)\right| \le \frac{1}{2} \int_\R |f(x + \frac{1}{2t}) - f(x)| dx$$
-    Now by \autoref{prop:L1_functions_are_continuous_in_L1_norm_in_R} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$. Hence proved. 
+    Now by \autoref{prop:Lp_functions_are_continuous_in_LpR} as $t \to \infty$, $\frac{1}{2t} \to 0$ and therefore $\hatf(t) \to 0$. Hence proved. 
   \end{proof}
 
   Convolution was one important operation which helped us in the theory of Fourier series. We will define the convolution of two functions in $L^1(\R)$ the same way we defined it for functions in $L^1(\T)$ in \autoref{def:convolution_of_functions_in_L^1(T)}. That is if $f, g \in L^1(\R)$, we define the convolution of $f$ and $g$ as $$(f*g)(x) = \int_{\R} f(x-y)g(y) dy$$
-  But unlike $L^1(\T)$, $L^1(\R)$ is not finite measure space. So we'll need to make sure this definition of convolution is well defined for functions in $L^1(\R)$. 
+  But unlike $L^1(\T)$, $L^1(\R)$ is not finite measure space. So we will need to make sure this definition of convolution is well defined for functions in $L^1(\R)$. 
 
   \begin{proposition}
     For functions $f, g \in L^1(\R)$, $f(x-y)g(y)$ is Lebesgue measurable in the product space $\R^2$. Moreover $f(x-y)g(y) \in L^1(\R^2)$. And therefore by Fubini's theorem $\int_\R f(x-y)g(y) dx$ exists and is well defined for all $x \in \R$. 
@@ -89,7 +89,7 @@
 
   Almost all the properties of the convolution in $L^1(\T)$ has its analogues in $L^1(\R)$, but we will only quote the most important one, that is the convolution is commutative, $f*g = g*f$. One can easily prove this using a change of variable like we did in \autoref{prop:properties_of_convolution}
 
-  We'll also prove that for functions $f, g \in L^1(\R)$, $f*g \in L^1(\R)$.
+  we will also prove that for functions $f, g \in L^1(\R)$, $f*g \in L^1(\R)$.
   \begin{proposition}
     \label{prop:convolution_is_well_defined_in_L^1(R)}
     Let $f, g \in L^1(\R)$, then $f*g \in L^1(\R)$ and $\widehat{f*g}(t) = \hatf(t)\hatg(t)$.
@@ -113,8 +113,8 @@
     Note that the change of variable is justified since we know that  for all $x \in \R$, $|e^{-2\pi itx}| = 1$ and hence the integral is absolutely convergent by the proof similar to last theorem. 
   \end{proof}
 
-  Now we'll prove a result which has close relations with the Plancherel's theorem we'll prove in \autoref{thm:Plancherel's_theorem}. 
-  % We'll use this result to prove some propoerties of the Poisson Kernel in \autoref{prop:convolution_of_poisson_kernel}
+  Now we will prove a result which has close relations with the Plancherel's theorem we will prove in \autoref{thm:Plancherel's_theorem}. 
+  % we will use this result to prove some propoerties of the Poisson Kernel in \autoref{prop:convolution_of_poisson_kernel}
 \begin{proposition}
   \label{prop:plancherel_theorem_in_L1}
   Let $f, g \in L^1(\R)$, then $$\int_\R \hatf(t) g(t) \ dt = \int_\R f(t) \hatg(t) \ dt$$
@@ -132,14 +132,14 @@
 % \section{Poisson Kernel}
 % \textit{when you pull an all nighter thinking you missed an important step in your master's thesis, but it was your misunderstanding and you really didn't need Poisson kernel. Yes, I'm crying now at 3 AM}
 %
-%   Now we'll define Poisson kernel which will be quite useful for the fourier inversion.
+%   Now we will define Poisson kernel which will be quite useful for the fourier inversion.
 % \begin{definition}[Poisson Kernel]
 %   \label{def:poisson_kernel}
 %   Let $r>0$ define $P_r : \R \to \R$, as $$P_r = \frac{1}{\pi}\frac{r}{x^2 + r^2}$$
 %   Then the collection of functions $P_r$ are called Poisson kernel.
 % \end{definition}
 %
-% Since we defined Poisson kernel and approximation identities we'll now show that Poisson kernel is an approximation identity.
+% Since we defined Poisson kernel and approximation identities we will now show that Poisson kernel is an approximation identity.
 %
 % \begin{proposition}
 %   \label{prop:properties_of_poisson_kernel}
@@ -173,7 +173,7 @@
 %   \end{enumerate}
 % \end{proof}
 %
-% Like we used convolutions of the summability kernels in Fourier series, here the convolutions of the Poisson kernels will be an important tool in our analysis. Here we'll prove an important result. 
+% Like we used convolutions of the summability kernels in Fourier series, here the convolutions of the Poisson kernels will be an important tool in our analysis. Here we will prove an important result. 
 % \begin{proposition}
 % \label{prop:convolution_of_poisson_kernel}
 %   Consider the function $h_{y,b}(x) = e^{2\pi i b x}e^{-2 \pi y|x|} $ and $f \in L^1(\R)$. Then $$\int_\R \hatf(x)h_{y, b}(x) \ dx = \int_\R \hatf(x) e^{2\pi i b x}e^{-2\pi y |x|} \ dx = (f*P_y)(x)$$
@@ -198,7 +198,7 @@
 %   \end{align*}
 % \end{proof}
 %
-% We'll show another important property of Poisson kernel.
+% we will show another important property of Poisson kernel.
 % \begin{proposition}
 %   Let $f: \R \to \C$ be uniformly continuous and bounded. Then $$\lim_{y\downarrow 0} \norm{f - (f*P_y)}_\infty = 0$$
 % \end{proposition}
@@ -216,7 +216,7 @@
 %   Since our choice of $\epsilon$ was arbitary it can be taken arbitarily small and it does not depend on $x$. Hence the result.
 % \end{proof}
 %
-% We'll state another property of poisson kernel
+% we will state another property of poisson kernel
 % \begin{proposition}
 %   Let $1\le p < \infty$ and $f \in L^p(\R)$. Then $$\lim_{y \downarrow 0}\norm{f-(f*P_y)}_p = 0$$
 % \end{proposition}
@@ -225,10 +225,10 @@
 
 \section{Fourier Inverse Transform}
 For $L^1$ periodic functions, we were able to represent them using their Fourier series. We wish to do the same for functions in $L^1(\R)$, by trying to represent them using their Fourier transform. We hope that $$f(x) = \int_\R \hatf(t) e^{2\pi itx} dt$$
-But note that for the above integral to make sense we require $\hatf \in L^1(\R)$. Therefore we'll assume that $\hatf \in L^1(\R)$ for the later part of the chapter. Still we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogous techniques to Fej\'er kernel to define the integral. As a first step towards that we'll consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
+But note that for the above integral to make sense we require $\hatf \in L^1(\R)$. Therefore we will assume that $\hatf \in L^1(\R)$ for the later part of the chapter. Still we might encounter difficulties in convergence, like we had in Fourier series. We might need to introduce analogous techniques to Fej\'er kernel to define the integral. As a first step towards that we will consider functions like $$B(x) = \int_{-T}^T b(t)e^{2 \pi itx} \ dt$$
 For the Fourier transform, these functions will serve as analogue for trigonometric polynomials in Fourier series.
 
-We'll now prove an important property of functions $B(x)$ as defined above. 
+We will now prove an important property of functions $B(x)$ as defined above. 
 
 \begin{proposition}
   \label{prop:property_of_analogue_of_trigonometric_functions}
@@ -246,7 +246,7 @@ We'll now prove an important property of functions $B(x)$ as defined above.
   Note that the change of intergral is justified because we already know that the integral is finite since $|(f*B)(x)| \le \infty$.
 \end{proof}
 
-Now we'll prove some propositions which will help us in $L^2(\R)$. 
+Now we will prove some propositions which will help us in $L^2(\R)$. 
 \begin{proposition}
   \label{prop:integral_of_sin(pi_x)^2/(pi_x)^2}
   We have $$\int_{-\infty}^{\infty} \left(\frac{\sin(\pi x)}{\pi x}\right)^2 \ dx = 1$$
@@ -286,7 +286,7 @@ Let's define the $L^1(\R)$ analogue of Fej\'er kernel.
       Put $x=Ty$, then $dx = T \ dy $ and we get the desired result
 
     \item This is clear from the definition, since $\sin^2(-x) = \sin^2(x)$.
-    \item To prove this first we'll find the Fourier transform of the function $g$, where $g(x) = 1 - |x|$ for $|x| \le 1$ and $g(x)$ is 0 everywhere else.
+    \item To prove this first we will find the Fourier transform of the function $g$, where $g(x) = 1 - |x|$ for $|x| \le 1$ and $g(x)$ is 0 everywhere else.
      \begin{align*}
        \hatg(t) &= \int_{-1}^1 (1-|x|)e^{-2 \pi itx} \ dx = 2\int_0^1(1-x)\cos(2\pi tx) \ dx \\
        &= 2\left[(1-x)\frac{\sin(2\pi tx)}{2\pi t} \right]_0^1 + \int_0^1\frac{\sin(2\pi tx)}{\pi t} \ dx \\
@@ -320,20 +320,20 @@ Now we prove the $L^1(\R)$ analogue of the Fejer's theorem (\autoref{thm:fejer_t
      &= \int_\R f(x-y) \Delta_T(y) dy - \int_\R f(x)\Delta_T(y) \ dy \\
      &= \int_\R (f(x-y) - f(y)) \Delta_T(y) dy \\ 
   \end{align*}
-  Now we'll evaluate the last integral into $I_1, I_2, I_3$, where $I_1$ is when $-\infty<y\le-\delta$, $I_2$ is when $-\delta < y < \delta$ and $I_3$ is $\delta \le y < \infty$. When $y$ is in $I_1$ and $I_3$, we see from the \autoref{def:L1(R)_analogue_of_fejer_kernel} that since $|y| > |\delta|$ in $I_1$ and $I_3$, $|\Delta_T(y)| \le \frac{1}{T(\pi\delta)^2}$. Thus $$|I_1| \le \frac{1}{T\pi^2\delta^2}\int_{-\infty}^{-\delta} |f(x-y)| \ dy + |f(x)|\int_{-\infty}^{-\delta}\Delta_T(y) \ dy $$ $$|I_3| \le \frac{1}{T\pi^2\delta^2}\int^{\infty}_{\delta} |f(x-y)| \ dy + |f(x)|\int^{\infty}_{\delta}\Delta_T(y) \ dy $$
+  Now we will evaluate the last integral into $I_1, I_2, I_3$, where $I_1$ is when $-\infty<y\le-\delta$, $I_2$ is when $-\delta < y < \delta$ and $I_3$ is $\delta \le y < \infty$. When $y$ is in $I_1$ and $I_3$, we see from the \autoref{def:L1(R)_analogue_of_fejer_kernel} that since $|y| > |\delta|$ in $I_1$ and $I_3$, $|\Delta_T(y)| \le \frac{1}{T(\pi\delta)^2}$. Thus $$|I_1| \le \frac{1}{T\pi^2\delta^2}\int_{-\infty}^{-\delta} |f(x-y)| \ dy + |f(x)|\int_{-\infty}^{-\delta}\Delta_T(y) \ dy $$ $$|I_3| \le \frac{1}{T\pi^2\delta^2}\int^{\infty}_{\delta} |f(x-y)| \ dy + |f(x)|\int^{\infty}_{\delta}\Delta_T(y) \ dy $$
   where the first integral in both the inequalities is less than $\|f\|_1$ which is finite, and second integral $$\int_{-\infty}^{-\delta} \Delta_T(y) \ dy = \int_\delta^\infty \Delta_T(y) \ dy \le \int_\delta^\infty \frac{1}{T\pi^2 \delta^2} \ dx = \frac{1}{T\pi^2 \delta}$$
   Therefore $I_1, I_3 \to 0$, as $T\to \infty$. Now in $I_2$, by the continuity of $f$ at $x$, $$|I_2| \le \epsilon\int_{-\delta}^\delta \Delta_T(y) \ dy \le \epsilon \int_\R \Delta_T(y) \ dy = \epsilon$$
   Therefore $I_2$ can also be made arbitarily small. Hence the theorem. 
 \end{proof}
 
-Now we'll prove some results which will help us to prove the general Fourier inversion theorem. The below result is analogous to the fact that Ces\'aro sum of a convergent sequence converges to the same limit as the original sequence, given it exists.
+Now we will prove some results which will help us to prove the general Fourier inversion theorem. The below result is analogous to the fact that Ces\'aro sum of a convergent sequence converges to the same limit as the original sequence, given it exists.
 \begin{proposition}
   \label{prop:cesaro_integral_converge_to_same_limit}
   Let $f \in L^1[-T, T]$ and let $$I(T) = \int_{-T}^T f(t) \ dt, \quad J(T) = \int_{-T}^T\left(1-\frac{|t|}{T}\right)f(t)\ dt$$
   Then $$\lim_{T\to \infty} I(T) = \lim_{T\to \infty}J(T)$$
 \end{proposition}
 \begin{proof}
-  We'll first show that $\lim_{T\to \infty}I(T)$ exists. But since $f\in L^1(\R)$, $$|I(T)| \ dt \le \int_{-T}^T |f(t)| \ dt \le \|f\|_1$$
+  we will first show that $\lim_{T\to \infty}I(T)$ exists. But since $f\in L^1(\R)$, $$|I(T)| \ dt \le \int_{-T}^T |f(t)| \ dt \le \|f\|_1$$
   Therefore $\lim_{T \to \infty}I(T) \le \|f\|_1$, and the limit exists. Moreover we see that by Fubini's theorem, $$\frac{1}{T} \int_0^T I(u) \ du = \frac{1}{T} \int_0^T\int_{-u}^u f(t) \ dt \ du = \frac{1}{T}\int_{-T}^T f(t) \left(\int_{|t|}^T 1 \ du \right) \ dt = J(T)$$
   Since we assumed that $\lim_{T\to \infty} I(T) = a$, given $\epsilon > 0$, there exists an $N$ such that $|I(u) - a| < \epsilon$ for all $u \ge N$. Now we can write $$J(T) - a = \frac{1}{T}\int_0^T I(u) - a \ du = \frac{1}{T}\int_0^N I(u) - a \ du + \frac{1}{T}\int_N^T I(u) - a \ du = E_1 + E_2$$
   Now since $I(u)$ is bounded for all $u$, the integral in $E_1$ is finite and therefore $E_1 \to 0$ as $T\to \infty$. As for $E_2$, $$|E_2| \le \frac{1}{T} \int_N^T |I(u) -a| \ du < \frac{1}{T}\int_N^T \epsilon \ du = \frac{T-N}{T}\epsilon < \epsilon$$
@@ -347,13 +347,13 @@ As a result of the above result combined with \autoref{thm:L1(R)_analogue_of_fej
   exists, then it is equal to $f(x)$.
 \end{corollary}
 
-Since we'll be working a lot with functions $f$ which are continuous everywhere in the real line, we explicityly state the next theorem.
+Since we will be working a lot with functions $f$ which are continuous everywhere in the real line, we explicityly state the next theorem.
 \begin{theorem}
   If $f\in L^1(\R)$, $f$ is continuous in $\R$, and if $\hatf \in L^1(\R)$, then $$\int_\R \hatf(t)e^{2\pi itx} \ dt = f(x)$$
 \end{theorem}
 Note that the condition that $\hatf \in L^1(\R)$ in the above theorem guarantee the existence of the limit from the corollary above.
 
-Now we'll prove one important theorem
+Now we will prove one important theorem
 \begin{theorem}
   \label{thm:almost_fourier_inversion}
   If $f\in L^1(\R)$ and $\sigma_T(x) = (f*\Delta_T)(x)$, where $\Delta_T$ is as in \autoref{def:L1(R)_analogue_of_fejer_kernel}, then $$\lim_{T\to \infty} \int_{-\infty}^{\infty}|f(x) - \sigma_T(x)| \ dx = 0$$
@@ -365,9 +365,9 @@ Now we'll prove one important theorem
   and therefore $$\int_\R \left|f(x)-\sigma_T(x)\right| \ dx \le \int_\R \int_\R \left|f(x) - f(x-u)\right| \Delta_T(u) \ du \ dx$$
   Again we see that $$\int_\R \Delta_T(u) \int_\R |f(x) - f(x-u)| \ dx \ du \le \int_\R \Delta_T(u) \cdot 2\|f\|_1 \ du = 2\|f|\|_1$$
   and since $\R^2$ is a sigma finite measure space by Fubini-Tonelli theorem, we can change the order of integration. Then $$\int_\R \left|f(x)-\sigma_T(x)\right| \ dx \le \int_\R \Delta_T(u) \int_\R \left|f(x) - f(x-u)\right|  \ dx \ du$$
-  Now we'll analyse the last integral. Let us denote the inner integral by $I(u)$. Since $f\in L^1(\R)$, by \autoref{prop:L1_functions_are_continuous_in_L1_norm_in_R} given any $\epsilon$, there exists a $\delta$ such that for all $|u| < \delta$, $$I(u) = \int_\R |f(x) - f(x-u)| \ dx < \epsilon$$
+  Now we will analyse the last integral. Let us denote the inner integral by $I(u)$. Since $f\in L^1(\R)$, by \autoref{prop:Lp_functions_are_continuous_in_LpR} given any $\epsilon$, there exists a $\delta$ such that for all $|u| < \delta$, $$I(u) = \int_\R |f(x) - f(x-u)| \ dx < \epsilon$$
   Moreover, $$I(u) \le \int_\R |f(x)| + |f(x-u)| \ du = 2\|f\|_1$$
-  We'll split the integral into three intervals and analyse there. For that let $$\int_\R \Delta_T(u) I(u) \ du = \int_{-\infty}^{-\delta}+ \int_{-\delta}^{\delta} + \int^{\infty}_{\delta} = I_1 + I_2 + I_3$$
+  We will split the integral into three intervals and analyse there. For that let $$\int_\R \Delta_T(u) I(u) \ du = \int_{-\infty}^{-\delta}+ \int_{-\delta}^{\delta} + \int^{\infty}_{\delta} = I_1 + I_2 + I_3$$
   Then by the definition of $\Delta_T$ in \autoref{def:L1(R)_analogue_of_fejer_kernel},
   $$I_1 \le 2\|f\|_1 \int_{-\infty}^{-\delta} \Delta_T(u) \ du \le 2\|f\|_1\int_{-\infty}^{-\delta} \frac{1}{T\pi^2 u^2} \le \frac{2\|f\|_1}{T\pi^2 \delta}$$ $$I_3 \le 2\|f\|_1 \int^{\infty}_{\delta} \Delta_T(u) \ du \le 2\|f\|_1\int^{\infty}_{\delta} \frac{1}{T\pi^2 u^2} \le \frac{2\|f\|_1}{T\pi^2 \delta}$$
   And by the choice of $\delta$ and \autoref{prop:properties_of_fejer_kernel_in_R}, $I_2$ can be estimated as $$I_2 \le \epsilon \int_{-\delta}^\delta \Delta_T(u) \ du \le \epsilon \int_\R \Delta_T(u) \ du = \epsilon$$
@@ -404,7 +404,7 @@ Applying the corollary above to $f-g$ where $f, g \in L^1(\R)$, we get
 We are intereseted in defining the Fourier transfrom for functions in $L^2(\R)$ because a lot of important relations appear when the space is $L^2(\R)$. But here arise a new problem. The way we defined Fourier transforms for $L^1$ functions were by directly using the fact that since their $L^1$ norm is finite, the integral in \autoref{def:fourier_transform_of_f} is well defined. But since there is no containment between the spaces $L^1(\R)$ and $L^2(\R)$, we will not be able to define the Fourier transform for all $L^2(\R)$ functions. Therefore we restrict ourself to the space $L^1(\R) \cap L^2(\R)$. 
 Since our new space $L^1(\R) \cap L^2(\R)$ is a subspace of $L^1(\R)$, the Fourier transform of all functions $f \in L^1(\R) \cap L^2(\R)$ is well defined. 
 
-Now we'll discuss about the convolution of functions in $L^2(\R)$. We'll follow the same definition as before in $L^1(\R)$. (For formula refer to \autoref{def:convolution_of_functions_in_L^1(T)}). It is natural to think if such a definition is well defined. In fact by the Holders inequality (\autoref{thm:Holder_inequality}) one can show that it is well defined. Since if $f, g \in L^2(\R)$, then 
+Now we will discuss about the convolution of functions in $L^2(\R)$. We will follow the same definition as before in $L^1(\R)$. (For formula refer to \autoref{def:convolution_of_functions_in_L^1(T)}). It is natural to think if such a definition is well defined. In fact by the Holders inequality (\autoref{thm:Holder_inequality}) one can show that it is well defined. Since if $f, g \in L^2(\R)$, then 
   \begin{align*}
     |f*g(x)| &= \left|\int_R f(x-y)g(y) \ dy \right|\\
         &\le \int_\R |f(x-y)g(y)| \ dy \\
@@ -412,7 +412,7 @@ Now we'll discuss about the convolution of functions in $L^2(\R)$. We'll follow 
         &= \|f\|_2 \|g\|_2
   \end{align*}
 
-We can now discuss about the convolution of $L^2(\R)$ functions. We'll now show that the convolution of two functions in $L^2(\R)$ is uniformly continuous. This proposition will be a stepping stone to the celebrated Plancherel's Theorem.
+We can now discuss about the convolution of $L^2(\R)$ functions. We will now show that the convolution of two functions in $L^2(\R)$ is uniformly continuous. This proposition will be a stepping stone to the celebrated Plancherel's Theorem.
 
   \begin{proposition}
     If $f, g \in L^2(\R)$, then $f*g$ is uniformly continuous.
@@ -428,7 +428,7 @@ We can now discuss about the convolution of $L^2(\R)$ functions. We'll now show 
   \end{proof}
 
 
-Now we'll prove the famous Plancherel's theorem.
+Now we will prove the famous Plancherel's theorem.
 \begin{theorem}[Plancherel's Theorem]
   \label{thm:Plancherel's_theorem}
   If $f \in L^1(\R) \cap L^2(\R)$, then $$\int_\R |f(x)|^2 \ dx = \int_\R |\hatf(t)|^2 \ dt $$
@@ -444,7 +444,7 @@ Now we'll prove the famous Plancherel's theorem.
   Since $\epsilon$ can be made arbitary small, the result follows.
 \end{proof}
 
-Also by \autoref{prop:L1_functions_are_dense_in_L2}, $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$. Then by Plancherel's theorem Fourier transform in $L^1(\R) \cap L^2(\R)$ can be extended into an equinorm transform $\mathcal{F} : L^2(\R) \to L^2(\R)$. When working with $L^2(\R)$, by Fourier transform we'll mean this $\mathcal{F}$. Also note that $\mathcal{F}(L^1(\R) \cap L^2(\R))$ is dense in $L^2(\R)$. The proof can be seen at \autocite[Theorem~9.13 \pno~186]{papaRudin} or \autocite[Theorem~2.4.1 \pno~128]{PinskyWavelet}
+Also by \autoref{prop:L1_functions_are_dense_in_L2}, $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$. Then by Plancherel's theorem Fourier transform in $L^1(\R) \cap L^2(\R)$ can be extended into an equinorm transform $\mathcal{F} : L^2(\R) \to L^2(\R)$. When working with $L^2(\R)$, by Fourier transform we will mean this $\mathcal{F}$. Also note that $\mathcal{F}(L^1(\R) \cap L^2(\R))$ is dense in $L^2(\R)$. The proof can be seen at \autocite[Theorem~9.13 \pno~186]{papaRudin} or \autocite[Theorem~2.4.1 \pno~128]{PinskyWavelet}
 
 
 % Moreover, if $C_c(\R)$ is the set of all compactly supported functions in $\R$, then $C_c(\R)$ is dense in $L^2(\R)$ by \autoref{prop:L1_functions_are_dense_in_L2}. Let $f \in C_c(\R)$ compactly supported in $[-A, A]$, then consider $$g(x) = \int_{-A}^A f(t) e^{2\pi i tx} \ dt$$
