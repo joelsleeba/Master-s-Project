@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[97] biber:340> INFO - === Wed May 10, 2023, 02:01:21
-[114] Biber.pm:419> INFO - Reading 'main.bcf'
-[195] Biber.pm:979> INFO - Found 8 citekeys in bib section 0
-[212] Biber.pm:4419> INFO - Processing section 0
-[225] Biber.pm:4610> INFO - Looking for bibtex file '02End/math.bib' for section 0
-[228] bibtex.pm:1713> INFO - LaTeX decoding ...
-[254] bibtex.pm:1519> INFO - Found BibTeX data source '02End/math.bib'
-[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[372] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[372] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[384] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[393] bbl.pm:763> INFO - Output to main.bbl
+[94] biber:340> INFO - === Thu May 11, 2023, 13:51:26
+[111] Biber.pm:419> INFO - Reading 'main.bcf'
+[189] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
+[204] Biber.pm:4419> INFO - Processing section 0
+[217] Biber.pm:4610> INFO - Looking for bibtex file '02End/math.bib' for section 0
+[219] bibtex.pm:1713> INFO - LaTeX decoding ...
+[244] bibtex.pm:1519> INFO - Found BibTeX data source '02End/math.bib'
+[345] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[345] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[345] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[345] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[353] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[358] bbl.pm:763> INFO - Output to main.bbl

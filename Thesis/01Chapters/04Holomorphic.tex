@@ -123,6 +123,8 @@ What is interesting is that the converse of the above two results is also true. 
     \int_{\Gamma_\alpha} f(z)e^{-2\pi itz} \ dz = 0
   \end{equation}
   For $\beta \in \R$ and $I= [1, y]$ if $1<y$ (otherwise let $I=[y, 1]$) let $$\Phi(\beta) = \int_I f(\beta + iu)e^{-2\pi it(\beta+iu)} \ du$$
+
+  
   Now by Cauchy Schwarz inequality, we get that
   \begin{equation}
     |\Phi(\beta)|^2 \le \left(\int_I |f(\beta+iu)|^2 \ du \right)\left(\int_I e^{4\pi \beta u} \ dt \right)
@@ -140,7 +142,37 @@ What is interesting is that the converse of the above two results is also true. 
   \label{eqn:some_blah_blah_blah}
   \lim_{j \to \infty} \int_I f(\alpha_j + iu) \ du = \lim_{j \to \infty} \int_I f(-\alpha_j + iu) \ du = 0
   \end{equation}
+ 
   Therefore $\Phi(\alpha_j) \to 0, \Phi(-\alpha_j) \to 0$ as $j \to \infty$.
+ 
+  \begin{figure}
+    \centering
+    \begin{tikzpicture}
+      % Draw the x-axis and y-axis
+      \draw[->] (-5,0) -- (5,0) node[below right] {$\Re(z)$};
+      \draw[->] (0,-1) -- (0,4) node[above left] {$\Im(z)$};
+ 
+      % Draw the rectangle with one edge on the line y=1
+      \draw[thick] (-2,1) rectangle (2,3);
+      \draw[dotted] (-3,1) rectangle (3,3);
+      \fill[cyan, opacity=0.3] (-2,1) -- (-2, 3) -- (2, 3) -- (2, 1) -- cycle;
+      \draw[dotted] (-4,1) rectangle (4,3);
+
+      \node[left] at (0, 2) {$\Gamma_{\alpha_j}$};
+      \node[above right] at (0, 1) {$1$};
+      \node[above right] at (0, 3) {$y$};
+      \node[circle, fill, inner sep=1pt, label=below:$\alpha_j$] at (2, 0) {};
+      \node[circle, fill, inner sep=1pt, label=below:$\alpha_{j+1}$] at (3, 0) {};
+      \node[circle, fill, inner sep=1pt, label=below:$\alpha_{j+2}$] at (4, 0) {};
+      \node[circle, fill, inner sep=1pt, label=below:$-\alpha_j$] at (-2, 0) {};
+      \node[circle, fill, inner sep=1pt, label=below:$-\alpha_{j+1}$] at (-3, 0) {};
+      \node[circle, fill, inner sep=1pt, label=below:$-\alpha_{j+2}$] at (-4, 0) {};
+      \node[left] at (-2, 2) {\rotatebox{90}{$\xrightarrow{\Phi(-\alpha_j)}$}};
+      \node[left] at (2, 2) {\rotatebox{90}{$\xrightarrow{\Phi(\alpha_j)}$}};
+    \end{tikzpicture}
+    \caption{Indicative diagram shows the domains of integration}
+  \end{figure}
+
   Also by \autoref{eqn:eqn_holomorphic_stuff},
   \begin{equation*}
     \begin{split}
@@ -185,8 +217,26 @@ What is interesting is that the converse of the above two results is also true. 
 
   \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{i\alpha}$$
   where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{i\alpha}) > A\}$$
-  Note that $\Pi_\alpha$ is precisely the half plane where $\Re(w) > A$ rotated by $\alpha$ degress in the clockwise direction. This information will later come in handy. Now for $w \in \Pi_\alpha$ define $$ \Phi_\alpha(w) = \int_{\Gamma_\alpha} f(z) e^{-2\pi wz} \ dz = e^{i\alpha}\int_0^\infty f(se^{i\alpha})e^{-2\pi wse^{i\alpha}} \ ds$$
-  By assumption, we know that $\left|f(se^{i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{i\alpha})e^{-2\pi wse^{i\alpha}}\right| = \left|f(se^{i\alpha})e^{-\Re(2\pi wse^{i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} = Ce^{-2\pi \tau s}$$
+
+   \begin{figure}
+     \centering
+      \begin{tikzpicture}[scale=1.5]
+        % Draw axes
+        \draw[<->] (-2,0) -- (2,0) node[above] {$\Re(z)$};
+        \draw[<->] (0,-2) -- (0,1) node[left] {$\Im(z)$};
+        \fill[cyan,opacity=0.3] (-2,-1.5) -- (-2, -2) -- (2,-2) -- (2, 0) -- cycle;
+        \draw[dashed] (-2, -1.5) -- (2, 0);
+        % Draw line
+        \draw[blue,rotate=-67] (0,0) -- (0.7,0);
+        \node at (0.35, -0.4) {\color{blue}{A}};
+        \node at (0.7, -1.4) {$\Pi_\alpha$};
+        \draw[red] (0, 0) -- (0:0.2) arc (0:-68:0.2) node[midway, right] {\color{red}{$\alpha$}};
+        \draw[rotate=-67] (0.6, 0) -- (0.6, -0.1) -- (0.7, -0.1);
+      \end{tikzpicture}
+      \caption{Region $\Pi_\alpha$}
+    \end{figure}
+
+  By assumption, we know that $\left|f(se^{i\alpha})\right| \le Ce^{2\pi As}$ and therefore $$\left|f(se^{i\alpha})e^{-2\pi wse^{i\alpha}}\right| = \left|f(se^{i\alpha})e^{-\Re(3\pi wse^{i\alpha})}\right| \le Ce^{-2\pi[\Re(we^{i\alpha}) - A]s} = Ce^{-2\pi \tau s}$$
   where $\tau > 0$, since $w \in \Pi_\alpha$. Let $T$ is any triangular path in $\Pi_\alpha$. Since $T$ is compact and $\Re(we^{i\alpha})-A$ is continuous and positive in $\Pi_\alpha$, there is a $w = \tau_k$ where $\Re(we^{i\alpha} - A)$ is minimum and positive. Then 
   \begin{align*}
     \int_T\left|\Phi_\alpha(w)\right| \ dw &= \int_T e^{i\alpha} \left|\int_0^\infty f(se^{i\alpha}) e^{-2\pi we^{i\alpha}} \ ds \right| dw \\
