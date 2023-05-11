@@ -51,34 +51,6 @@
       \field{title}{Mathematical analysis: a modern approach to advanced calculus}
       \field{year}{1974}
     \endentry
-    \entry{AxlerMeasure}{book}{}
-      \name{author}{1}{}{%
-        {{hash=71493eec7caacea528ad39dbfb52773a}{%
-           family={Axler},
-           familyi={A\bibinitperiod},
-           given={Sheldon},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{71493eec7caacea528ad39dbfb52773a}
-      \strng{fullhash}{71493eec7caacea528ad39dbfb52773a}
-      \strng{bibnamehash}{71493eec7caacea528ad39dbfb52773a}
-      \strng{authorbibnamehash}{71493eec7caacea528ad39dbfb52773a}
-      \strng{authornamehash}{71493eec7caacea528ad39dbfb52773a}
-      \strng{authorfullhash}{71493eec7caacea528ad39dbfb52773a}
-      \field{labelalpha}{Axl20}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-030-33143-6}
-      \field{series}{Graduate Texts in Mathematics}
-      \field{title}{Measure, Integration \& Real Analysis}
-      \field{volume}{282}
-      \field{year}{2020}
-    \endentry
     \entry{Grafakos2017a}{article}{}
       \name{author}{5}{}{%
         {{hash=d75ea9c673adff92b3c4257d2a70a85b}{%
@@ -196,56 +168,43 @@
       \range{pages}{-1}
       \keyw{42-01 (42A16 42B05)}
     \endentry
-    \entry{perko_differential_2001}{book}{}
-      \name{author}{1}{}{%
-        {{hash=2e86fbceb5185d82a8b0e6fccbdf1691}{%
-           family={Perko},
-           familyi={P\bibinitperiod},
-           given={Lawrence},
-           giveni={L\bibinitperiod}}}%
-      }
-      \name{editor}{3}{}{%
-        {{hash=a109e64d7dd72d3d3700a1a0216efd4b}{%
-           family={Marsden},
+    \entry{Schlag_classical_multilinear}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a8448ea4855b9dbfd3494f3c587b38fb}{%
+           family={Muscalu},
            familyi={M\bibinitperiod},
-           given={J.\bibnamedelimi E.},
-           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=5d6345132a2589d627a26c0778d1b0ad}{%
-           family={Sirovich},
+           given={Camil},
+           giveni={C\bibinitperiod}}}%
+        {{hash=84855c2012f18fc50a5a52adc676ec62}{%
+           family={Schlag},
            familyi={S\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod}}}%
-        {{hash=04c1bb50a693abd13f903c4d491ef394}{%
-           family={Golubitsky},
-           familyi={G\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
+           given={Wilhelm},
+           giveni={W\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {New York, NY}%
+        {Cambridge, UK}%
       }
       \list{publisher}{1}{%
-        {Springer New York}%
+        {Cambridge University Press}%
       }
-      \strng{namehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
-      \strng{fullhash}{2e86fbceb5185d82a8b0e6fccbdf1691}
-      \strng{bibnamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
-      \strng{authorbibnamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
-      \strng{authornamehash}{2e86fbceb5185d82a8b0e6fccbdf1691}
-      \strng{authorfullhash}{2e86fbceb5185d82a8b0e6fccbdf1691}
-      \strng{editorbibnamehash}{e9d83dc54d3832706519233f84a2f979}
-      \strng{editornamehash}{e9d83dc54d3832706519233f84a2f979}
-      \strng{editorfullhash}{e9d83dc54d3832706519233f84a2f979}
-      \field{labelalpha}{Per01}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \strng{namehash}{26d8d71db65fc1b6e4b9e3607c34c690}
+      \strng{fullhash}{26d8d71db65fc1b6e4b9e3607c34c690}
+      \strng{bibnamehash}{26d8d71db65fc1b6e4b9e3607c34c690}
+      \strng{authorbibnamehash}{26d8d71db65fc1b6e4b9e3607c34c690}
+      \strng{authornamehash}{26d8d71db65fc1b6e4b9e3607c34c690}
+      \strng{authorfullhash}{26d8d71db65fc1b6e4b9e3607c34c690}
+      \field{labelalpha}{MS13}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9781461265269}
-      \field{series}{Texts in {Applied} {Mathematics}}
-      \field{title}{Differential {Equations} and {Dynamical} {Systems}}
-      \field{volume}{7}
-      \field{year}{2001}
+      \field{abstract}{"This two-volume text in harmonic analysis introduces a wealth of analytical results and techniques. It is largely self-contained, and will be useful to graduate students and researchers in both pure and applied analysis. Numerous exercises and problems make the text suitable for self-study and the classroom alike. This first volume starts with classical one-dimensional topics: Fourier series; harmonic functions; Hilbert transform. Then the higher-dimensional Calderón-Zygmund and Littlewood-Paley theories are developed. Probabilistic methods and their applications are discussed, as are applications of harmonic analysis to partial differential equations. The volume concludes with an introduction to the Weyl calculus. The second volume goes beyond the classical to the highly contemporary, and focuses on multilinear aspects of harmonic analysis: the bilinear Hilbert transform; Coifman-Meyer theory; Carleson's resolution of the Lusin conjecture; Calderón's commutators and the Cauchy integral on Lipschitz curves. The material in this volume has not previously appeared together in book form"--}
+      \field{isbn}{9780521882453}
+      \field{number}{137-138}
+      \field{series}{Cambridge studies in advanced mathematics}
+      \field{title}{Classical and multilinear harmonic analysis}
+      \field{year}{2013}
+      \keyw{Harmonic analysis,MATHEMATICS / Mathematical Analysis}
     \endentry
     \entry{PinskyWavelet}{book}{}
       \name{author}{1}{}{%

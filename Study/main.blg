@@ -1,15 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[92] biber:340> INFO - === Thu May 11, 2023, 00:45:59
-[112] Biber.pm:419> INFO - Reading 'main.bcf'
-[191] Biber.pm:979> INFO - Found 8 citekeys in bib section 0
-[206] Biber.pm:4419> INFO - Processing section 0
-[220] Biber.pm:4610> INFO - Looking for bibtex file '02End/math.bib' for section 0
-[222] bibtex.pm:1713> INFO - LaTeX decoding ...
-[243] bibtex.pm:1519> INFO - Found BibTeX data source '02End/math.bib'
-[356] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[356] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[356] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[356] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[365] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[371] bbl.pm:763> INFO - Output to main.bbl
+[104] biber:340> INFO - === Thu May 11, 2023, 11:22:48
+[122] Biber.pm:419> INFO - Reading 'main.bcf'
+[205] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
+[222] Biber.pm:4419> INFO - Processing section 0
+[235] Biber.pm:4610> INFO - Looking for bibtex file '02End/math.bib' for section 0
+[239] bibtex.pm:1713> INFO - LaTeX decoding ...
+[267] bibtex.pm:1519> INFO - Found BibTeX data source '02End/math.bib'
+[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[376] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[376] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[385] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[392] bbl.pm:763> INFO - Output to main.bbl
+[392] Biber.pm:131> WARN - Duplicate entry key: 'wolff_harmonic' in file '02End/math.bib', skipping ...
+[392] Biber.pm:133> INFO - WARNINGS: 1

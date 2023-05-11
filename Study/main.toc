@@ -8,18 +8,19 @@
 \contentsline {section}{\numberline {1.5}Summability Kernels}{9}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Convergence of Fourier Series}{15}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Fourier Series in $L^p(\mathbb T)$}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Fourier Series in $L^2(\mathbb T)$}{22}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Fourier Series in $L^2(\mathbb T)$}{21}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Fourier Series in $L^p(\mathbb T)$}{25}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Fourier Transform}{29}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definiton and basic properties}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Poisson Kernel}{34}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Fourier Inversion Theorem}{38}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Fourier Transform in $L^2(\mathbb R)$}{45}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Holomorphic Fourier Transforms}{49}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Motivation and Basic Results}{49}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Paley Wiener Theorems}{54}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Further Topics}{63}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Fourier Transforms in $\mathbb R^n$}{63}{section.5.1}%
-\contentsline {chapter}{Appendices}{65}{section*.5}%
-\contentsline {chapter}{\numberline {A}Results from Measure Theory}{65}{appendix.A}%
-\contentsline {chapter}{Bibliography}{67}{appendix*.6}%
+\contentsline {section}{\numberline {3.2}Fourier Inverse Transform}{33}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Fourier Transform in $L^2(\mathbb R)$}{41}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Holomorphic Fourier Transforms}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Motivation and Basic Results}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Paley Wiener Theorems}{50}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Further Topics}{59}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Fourier Transforms in $\mathbb R^n$}{59}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Restriction Conjecture}{60}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Another problem}{60}{section.5.3}%
+\contentsline {chapter}{Appendices}{62}{section*.5}%
+\contentsline {chapter}{\numberline {A}Results from Measure Theory}{63}{appendix.A}%
+\contentsline {chapter}{Bibliography}{65}{appendix*.6}%

@@ -5,26 +5,46 @@
 From our understanding our Fourier analysis in the circle, line and for special classes of holomorphic functions, we can step into a world of further analysis where answers to seemingly simple problems are still hidden. In this chapter we will discuss some of them and try to understand what tools are required for them. This will be a brief outlook into the future of the topic presenting some open problems and probing directions for further research.
 
 \section{Fourier Transforms in $\R^n$}
-Before we begin our analysis on $\R^n$, unlike $\R$, we define a new class of functions called the Schwartz functions.
+Before we begin our analysis on $\R^n$, unlike $\R$, we define a new class of functions called the Schwartz functions. 
 
 \begin{definition}[Schwartz Class]
 \label{def:schwartz_class}
 A smooth function $f:\mathbb{R}^n \to \mathbb{C}$, $f$ is called a \emph{Schwartz function} if for any given multi index $\alpha, \beta$, there exists a positive constant $C_{\alpha, \beta}$ such that $$\rho_{\alpha, \beta} = \sup_{x \in \mathbb{R}^n} \left|x^\alpha (D^\beta f)x \right| = C_{\alpha, \beta} < \infty$$ 
 Here $\rho_{\alpha, \beta}(f)$ is called \emph{Schwartz seminorm of $f$}. The collection of all such functions is called the \emph{Schwartz space} of $\mathbb{R}^n$ and is denoted by $\mathscr{S}(\mathbb{R}^n)$. 
-See \autocite[Appendix A.3]{perko_differential_2001} for definition of multi index and derivative.
+See \autocite[Section~2.2]{Grafakos_Classical_Fourier} for the definition of multi index and derivatives.
 \end{definition}
+We also get that $\mathscr{S}(\R^n) \subset L^p(\R^n)$ for any $1\le p < \infty$ \autocite[Proposition~2.2.6 \pno~106]{Grafakos_Classical_Fourier}. Moreover $\mathscr{S}(\R^n)$ is dense in $L^p(\R^n)$. Therefore if we define Fourier transform in $\mathscr{S}(\R^n)$, using Plancherel's theorem we'll be able to define Fourier transform for all $L^p(\R^n)$.
 
-Now let us define Fourier transform for a funtion in $\mathscr{S}(\R^n)$
 \begin{definition}
   \label{def:fourier_transform_in_Rn}
   Let $f \in \mathscr{S}(\R^n)$, then we define the Fourier transform of $f$, as $$\hatf(t) = \int_{\R^n} f(x) e^{-2\pi i t\cdot x} \ dx $$
   where $x \cdot y$ denote the standard inner product in $\R^n$.
 \end{definition}
 
-Notice that $\hatf$ is well defined since $$\left|\hatf(t)\right| \le \int_{\R^n} \left|f(x) e^{-2\pi i t\cdot x}\right| \ dx \le \int_{\R^n} \left|f(x)\right| \ dx  = \|f\|_1$$
+Notice that $\hatf$ is well defined since $\mathscr{S}(\R^n) \subset L^1(\R)$. Therefore $$\left|\hatf(t)\right| \le \int_{\R^n} \left|f(x) e^{-2\pi i t\cdot x}\right| \ dx \le \int_{\R^n} \left|f(x)\right| \ dx  = \|f\|_1$$
+
+The reason why Schwartz class is an attractive space for Fourier analysis is because Fourier transform is a homeomorphism on the Schwartz class \autocite[Corollary 2.2.15]{Grafakos_Classical_Fourier}
+
+\section{Restriction Conjecture}
+One celebrated conjecture in Fourier analysis is the 'Restriction conjecture' proposed by Elias M Stein.
+
+\begin{problem}[Restriction Conjecture]
+  The restriction problem asks when the inequality $$\|\hatf\vert_{S^{n-1}}\|_{L^q(S^{n-1})} \le C_{n, p, q} \|f\|_{L^p}$$
+holds. Where $f \in L^p(\R)$, $S^{n-1}$ is the unit sphere in $\R^n$ and $C_{n, p, q}$ is a constant which depend only on $n, p$ and, $q$.
+\end{problem}
+
+When $q=2$, the best possible result is given by the Stein-Tomas theorem.
+\begin{theorem}[Stein Tomas Theorem]
+  For every $n\ge 2$, there is a constant $C_{n, p}$ such that for all $f \in L^p(\R^n)$, $$\|\hatf\vert_{S^{n-1}}\|_{L^2(S^{n-1})} \le C_{n, p} \|f\|_{L^p}$$
+  where $p\le \frac{2n+2}{n+3}$
+\end{theorem}
+\begin{proof}
+  See \autocite[Theorem~11.1 \pno~288]{Schlag_classical_multilinear}
+\end{proof}
 
 
-We'll try to look into \emph{Functions whose Fourier transform vanishes on the sphere} from \autocite[Problem no. 3]{Grafakos2017a}
+\section{Another problem}
+Stein Tomas theorm can be used utilized to analyse the following problem from \autocite[Problem.no~3]{Grafakos2017a}. But since analysing that is beyond the scope of our understanding, we state the problem and wrap up.
 
 \begin{problem}[Functions whose Fourier transforms vanishes on the sphere]
 \label{prb:research_problem}
@@ -32,15 +52,3 @@ Let $n \ge 2$. Does there exist a function $f \in L^{\frac{2n+2}{n+3}}(\R^n)$ su
 and
 $$\left| 1 - |\xi|^2\right|^{-\frac{1}{2}}f \notin L^2(\R^n)$$
 \end{problem}
-
-In order to analyse this problem we need a little more tools in our disposal. The main one among them is Schwartz functions. 
-
-The reason why Schwartz class is an attractive space for Fourier analysis is because Fourier transform is a homeomorphism on the Schwartz class \autocite[Corollary 2.2.15]{Grafakos_Classical_Fourier}
-
-We instantly notice the similarity of Problem \autoref{prb:research_problem} with another famous problem called the 'Restriction Conjecture' proposed by Elias M Stein.
-
-\begin{problem}
-
-\end{problem}
-
-Next theorem which will aid us is the Stein-Tomas theorem. 
