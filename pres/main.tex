@@ -1,0 +1,165 @@
+% Copyright 2020 by Junwei Wang <i.junwei.wang@gmail.com>
+%
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+%   Compile this in xelatex
+
+\documentclass[compress]{beamer}
+
+\usepackage[english]{babel}
+\usepackage{metalogo}
+\usepackage{listings}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\usetheme{Nord}
+% \usetheme[style=light]{Nord}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+\newcommand{\T}{\mathbb T}
+
+% \setsansfont{NotoSans Nerd Font}
+% \setmonofont{FiraMono Nerd Font Mono}
+
+\AtBeginSection[]
+{
+  \begin{frame}[c,noframenumbering,plain]
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/show/hide]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+  \begin{frame}[c,noframenumbering,plain]
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
+  \end{frame}
+}
+
+\title{A Study in Fourier Analysis}
+\subtitle{From circle, through the line, to the complex}
+\author{Joel Sleeba}
+\institute{IISER Thiruvananthapuram}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}[plain,noframenumbering]
+  \maketitle
+\end{frame}
+
+
+\section{Fourier Series}
+
+\begin{frame}{Structure and Topology of $\mathbb{T}$}{}
+  \begin{itemize}
+    \item Defining $\mathbb{T}$ as the set of equivalence class of the relation $x\sim y \iff x-y \in \mathbb{Z}$ and identifying classes in $\mathbb{T}$ with their representative element in $[0,1)$ as $[x] \to \{x\}$, where $\{x\}$ is the fractional part of $x$.
+    \item Endow $\mathbb{T}$ with quotient topology by the map $f: \mathbb{R} \to \mathbb{T}:= x \to [x]$
+    \item Lebesgue measure on $\mathbb{T}$ is defined by the Lebesgue measure of its identification in $[0,1)$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Functions in $\T$}
+  \begin{itemize}
+    \item Functions in $\T$ are identified with periodic functions in $\R$ with period $1$ this again can be completely characterized by their values in $[0,1)$.
+    \item By the quotient topology in $\T$, we see that continuous functions in $\T$ can identified with continuous functions in $\R$ with period $1$.
+    \item Also by the Lebesgue measure defined on $\T$, we say $f \in L^p(\T)$ if the corresponding function in $[0, 1)$ is in $L^p[0, 1)$.
+    \item For any two function $f, g \in L^1(\T)$, their convolution, $(f*g)(x)$ as $$(f*g)(x) = \int_0^1 f(x-y)g(y) \ dy$$
+      is again in $L^1(\T)$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fourier Coefficients}
+  \begin{itemize}
+    \item For $f \in L^1(\T)$, and $n \in \Z$ we define the $n^{th}$ Fourier coefficient of $f$ as $$\hat{f}(n) = \int_0^1 f(x)e^{-2\pi i n x} \ dx $$
+    \item Also the Fourier series of $f \in L^1(\T)$ is defined as $$\sum_{n=-\infty }^\infty \hat{f}(n) e^{2\pi in x} $$
+    \item Since we are interested in the convergence of the Fourier series, we will define the symmetric and Ces\`aro partial sums of the Fourier seres respectively as $$ S_N(x) = \sum_{n=-N}^N \hat{f}(n)e^{2\pi inx} \ \text{ and } \  \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)$$
+   \end{itemize}
+\end{frame}
+
+\begin{frame}{Summability Kernel}
+  \begin{itemize}
+    \item A collection of functions $K_N \in L^1(\T)$ are called a summability kernel if it satisfies the following properites
+      \begin{enumerate}
+        \item $\int_{0}^{1}K_N(x)dx = 1$
+        \item $\int_{0}^{1}\lvert K_N(x)\rvert dx \le C$ for some constant $C>0$
+        \item $\lim_{N\to\infty} \int_{\delta}^{1-\delta}\lvert K_N(x)\rvert dx= 0$
+      \end{enumerate}
+    \item We prove that if $K_N$ is a summability kernel in $L^1(T)$, then $(f*K_N)(x)$ converge to $f(x)$ in $L^1(\T)$. That is $$\int_0^1 \lvert f(x) - (f*K_N)(x) \rvert \ dx$$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fej\'er Kernel and Ces\`aro Convergence}
+  \begin{itemize}
+    \item Fej\'er kernel defined as $$\Delta_N(x) = \sum_{n=-N}^N\left(1 - \frac{|n|}{N} \right)e^{2\pi inx}$$
+      is a summability kernel we get that $(f*\Delta_N)$ converge to $f$ in $L^1(\T)$
+    \item Moreover we see that $(f*\Delta_N)(x) = \sigma_N(x)$ and therefore the Ces\`aro partial sums of the Fourier series of $f$ converge to $f$ in $L^1(\T)$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fourier Series in $L^2(\T)$}
+  \begin{itemize}
+    \item Since $\T$ is identified with the finite measure space $[0, 1)$, we get that $L^2(\T) \subset L^1(\T)$. Theorefore the Fourier coefficients and series can be defined the same way as in $L^1(\T)$.
+    \item Moreover we see that if $f \in L^2(\R)$, since the Fej\'er kernel, $\Delta_N \in L^\infty(\T)$, its Ces\`aro partial sum, $\sigma_N = (f*\Delta_N) \in L^2(\T)$
+    \item As in $L^1(\T)$, we get that the Ces\`aro partial sums $\sigma_N$ converge to $f$ in $L^2(\T)$. That is $$\lim_{N\to \infty} \int_0^1 \left| f(x) - \sigma_N(x)\right| \ dx  = 0 $$
+    \item The same results follow for functions in $L^p(\T)$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fej\'er Theorem and Pointwise Convergence}
+  Write if needed
+\end{frame}
+
+\section{Fourier Transforms in $\R$}
+
+\begin{frame}{Fourier transforms in $L^1(\R)$}
+  \begin{itemize}
+    \item For any $f\in L^1(\R)$, the Fourier transform of $f$ is defined as $$\hat{f}(t) = \int_{-\infty}^{\infty} f(x)e^{-2\pi i t x} \ dx $$
+    \item Riemann Lebesgue lemma $$\lim_{|t| \to \infty} \hat{f}(t) = 0$$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Riemann Lebesgue Lemma}
+\end{frame}
+
+\begin{frame}{Fourier Inversion}
+\end{frame}
+
+\begin{frame}{Fourier transforms in $L^2(\R)$}
+\end{frame}
+
+\section{Holomorphic Fourier Transforms}
+
+\begin{frame}{Paley Wiener Theorem 1}
+\end{frame}
+
+\begin{frame}{Paley Wiener Theorem 2}
+\end{frame}
+
+\begin{frame}{Consequence of Paley Wiener Theorems}
+\end{frame}
+
+\section{Future Directions}
+
+\begin{frame}{Fourier transforms in $R^n$}
+\end{frame}
+
+\begin{frame}{Restriction Conjecture}
+\end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
