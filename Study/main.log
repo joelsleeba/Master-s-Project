@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  11 MAY 2023 11:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.16)  11 MAY 2023 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -961,7 +961,10 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (./config/mathletters.tex)
 \@quotelevel=\count456
 \@quotereset=\count457
- (./main.aux)
+ (./main.aux
+(./00Intro/Preface.aux) (./01Chapters/01FourierSeries.aux)
+(./01Chapters/02LpConvergence.aux) (./01Chapters/03FourierTransform.aux)
+(./01Chapters/04Holomorphic.aux) (./01Chapters/05Future.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1104,14 +1107,12 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 
 
 
-] (./main.toc)
+] (./main.toc
+[3])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-
-[3] [4
-
-]
+ [4]
 \openout2 = `01Chapters/01FourierSeries.aux'.
 
  (./01Chapters/01FourierSeries.tex
@@ -1133,166 +1134,42 @@ l.26   \end{proposition}
                          [1
 
 
+
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.64     \begin{align*}
-                        [2] [3]
-
-LaTeX Warning: Reference `def:fourier_coefficient' on page 4 undefined on input
- line 110.
-
-[4]
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 5 undefine
-d on input line 146.
-
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 5 undefine
-d on input line 146.
-
-[5]
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 6 undefine
-d on input line 188.
-
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 6 undefine
-d on input line 188.
-
-[6]
-
-LaTeX Warning: Reference `prop:properties_of_fourier_coefficients' on page 7 un
-defined on input line 230.
-
-
-LaTeX Warning: Reference `prop:properties_of_fourier_coefficients' on page 7 un
-defined on input line 230.
-
+                        [2] [3] [4] [5] [6]
 
 LaTeX Warning: Command \L invalid in math mode on input line 239.
 
 
 LaTeX Warning: Command \L invalid in math mode on input line 248.
 
-
-LaTeX Warning: Reference `def:symmetric_partial_sum_of_fourier_series' on page 
-7 undefined on input line 252.
-
 [7]
 Underfull \vbox (badness 1383) has occurred while \output is active []
 
  [8]
+Overfull \hbox (3.74324pt too wide) in paragraph at lines 305--306
+[][]\OT1/cmr/bx/n/10 Proposition 1.5.1 \OT1/cmr/m/n/10 (Prop-er-ties of Fej^^Se
+r ker-nel)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 If $\OT1/cmr/m/n/10 ^^A[](\OML/
+cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 is as in []Def-i-ni-tion 1.5.2
+[][],
+ []
 
-LaTeX Warning: Reference `def:fejer_kernel' on page 9 undefined on input line 3
-02.
+[9] [10] [11] [12]
+Overfull \hbox (8.38603pt too wide) detected at line 438
+[]
+ []
 
+[13] [14] [15]
+Overfull \hbox (5.90742pt too wide) detected at line 528
+[]
+ []
 
-LaTeX Warning: Reference `def:summability_kernel' on page 9 undefined on input 
-line 302.
-
-
-LaTeX Warning: Reference `def:fejer_kernel' on page 9 undefined on input line 3
-05.
-
-[9]
-
-LaTeX Warning: Reference `def:cesaro_partial_sum_of_fourier_series' on page 10 
-undefined on input line 336.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 10 undefined
- on input line 357.
-
-[10]
-Underfull \vbox (badness 2318) has occurred while \output is active []
-
- [11]
-[12]
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 13 undefin
-ed on input line 438.
-
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 13 undefin
-ed on input line 438.
-
-[13]
-
-LaTeX Warning: Reference `def:fejer_kernel' on page 14 undefined on input line 
-445.
-
-
-LaTeX Warning: Reference `def:summability_kernel' on page 14 undefined on input
- line 445.
-
-
-LaTeX Warning: Reference `def:summability_kernel' on page 14 undefined on input
- line 448.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 14 undefined
- on input line 451.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 14 undefined
- on input line 453.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 14 undefined
- on input line 473.
-
-[14] [15]
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 16 undefin
-ed on input line 528.
-
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 16 undefin
-ed on input line 528.
-
-[16]
-
-LaTeX Warning: Reference `prop:fejer_kernel_is_summability_kernel' on page 17 u
-ndefined on input line 558.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 17 undefined
- on input line 558.
-
-
-LaTeX Warning: Reference `thm:L1_convergence_of_summability_kernel' on page 17 
-undefined on input line 558.
-
-
-LaTeX Warning: Reference `def:cesaro_partial_sum_of_fourier_series' on page 17 
-undefined on input line 565.
-
-
-LaTeX Warning: Reference `thm:convergence_of_cesaro_partial_sum_in_circle' on p
-age 17 undefined on input line 565.
-
-[17]
-
-LaTeX Warning: Reference `def:summability_kernel' on page 18 undefined on input
- line 588.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 18 undefined
- on input line 592.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 18 undefined
- on input line 602.
-
-[18]
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 19 undefined
- on input line 613.
-
-) [19]
+[16] [17] [18]) [19]
 \openout2 = `01Chapters/02LpConvergence.aux'.
 
  (./01Chapters/02LpConvergence.tex [20
@@ -1315,14 +1192,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
 
-LaTeX Warning: Reference `def:Lp_function' on page 21 undefined on input line 5
-.
-
-
-LaTeX Warning: Reference `def:Lp_function' on page 21 undefined on input line 1
-1.
-
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 22.
 
@@ -1334,48 +1203,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 22.
 
-[21]
-
-LaTeX Warning: Reference `prop:L2_functions_are_continuous_in_L2_norm' on page 
-22 undefined on input line 50.
-
+[21] [22]
 
 LaTeX Warning: Command \L invalid in math mode on input line 60.
 
-
-LaTeX Warning: Reference `def:fourier_coefficient' on page 22 undefined on inpu
-t line 60.
-
-[22]
-
-LaTeX Warning: Reference `def:fourier_series' on page 23 undefined on input lin
-e 66.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 23 undefined
- on input line 74.
-
-
-LaTeX Warning: Reference `thm:Holder_inequality' on page 23 undefined on input 
-line 80.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 23 undefined
- on input line 85.
-
-[23]
-
-LaTeX Warning: Reference `prop:L2_functions_are_continuous_in_L2_norm' on page 
-24 undefined on input line 93.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 24 undefined
- on input line 100.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 24 undefined
- on input line 102.
-
+[23] [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 109.
@@ -1388,85 +1220,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 109.
 
-[24]
-
-LaTeX Warning: Reference `thm:Minkowski_inequality' on page 25 undefined on inp
-ut line 132.
-
-
-LaTeX Warning: Reference `prop:Lp_functions_are_continuous_in_Lp_norm' on page 
-25 undefined on input line 137.
-
+[25]
 
 LaTeX Warning: Command \L invalid in math mode on input line 148.
 
-
-LaTeX Warning: Reference `def:fourier_coefficient' on page 25 undefined on inpu
-t line 148.
-
-[25]
-
-LaTeX Warning: Reference `def:fourier_series' on page 26 undefined on input lin
-e 154.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 26 undefined
- on input line 162.
-
-
-LaTeX Warning: Reference `thm:Holder_inequality' on page 26 undefined on input 
-line 168.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 26 undefined
- on input line 173.
-
-[26]
-
-LaTeX Warning: Reference `prop:Lp_functions_are_continuous_in_Lp_norm' on page 
-27 undefined on input line 181.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 27 undefined
- on input line 188.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 27 undefined
- on input line 190.
-
-) [27]
+[26] [27]) [28]
 \openout2 = `01Chapters/03FourierTransform.aux'.
 
- (./01Chapters/03FourierTransform.tex [28
-
-
-
-
-]
+ (./01Chapters/03FourierTransform.tex
 Chapter 3.
-
-LaTeX Warning: Reference `def:fourier_coefficient' on page 29 undefined on inpu
-t line 7.
-
-[29]
-
-LaTeX Warning: Reference `prop:properties_of_fourier_coefficients' on page 30 u
-ndefined on input line 24.
+[29
 
 
-LaTeX Warning: Reference `def:fourier_transform_of_f' on page 30 undefined on i
-nput line 27.
-
-[30]
-
-LaTeX Warning: Reference `prop:L1_functions_are_continuous_in_L1_norm_in_R' on 
-page 31 undefined on input line 73.
 
 
-LaTeX Warning: Reference `def:convolution_of_functions_in_L^1(T)' on page 31 un
-defined on input line 76.
-
-[31]
+] [30] [31]
 Overfull \hbox (11.07901pt too wide) detected at line 85
 [][] [] \OML/cmm/m/it/10 dx dy \OT1/cmr/m/n/10 = [][] [] \OMS/cmsy/m/n/10 j\OML
 /cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 )\OMS/cmsy/m/n
@@ -1477,98 +1245,7 @@ y\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 dy \OT1/cmr/m/n/10 = \OMS
 y/m/n/10 k[]
  []
 
-
-LaTeX Warning: Reference `prop:properties_of_convolution' on page 32 undefined 
-on input line 90.
-
-[32]
-
-LaTeX Warning: Reference `thm:Plancherel's_theorem' on page 33 undefined on inp
-ut line 116.
-
-
-LaTeX Warning: Reference `prop:fourier_transform_of_L1_functions_in_R_are_bound
-ed' on page 33 undefined on input line 123.
-
-[33] [34]
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel' on page 35 undefined
- on input line 255.
-
-
-LaTeX Warning: Reference `lem:integral_of_periodic_function' on page 35 undefin
-ed on input line 255.
-
-[35]
-
-LaTeX Warning: Reference `prop:integral_of_sin(pi_x)^2/(pi_x)^2' on page 36 und
-efined on input line 285.
-
-
-LaTeX Warning: Reference `prop:properties_of_fourier_transform' on page 36 unde
-fined on input line 295.
-
-
-LaTeX Warning: Reference `def:L1(R)_analogue_of_fejer_kernel' on page 36 undefi
-ned on input line 304.
-
-[36]
-
-LaTeX Warning: Reference `prop:property_of_analogue_of_trigonometric_functions'
- on page 37 undefined on input line 308.
-
-
-LaTeX Warning: Reference `thm:fejer_theorem' on page 37 undefined on input line
- 311.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel_in_R' on page 37 unde
-fined on input line 317.
-
-
-LaTeX Warning: Reference `cor:convolution_with_fejer_kernel_in_L1(R)' on page 3
-7 undefined on input line 317.
-
-
-LaTeX Warning: Reference `def:L1(R)_analogue_of_fejer_kernel' on page 37 undefi
-ned on input line 323.
-
-[37]
-
-LaTeX Warning: Reference `thm:L1(R)_analogue_of_fejer_theorem' on page 38 undef
-ined on input line 343.
-
-[38]
-
-LaTeX Warning: Reference `def:L1(R)_analogue_of_fejer_kernel' on page 39 undefi
-ned on input line 359.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel_in_R' on page 39 unde
-fined on input line 363.
-
-
-LaTeX Warning: Reference `prop:L1_functions_are_continuous_in_L1_norm_in_R' on 
-page 39 undefined on input line 368.
-
-[39]
-
-LaTeX Warning: Reference `def:L1(R)_analogue_of_fejer_kernel' on page 40 undefi
-ned on input line 371.
-
-
-LaTeX Warning: Reference `prop:properties_of_fejer_kernel_in_R' on page 40 unde
-fined on input line 373.
-
-
-LaTeX Warning: Reference `cor:convolution_with_fejer_kernel_in_L1(R)' on page 4
-0 undefined on input line 382.
-
-[40]
-
-LaTeX Warning: Reference `cor:fourier_inversion_equals_f_at_points_of_continuit
-y' on page 41 undefined on input line 398.
-
+[32] [33] [34] [35] [36] [37] [38] [39] [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 403.
@@ -1581,47 +1258,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 403.
 
-
-LaTeX Warning: Reference `def:fourier_transform_of_f' on page 41 undefined on i
-nput line 404.
-
-
-LaTeX Warning: Reference `def:convolution_of_functions_in_L^1(T)' on page 41 un
-defined on input line 407.
-
-
-LaTeX Warning: Reference `thm:Holder_inequality' on page 41 undefined on input 
-line 407.
-
-[41]
-
-LaTeX Warning: Reference `prop:L2_functions_are_continuous_in_L2_norm_in_R' on 
-page 42 undefined on input line 427.
-
-
-LaTeX Warning: Reference `prop:convolution_is_well_defined_in_L^1(R)' on page 4
-2 undefined on input line 437.
-
-
-LaTeX Warning: Reference `prop:L2_functions_are_continuous_in_L2_norm_in_R' on 
-page 42 undefined on input line 437.
-
-
-LaTeX Warning: Reference `thm:L1(R)_analogue_of_fejer_theorem' on page 42 undef
-ined on input line 438.
-
-[42]
-
-LaTeX Warning: Reference `prop:convolution_is_well_defined_in_L^1(R)' on page 4
-3 undefined on input line 439.
-
-
-LaTeX Warning: Reference `prop:properties_of_fourier_transform' on page 43 unde
-fined on input line 439.
-
-
-LaTeX Warning: Reference `prop:L1_functions_are_dense_in_L2' on page 43 undefin
-ed on input line 447.
+[41] [42]
+Overfull \hbox (9.91331pt too wide) in paragraph at lines 447--448
+[]\OT1/cmr/m/n/10 Also by []Propo-si-tion A.0.3[][], $\OML/cmm/m/it/10 L[]\OT1/
+cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/1
+0 L[]\OT1/cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 )$ is dense in $\OML/cmm/m
+/it/10 L[]\OT1/cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 )$. Then by Planchere
+l's
+ []
 
 ) [43]
 \openout2 = `01Chapters/04Holomorphic.aux'.
@@ -1641,17 +1285,7 @@ m/n/10 k[]$ \OT1/cmr/m/n/10 is a fi-nite quan-tity and from above re-sult $\OMS
 S/cmsy/m/n/10 k[] !
  []
 
-[46] [47]
-
-LaTeX Warning: Reference `thm:Plancherel's_theorem' on page 48 undefined on inp
-ut line 65.
-
-[48]
-
-LaTeX Warning: Reference `prop:L2_functions_are_continuous_in_L2_norm' on page 
-49 undefined on input line 85.
-
-
+[46] [47] [48]
 Overfull \hbox (9.44669pt too wide) detected at line 87
 [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) \OM
 L/cmm/m/it/10 dz \OT1/cmr/m/n/10 = [][] [][] \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 
@@ -1662,33 +1296,10 @@ r/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n
 /10 0 \OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = 0
  []
 
-[49]
-
-LaTeX Warning: Reference `thm:Plancherel's_theorem' on page 50 undefined on inp
-ut line 93.
-
-[50]
-
-LaTeX Warning: Reference `eqn:eqn_holomorphic_stuff' on page 51 undefined on in
-put line 176.
-
-[51]
-
-LaTeX Warning: Reference `eqn:some_blah_blah_blah' on page 52 undefined on inpu
-t line 183.
-
-
+[49] [50] [51]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52]
-
-LaTeX Warning: Reference `thm:Plancherel's_theorem' on page 53 undefined on inp
-ut line 197.
-
-
-LaTeX Warning: Reference `prop:fourier_transform_in_upper_half_plane' on page 5
-3 undefined on input line 206.
-
 [53] [54] [55] [56] [57]) [58]
 \openout2 = `01Chapters/05Future.aux'.
 
@@ -1718,19 +1329,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 Appendix A.
 
-LaTeX Warning: Reference `def:Lp_function' on page 63 undefined on input line 4
-.
-
-
 LaTeX Warning: Reference `def:continuous_functions_on_T' on page 63 undefined o
 n input line 8.
 
-[63]
-
-LaTeX Warning: Reference `prop:compact_supported_cont_func_are_dense_in_Lp' on 
-page 64 undefined on input line 40.
-
-) [64]
+[63]) [64]
 Overfull \hbox (17.92804pt too wide) in paragraph at lines 32--32
 \OT1/cmr/m/n/10 texts in math-e-mat-ics 249. New York: Springer, 2014. \OT1/cmr
 /m/sc/10 isbn\OT1/cmr/m/n/10 : 9781493911936. 
@@ -1753,28 +1355,17 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  D954B5D114E9943A249F6E832043C0FE;4160.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D954B5D114E9943A249F6E832043C0FE;4160.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31878 strings out of 476025
- 601726 string characters out of 5796532
+ 31924 strings out of 476025
+ 602562 string characters out of 5796532
  1867388 words of memory out of 5000000
- 51590 multiletter control sequences out of 15000+600000
+ 51624 multiletter control sequences out of 15000+600000
  542523 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,17n,83p,1225b,1867s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1797,10 +1388,10 @@ fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pf
 b></usr/share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on main.pdf (71 pages, 440705 bytes).
+Output written on main.pdf (71 pages, 451438 bytes).
 PDF statistics:
- 638 PDF objects out of 1000 (max. 8388607)
- 513 compressed objects within 6 object streams
+ 869 PDF objects out of 1000 (max. 8388607)
+ 713 compressed objects within 8 object streams
  219 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
