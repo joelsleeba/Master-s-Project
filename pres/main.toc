@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{Fourier Series}{2}{0}{1}
 \beamer@sectionintoc {2}{Fourier Transforms in $\mathbb R$}{10}{0}{2}
-\beamer@sectionintoc {3}{Holomorphic Fourier Transforms}{15}{0}{3}
-\beamer@sectionintoc {4}{Future Directions}{19}{0}{4}
+\beamer@sectionintoc {3}{Homolorphic Fourier Transforms}{15}{0}{3}
+\beamer@sectionintoc {4}{Future Directions}{20}{0}{4}

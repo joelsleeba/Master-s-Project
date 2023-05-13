@@ -14,7 +14,9 @@
 \usepackage{listings}
 \usepackage{fontspec}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{mathrsfs}
 \usepackage{tikz}
 
 \usetheme{Nord}
@@ -144,27 +146,64 @@
     \item We consider the space $L^1(\R) \cap L^2(\R)$. Since it is a subspace of $L^1(\R)$, the definition of Fourier transform and inverse transform holds good in the smaller space.
     \item (Plancherel's Theorem) If $f \in L^1(\R) \cap L^2(\R)$, then $$\int_\R |f(x)|^2 \ dx = \int_\R |\hat{f}(t)|^2 \ dt$$
     \item Now since the collection of compactly supported functions in $\R$, $C_c(\R)$ is dense in $L^p(\R)$ for all $1 \le p < \infty$, we get that $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$.
-    \item Moreover we see that the Fourier transform of functions in $L^1(\R) \cap L^2(\R)$ form a dense subset in $L^2(\R)$. Therefore we can extend the domain of Fourier transform to $L^2(\R)$ and Plancherel's theorem asserts that Fourier transform in $L^2(\R)$ is an isometry.
+    \item Moreover we see that the Fourier transform of functions in $L^1(\R) \cap L^2(\R)$ form a dense subset in $L^2(\R)$. Plancherel's theorem asserts that Fourier transform in $L^1(\R) \cap L^2(\R)$ is an isometry therefore we can extend Fourier transform to an isometry in $L^2(\R)$.
   \end{itemize}
 \end{frame}
 
-\section{Holomorphic Fourier Transforms}
+\section{Homolorphic Fourier Transforms}
+\begin{frame}{Extending Domain to $\C$}
+  \begin{itemize}
+    \item Fourier transform of certain functions can be extended into a holomorphic functions in certain regions. That is for $z \in \C$, $$\hat{f}(z) = \int_\R f(x)e^{-2\pi izx} \ dx $$
+      will be holomorphic in certain regions in $\C$.
+    \item For example if $f(x) = e^{-|x|}$, then its Fourier transform, $\hat{f}(t) = \frac{1}{1+(2\pi t)^2}$ can be extended into holomorphic function in regions in the complex plane without the points $\pm \frac{i}{2\pi}$.
+    \item We will focus on two types of functions in $L^2(\R)$
+      \begin{enumerate}
+        \item $f(x) = 0, (x<0)$
+        \item $f(x) = 0, (x \notin (-A, A))$
+      \end{enumerate}
+  \end{itemize}
+\end{frame}
 
 \begin{frame}{Paley Wiener Theorem 1}
+  \begin{itemize}
+    \item Let $F \in L^2(\R)$ such that $F(x) = 0$ in $(-\infty, 0)$. Then $f: \Pi^+ \to \C$ defined as, $$f(z) = \int_0^\infty F(x) e^{2\pi it z} \ dz$$
+      is in $H(\Pi^+)$ if and only if $$\sup_{0<y<\infty} \frac{1}{2\pi}\int_\R f(x+iy) \ dx = \int_0^\infty |F(x)|^2 \ dx < \infty$$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Paley Wiener Theorem 2}
+    The following statements are equivalent:
+      \begin{enumerate}
+        \item $f: \C \to \C$ is an entire function satisfying $|f(z)| \le Ce^{2\pi A |z|}$ and $$\int_{-\infty}^\infty |f(x+iy)|^2 \ dx < \infty$$
+        \item There exist an $F \in L^2(\R)$ is compactly supported in $[-A, A]$ such that $$f(z) = \int_{-A}^A F(x) e^{2\pi iz x} \ dx$$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Consequence of Paley Wiener Theorems}
 \end{frame}
 
+
 \section{Future Directions}
 
+\begin{frame}{Schwartz Class}
+  \begin{itemize}
+    \item A smooth function $f:\mathbb{R}^n \to \mathbb{C}$, $f$ is called a \emph{Schwartz function} if for any given multi index $\alpha, \beta$, there exists a positive constant $C_{\alpha, \beta}$ such that $$\rho_{\alpha, \beta} = \sup_{x \in \mathbb{R}^n} \left|x^\alpha (D^\beta f)x \right| = C_{\alpha, \beta} < \infty$$
+    \item Here $\rho_{\alpha, \beta}(f)$ is called \emph{Schwartz seminorm of $f$}. The collection of all such functions is called the \emph{Schwartz space} of $\mathbb{R}^n$ and is denoted by $\mathscr{S}(\mathbb{R}^n)$.
+    \item Schwartz class is dense in $L^p(\R^n)$ for all $1\le p < \infty$.
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Fourier transforms in $R^n$}
+  \begin{itemize}
+    \item Fourier transform of $f \in \mathscr{S}(\R^n)$, $\hat{f} : \R^n \to \C^n$ is defined as $$\hat{f}( \textbf{t} ) = \int_{\R^n} f(x)e^{-2 \pi i \textbf{t} \cdot \textbf{x}} \ dx$$
+    \item Parseval's identity holds in Schwartz class $$\|\hat{f}\|_2 = \|f\|_2$$
+    \item Fourier transform is a homeomorphism in $\mathscr{S}(\R^n)$.
+    \item By Parseval's identity Fourier transform can be extended into whole of $\R^n$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Restriction Conjecture}
+  
 \end{frame}
 
 \end{document}
