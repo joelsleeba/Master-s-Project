@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.4.16)  14 MAY 2023 16:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.4.16)  14 MAY 2023 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1084,23 +1084,23 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
 
 ]
 LaTeX Font Info:    Font shape `TU/lmss/b/n' in size <14.4> not available
-(Font)              Font shape `TU/lmss/bx/n' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/b/n' in size <10> not available
-(Font)              Font shape `TU/lmss/bx/n' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/b/n' in size <7> not available
-(Font)              Font shape `TU/lmss/bx/n' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/b/it' in size <14.4> not available
-(Font)              Font shape `TU/lmss/bx/it' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/it' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <14.4> not available
-(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/b/it' in size <10> not available
-(Font)              Font shape `TU/lmss/bx/it' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/it' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/b/it' in size <7> not available
-(Font)              Font shape `TU/lmss/bx/it' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/it' tried instead on input line 91.
 LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <7> not available
-(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 73.
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 91.
 \nord@tmpbox=\box86
 
 [3
@@ -1114,10 +1114,6 @@ LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <7> not available
  [5
 
 ]
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 103.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 103.
 \nord@tmpbox=\box89
  [6
 
@@ -1134,59 +1130,197 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
  [9
 
 ]
+\nord@tmpbox=\box93
+ [10
+
+]
+Overfull \vbox (4.6743pt too high) detected at line 118
+ []
+
+\nord@tmpbox=\box94
+[11
+
+]
+Overfull \vbox (4.6743pt too high) detected at line 118
+ []
+
+\nord@tmpbox=\box95
+[12
+
+]
+Overfull \vbox (4.6743pt too high) detected at line 118
+ []
+
+\nord@tmpbox=\box96
+[13
+
+]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 135.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 135.
+\nord@tmpbox=\box97
+ [14
+
+]
+\nord@tmpbox=\box98
+ [15
+
+]
+\nord@tmpbox=\box99
+ [16
+
+]
+\nord@tmpbox=\box100
+ [17
+
+]
+\nord@tmpbox=\box101
+ [18
+
+]
+\nord@tmpbox=\box102
+ [19
+
+]
+\nord@tmpbox=\box103
+ [20
+
+]
+\nord@tmpbox=\box104
+ [21
+
+]
+\nord@tmpbox=\box105
+ [22
+
+]
+\nord@tmpbox=\box106
+ [23
+
+]
+\nord@tmpbox=\box107
+ [24
+
+]
+\nord@tmpbox=\box108
+ [25
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 131.
+(hyperref)                removing `math shift' on input line 175.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 131.
+(hyperref)                removing `math shift' on input line 175.
 
 (./main.toc
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
 (Font)              Font shape `TU/lmss/m/sl' tried instead on input line 3.
-) [10
+) [26
 
 ]
-\nord@tmpbox=\box93
- [11
+\nord@tmpbox=\box109
+ [27
 
 ]
-\nord@tmpbox=\box94
- [12
+\nord@tmpbox=\box110
+ [28
 
 ]
-\nord@tmpbox=\box95
- [13
-
-] (./main.toc) [14
+\nord@tmpbox=\box111
+ [29
 
 ]
-\nord@tmpbox=\box96
- [15
+\nord@tmpbox=\box112
+ [30
 
 ]
-\nord@tmpbox=\box97
- [16
+\nord@tmpbox=\box113
+ [31
 
 ]
-\nord@tmpbox=\box98
- [17
+\nord@tmpbox=\box114
+ [32
+
+]
+\nord@tmpbox=\box115
+ [33
+
+]
+\nord@tmpbox=\box116
+ [34
+
+]
+\nord@tmpbox=\box117
+ [35
 
 ] (./main.toc)
-[18
+[36
 
 ]
-\nord@tmpbox=\box99
- [19
+\nord@tmpbox=\box118
+ [37
 
 ]
-\nord@tmpbox=\box100
- [20
+\nord@tmpbox=\box119
+ [38
 
 ]
-\nord@tmpbox=\box101
- [21
+\nord@tmpbox=\box120
+ [39
+
+]
+\nord@tmpbox=\box121
+ [40
+
+]
+\nord@tmpbox=\box122
+ [41
+
+]
+\nord@tmpbox=\box123
+ [42
+
+]
+\nord@tmpbox=\box124
+ [43
+
+] (./main.toc) [44
+
+]
+\nord@tmpbox=\box125
+ [45
+
+]
+\nord@tmpbox=\box126
+ [46
+
+]
+\nord@tmpbox=\box127
+ [47
+
+]
+\nord@tmpbox=\box128
+
+[48
+
+]
+\nord@tmpbox=\box129
+ [49
+
+]
+\nord@tmpbox=\box130
+ [50
+
+]
+\nord@tmpbox=\box131
+ [51
+
+]
+\nord@tmpbox=\box132
+ [52
 
 ]
 \tf@nav=\write6
@@ -1203,12 +1337,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9576B3DFB929CEBE9AD93570219B2C21;613.
  ) 
 Here is how much of TeX's memory you used:
- 29507 strings out of 476683
- 620960 string characters out of 5809790
- 1862018 words of memory out of 5000000
- 49132 multiletter control sequences out of 15000+600000
+ 29528 strings out of 476683
+ 621376 string characters out of 5809790
+ 1863018 words of memory out of 5000000
+ 49153 multiletter control sequences out of 15000+600000
  524782 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,19n,122p,417b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,19n,122p,417b,809s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (21 pages).
+Output written on main.pdf (52 pages).
