@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.4.16)  14 MAY 2023 12:01
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.4.16)  14 MAY 2023 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,11 +1136,11 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 124.
+(hyperref)                removing `math shift' on input line 128.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 124.
+(hyperref)                removing `math shift' on input line 128.
 
 (./main.toc
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
@@ -1159,11 +1159,11 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
 \nord@tmpbox=\box95
  [13
 
+] (./main.toc) [14
+
 ]
 \nord@tmpbox=\box96
- [14
-
-] (./main.toc) [15
+ [15
 
 ]
 \nord@tmpbox=\box97
@@ -1178,11 +1178,11 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
  [18
 
 ]
-\nord@tmpbox=\box100
- [19
+(./main.toc) [19
 
 ]
-(./main.toc) [20
+\nord@tmpbox=\box100
+ [20
 
 ]
 \nord@tmpbox=\box101
@@ -1191,10 +1191,6 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
 ]
 \nord@tmpbox=\box102
  [22
-
-]
-\nord@tmpbox=\box103
- [23
 
 ]
 \tf@nav=\write6
@@ -1211,12 +1207,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 27374F1A83942A3F3A072FEB82BA5284;613.
  ) 
 Here is how much of TeX's memory you used:
- 29511 strings out of 476683
- 620992 string characters out of 5809790
- 1863018 words of memory out of 5000000
- 49136 multiletter control sequences out of 15000+600000
+ 29509 strings out of 476683
+ 620976 string characters out of 5809790
+ 1862018 words of memory out of 5000000
+ 49134 multiletter control sequences out of 15000+600000
  524782 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,19n,122p,417b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (23 pages).
+Output written on main.pdf (22 pages).

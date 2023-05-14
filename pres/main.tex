@@ -84,7 +84,7 @@
   \begin{itemize}
     \item For $f \in L^1(\T)$, and $n \in \Z$ we define the $n^{th}$ Fourier coefficient of $f$ as $$\hat{f}(n) = \int_0^1 f(x)e^{-2\pi i n x} \ dx $$
     \item Also the Fourier series of $f \in L^1(\T)$ is defined as $$\sum_{n=-\infty }^\infty \hat{f}(n) e^{2\pi in x} $$
-    \item Since we are interested in the convergence of the Fourier series, we will define the symmetric and Ces\`aro partial sums of the Fourier seres respectively as $$ S_N(x) = \sum_{n=-N}^N \hat{f}(n)e^{2\pi inx} \ \text{ and } \  \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)$$
+    \item Since we are interested in the convergence of the Fourier series, we will define the symmetric and Ces\`aro partial sums of the Fourier series respectively as $$ S_N(x) = \sum_{n=-N}^N \hat{f}(n)e^{2\pi inx} \ \text{ and } \  \sigma_N(x) = \frac{1}{N}\sum_{n=0}^{N-1} S_n(x)$$
    \end{itemize}
 \end{frame}
 
@@ -105,6 +105,7 @@
     \item Fej\'er kernel defined as $$\Delta_N(x) = \sum_{n=-N}^N\left(1 - \frac{|n|}{N} \right)e^{2\pi inx}$$
       is a summability kernel we get that $(f*\Delta_N)$ converge to $f$ in $L^1(\T)$
     \item Moreover we see that $(f*\Delta_N)(x) = \sigma_N(x)$ and therefore the Ces\`aro partial sums of the Fourier series of $f$ converge to $f$ in $L^1(\T)$.
+    \item Therefore if $f, g \in L^1(\T)$ such that $\hat{f} = \hat{g}$, then $f \stackrel{a.e}{=} g$
   \end{itemize}
 \end{frame}
 
@@ -118,7 +119,10 @@
 \end{frame}
 
 \begin{frame}{Fej\'er Theorem and Pointwise Convergence}
-  Write if needed
+  If $f \in L^1(\T)$, then $$\lim_{N \to \infty} \sigma_N(x) = \frac{f(x^-) + f(x^+)}{2}$$
+  given that $f(x^-)$ and $f(x^+)$, the left limit and right limit of $f$ at $x$ exists.
+
+  Therefore if $f$ is continuous then the Ces\`aro partial sum converge pointwise to $f$
 \end{frame}
 
 \section{Fourier Transforms in $\R$}
@@ -128,9 +132,6 @@
     \item For any $f\in L^1(\R)$, the Fourier transform of $f$ is defined as $$\hat{f}(t) = \int_{-\infty}^{\infty} f(x)e^{-2\pi i t x} \ dx $$
     \item $\hat{f}$ is uniformly continuous and $$\lim_{|t| \to \infty} \hat{f}(t) = 0$$
   \end{itemize}
-\end{frame}
-
-\begin{frame}{Riemann Lebesgue Lemma}
 \end{frame}
 
 \begin{frame}{Fourier Inversion}
