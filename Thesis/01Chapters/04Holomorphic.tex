@@ -19,7 +19,7 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
 \begin{proposition}
   \label{prop:fourier_transform_in_upper_half_plane}
   Let $F\in L^2(\R)$ such that $F$ vanishes at $(-\infty , 0)$. Then $f : \Pi^+ \to \C$ defined as, $$f(z) = \int_0^\infty F(t) e^{2\pi itz} \ dt$$
-  is holomorphic in the upper half plane, i.e $f \in H(\Pi^+)$. Moreover $f$ restricted to horizontal lines in $\Pi^+$ is bounded in the  $L^2$ norm and the bound is independent of the horizontal line. That is if $z = x+iy$, then $$\sup_{0<y<\infty}\int_{-\infty}^\infty \left|f(x + iy)\right|^2 \ dx < \infty$$
+  is holomorphic in the upper half plane, i.e $f \in H(\Pi^+)$. Moreover $f$ restricted to horizontal lines in $\Pi^+$ is bounded in the  $L^2$ norm and the bound is independent of the horizontal line. That is if $z = x+iy$, then $$\sup_{0<y<\infty}\int_{-\infty}^\infty \left|f(x + iy)\right|^2 \ dx = \int_0^\infty |F(t)|^2 \ dt < \infty$$
 \end{proposition}
 \begin{proof}
   Let $z \in \Pi^+$. Then there exists a $\delta$ such that $0< \delta < \Im(z)$. Since $\Pi^+$ is open, there exists a sequence $z_n$ in $\Pi^+$ such that $\delta < \Im(z_n)$, and  $z_n \to z$. Also 
@@ -38,7 +38,7 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
     f(w_n) - f(w) &= \int_0^\infty F(t)(e^{2\pi it w_n} - e^{2\pi i tw}) \ dt \\
     & \le \|F\|_2 \|e^{2\pi itw_n} - e^{2\pi itw}\|_2
   \end{align*}
-  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Also if $\gamma$ is any triangle in $\Pi^+$, then $\gamma$ can be parametrized by $s \in [a, b]$ as $\gamma(s) = x(s) + iy(s)$, where $y(s) >0$ since $\gamma \in \Pi^+$. Now let $M = \inf_{s \in [a,b]} |\gamma^{'}(s)|$ (here we take only differentiable points in $\gamma$ for infimum, since the non-differentiable points will be measure zero and adds nothing to the integral). Also since $\gamma \in \Pi^+$, there exist an $m >0$ such that $y(s) > m$ for all $s$. Then we get that
+  By assumption $\|F\|_2$ is a finite quantity and from above result $\|e^{2\pi itw_n} - e^{2\pi itw}\|_2 \to 0$ as $w_n \to w$. Therefore $f(w_n) \to f(w)$. Since our choice of $w$ was arbitary, this implies that $f$ is continuous everywhere in $\Pi^+$. Also if $\gamma$ is any triangle in $\Pi^+$, then $\gamma$ can be parametrized by $s \in [a, b]$ as $\gamma(s) = x(s) + iy(s)$, where $y(s) >0$ since $\gamma \in \Pi^+$. Now let $M = \sup_{s \in [a,b]} |\gamma^{'}(s)|$ (here we take only differentiable points in $\gamma$ for supremum, since the non-differentiable points will be measure zero and adds nothing to the integral). Also since $\gamma \in \Pi^+$, there exist an $m >0$ such that $y(s) > m$ for all $s$. Then we get that
   \begin{align*}
     \int_{\gamma}\int_{0}^{\infty}|F(t)e^{itz}|\,dt\,d|z|&=
     \int_a^b\int_{0}^{\infty}|F(t)|e^{-ty(s)}\,dt\,|\gamma'(s)|\,ds\\
@@ -65,6 +65,8 @@ where $0<A<\infty$ and $F \in L^2(-A, A)$. We'll now prove some important result
   which is again finite. Therefore $g\in L^2(0, \infty)$. Therefore by Plancherel's theorem (refer theorem \ref{thm:Plancherel's_theorem}) on $g_y$ we get that, $$\int_{-\infty}^{\infty}\left|f(x+iy)\right|^2 \ dx = \int_{-\infty}^{\infty} \left|\widehat{g_y}(x)\right|^2 \ dx= \int_{-\infty}^{\infty} \left|g_y(t)\right|^2 \ dt = \int_0^\infty \left|g_y(t)\right|^2 \ dt $$
 Note that the change in limit in the last integral is because $g_y(t) = 0$ when $t < 0$. But from last inequality $$\int_0^\infty \left|g_y(t)\right|^2 \ dt \le \int_0^\infty \left|F(t)\right|^2 \ dt$$
   which is finite since $F \in L^2(0, \infty)$, and independent of $y$. Therefore $$\sup_{0<y<\infty} \int_{-\infty}^\infty \left|f(x+iy)\right|^2 \ dx \le \int_0^\infty \left|F(t)\right|^2 \ dt $$
+  Moreover by Lebesgue dominated convergence theorem we get that $$\lim_{y \searrow 0} \int_0^\infty |g_y(t)|^2 \ dt = \int_0^\infty |F(t)|^2 \ dt$$
+  Therefore $$\sup_{0<y<\infty} \int_{-\infty}^\infty \left|f(x+iy)\right|^2 \ dx = \int_0^\infty \left|F(t)\right|^2 \ dt $$
 \end{proof}
 
 \begin{proposition}
@@ -218,9 +220,9 @@ What is interesting is that the converse of the above two results is also true. 
   \textbf{Step 1}: For each $\alpha \in \R$ define $\Gamma_\alpha$ to be the ray, $$\Gamma_\alpha(s) = se^{i\alpha}$$
   where $0\le s <\infty$ and $$\Pi_\alpha = \{w\ | \ \Re(we^{i\alpha}) > A\}$$
 
-   \begin{figure}
+   \begin{figure}[h]
      \centering
-      \begin{tikzpicture}[scale=1.5]
+      \begin{tikzpicture}
         % Draw axes
         \draw[<->] (-2,0) -- (2,0) node[above] {$\Re(z)$};
         \draw[<->] (0,-2) -- (0,1) node[left] {$\Im(z)$};
@@ -228,7 +230,7 @@ What is interesting is that the converse of the above two results is also true. 
         \draw[dashed] (-2, -1.5) -- (2, 0);
         % Draw line
         \draw[blue,rotate=-67] (0,0) -- (0.7,0);
-        \node at (0.35, -0.4) {\color{blue}{A}};
+        \node at (0.35, -0.35) {\color{blue}{A}};
         \node at (0.7, -1.4) {$\Pi_\alpha$};
         \draw[red] (0, 0) -- (0:0.2) arc (0:-68:0.2) node[midway, right] {\color{red}{$\alpha$}};
         \draw[rotate=-67] (0.6, 0) -- (0.6, -0.1) -- (0.7, -0.1);
