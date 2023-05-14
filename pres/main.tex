@@ -6,6 +6,8 @@
 % The latest version of this license is in
 %   http://www.latex-project.org/lppl.txt
 %   Compile this in xelatex
+% xelatex
+
 
 \documentclass[compress]{beamer}
 
@@ -64,7 +66,7 @@
 
 \begin{frame}{Structure and Topology of $\mathbb{T}$}{}
   \begin{itemize}
-    \item Defining $\mathbb{T}$ as the set of equivalence class of the relation $x\sim y \iff x-y \in \mathbb{Z}$ and identifying classes in $\mathbb{T}$ with their representative element in $[0,1)$ as $[x] \to \{x\}$, where $\{x\}$ is the fractional part of $x$.
+    \item Defining $\mathbb{T}$ as the set of equivalence class of the relation $\sim$ in $\R$, where $x\sim y \iff x-y \in \mathbb{Z}$ and identifying classes in $\mathbb{T}$ with their representative element in $[0,1)$ as $[x] \to \{x\}$, where $\{x\}$ is the fractional part of $x$.
     \item Endow $\mathbb{T}$ with quotient topology by the map $f: \mathbb{R} \to \mathbb{T}:= x \to [x]$
     \item Lebesgue measure on $\mathbb{T}$ is defined by the Lebesgue measure of its identification in $[0,1)$.
   \end{itemize}
@@ -96,13 +98,13 @@
         \item $\int_{0}^{1}\lvert K_N(x)\rvert dx \le C$ for some constant $C>0$
         \item $\lim_{N\to\infty} \int_{\delta}^{1-\delta}\lvert K_N(x)\rvert dx= 0$
       \end{enumerate}
-    \item We prove that if $K_N$ is a summability kernel in $L^1(T)$, then $(f*K_N)(x)$ converge to $f(x)$ in $L^1(\T)$. That is $$\int_0^1 \lvert f(x) - (f*K_N)(x) \rvert \ dx$$
+    \item We prove that if $K_N$ is a summability kernel in $L^1(\T)$, then $(f*K_N)(x)$ converge to $f(x)$ in $L^1(\T)$. That is $$\int_0^1 \lvert f(x) - (f*K_N)(x) \rvert^2 \ dx$$
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Fej\'er Kernel and Ces\`aro Convergence}
   \begin{itemize}
-    \item Fej\'er kernel defined as $$\Delta_N(x) = \sum_{n=-N}^N\left(1 - \frac{|n|}{N} \right)e^{2\pi inx}$$
+    \item Fej\'er kernel defined as $$\Delta_N(x) = \sum_{n=-N}^N\left(1 - \frac{|n|}{N} \right)e^{2\pi inx} = \frac{1}{N}\sum_{n=0}^{N-1}\sum_{k=-n}^n e^{2\pi i k x}$$
       is a summability kernel we get that $(f*\Delta_N)$ converge to $f$ in $L^1(\T)$
     \item Moreover we see that $(f*\Delta_N)(x) = \sigma_N(x)$ and therefore the Ces\`aro partial sums of the Fourier series of $f$ converge to $f$ in $L^1(\T)$.
     \item Therefore if $f, g \in L^1(\T)$ such that $\hat{f} = \hat{g}$, then $f \stackrel{a.e}{=} g$
@@ -112,17 +114,18 @@
 \begin{frame}{Fourier Series in $L^2(\T)$}
   \begin{itemize}
     \item Since $\T$ is identified with the finite measure space $[0, 1)$, we get that $L^2(\T) \subset L^1(\T)$. Theorefore the Fourier coefficients and series can be defined the same way as in $L^1(\T)$.
-    \item Moreover we see that if $f \in L^2(\R)$, since the Fej\'er kernel, $\Delta_N \in L^\infty(\T)$, its Ces\`aro partial sum, $\sigma_N = (f*\Delta_N) \in L^2(\T)$
-    \item As in $L^1(\T)$, we get that the Ces\`aro partial sums $\sigma_N$ converge to $f$ in $L^2(\T)$. That is $$\lim_{N\to \infty} \int_0^1 \left| f(x) - \sigma_N(x)\right| \ dx  = 0 $$
+    \item Moreover we see that if $f \in L^2(\R)$, since the Fej\'er kernel, $\Delta_N(x) \le N$, its Ces\`aro partial sum, $\sigma_N = (f*\Delta_N) \in L^2(\T)$
+    \item Then we get that the Ces\`aro partial sums $\sigma_N$ converge to $f$ in $L^2(\T)$. That is $$\lim_{N\to \infty} \int_0^1 \left| f(x) - \sigma_N(x)\right|^2 \ dx  = 0 $$
     \item The same results follow for functions in $L^p(\T)$
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fej\'er Theorem and Pointwise Convergence}
-  If $f \in L^1(\T)$, then $$\lim_{N \to \infty} \sigma_N(x) = \frac{f(x^-) + f(x^+)}{2}$$
-  given that $f(x^-)$ and $f(x^+)$, the left limit and right limit of $f$ at $x$ exists.
-
-  Therefore if $f$ is continuous then the Ces\`aro partial sum converge pointwise to $f$
+\begin{frame}{Fej\'er's Theorem and Pointwise Convergence}
+  \begin{itemize}
+    \item (Fej\'er's Theorem) If $f \in L^1(\T)$, then $$\lim_{N \to \infty} \sigma_N(x) = \frac{f(x^-) + f(x^+)}{2}$$
+    given that $f(x^-)$ and $f(x^+)$, the left limit and right limit of $f$ at $x$ exists.
+    \item Therefore if $f$ is continuous then the Ces\`aro partial sum converge pointwise to $f$
+  \end{itemize}
 \end{frame}
 
 \section{Fourier Transforms in $\R$}
@@ -130,7 +133,7 @@
 \begin{frame}{Fourier transforms in $L^1(\R)$}
   \begin{itemize}
     \item For any $f\in L^1(\R)$, the Fourier transform of $f$ is defined as $$\hat{f}(t) = \int_{-\infty}^{\infty} f(x)e^{-2\pi i t x} \ dx $$
-    \item $\hat{f}$ is uniformly continuous and $$\lim_{|t| \to \infty} \hat{f}(t) = 0$$
+    \item (Riemann Lebesgue Lemma) $\hat{f}$ is uniformly continuous and $$\lim_{|t| \to \infty} \hat{f}(t) = 0$$
   \end{itemize}
 \end{frame}
 
@@ -138,7 +141,7 @@
   \begin{itemize}
     \item Let $f \in L^1(\R)$, then the inverse Fourier transform is defined as $$\check{f}(t) = \int_{-\infty}^\infty f(x)e^{2\pi itx} \ dx$$
     \item We see that if $f \in L^1(\R)$, continuous at $x \in \R$ and its Fourier transform $\hat{f} \in L^1(\R)$, then $$\check{\hat{f}}(x) = f(x)$$
-    \item Generalizing further we get that that if $f, \hat{f} \in L^1(\R)$ then $$\check{\hat{f}} \ \stackrel{a.e}{=} \ f$$
+    \item Generalizing further we get that if $f, \hat{f} \in L^1(\R)$ then $$\check{\hat{f}} \ \stackrel{a.e}{=} \ f$$
   \end{itemize}
 \end{frame}
 
@@ -169,7 +172,7 @@
 \begin{frame}{Paley Wiener Theorem 1}
   The following statements are equivalent
   \begin{enumerate}
-    \item $f \in H(\Pi_+)$ such that $$\sup_{0<y<\infty} \frac{1}{2\pi}\int_\R f(x+iy) \ dx = C < \infty$$
+    \item $f \in H(\Pi^+)$ such that $$\sup_{0<y<\infty} \frac{1}{2\pi}\int_\R f(x+iy) \ dx = C < \infty$$
     \item There exist an $F \in L^2(\R)$ such that $F$ is essentially supported in $(0, \infty)$ and for all $z \in \Pi^+$ $$f(z) = \int_0^\infty F(t) e^{2\pi it z} \ dt$$
       and $$\int_0^\infty |F(t)|^2 \ dt = C$$
   \end{enumerate}
@@ -181,9 +184,6 @@
         \item $f: \C \to \C$ is an entire function satisfying $|f(z)| \le Ce^{2\pi A |z|}$ and $$\int_{-\infty}^\infty |f(x+iy)|^2 \ dx < \infty$$
         \item There exist an $F \in L^2(\R)$ is essentially supported in $(-A, A)$ such that $$f(z) = \int_{-A}^A F(x) e^{2\pi iz x} \ dx$$
       \end{enumerate}
-\end{frame}
-
-\begin{frame}{Consequence of Paley Wiener Theorems}
 \end{frame}
 
 
@@ -206,8 +206,10 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Restriction Conjecture}
-  
+\begin{frame}{A problem}
+  Let $n \ge 2$. Does there exist a function $f \in L^{\frac{2n+2}{n+3}}(\R^n)$ such that $$\hat{f}\vert_{S^{n-1}} = 0$$
+and
+$$\left| 1 - |\xi|^2\right|^{-\frac{1}{2}}f \notin L^2(\R^n)$$
 \end{frame}
 
 \end{document}

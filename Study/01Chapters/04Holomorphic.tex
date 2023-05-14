@@ -185,7 +185,7 @@ What is interesting is that the converse of the above two results is also true. 
   Now taking limit as $j \to \infty$ on both sides and by \autoref{eqn:some_blah_blah_blah}, we get that $$\lim_{j\to \infty} \int_{-\alpha_j+yi}^{\alpha_j +yi} f(z)e^{-2\pi it z} \ dz = \lim_{j \to \infty} \int_{-\alpha_j +i}^{\alpha_j +i} f(z)e^{-2\pi it z}$$
   Therefore,
   $$\int_\R f(x+iy)e^{-2\pi i t(x+iy)} \ dx = \int_\R f(x+i)e^{-2\pi it(x+i)} \ dx$$
-  Now for a fixed $y>0$ and $f_y(x) = f(x+iy)$, take $F(t) = e^{2\pi ty}\widehat{f}(t)$, where $\widehat{f_y}$, is the Fourier transform of $f_y$. Then by previous equality we get that, 
+  Now for a fixed $y>0$ and $f_y(x) = f(x+iy)$, take $F(t) = e^{2\pi ty}\widehat{f_y}(t)$, where $\widehat{f_y}$, is the Fourier transform of $f_y$. Then by previous equality we get that, 
   \begin{align*}
     F(t) &= e^{2\pi ty} \widehat{f_y}(t)\\
           &= e^{2\pi ty}\int_\R f(x+iy) e^{-2\pi itx} \ dx \\
