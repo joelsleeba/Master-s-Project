@@ -21,6 +21,20 @@ The proofs of the above two theorems can be found in any measure theory textbook
 
 \section{Fourier Series in $L^2(\T)$}
 Before we proceed with the fourier coefficients and fourier series for $L^2(\T)$ functions we first prove some important results.
+\begin{proposition}
+  \label{prop:L2_functions_are_continuous_in_L2_norm}
+  If $f \in L^2(\T)$, then
+  \begin{displaymath}
+   \lim_{\delta \to 0} \int_0^1 |f(x+\delta) - f(x)|^2 dx = 0
+  \end{displaymath}
+\end{proposition}
+\begin{proof}
+  From measure theory we know that continuous functions are dense in $L^2(\T)$. Then given any $\epsilon$ there exists a function $g\in C(\T)$ such that $\|f-g\|_2 < \epsilon$. Then,
+  $$ f(x+\delta) - f(x) = (f(x+\delta) - g(x+\delta)) - (f(x) - g(x)) + ( g(x+\delta) - g(x))$$
+  Now by triangle inequality, (i.e minkowski's inequality for $p = 2$), 
+  $$ \|f(x+\delta) - f(x)\|_2 = \|f(x+\delta) - g(x+\delta)\|_2 - \|f(x) - g(x)\|_2 + \|g(x+\delta) - g(x)\|_2$$
+  Now since $g$ is continuous on $\T$ it is uniformly continuous (since it is continuous on $\R$, it'll be continuous on $[0,1]$, a compact set) and therefore $\delta$ can be taken such that $\|g(x+\delta) - g(x) \|_2 < \epsilon$. Hence the theorem.
+\end{proof}
 
 \begin{proposition}
   \label{prop:convolution_of_L2_functions}
@@ -93,6 +107,22 @@ Hence we define the fourier series the same way as in \autoref{def:fourier_serie
 \end{proof}
 
 \section{Fourier Series in $L^p(\T)$}
+\begin{proposition}
+  \label{prop:Lp_functions_are_continuous_in_Lp_norm}
+  If $f \in L^p(\T)$, then
+  \begin{displaymath}
+   \lim_{\delta \to 0} \int_0^1 |f(x+\delta) - f(x)|^p dx = 0
+  \end{displaymath}
+\end{proposition}
+\begin{proof}
+  From measure theory we know that continuous functions are dense in $L^p(\T)$. Then given any $\epsilon$ there exists a function $g\in C(\T)$ such that $\|f-g\|_p < \epsilon$. Then,
+  $$ f(x+\delta) - f(x) = (f(x+\delta) - g(x+\delta)) - (f(x) - g(x)) + ( g(x+\delta) - g(x))$$
+  Now by triangle inequality, (i.e minkowski's inequality for $p = 2$), 
+  $$ \|f(x+\delta) - f(x)\|_p = \|f(x+\delta) - g(x+\delta)\|_p - \|f(x) - g(x)\|_p + \|g(x+\delta) - g(x)\|_p$$
+
+  Now since $g$ is continuous on $\T$ it is uniformly continuous (since it is continuous on $\R$, it'll be continuous on $[0,1]$, a compact set) and therefore $\delta$ can be taken such that $\|g(x+\delta) - g(x) \|_p < \epsilon$. Hence the theorem.
+\end{proof}
+
 \begin{proposition}
   \label{prop:convolution_of_Lp_functions}
   If $f \in L^p(\T)$ and $g \in L^q(\T)$, then their convolution, $f*g$ is continuous and moreover $\|f*g\|_{\infty} \le \|f\|_p \|g\|_q$
