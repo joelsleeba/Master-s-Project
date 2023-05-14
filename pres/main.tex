@@ -146,9 +146,10 @@
     \item We consider the space $L^1(\R) \cap L^2(\R)$. Since it is a subspace of $L^1(\R)$, the definition of Fourier transform and inverse transform holds good in the smaller space.
     \item (Plancherel's Theorem) If $f \in L^1(\R) \cap L^2(\R)$, then $$\int_\R |f(x)|^2 \ dx = \int_\R |\hat{f}(t)|^2 \ dt$$
     \item Now since the collection of compactly supported functions in $\R$, $C_c(\R)$ is dense in $L^p(\R)$ for all $1 \le p < \infty$, we get that $L^1(\R) \cap L^2(\R)$ is dense in $L^2(\R)$.
-    \item Moreover we see that the Fourier transform of functions in $L^1(\R) \cap L^2(\R)$ form a dense subset in $L^2(\R)$. Plancherel's theorem asserts that Fourier transform in $L^1(\R) \cap L^2(\R)$ is an isometry therefore we can extend Fourier transform to an isometry in $L^2(\R)$.
+    \item Plancherel's theorem asserts that Fourier transform in $L^1(\R) \cap L^2(\R)$ is an isometry therefore we can extend Fourier transform to an isometry in $L^2(\R)$.
   \end{itemize}
 \end{frame}
+
 
 \section{Homolorphic Fourier Transforms}
 \begin{frame}{Extending Domain to $\C$}
@@ -165,17 +166,19 @@
 \end{frame}
 
 \begin{frame}{Paley Wiener Theorem 1}
-  \begin{itemize}
-    \item Let $F \in L^2(\R)$ such that $F(x) = 0$ in $(-\infty, 0)$. Then $f: \Pi^+ \to \C$ defined as, $$f(z) = \int_0^\infty F(x) e^{2\pi it z} \ dz$$
-      is in $H(\Pi^+)$ if and only if $$\sup_{0<y<\infty} \frac{1}{2\pi}\int_\R f(x+iy) \ dx = \int_0^\infty |F(x)|^2 \ dx < \infty$$
-  \end{itemize}
+  The following statements are equivalent
+  \begin{enumerate}
+    \item $f \in H(\Pi_+)$ such that $$\sup_{0<y<\infty} \frac{1}{2\pi}\int_\R f(x+iy) \ dx = C < \infty$$
+    \item There exist an $F \in L^2(\R)$ such that $F$ is supported in $(0, \infty)$ and for all $z \in \Pi^+$ $$f(z) = \int_0^\infty F(t) e^{2\pi it z} \ dt$$
+      and $$\int_0^\infty |F(t)|^2 \ dt = C$$
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Paley Wiener Theorem 2}
     The following statements are equivalent:
       \begin{enumerate}
         \item $f: \C \to \C$ is an entire function satisfying $|f(z)| \le Ce^{2\pi A |z|}$ and $$\int_{-\infty}^\infty |f(x+iy)|^2 \ dx < \infty$$
-        \item There exist an $F \in L^2(\R)$ is compactly supported in $[-A, A]$ such that $$f(z) = \int_{-A}^A F(x) e^{2\pi iz x} \ dx$$
+        \item There exist an $F \in L^2(\R)$ is supported in $(-A, A)$ such that $$f(z) = \int_{-A}^A F(x) e^{2\pi iz x} \ dx$$
       \end{enumerate}
 \end{frame}
 
